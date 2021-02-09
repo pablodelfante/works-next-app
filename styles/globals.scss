@@ -1,9 +1,10 @@
 /* ./styles/globals.css */
 
+$color-fuente: rgb(48, 48, 48);
 
 *{
     font-family: 'Roboto Mono', monospace;
-    
+    color: $color-fuente;
 }
 
 // color texto en dark mode
@@ -16,6 +17,7 @@
 // tamaño minimo de los svg
 svg{
     width: 1.5rem;
+    
 }
 
 // mi contenedor principal
@@ -24,4 +26,8 @@ svg{
     display: grid;
     grid-template-rows: auto 1fr auto;
     height: 100vh;
+
+    .portada svg{
+        width: 8rem;
+    }
 }
