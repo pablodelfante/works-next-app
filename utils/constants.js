@@ -1,0 +1,1 @@
+export const COLOR_DARK = 'dark:bg-gray-500';
