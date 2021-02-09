@@ -3,6 +3,19 @@
 
 *{
     font-family: 'Roboto Mono', monospace;
+    
+}
+
+// color texto en dark mode
+.dark *{
+    color: whitesmoke;
+    transition: color 1s;
+}
+
+
+// tamaño minimo de los svg
+svg{
+    width: 1.5rem;
 }
 
 // mi contenedor principal

@@ -1,1 +1,2 @@
-export const COLOR_DARK = 'dark:bg-gray-500';
+export const COLOR_DARK = 'dark:bg-black';
+export const HOST_BACKEND = ''; 

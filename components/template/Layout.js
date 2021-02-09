@@ -1,14 +1,17 @@
 import Header from "./header";
 import Footer from './Footer'
 
-import Head from 'next/head'
+
+
 
 
 export default function Layout(props) {
     const {children} = props;
+    const classPersonalBlog = `personal-blog | container m-auto md:w-8/12`;
+
     return (
         <div 
-        className='personal-blog | container m-auto md:w-8/12'>
+        className={classPersonalBlog}>
             {/* HEADER */}
             <Header/>
 
