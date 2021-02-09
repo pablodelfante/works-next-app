@@ -31,7 +31,7 @@ export default function Header() {
             </Head>
 
             <header className=''>
-                <ul className='flex justify-end gap-20 py-10'>
+                <ul className='flex justify-end gap-3 md:gap-10 py-10'>
 
                     <li className='mr-auto'>
                         <Link href='/'>
