@@ -30,7 +30,7 @@ export default function Header() {
                 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
             </Head>
 
-            <header className=''>
+            <header className='px-10 md:px-52 | sticky top-0 bg-white shadow-sm'>
                 <ul className='flex justify-end gap-3 md:gap-10 py-10'>
 
                     <li className='mr-auto'>
@@ -41,11 +41,6 @@ export default function Header() {
                     <li>
                         <Link href='/'>
                             <a>INICIO</a>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href='/blog'>
-                            <a>BLOG</a>
                         </Link>
                     </li>
                     <li>

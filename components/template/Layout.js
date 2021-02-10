@@ -7,7 +7,7 @@ import Footer from './Footer'
 
 export default function Layout(props) {
     const {children} = props;
-    const classPersonalBlog = `personal-blog | container m-auto md:w-8/12`;
+    const classPersonalBlog = `personal-blog`;
 
     return (
         <div 
@@ -16,7 +16,7 @@ export default function Layout(props) {
             <Header/>
 
             {/* CONTENIDO PRINCIPAL */}
-            <main>
+            <main className='px-10 md:px-52'>
             {children}
             </main>
 

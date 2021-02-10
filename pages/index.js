@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
       <Layout>
-        CONTENIDO DEL LAYOUT
+        Trabajando en portfolio
        </Layout>
     </>
   )
