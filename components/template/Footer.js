@@ -1,15 +1,16 @@
 import Link from 'next/link';
+import style from './Footer.module.scss';
 
 export default function Footer() {
     const date = new Date();
     const year = date.getFullYear();
 
     return (
-            <footer>
-                <ul className='flex justify-center gap-20 py-10 px-10 md:px-52'>
+            <footer className={style.prueba}>
+                <ul className='flex justify-between py-10 px-10 md:px-72'>
                     <li>
-                        <Link href='/inicio'>
-                            <a>GitHub</a>
+                        <Link href='https://github.com/pablodelfante'>
+                            <a target="_blank">GitHub</a>
                         </Link>
                     </li>
                     <li>

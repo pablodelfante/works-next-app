@@ -7,10 +7,10 @@ import {HOST_BACKEND} from '../utils/constants';
 export const getWorks = async (_id) => {
     const QUERY = _id ? `/${_id}` : ''; //si hay query usala sino vacio
     try {
-       const response = await axios.get(`${HOST_BACKEND}/works${QUERY}`);
-        //data es un array con datos traidos
-       //desestructurar
-       return response;
+        //de la response tomo data con datos devueltos
+       const {data} = await axios.get(`${HOST_BACKEND}/works${QUERY}`);
+       //dependiendo el caso es un array de datos o un objeto con dato especifico
+       return data;
     } catch (error) {
         console.log(error)
     }
