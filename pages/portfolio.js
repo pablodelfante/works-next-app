@@ -20,7 +20,7 @@ export default function Portfolio({ works }) {
                 {works.map((work) => (
                     <Link href={`/portfolio/${work._id}`} key={work._id}>
                         <a>
-                            <li className='mb-10 border border-t-0 border-r-0 md:p-8'>
+                            <li className='mb-10 border-b md:p-8'>
                                 <h3>{work.title}</h3>
                                 <p className='whitespace-pre overflow-ellipsis overflow-hidden'>{work.description}</p>
                                 <time dateTime={fecha}>Publicado: {fecha}

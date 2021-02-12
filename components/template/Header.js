@@ -15,10 +15,10 @@ export default function Header() {
         const body = document.getElementsByTagName('body')[0];
 
         // html
-        html.className = !dark ? 'dark':'';
+        html.className = !dark ? 'dark' : '';
         useDark(!dark);
         // body
-        body.className = !colorDark ? COLOR_DARK:'';
+        body.className = !colorDark ? COLOR_DARK : '';
         useColorDark(!colorDark);
     }
 
@@ -26,8 +26,9 @@ export default function Header() {
         <>
             <Head>
                 {/* my content */}
-                <title>lapabla | blog</title>
+                <title>pablodelfante | blog</title>
                 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+                <link rel="shortcut icon" href="/favicon.ico" />
             </Head>
 
             <header className='px-10 md:px-72 | sticky top-0 bg-white shadow-sm'>

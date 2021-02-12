@@ -16,7 +16,7 @@ export default function Work({ work }) {
             <article className='py-14'>
                 {/* Titulo descripcion e imagen */}
                 <h2 className='mb-5'>{title}</h2>
-                <time className='text-gray-500 block mb-2 font-light'>Actualizado: {dateUpdate}</time>
+                <time className='text-gray-500 block mb-2 font-light border-b'>Actualizado: {dateUpdate}</time>
                 <p className='mb-5'>{description}</p>
                 <img src={url_image}></img>
 
