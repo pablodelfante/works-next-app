@@ -1,17 +1,22 @@
 import Layout from '../../components/template';
 import { getWorks } from '../../connectors/findWorks';
+import moment from 'moment';
+//const fecha = moment(work.createdAt).locale('es').format('LLL');// 11 de febrero de 2021 20:47
 
 import Markdown from 'markdown-to-jsx';
 
 export default function Work({ work }) {
 
-    const { title, description, content, tecnologies, url_github, url_image } = work;
+    const { title, description, content, tecnologies, url_github, url_image , updatedAt} = work;
+    const dateUpdate = moment(updatedAt).locale('es').format('LLL');
+
 
     return (
         <Layout>
             <article className='py-14'>
                 {/* Titulo descripcion e imagen */}
                 <h2 className='mb-5'>{title}</h2>
+                <time className='text-gray-500 block mb-2 font-light'>Actualizado: {dateUpdate}</time>
                 <p className='mb-5'>{description}</p>
                 <img src={url_image}></img>
 

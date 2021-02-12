@@ -3,10 +3,14 @@ import Portada from "../components/portada";
 import { getWorks } from '../connectors/findWorks';
 import Link from 'next/link';
 import { CONTENT_PORTADA } from '../utils/contentPortada';
+import moment from 'moment';
+
 
 export default function Portfolio({ works }) {
     const { titlePortada, iconPortada, contentPortada } = CONTENT_PORTADA.portfolio;
 
+    //fecha local
+    const fecha = moment(works.published_at).locale('es').format('LL');
 
     return (
         <Layout>
@@ -19,7 +23,9 @@ export default function Portfolio({ works }) {
                             <li className='mb-10 border border-t-0 border-r-0 md:p-8'>
                                 <h3>{work.title}</h3>
                                 <p className='whitespace-pre overflow-ellipsis overflow-hidden'>{work.description}</p>
-                                <time dateTime={work.published_at}>Publicado: {work.published_at}</time>
+                                <time dateTime={fecha}>Publicado: {fecha}
+                                
+                                </time>
                             </li>
                         </a>
                     </Link>

@@ -1,3 +1,7 @@
+*{
+    font-family: 'Roboto Mono', monospace;
+    @apply text-gray-700;
+}
 //@tailwind base;
 @layer base {
     h1 {
@@ -12,21 +16,20 @@
     h4 {
       @apply text-2xl;
     }
+    ul{
+      @apply pl-10;
+    }
   }
-
-$color-fuente: rgb(48, 48, 48);
-
-*{
-    font-family: 'Roboto Mono', monospace;
-    color: $color-fuente;
-}
 
 // color texto en dark mode
 .dark *{
-    color: whitesmoke;
+    @apply text-white;
     transition: color 1s;
+    
+    header {
+      @apply bg-black;
+    }
 }
-
 
 // tamaño minimo de los svg
 svg{
