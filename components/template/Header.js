@@ -7,19 +7,14 @@ export default function Header() {
 
     // estado para el modo dark
     const [dark, useDark] = useState(false);
-    const [colorDark, useColorDark] = useState(false);
 
     // Funcion modo dark
     const modeDark = () => {
         const html = document.getElementsByTagName('html')[0];
-        const body = document.getElementsByTagName('body')[0];
 
         // html
         html.className = !dark ? 'dark' : '';
         useDark(!dark);
-        // body
-        body.className = !colorDark ? COLOR_DARK : '';
-        useColorDark(!colorDark);
     }
 
     return (
@@ -49,7 +44,7 @@ export default function Header() {
                             <a>PORTFOLIO</a>
                         </Link>
                     </li>
-                    <li onClick={() => modeDark()}>
+                    <li onClick={() => modeDark()} className='cursor-pointer'>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
                         </svg>

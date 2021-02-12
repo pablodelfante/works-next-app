@@ -6,11 +6,11 @@ export default function Footer() {
     const year = date.getFullYear();
 
     return (
-            <footer className={style.prueba}>
-                <ul className='flex justify-between py-10 px-10 md:px-72'>
+            <footer className={style.prueba} className='py-10 px-10 md:px-72'>
+                <ul className='flex flex-col sm:flex-row justify-between'>
                     <li>
                         <Link href='https://github.com/pablodelfante'>
-                            <a target="_blank">GitHub</a>
+                            <a target="_blank" className='underline'>GitHub</a>
                         </Link>
                     </li>
                     <li>

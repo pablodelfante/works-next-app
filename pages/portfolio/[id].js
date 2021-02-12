@@ -2,12 +2,13 @@ import Layout from '../../components/template';
 import { getWorks } from '../../connectors/findWorks';
 import moment from 'moment';
 //const fecha = moment(work.createdAt).locale('es').format('LLL');// 11 de febrero de 2021 20:47
+import style from './id.module.scss'
 
 import Markdown from 'markdown-to-jsx';
 
 export default function Work({ work }) {
 
-    const { title, description, content, tecnologies, url_github, url_image , updatedAt} = work;
+    const { title, description, content, tecnologies, url_github, url_image, updatedAt } = work;
     const dateUpdate = moment(updatedAt).locale('es').format('LLL');
 
 
@@ -21,9 +22,9 @@ export default function Work({ work }) {
                 <img src={url_image}></img>
 
                 {/* MARKDOWN */}
-                <div className='py-5'>
-                    <Markdown>{content}</Markdown>
-                </div>
+                <Markdown className={style.markdown}>
+                    {content}
+                </Markdown>
 
                 {/* Tecnologias*/}
                 <h3 className='mb-5'>Tecnologías usadas</h3>
@@ -66,7 +67,7 @@ export async function getStaticProps({ params }) {
     const res = await getWorks(id);
     const work = await JSON.parse(JSON.stringify(res));
 
-    
+
     // aca props es requerido retornar
     return {
         props: { work }

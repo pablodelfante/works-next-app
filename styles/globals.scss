@@ -1,50 +1,59 @@
-*{
-    font-family: 'Roboto Mono', monospace;
+// NOTAS
+/* Modo dark: 
+      -en header.js cambio clase dark en html
+      -aqui cambio body header y lunita svg */
+
+* {
+    font-family: "Roboto Mono", monospace;
     @apply text-gray-700;
 }
 //@tailwind base;
 @layer base {
     h1 {
-      @apply text-5xl;
+        @apply text-5xl;
     }
     h2 {
-      @apply text-4xl;
+        @apply text-4xl;
     }
     h3 {
-      @apply text-3xl;
+        @apply text-3xl;
     }
     h4 {
-      @apply text-2xl;
+        @apply text-2xl;
     }
-    ul{
-      @apply pl-10;
+    ul {
+        @apply list-inside;
     }
-  }
+}
 
 // color texto en dark mode
-.dark *{
+.dark * {
     @apply text-white;
     transition: color 1s;
-    
-    header {
-      @apply bg-black;
+}
+.dark {
+    header,
+    body {
+        @apply bg-black;
+    }
+    header svg{
+      @apply fill-current;
     }
 }
 
 // tamaño minimo de los svg
-svg{
+svg {
     width: 1.5rem;
-    
 }
 
 // mi contenedor principal
-.personal-blog{
+.personal-blog {
     // background-color: #f5f5f5;
     display: grid;
     grid-template-rows: auto 1fr auto;
     height: 100vh;
 
-    .portada svg{
+    .portada svg {
         width: 2.5rem;
     }
 }

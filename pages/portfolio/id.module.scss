@@ -1,0 +1,15 @@
+/* aplico estos estilos asi ya que estos datos
+vienen de strapi, es decir los h2 p etc vienen
+ de alla y nose que viene por eso aplico estilos desde aca */
+.markdown{
+    // estilos al contenedor
+    @apply pt-5;
+
+    h1,h2,h3,h4,p, ul, ol{
+        @apply mb-5;
+    }
+    ul,ol{
+        @apply list-disc;
+        @apply list-inside;
+    }
+}
