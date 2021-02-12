@@ -28,7 +28,7 @@ export default function Header() {
                 {/* my content */}
                 <title>pablodelfante | blog</title>
                 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
-                <link rel="shortcut icon" href="/favicon.ico" />
+                <link rel="shortcut icon" href="/favicon.svg" />
             </Head>
 
             <header className='px-10 md:px-72 | sticky top-0 bg-white shadow-sm'>
