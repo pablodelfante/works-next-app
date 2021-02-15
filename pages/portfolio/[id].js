@@ -8,10 +8,10 @@ import Markdown from 'markdown-to-jsx';
 
 export default function Work({ work }) {
 
-    const { title, description, content, tecnologies, url_github, url_image, updatedAt } = work;
+    const { title, description, content, tecnologies, url_github, url_image, updatedAt, image } = work;
     const dateUpdate = moment(updatedAt).locale('es').format('LLL');
 
-
+    
     return (
         <Layout>
             <article className='py-14'>
@@ -19,7 +19,7 @@ export default function Work({ work }) {
                 <h2 className='mb-5'>{title}</h2>
                 <time className='text-gray-500 block mb-2 font-light border-b'>Actualizado: {dateUpdate}</time>
                 <p className='mb-5'>{description}</p>
-                <img src={url_image}></img>
+                <img src={url_image ? url_image : image ? image.url : 'null'}></img>
 
                 {/* MARKDOWN */}
                 <Markdown className={style.markdown}>
