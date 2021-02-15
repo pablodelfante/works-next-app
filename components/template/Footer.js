@@ -6,7 +6,7 @@ export default function Footer() {
     const year = date.getFullYear();
 
     return (
-            <footer className={style.prueba} className='py-10 px-10 md:px-72'>
+            <footer className={style.prueba} className='py-10 px-5 md:px-72'>
                 <ul className='flex flex-col sm:flex-row justify-between'>
                     <li>
                         <Link href='https://github.com/pablodelfante'>
