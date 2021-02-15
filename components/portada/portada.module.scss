@@ -1,0 +1,17 @@
+// relacionado a portada
+.portada{
+    @apply py-10;
+    @apply md:py-24;
+    @apply md:pb-40;
+    @apply md:max-w-sm;
+    
+    svg {
+        width: 2.5rem;
+    }
+    h1,
+    path {
+            @apply text-indigo-500;
+        }
+
+}
+//html:not(.dark) 

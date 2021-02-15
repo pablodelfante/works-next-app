@@ -1,3 +1,9 @@
-.prueba a, .prueba li {
+.footer a, .footer li {
     text-shadow: 1px 1px 0px #d0e1ff;
+   
+}
+.footer{
+    @apply py-10;
+    @apply px-5;
+    @apply md:px-72;
 }

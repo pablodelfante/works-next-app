@@ -19,7 +19,7 @@ export default function Work({ work }) {
                 <h2 className='mb-5'>{title}</h2>
                 <time className='text-gray-500 block mb-2 font-light border-b'>Actualizado: {dateUpdate}</time>
                 <p className='mb-5'>{description}</p>
-                <img src={url_image ? url_image : image ? image.url : 'null'}></img>
+                <img src={url_image ? url_image : image ? image.url : 'null'} alt='<- articulo sin imagen'></img>
 
                 {/* MARKDOWN */}
                 <Markdown className={style.markdown}>
@@ -27,7 +27,7 @@ export default function Work({ work }) {
                 </Markdown>
 
                 {/* Tecnologias*/}
-                <h3 className='mb-5'>Tecnologías usadas</h3>
+                <h4 className='mb-5'>Tecnologías usadas</h4>
                 <ul className='list-disc mb-10'>
                     {tecnologies.map((tecnologie) => (
                         <li>{tecnologie}</li>

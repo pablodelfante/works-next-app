@@ -29,12 +29,13 @@
 // color texto en dark mode
 .dark * {
     @apply text-white;
-    transition: color 1s;
+    transition: color 0.5s 0.2s ease-out;
 }
 .dark {
     header,
     body {
         @apply bg-black;
+        transition: background 0.2s ease-out;
     }
 }
 
@@ -49,8 +50,6 @@ svg {
     display: grid;
     grid-template-rows: auto 1fr auto;
     height: 100vh;
-
-    .portada svg {
-        width: 2.5rem;
-    }
 }
+
+
