@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import Button from './Button.js';
+
+import Button from '../button/Button.js';
 
 export default function About() {
     return (
@@ -17,7 +17,7 @@ export default function About() {
                         Soy un colgado resolviendo problemas, de chico fuí muy observador, ver que caminos tomaban diferentes soluciones,
                         posibilidades... disfruto ser analítico y creativo =D
                     </p>
-                   <Button></Button>
+                   <Button href='/portfolio'>PORTFOLIO</Button>
                 </div>
                 <div className='pointer-events-none'>
                     <img src='https://media.giphy.com/media/xT1Ra7uxTuOssARKda/giphy.gif' alt='sin img' className='h-full'></img>
