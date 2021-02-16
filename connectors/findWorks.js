@@ -12,6 +12,14 @@ export const getWorks = async (_id) => {
        //dependiendo el caso es un array de datos o un objeto con dato especifico
        return data;
     } catch (error) {
+        //al retornar un array vacio ni muestra cosas en portfolio,
+        //y tampoco dará paso a buscar id especifico, corta el error temprano
         console.log(error)
+        return [
+            {
+                title:'No se encontraron datos',
+                description:'te agradezco que me avises +(, pablodelfantexp@gmail.com'
+            }
+        ]
     }
 }
