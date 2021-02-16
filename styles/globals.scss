@@ -11,6 +11,10 @@ img{
     @apply w-full;
     @apply object-cover;
 }
+// tamaño minimo de los svg
+svg {
+    width: 1.5rem;
+}
  
 //@tailwind base;
 @layer base {
@@ -42,11 +46,6 @@ img{
         @apply bg-black;
         transition: background 0.2s ease-out;
     }
-}
-
-// tamaño minimo de los svg
-svg {
-    width: 1.5rem;
 }
 
 // mi contenedor principal
