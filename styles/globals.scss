@@ -7,6 +7,11 @@
     font-family: "Roboto Mono", monospace;
     @apply text-gray-700;
 }
+img{
+    @apply w-full;
+    @apply object-cover;
+}
+ 
 //@tailwind base;
 @layer base {
     h1 {
