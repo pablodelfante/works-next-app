@@ -14,18 +14,19 @@ export default function Header() {
     </svg>;
 
     // estado para el modo dark
-    const [dark, useDark] = useState(false);
+    const [dark, setDark] = useState(false);
     //estado para icono modo dark
-    const [icono, useIcono] = useState(sun);
-
+    const [icono, setIcono] = useState(sun);
+    // const [a, setstate] = useState(initialState)
+// console.log(dark)
     // Funcion modo dark
     const modeDark = () => {
         const html = document.getElementsByTagName('html')[0];
-
+        
         // html
         html.className = !dark ? 'dark' : undefined;
-        if (dark){useIcono(sun)}else{useIcono(moon)}
-        useDark(!dark);
+        if (dark) { setIcono(sun) } else { setIcono(moon) }
+        setDark(!dark);
     }
 
     return (
@@ -35,6 +36,10 @@ export default function Header() {
                 <title>pablodelfante | blog</title>
                 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
                 <link rel="shortcut icon" href="/favicon.svg" />
+
+                {/* font awesome  */}
+                {/* <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous"/> */}
+                
             </Head>
 
             <header className='px-5 md:px-72 | sticky top-0 bg-white shadow-sm'>
