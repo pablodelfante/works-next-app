@@ -4,7 +4,7 @@ import Head from 'next/head'
 import { COLOR_DARK } from '../../utils/constants';
 
 import { useContext } from 'react';
-import DarkContext from '../../contexts/DarkContext';
+import DarkContext from '../../contexts/darkMode/DarkContext';
 
 export default function Header() {
 

@@ -1,12 +1,12 @@
 import "tailwindcss/tailwind.css";
 import '../styles/globals.scss'
-import DarkProvider from '../contexts/DarkProvider';
+import DarkState from '../contexts/darkMode/DarkState';
 
 function MyApp({ Component, pageProps }) {
   return <>
-    <DarkProvider>
+    <DarkState>
       <Component {...pageProps} />
-    </DarkProvider>
+    </DarkState>
   </>
 }
 
