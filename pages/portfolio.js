@@ -16,14 +16,14 @@ export default function Portfolio({ works }) {
         <Layout>
             <Portada titlePortada={titlePortada} iconoPortada={iconPortada} contentPortada={contentPortada} />
 
-            <ul className='container m-auto max-w-lg md:w-8/12'>
+            <ul className='container m-auto w-screen max-w-lg'>
                 {works.map((work) => (
                     <Link href={`/portfolio/${work._id}`} key={work._id}>
                         <a>
                             <li className='mb-10 border-b md:p-8'>
                                 <h3>{work.title}</h3>
                                 <p className='whitespace-pre overflow-ellipsis overflow-hidden'>{work.description}</p>
-                                <time dateTime={fecha}>Publicado: {fecha}
+                                <time dateTime={fecha} className='text-gray-500 block mb-2 font-light'>Publicado: {fecha}
                                 
                                 </time>
                             </li>
