@@ -29,8 +29,8 @@ export default function Work({ work }) {
                 {/* Tecnologias*/}
                 <h4 className='mb-5'>Tecnologías usadas</h4>
                 <ul className='list-disc mb-10'>
-                    {tecnologies.map((tecnologie) => (
-                        <li>{tecnologie}</li>
+                    {tecnologies.map((tecnologie, key) => (
+                        <li key={key}>{tecnologie}</li>
                     ))}
                 </ul>
 
@@ -60,9 +60,9 @@ export async function getStaticPaths() {
     }))
 
     // aqui es obligatorio retornar paths y fallback
+    //paths aqui por estar dentro de {} se transforma a paths:[a,b,c...]
     return {
-        paths:
-            paths, fallback: false
+        paths, fallback: false
     }
 }//fin obtencion de id's
 
