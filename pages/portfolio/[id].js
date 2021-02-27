@@ -7,8 +7,8 @@ import style from './id.module.scss'
 import Markdown from 'markdown-to-jsx';
 
 export default function Work({ work }) {
-
-    const { title, description, content, tecnologies, url_github, url_image, updatedAt, image } = work;
+ 
+    const { title, description, content, tecnologies, url_github, url_deploy, url_image, updatedAt, image } = work;
     const dateUpdate = moment(updatedAt).locale('es').format('LLL');
 
     
@@ -36,6 +36,12 @@ export default function Work({ work }) {
 
                 {/* Link github */}
                 <a href={url_github} target="_blank" className='underline'>LINK github</a>
+                <br/>
+                <br/>
+
+                {/* Link deploy */}
+                {url_deploy ? (<a href={url_deploy} target="_blank" className='underline'>LINK deploy</a>):''}
+                
 
 
             </article>

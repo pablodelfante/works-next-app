@@ -15,7 +15,7 @@ export default function Layout(props) {
             <Header/>
 
             {/* CONTENIDO PRINCIPAL */}
-            <main className='px-5 md:px-72'>
+            <main className='px-5 lg:px-96'>
             {children}
             </main>
 

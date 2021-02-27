@@ -33,7 +33,7 @@ export default function Header() {
 
             </Head>
 
-            <header className='px-5 md:px-72 | sticky top-0 bg-white shadow-sm'>
+            <header className='px-5 lg:px-96 | sticky top-0 bg-white shadow-sm'>
                 <ul className='flex justify-end gap-3 md:gap-10 py-10'>
 
                     <li className='mr-auto'>

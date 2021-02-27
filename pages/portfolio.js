@@ -16,7 +16,7 @@ export default function Portfolio({ works }) {
         <Layout>
             <Portada titlePortada={titlePortada} iconoPortada={iconPortada} contentPortada={contentPortada} />
 
-            <ul className='container m-auto w-screen max-w-lg'>
+            <ul className='container w-screen max-w-lg'>
                 {works.map((work) => (
                     <Link href={`/portfolio/${work._id}`} key={work._id}>
                         <a>
