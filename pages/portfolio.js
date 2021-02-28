@@ -11,7 +11,7 @@ export default function Portfolio({ works }) {
 
     //fecha local
     const fecha = moment(works?.published_at).locale('es').format('LL');
-
+console.log(works)
     return (
         <Layout>
             <Portada titlePortada={titlePortada} iconoPortada={iconPortada} contentPortada={contentPortada} />
@@ -25,9 +25,7 @@ export default function Portfolio({ works }) {
                             <li className='mb-10 border-b md:p-8'>
                                 <h3>{work.title}</h3>
                                 <p className='whitespace-pre overflow-ellipsis overflow-hidden'>{work.description}</p>
-                                <time dateTime={fecha} className='text-gray-500 block mb-2 font-light'>Publicado: {fecha}
-
-                                </time>
+                                <time dateTime={fecha} className='text-gray-500 block mb-2 font-light'>Publicado: {fecha}</time>
                             </li>
                         </a>
                     </Link>
