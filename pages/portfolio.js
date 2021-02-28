@@ -10,21 +10,23 @@ export default function Portfolio({ works }) {
     const { titlePortada, iconPortada, contentPortada } = CONTENT_PORTADA.portfolio;
 
     //fecha local
-    const fecha = moment(works.published_at).locale('es').format('LL');
+    const fecha = moment(works?.published_at).locale('es').format('LL');
 
     return (
         <Layout>
             <Portada titlePortada={titlePortada} iconoPortada={iconPortada} contentPortada={contentPortada} />
 
             <ul className='container w-screen max-w-lg'>
-                {works.map((work) => (
+                {/* si no hay works */}
+                {!works?<em>UPS! no se encontraron trabajos =(</em>:''}
+                {works?.map((work) => (
                     <Link href={`/portfolio/${work._id}`} key={work._id}>
                         <a>
                             <li className='mb-10 border-b md:p-8'>
                                 <h3>{work.title}</h3>
                                 <p className='whitespace-pre overflow-ellipsis overflow-hidden'>{work.description}</p>
                                 <time dateTime={fecha} className='text-gray-500 block mb-2 font-light'>Publicado: {fecha}
-                                
+
                                 </time>
                             </li>
                         </a>
@@ -43,10 +45,17 @@ export async function getStaticProps(context) {
 
     // getWorks(query); la query es opcional
     const res = await getWorks();
-    const works = await JSON.parse(JSON.stringify(res));
-    return {
-        props: {
-            works
+    if (res) {
+        const works = await JSON.parse(JSON.stringify(res));
+        return {
+            props: {
+                works
+            }
         }
+    } else {
+        // regreso un objeto res como nullo
+        const works = {res}
+        return {props: works}
     }
+
 }

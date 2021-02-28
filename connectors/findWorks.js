@@ -13,13 +13,7 @@ export const getWorks = async (_id) => {
        return data;
     } catch (error) {
         //retornar esto falso me sirve para pruebas mias cuando no tengo conecion
-        console.log(error)
-        return [
-            {
-                _id:345345,
-                title:'No se encontraron datos',
-                description:'te agradezco que me avises +(, pablodelfantexp@gmail.com'
-            }
-        ]
+        console.log({getWorks_dice:error.message})
+        return null
     }
 }

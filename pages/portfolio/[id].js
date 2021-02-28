@@ -7,11 +7,11 @@ import style from './id.module.scss'
 import Markdown from 'markdown-to-jsx';
 
 export default function Work({ work }) {
- 
+
     const { title, description, content, tecnologies, url_github, url_deploy, url_image, updatedAt, image } = work;
     const dateUpdate = moment(updatedAt).locale('es').format('LLL');
 
-    
+
     return (
         <Layout>
             <article className='py-14'>
@@ -36,12 +36,12 @@ export default function Work({ work }) {
 
                 {/* Link github */}
                 <a href={url_github} target="_blank" className='underline'>LINK github</a>
-                <br/>
-                <br/>
+                <br />
+                <br />
 
                 {/* Link deploy */}
-                {url_deploy ? (<a href={url_deploy} target="_blank" className='underline'>LINK deploy</a>):''}
-                
+                {url_deploy ? (<a href={url_deploy} target="_blank" className='underline'>LINK deploy</a>) : ''}
+
 
 
             </article>
@@ -55,14 +55,20 @@ export async function getStaticPaths() {
 
     // obtener las id para pre renderizar
     // retorna un array que contienen objetos asi: {params: {id: id}}
-    const paths = works.map((work) => ({
+    const paths = works?.map((work) => ({
         params: { id: work?.id },
     }))
 
     // aqui es obligatorio retornar paths y fallback
     //paths aqui por estar dentro de {} se transforma a paths:[a,b,c...]
-    return {
-        paths, fallback: false
+    if (paths) {
+        return {
+            paths, fallback: false
+        }
+    } else {
+        return {
+            paths: [], fallback: false
+        }
     }
 }//fin obtencion de id's
 
