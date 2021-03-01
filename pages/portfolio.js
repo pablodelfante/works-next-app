@@ -11,7 +11,7 @@ export default function Portfolio({ works }) {
 
     //fecha local
     const fecha = moment(works?.published_at).locale('es').format('LL');
-console.log(works)
+
     return (
         <Layout>
             <Portada titlePortada={titlePortada} iconoPortada={iconPortada} contentPortada={contentPortada} />

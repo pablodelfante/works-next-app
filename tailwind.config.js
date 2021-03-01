@@ -1,7 +1,7 @@
 module.exports = {
   purge: {
     // enabled: process.env.PURGUE_CSS || false,
-    enabled: true,
+    enabled: process.env.PURGUE_CSS || false,
     content: ['./**/*.js'],
   },
   darkMode: 'class', // or 'media' or 'class'
