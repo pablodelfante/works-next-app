@@ -32,8 +32,10 @@ export default function Work({ work }) {
                     //como se comporta la imagen dentro de su propio contenedor
                     objectFit='contain'
                     //obligatorios, no hacen mucho cuando layouyt responsive
-                    width={0}
-                    height={0}
+                    //en este caso use 16:9 para darle cierta proporción
+                    width={16}
+                    height={9}
+                    quality={100}
                 />
 
                 {/* MARKDOWN */}

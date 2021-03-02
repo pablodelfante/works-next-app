@@ -1,0 +1,9 @@
+.bgWrap {
+    width: 100%;
+    height: -webkit-fill-available;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: opacity(0.2);
+}
