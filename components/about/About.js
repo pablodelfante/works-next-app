@@ -3,7 +3,7 @@ import Button from '../button/Button.js';
 
 export default function About() {
     return (
-        <>
+        <section>
             <hr className='mb-20' />
             <h3 className='mb-5'>Acerca de mi</h3>
 
@@ -17,12 +17,28 @@ export default function About() {
                         Soy un colgado resolviendo problemas, de chico fuí muy observador, ver que caminos tomaban diferentes soluciones,
                         posibilidades... disfruto ser analítico y creativo =D
                     </p>
-                   <Button href='/portfolio'>PORTFOLIO</Button>
+                    {/* botones */}
+                    <div className='grid 2xl:grid-flow-col items-start place-content-start gap-5'>
+                        <Button href='/portfolio'>PORTFOLIO</Button>
+                        <p>o como hice esta web</p>
+                        <Button href='./portfolio/6025b8ae31c60c396885113c'>VER</Button>
+                    </div>
+
                 </div>
                 <div className='pointer-events-none'>
                     <img src='https://media.giphy.com/media/xT1Ra7uxTuOssARKda/giphy.gif' alt='sin img' className='h-full'></img>
                 </div>
             </div>
-        </>
+
+            <h3 className='mb-5'>Acerca de mi</h3>
+            <div className=''>
+                <p className='mb-5'>
+                    Soy Pablo! soy diseñador gráfico, estudio diseño gráfico web, y soy apasionado por la tecnología,
+                    desde pequeño he sido muy curioso, activo, me gusta compartir, aprender, escucuchar, ayudar y conocer gente.
+                    </p>
+                <Button href='/portfolio'>VER</Button>
+            </div>
+
+        </section>
     )
 }
