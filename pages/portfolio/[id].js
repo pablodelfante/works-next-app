@@ -3,6 +3,7 @@ import { getWorks } from '../../connectors/findWorks';
 import moment from 'moment';
 //const fecha = moment(work.createdAt).locale('es').format('LLL');// 11 de febrero de 2021 20:47
 import style from './id.module.scss'
+import Image from 'next/image';
 
 import Markdown from 'markdown-to-jsx';
 
@@ -10,16 +11,30 @@ export default function Work({ work }) {
 
     const { title, description, content, tecnologies, url_github, url_deploy, url_image, updatedAt, image } = work;
     const dateUpdate = moment(updatedAt).locale('es').format('LLL');
+    console.log(work)
 
 
     return (
         <Layout>
-            <article className='py-14'>
+            <article className='py-14 xl:w-8/12 mx-auto'>
                 {/* Titulo descripcion e imagen */}
                 <h2 className='mb-5'>{title}</h2>
                 <time className='text-gray-500 block mb-2 font-light border-b'>Actualizado: {dateUpdate}</time>
                 <p className='mb-5'>{description}</p>
-                <img src={url_image ? url_image : image ? image?.url : 'null'} alt='<- articulo sin imagen'></img>
+
+                {/* <img src={url_image ? url_image : image ? image?.url : 'null'} alt='<- articulo sin imagen'></img> */}
+                {/* <img src={url_image ? url_image : image ? image.formats.large.url : 'null'} alt='<- articulo sin imagen'></img> */}
+                <Image
+                    src={url_image ? url_image : image ? image.url : 'null'}
+                    alt='sin imagen optimizada'
+                    //define como se comporta en el layout
+                    layout="responsive"
+                    //como se comporta la imagen dentro de su propio contenedor
+                    objectFit='contain'
+                    //obligatorios, no hacen mucho cuando layouyt responsive
+                    width={0}
+                    height={0}
+                />
 
                 {/* MARKDOWN */}
                 <Markdown className={style.markdown}>

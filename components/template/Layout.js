@@ -6,8 +6,8 @@ import Footer from './Footer'
 
 export default function Layout(props) {
     const {children} = props;
-    const classPersonalBlog = `personal-blog px-5 lg:px-80`;
-    const classMain = 'xl:container xl:mx-auto xl:w-8/12 2xl:w-5/12';
+    const classPersonalBlog = `personal-blog px-4 lg:px-80`;
+    const classMain = 'xl:container';
 
     return (
         <div 

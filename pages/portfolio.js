@@ -9,8 +9,11 @@ import moment from 'moment';
 export default function Portfolio({ works }) {
     const { titlePortada, iconPortada, contentPortada } = CONTENT_PORTADA.portfolio;
 
-    //fecha local
+    //fecha de publicación
     const fecha = moment(works?.published_at).locale('es').format('LL');
+    //le pasas una fecha y te regresa esa fecha de forma local y en español
+    const dateConvert = (date) => moment(date).locale('es').format('LL');
+    
 
     return (
         <Layout>
@@ -18,14 +21,14 @@ export default function Portfolio({ works }) {
 
             <ul className='container w-screen max-w-lg'>
                 {/* si no hay works */}
-                {!works?<em>UPS! no se encontraron trabajos =(</em>:''}
+                {!works ? <em>UPS! no se encontraron trabajos =(</em> : ''}
                 {works?.map((work) => (
                     <Link href={`/portfolio/${work._id}`} key={work._id}>
                         <a>
                             <li className='mb-10 border-b md:p-8'>
-                                <h3>{work.title}</h3>
-                                <p className='whitespace-pre overflow-ellipsis overflow-hidden'>{work.description}</p>
-                                <time dateTime={fecha} className='text-gray-500 block mb-2 font-light'>Publicado: {fecha}</time>
+                                <h3>{work?.title}</h3>
+                                <p className='whitespace-pre overflow-ellipsis overflow-hidden'>{work?.description}</p>
+                                <time dateTime={dateConvert(work?.published_at)} className='text-gray-500 block mb-2 font-light'>Publicado: {dateConvert(work?.published_at)}</time>
                             </li>
                         </a>
                     </Link>
@@ -52,8 +55,8 @@ export async function getStaticProps(context) {
         }
     } else {
         // regreso un objeto res como nullo
-        const works = {res}
-        return {props: works}
+        const works = { res }
+        return { props: works }
     }
 
 }
