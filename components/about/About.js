@@ -1,10 +1,13 @@
 
 import Button from '../button/Button.js';
 import Image from 'next/image';
+import { contentTechnologies } from '../../utils/contentTechnologies';
 
 export default function About() {
+    console.log(contentTechnologies);
     return (
         <>
+            {/* acerca de mi general */}
             <section>
                 <hr className='mb-20' />
                 <h3 className='mb-5'>Acerca de mi</h3>
@@ -45,31 +48,30 @@ export default function About() {
 
 
             {/* contenedor con barras */}
-            <section className='w-full lg:w-5/12 grid gap-y-5 my-5'>
+            <section className='w-full lg:w-8/12 my-20'>
+                {/* titulo */}
+                <h3>Tecnologías</h3>
+                <em className='font-extralight'>grafican cuán cómodo me siento con la tecnología</em>
 
-                <div>
-                    <h3>Tecnologías</h3>
-                    <em className='font-extralight'>grafican cuán cómodo me siento</em>
-                </div>
+                {/* lista de tecnologias */}
+                <ul className='grid gap-y-5 mt-5'>
+                    {contentTechnologies.map((item, key) => {
+                        const { title, percentage } = item;
+                        const percentageOf12 = Math.round(12 * percentage / 100);
+                        const result = percentageOf12 < 1 ? 1 : percentageOf12 > 11 ? 11 : percentageOf12;
+                        return (
+                            <li key={key}>
+                                <p className='font-thin'>{title}</p>
+                                <div class="shadow w-full bg-grey-light">
+                                    <div class={`bg-indigo-700 text-xs leading-none py-1 text-center text-white w-${result}/12`}>
+                                        {percentage}%
+                                    </div>
+                                </div>
 
-                <div>
-                    <em>Titulo de ejemplo</em>
-                    <div className="shadow w-full bg-grey-light">
-                        <div className="bg-indigo-700 text-xs leading-none py-1 text-center text-white w-9/12">90%</div>
-                    </div>
-                </div>
-                <div>
-                    <em>Titulo de ejemplo</em>
-                    <div className="shadow w-full bg-grey-light">
-                        <div className="bg-indigo-700 text-xs leading-none py-1 text-center text-white w-5/12">50%</div>
-                    </div>
-                </div>
-                <div>
-                    <em>Titulo de ejemplo</em>
-                    <div className="shadow w-full bg-grey-light">
-                        <div className="bg-indigo-700 text-xs leading-none py-1 text-center text-white w-6/12">60%</div>
-                    </div>
-                </div>
+                            </li>
+                        )
+                    })}
+                </ul>
             </section>
         </>
 
