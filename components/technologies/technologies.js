@@ -5,33 +5,33 @@ import { useState } from 'react';
 import style from './technologies.module.scss';
 
 export default function technologies() {
-    // creo estado para mantener section
-    const [section, setSection] = useState();
-
     // escucha para borrar clase al pasar por arriba
-    const handler = (e) => {
-        section.classList.remove(`${style.technologiesStartPosition}`);
-        console.log(section)
-    }
+    const [classTechnologies, setClassTechnologies] = useState(style.technologiesStartPosition);
+    const [node, setNode] = useState({ value: null });
+
 
     useEffect(() => {
         // selecciono nodo
-        const node = document.querySelector(`.${style.technologiesStartPosition}`);
-        // seteo nodo como estado
-        setSection(node);
-        // agrego eventos
-        section.addEventListener('mouseenter', handler);
-        // limpieza o sanitización
+        node.value = document.querySelector(`.${classTechnologies}`);
+
+        // remueve clase y evento
+        const handler = () => {
+            node.value.classList.remove(`${classTechnologies}`);
+            node?.value?.removeEventListener('mouseenter', handler);
+        }
+        // agregar evento
+        node?.value?.addEventListener('mouseenter', handler);
+
+        // elminar evento
         return () => {
-            section.removeEventListener('mouseenter', handler);
+            node?.value?.removeEventListener('mouseenter', handler);
         }
     }, [])
-
 
     return (
         <>
             {/* contenedor con barras */}
-            <section className={`${style.technologiesStartPosition} w-full lg:w-6/12 my-20 group`}>
+            <section className={`${classTechnologies} technologies w-full lg:w-6/12 my-20 group`}>
                 {/* titulo */}
                 <h3>Tecnologías</h3>
                 <em className='font-extralight'>grafican cuán cómodo me siento con la tecnología</em>
@@ -46,8 +46,8 @@ export default function technologies() {
                         return (
                             <li key={key}>
                                 <p className='font-thin'>{title}</p>
-                                <div class="shadow w-full bg-grey-light">
-                                    <div class={`bg-indigo-600 text-xs leading-none py-1 text-center text-white w-${result}`}>
+                                <div className="shadow w-full bg-grey-light">
+                                    <div className={`bg-indigo-600 text-xs leading-none py-1 text-center text-white transition-all duration-1000 delay-1000 w-${result}`}>
                                         {percentage}%
                                     </div>
                                 </div>
