@@ -5,7 +5,7 @@ export default function Portada({ titlePortada, iconoPortada, contentPortada }) 
     return (
         <div className={style.portada}>
             <div className='flex pb-4'>
-                <h1>{titlePortada}</h1>
+                <h1 className='font-medium'>{titlePortada}</h1>
                 {iconoPortada}
             </div>
 

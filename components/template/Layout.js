@@ -20,7 +20,7 @@ export default function Layout(props) {
         }
 
         router.events.on('routeChangeStart', handler);
-        router.events.on('routeChangeComplete', () => nprogress.done());
+        router.events.on('routeChangeComplete', (url) => nprogress.done());
 
         return () => {
             router.events.off('routeChangeStart', handler);
