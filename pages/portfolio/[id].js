@@ -11,7 +11,6 @@ export default function Work({ work }) {
 
     const { title, description, content, tecnologies, url_github, url_deploy, url_image, updatedAt, image } = work;
     const dateUpdate = moment(updatedAt).locale('es').format('LLL');
-    console.log(work)
 
 
     return (

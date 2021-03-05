@@ -29,11 +29,12 @@ export default function Portfolio({ works }) {
                                 {/* agregar imagen aca */}
                                 <div className='mb-5 opacity-90'>
                                     <Image
-                                        src={work?.image ? work.image.formats.small.url : 'https://blog.aulaformativa.com/wp-content/uploads/2016/08/ventajas-optimizacion-de-codigo-codigo-fuente-limpio.jpg'}
+                                        src={work?.image ? work.image.formats.medium.url : 'https://blog.aulaformativa.com/wp-content/uploads/2016/08/ventajas-optimizacion-de-codigo-codigo-fuente-limpio.jpg'}
                                         alt=''
                                         layout='responsive'
                                         objectFit="cover"
                                         objectPosition='top'
+                                        // 16/9 es el formato de origen de la imagen
                                         width={3}
                                         height={1}
                                         quality={100}
