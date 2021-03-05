@@ -11,6 +11,7 @@ export default function Home() {
     <>
       <Layout>
         <Portada titlePortada={titlePortada} iconoPortada={iconPortada} contentPortada={contentPortada} />
+        <hr/>
         <About></About>
         <Technologies/>
       </Layout>

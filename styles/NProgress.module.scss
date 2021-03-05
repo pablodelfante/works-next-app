@@ -1,12 +1,12 @@
-$color-NProgress: rgba(129, 140, 248);
-// $color-NProgress: red;
 
 // modificación de NProgress
 #nprogress .bar{
-    background-color: $color-NProgress;
+    @apply bg-primary;
 }
 
 #nprogress .spinner-icon {
-    border-top-color: $color-NProgress;
-    border-left-color: $color-NProgress;
+    display: none;
+    // border-top-color: $border-indigo-600;
+    // border-left-color: $border-indigo-600;
+    @apply border-primary;
   }
