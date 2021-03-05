@@ -7,24 +7,22 @@ import style from './technologies.module.scss';
 export default function technologies() {
     // escucha para borrar clase al pasar por arriba
     const [classTechnologies, setClassTechnologies] = useState(style.technologiesStartPosition);
-    const [node, setNode] = useState({ value: null });
-
 
     useEffect(() => {
-        // selecciono nodo
-        node.value = document.querySelector(`.${classTechnologies}`);
-
-        // remueve clase y evento
+        const node2 = document.querySelector('.technologies');
         const handler = () => {
-            node.value.classList.remove(`${classTechnologies}`);
-            node?.value?.removeEventListener('mouseenter', handler);
+            // top del elemento respecto de la ventana scrolleable
+            const top = node2.getBoundingClientRect().top;
+            if (top < 500 ){
+               node2.classList.remove(`${classTechnologies}`); 
+            } else {
+                node2.classList.add(`${classTechnologies}`);
+            }
         }
-        // agregar evento
-        node?.value?.addEventListener('mouseenter', handler);
-
-        // elminar evento
+        window.addEventListener('scroll', handler);
+        // limpieza
         return () => {
-            node?.value?.removeEventListener('mouseenter', handler);
+            window.removeEventListener('scroll', handler);
         }
     }, [])
 
@@ -47,7 +45,7 @@ export default function technologies() {
                             <li key={key}>
                                 <p className='font-thin'>{title}</p>
                                 <div className="shadow w-full bg-grey-light">
-                                    <div className={`bg-indigo-600 text-xs leading-none py-1 text-center text-white transition-all duration-1000 delay-1000 w-${result}`}>
+                                    <div className={`bg-indigo-600 text-xs leading-none py-1 text-center text-white transition-all duration-1000 delay-300 w-${result}`}>
                                         {percentage}%
                                     </div>
                                 </div>
