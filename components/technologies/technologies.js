@@ -29,10 +29,10 @@ export default function technologies() {
     return (
         <>
             {/* contenedor con barras */}
-            <section className={`${classTechnologies} technologies w-full lg:w-6/12 my-20 group`}>
+            <section className={`${classTechnologies} technologies w-full lg:w-6/12 mb-20`}>
                 {/* titulo */}
                 <h3>Tecnologías</h3>
-                <em className='font-extralight'>grafican cuán cómodo me siento con la tecnología</em>
+                <em className='font-extralight'>Grafican cuán cómodo me siento con la tecnología, en base a mi experiencia</em>
 
                 {/* lista de tecnologias */}
                 <ul className='grid gap-y-5 mt-5'>

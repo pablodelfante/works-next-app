@@ -11,7 +11,7 @@
     @apply pl-5;
     
     svg {
-        width: 2.5rem;
+        @apply w-20;
     }
     h1,
     path {

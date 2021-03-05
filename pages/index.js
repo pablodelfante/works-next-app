@@ -1,6 +1,7 @@
 import Layout from '../components/template';
 import Portada from '../components/portada';
 import About from '../components/about';
+import Technologies from '../components/technologies';
 import { CONTENT_PORTADA } from '../utils/contentPortada';
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
       <Layout>
         <Portada titlePortada={titlePortada} iconoPortada={iconPortada} contentPortada={contentPortada} />
         <About></About>
+        <Technologies/>
       </Layout>
     </>
   )

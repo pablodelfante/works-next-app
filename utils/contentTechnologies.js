@@ -1,7 +1,7 @@
 export const contentTechnologies = [
     {
         title:'JavaScript',
-        percentage:80
+        percentage:85
     },
     {
         title:'CSS',
@@ -9,11 +9,15 @@ export const contentTechnologies = [
     },
     {
         title:'SASS',
-        percentage:70
+        percentage:75
     },
     {
         title:'Next js (esta web)',
-        percentage:52
+        percentage:60
+    },
+    {
+        title:'Strapi (esta web)',
+        percentage:40
     },
     {
         title:'Tailwind (esta web)',
@@ -25,7 +29,7 @@ export const contentTechnologies = [
     },
     {
         title:'Express + Mongoose',
-        percentage:30
+        percentage:40
     },
     {
         title:'Herramientas de prototipado (Figma, XD...)',
