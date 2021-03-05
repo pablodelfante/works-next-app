@@ -41,6 +41,8 @@ export default function technologies() {
                         // calculos de porcentajes
                         const percentageOf12 = Math.round(12 * percentage / 100);
                         const result = percentageOf12 < 1 ? 'w-1/12' : percentageOf12 > 11 ? 'w-full' : `w-${percentageOf12}/12`;
+                        // esto es para que no se purguen estas clases ya que tailwind no se lleva con la concatenación de cadenas ${}
+                        const tailwind = 'w-full w-1/12 w-2/12 w-3/12 w-4/12 w-5/12 w-6/12 w-7/12 w-8/12 w-9/12 w-10/12 w-11/12';
                         return (
                             <li key={key}>
                                 <p className='font-thin'>{title}</p>
