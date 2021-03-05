@@ -43,7 +43,7 @@ export default function technologies() {
     return (
         <>
             {/* contenedor con barras */}
-            <section className={`${classTechnologies} technologies w-fullx lg:w-6/12x mb-40 grid grid-flow-row xl:grid-flow-col gap-10`}>
+            <section className={`w-fullx lg:w-6/12x mb-40 grid grid-flow-row xl:grid-flow-col gap-10`}>
 
                 <figure className='grid grid-flow-row auto-rows-max gap-5 border-l'>
                     <picture className=''>
@@ -72,7 +72,7 @@ export default function technologies() {
                     </figcaption>
 
                 </figure>
-                <div>
+                <div className={`${classTechnologies} technologies`}>
                     {/* titulo */}
                     <h3>Tecnologías</h3>
                     <em className='font-extralight'>Grafican cuán cómodo me siento con la tecnología, en base a mi experiencia</em>
