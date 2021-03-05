@@ -40,12 +40,12 @@ export default function technologies() {
                         const { title, percentage } = item;
                         // calculos de porcentajes
                         const percentageOf12 = Math.round(12 * percentage / 100);
-                        const result = percentageOf12 < 1 ? '1/12' : percentageOf12 > 11 ? 'full' : `${percentageOf12}/12`;
+                        const result = percentageOf12 < 1 ? 'w-1/12' : percentageOf12 > 11 ? 'w-full' : `w-${percentageOf12}/12`;
                         return (
                             <li key={key}>
                                 <p className='font-thin'>{title}</p>
-                                <div className="shadow w-full bg-grey-light">
-                                    <div className={`bg-indigo-600 text-xs leading-none py-1 text-center text-white transition-all duration-1000 delay-300 w-${result}`}>
+                                <div className="shadow w-full bg-grey-light dark:bg-gray-900">
+                                    <div className={`bg-indigo-600 text-xs leading-none py-1 text-center text-white transition-all duration-1000 delay-300 ${result}`}>
                                         {percentage}%
                                     </div>
                                 </div>
