@@ -21,25 +21,29 @@ export default function Work({ work }) {
                 <time className='text-gray-500 block mb-2 font-light border-b'>Actualizado: {dateUpdate}</time>
                 <p className='mb-5'>{description}</p>
 
-                {/* <img src={url_image ? url_image : image ? image?.url : 'null'} alt='<- articulo sin imagen'></img> */}
-                {/* <img src={url_image ? url_image : image ? image.formats.large.url : 'null'} alt='<- articulo sin imagen'></img> */}
-                <Image
-                    src={url_image ? url_image : image ? image.url : 'null'}
-                    alt='sin imagen optimizada'
-                    //define como se comporta en el layout
-                    layout="responsive"
-                    //como se comporta la imagen dentro de su propio contenedor
-                    objectFit='contain'
-                    //obligatorios, no hacen mucho cuando layouyt responsive
-                    //en este caso use 16:9 para darle cierta proporción
-                    width={16}
-                    height={9}
-                    quality={100}
-                />
+                {/* imagen */}
+                <div className='mb-5'>
+                    {/* si una de las imagenes existe retornalas */}
+                    {(url_image || image) && (
+                        <Image
+                            src={url_image ? url_image : image ? image.url : 'null'}
+                            alt='sin imagen optimizada'
+                            //define como se comporta en el layout
+                            layout="responsive"
+                            //como se comporta la imagen dentro de su propio contenedor
+                            objectFit='contain'
+                            //obligatorios, no hacen mucho cuando layouyt responsive
+                            //en este caso use 16:9 para darle cierta proporción
+                            width={16}
+                            height={9}
+                            quality={100}
+                        />
+                    )}
+                </div>
 
                 {/* MARKDOWN */}
                 <Markdown className={style.markdown}>
-                    {content}
+                    {content ? content : ''}
                 </Markdown>
 
                 {/* Tecnologias*/}
@@ -51,7 +55,7 @@ export default function Work({ work }) {
                 </ul>
 
                 {/* Link github */}
-                <a href={url_github} target="_blank" className='underline'>LINK github</a>
+                {url_github ? (<a href={url_github} target="_blank" className='underline'>LINK github</a>) : ''}
                 <br />
                 <br />
 
