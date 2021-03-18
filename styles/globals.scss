@@ -10,6 +10,7 @@
 img{
     @apply w-full;
     @apply object-cover;
+    image-rendering: -webkit-optimize-contrast;
 }
 // tamaño minimo de los svg
 svg {
