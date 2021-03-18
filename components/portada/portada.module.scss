@@ -1,21 +1,20 @@
 // relacionado a portada
 .portada{
     @apply my-10;
-    @apply md:my-24;
-    @apply md:mb-40;
+    @apply md:my-40;
     @apply md:max-w-sm;
 
     // rayita
     @apply border-l-8;
-    @apply border-indigo-400;
+    @apply border-primary;
     @apply pl-5;
     
     svg {
-        width: 2.5rem;
+        @apply w-20;
     }
     h1,
     path {
-            @apply text-indigo-400;
+            @apply text-primary;
         }
 
 }
