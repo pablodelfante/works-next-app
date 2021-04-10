@@ -44,7 +44,7 @@ export default function Portfolio({ works }) {
                                 {/* ------- */}
                                 <div className='md:px-8'>
                                     <h3>{work?.title}</h3>
-                                    <p className='whitespace-pre overflow-ellipsis overflow-hidden'>{work?.description}</p>
+                                    <p className='line-clamp-3'>{work?.description}</p>
                                     <time dateTime={dateConvert(work?.published_at)} className='text-gray-500 block mb-2 font-light'>Publicado: {dateConvert(work?.published_at)}</time>
                                 </div>
                             </li>

@@ -2,7 +2,7 @@ import Header from "./Header";
 import Footer from './Footer'
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
-import nprogress from 'nprogress';
+import NProgress from 'nprogress';
 
 
 
@@ -16,11 +16,11 @@ export default function Layout(props) {
 
     useEffect(() => {
         const handler = (url) => {
-            nprogress.start();
+            NProgress.start();
         }
 
         router.events.on('routeChangeStart', handler);
-        router.events.on('routeChangeComplete', (url) => nprogress.done());
+        router.events.on('routeChangeComplete', (url) => NProgress.done());
 
         return () => {
             router.events.off('routeChangeStart', handler);
