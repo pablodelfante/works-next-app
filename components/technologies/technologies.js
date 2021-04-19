@@ -14,7 +14,7 @@ export default function technologies() {
     useEffect(() => {
         const options = { 
             reset: true,
-            delay: 200,
+            delay: 300,
             rotate: {
                 x: 0,
                 y:0,
@@ -38,7 +38,7 @@ export default function technologies() {
     return (
         <>
             {/* contenedor */}
-            <section className={`w-full mb-40 grid grid-flow-row xl:grid-cols-2 gap-10`}>
+            <section className={`w-full mb-40 grid grid-flow-row xl:grid-cols-2 gap-10 overflow-hidden sm:overflow-visible`}>
 
                 <figure className='grid grid-flow-row auto-rows-max gap-5 border-l'>
                     <picture className=''>
