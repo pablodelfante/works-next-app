@@ -34,9 +34,12 @@ export default function Header() {
                 {/* NProgress */}
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.css"/>
 
+                {/* ScrollReveal */}
+                <script src="https://unpkg.com/scrollreveal"></script>
+
             </Head>
 
-            <header className='sticky top-0 bg-white shadow-sm'>
+            <header className='sticky top-0 bg-white border border-l-0 border-r-0'>
                 <ul className='flex justify-end gap-3 md:gap-10 py-10'>
 
                     <li className='mr-auto'>
