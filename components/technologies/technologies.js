@@ -70,7 +70,7 @@ export default function technologies() {
 
                 {/* TECHNOLOGIES */}
                 <div className={`${style.customShadow} lapabla-reveal`}>
-                    <div className='bg-white grid gap-2 p-8'>
+                    <div className='bg-white dark:bg-black grid gap-2 p-8'>
                         {/* titulo */}
                         <h3>Tecnologías</h3>
                         <em className='font-extralight'>Proyección</em>
