@@ -58,6 +58,10 @@ export default function technologies() {
 
                     </picture>
                     <figcaption className='pl-8 pb-8'>
+                        {/* titulo */}
+                        <h3>Sobre mi</h3>
+                        <em className='font-extralight block mb-5'>...quién soy?</em>
+
                         <p className='mb-5'>
                             Soy Pablo! diseñador gráfico, estudiante de gráfico web, apasionado por la tecnología, desde pequeño curioso, activo, me gusta compartir, aprender, escucuchar, ayudar y conocer gente.
                             </p>
