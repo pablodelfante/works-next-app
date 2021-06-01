@@ -9,7 +9,7 @@ import Markdown from 'markdown-to-jsx';
 
 export default function Work({ work }) {
 
-    const { title, description, content, tecnologies, url_github, url_deploy, url_image, updatedAt, image } = work;
+    const { title, description, content, tecnologies, url_github, url_deploy, url_image, url_video, updatedAt, image } = work;
     const dateUpdate = moment(updatedAt).locale('es').format('LLL');
 
 
@@ -18,13 +18,30 @@ export default function Work({ work }) {
             <article className='py-14 xl:w-8/12 mx-auto'>
                 {/* Titulo descripcion e imagen */}
                 <h2 className='mb-5'>{title}</h2>
-                <time className='text-gray-500 block mb-2 font-light border-b'>Actualizado: {dateUpdate}</time>
+                <time className='text-gray-500 block font-light border-b mb-10'>Actualizado: {dateUpdate}</time>
+
+                {/* Tecnologias*/}
+                {/* <h4 className=''>Tecnologías usadas</h4> */}
+                <ul className='grid grid-flow-col justify-start gap-3 mb-0.5'>
+                    <li className="font-bold">Tecnologías usadas</li>
+                    {tecnologies.map((tecnologie, key) => (
+                        <li className="text-primary" key={key}>{tecnologie}</li>
+                    ))}
+                </ul>
+
+                {/* description of page */}
                 <p className='mb-5'>{description}</p>
 
+
+                {/* SI existe un video y la imagen está seteada, mostrame SOLO el video */}
+
+
                 {/* imagen */}
-                <div className='mb-5'>
-                    {/* si una de las imagenes existe retornalas */}
-                    {(url_image || image) && (
+                {!url_video ?  //si video no existe intenta mostrarme la imagen
+                    
+                    // si una de las imagenes existe retornalas
+                    (url_image || image) && (
+                        <div className='mb-5'>
                         <Image
                             src={url_image ? url_image : image ? image.url : 'null'}
                             alt='sin imagen optimizada'
@@ -38,21 +55,27 @@ export default function Work({ work }) {
                             height={9}
                             quality={100}
                         />
-                    )}
-                </div>
+                         </div>
+                    )
+                    : ''
+                }
+               
+
+                {/* video */}
+                {url_video && (
+                    // este posicionamiento y padding son para mantener la relacion aspecto del video (16/9)
+                    <div className="relative" style={{ paddingBottom: "calc(9/16*100%);" }}>
+                        <iframe className="absolute w-full h-full" src={url_video} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                )}
+
 
                 {/* MARKDOWN */}
+                {/* este es un campo extra cuando desee agregar contenido */}
                 <Markdown className={style.markdown}>
                     {content ? content : ''}
                 </Markdown>
 
-                {/* Tecnologias*/}
-                <h4 className='mb-5'>Tecnologías usadas</h4>
-                <ul className='list-disc mb-10'>
-                    {tecnologies.map((tecnologie, key) => (
-                        <li key={key}>{tecnologie}</li>
-                    ))}
-                </ul>
 
                 {/* Link github */}
                 {url_github ? (<a href={url_github} target="_blank" className='underline'>LINK github</a>) : ''}
@@ -71,16 +94,17 @@ export default function Work({ work }) {
 
 export async function getStaticPaths() {
 
+    // obtener works
     const works = await getWorks();
 
     // obtener las id para pre renderizar
-    // retorna un array que contienen objetos asi: {params: {id: id}}
+    // retorna un array[] que contienen objetos asi: {params: {id: id}}
     const paths = works?.map((work) => ({
         params: { id: work?.id },
     }))
 
     // aqui es obligatorio retornar paths y fallback
-    //paths aqui por estar dentro de {} se transforma a paths:[a,b,c...]
+    // paths aqui por estar dentro de {} se transforma a paths:[a,b,c...]
     if (paths) {
         return {
             paths, fallback: false

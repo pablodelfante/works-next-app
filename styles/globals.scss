@@ -8,6 +8,7 @@
     font-family: "Roboto Mono", monospace;
     @apply text-gray-700;
 }
+// general de imagenes
 img{
     @apply w-full;
     @apply object-cover;
@@ -42,6 +43,7 @@ svg {
     @apply text-white;
     transition: color 0.5s 0.2s ease-out;
 }
+// cuando este dark pon negro estos elementos
 .dark {
     header,
     body {

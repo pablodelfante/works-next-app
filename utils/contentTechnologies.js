@@ -1,4 +1,4 @@
-export const contentTechnologies = [
+/* export const contentTechnologies = [
     {
         title:'JavaScript',
         percentage:85
@@ -43,4 +43,4 @@ export const contentTechnologies = [
         title:'PHP',
         percentage:5
     }
-];
+]; */

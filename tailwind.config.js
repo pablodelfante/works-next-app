@@ -1,6 +1,7 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
+  mode: 'jit',
   purge: {
     // enabled: process.env.PURGUE_CSS || false,
     enabled: process.env.PURGUE_CSS || false,
