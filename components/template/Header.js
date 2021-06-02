@@ -8,7 +8,7 @@ import DarkContext from '../../contexts/darkMode/DarkContext';
 
 export default function Header() {
 
-    const {dark,setDark,icono,setIcono,sun,moon} = useContext(DarkContext);
+    const { dark, setDark, icono, setIcono, sun, moon } = useContext(DarkContext);
 
     // Funcion modo dark
     const modeDark = () => {
@@ -23,18 +23,21 @@ export default function Header() {
     return (
         <>
             <Head>
+                {/* meta description for accesibility */}
+                <meta name="description" content="Web portfolio, presentation of work and projects. In order to display and provide a personal web image."></meta>
+
                 {/* my content */}
                 <title>pablodelfante | blog</title>
                 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
-                
+
                 {/* icono pagina */}
                 <link rel="shortcut icon" href="/lapabla-ico.ico" />
 
                 {/* font awesome  */}
                 {/* <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous"/> */}
-                
+
                 {/* NProgress */}
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.css"/>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.css" />
 
                 {/* ScrollReveal */}
                 <script src="https://unpkg.com/scrollreveal"></script>
