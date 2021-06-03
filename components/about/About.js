@@ -19,7 +19,7 @@ export default function About() {
                         </p>
 
                         <p className='mb-5'>¿como hice esta web?</p>
-                        <Button href='portfolio/6025b8ae31c60c396885113c'>VER</Button>
+                        <Button href='/portfolio/6025b8ae31c60c396885113c'>VER</Button>
 
                     </div>
                     <div className='pointer-events-none'>

@@ -22,10 +22,10 @@ export default function Work({ work }) {
 
                 {/* Tecnologias*/}
                 {/* <h4 className=''>Tecnologías usadas</h4> */}
-                <ul className='grid grid-flow-col justify-start gap-3 mb-0.5'>
+                <ul className='flex flex-wrap gap-x-3 mb-0.5'>
                     <li className="font-bold">Tecnologías usadas</li>
                     {tecnologies.map((tecnologie, key) => (
-                        <li className="text-primary" key={key}>{tecnologie}</li>
+                        <li className="text-primary dark:text-primary" key={key}>{tecnologie}</li>
                     ))}
                 </ul>
 
@@ -38,35 +38,38 @@ export default function Work({ work }) {
 
                 {/* imagen */}
                 {!url_video ?  //si video no existe intenta mostrarme la imagen
-                    
+
                     // si una de las imagenes existe retornalas
                     (url_image || image) && (
                         <div className='mb-5'>
-                        <Image
-                            src={url_image ? url_image : image ? image.url : 'null'}
-                            alt='sin imagen optimizada'
-                            //define como se comporta en el layout
-                            layout="responsive"
-                            //como se comporta la imagen dentro de su propio contenedor
-                            objectFit='contain'
-                            //obligatorios, no hacen mucho cuando layouyt responsive
-                            //en este caso use 16:9 para darle cierta proporción
-                            width={16}
-                            height={9}
-                            quality={100}
-                        />
-                         </div>
+                            <Image
+                                src={url_image ? url_image : image ? image.url : 'null'}
+                                alt='sin imagen optimizada'
+                                //define como se comporta en el layout
+                                layout="responsive"
+                                //como se comporta la imagen dentro de su propio contenedor
+                                objectFit='contain'
+                                //obligatorios, no hacen mucho cuando layouyt responsive
+                                //en este caso use 16:9 para darle cierta proporción
+                                width={16}
+                                height={9}
+                                quality={100}
+                            />
+                        </div>
                     )
                     : ''
                 }
-               
+
 
                 {/* video */}
                 {url_video && (
                     // este posicionamiento y padding son para mantener la relacion aspecto del video (16/9)
+                    <>
                     <div className="relative" style={{ paddingBottom: "calc(9/16*100%);" }}>
-                        <iframe className="absolute w-full h-full" src={url_video} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
+                            <iframe className="absolute w-full h-full" src={url_video} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                        </div>
+                        <p className="mb-5 mt-1 font-light text-sm text-opacity-80">* Si no ves el video puedes intentar recargar la web, o si tienes adblock deshabilitarlo...</p>
+                    </>
                 )}
 
 
