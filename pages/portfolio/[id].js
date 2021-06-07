@@ -65,10 +65,9 @@ export default function Work({ work }) {
                 {url_video && (
                     // este posicionamiento y padding son para mantener la relacion aspecto del video (16/9)
                     <>
-                    <div className="" style={{ aspectRatio: "16/9" }}>
+                        <div className="my-5" style={{ aspectRatio: "16/9" }}>
                             <iframe className="w-full h-full" src={url_video} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
                         </div>
-                        <p className="mb-5 mt-1 font-light text-sm text-opacity-80">* Si no ves el video intenta recargar la web, o si tienes adblock deshabilitarlo...</p>
                     </>
                 )}
 

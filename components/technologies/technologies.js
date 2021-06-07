@@ -1,5 +1,4 @@
 
-import { contentTechnologies } from '../../utils/contentTechnologies';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import style from './technologies.module.scss';
@@ -12,16 +11,16 @@ export default function technologies() {
 
 
     useEffect(() => {
-        const options = { 
+        const options = {
             reset: true,
             delay: 300,
             rotate: {
                 x: 0,
-                y:0,
-                z:-45
+                y: 0,
+                z: -45
             }
         };
-        ScrollReveal().reveal('.lapabla-reveal', options );
+        ScrollReveal().reveal('.lapabla-reveal', options);
     }, [])
 
     // manejador de github api
@@ -81,13 +80,13 @@ export default function technologies() {
 
                         {/* lista de tecnologias */}
                         <div className='grid gap-5'>
-                        <p >
-                        Me atraen pilas como la mern o jam, lo que no descarta ampliar mis conocimientos en cualquier otra o expandirme más en formas como UX UI!
+                            <p >
+                                Me atraen pilas como la mern o jam, lo que no descarta ampliar mis conocimientos en cualquier otra o expandirme más en formas como UX UI!
                         </p>
-                        <p >
-                        Además de lo estrictamente tecnológico, creo en las muchas herramientas e ingenio para mejorar experiencias de usuarios crear sistemas que mejoren la vida de las personas, me emocionan desafíos, aprender, crecer y con ello ayudar a la gente!
+                            <p >
+                                Además de lo estrictamente tecnológico, creo en las muchas herramientas e ingenio para mejorar experiencias de usuarios crear sistemas que mejoren la vida de las personas, me emocionan desafíos, aprender, crecer y con ello ayudar a la gente!
                         </p>
-                    </div>
+                        </div>
                     </div>
                 </div>
             </section>
