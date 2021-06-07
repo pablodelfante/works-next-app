@@ -1,16 +1,16 @@
 import Layout from '../../components/template';
 import { getWorks } from '../../connectors/findWorks';
-import moment from 'moment';
 //const fecha = moment(work.createdAt).locale('es').format('LLL');// 11 de febrero de 2021 20:47
 import style from './id.module.scss'
 import Image from 'next/image';
+import formatDate from './../../helpers/formatDate';
 
 import Markdown from 'markdown-to-jsx';
 
 export default function Work({ work }) {
 
     const { title, description, content, tecnologies, url_github, url_deploy, url_image, url_video, updatedAt, image } = work;
-    const dateUpdate = moment(updatedAt).locale('es').format('LLL');
+    const dateUpdate = formatDate(updatedAt);
 
 
     return (
