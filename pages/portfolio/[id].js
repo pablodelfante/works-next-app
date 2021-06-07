@@ -80,12 +80,12 @@ export default function Work({ work }) {
 
 
                 {/* Link github */}
-                {url_github ? (<a href={url_github} target="_blank" className='underline'>LINK github</a>) : ''}
+                {url_github ? (<a href={url_github} target="_blank" rel="noopener" className='underline'>LINK github</a>) : ''}
                 <br />
                 <br />
 
                 {/* Link deploy */}
-                {url_deploy ? (<a href={url_deploy} target="_blank" className='underline'>LINK deploy</a>) : ''}
+                {url_deploy ? (<a href={url_deploy} target="_blank" rel="noopener" className='underline'>LINK deploy</a>) : ''}
 
 
 
