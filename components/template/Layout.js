@@ -9,7 +9,7 @@ import NProgress from 'nprogress';
 
 export default function Layout(props) {
     const { children } = props;
-    const classPersonalBlog = `personal-blog px-4 lg:px-40 2xl:px-80`;
+    const classPersonalBlog = `personal-blog px-4 lg:px-40 2xl:px-80 overflow-hidden`;
     const classMain = 'xl:container';
 
     const router = useRouter();

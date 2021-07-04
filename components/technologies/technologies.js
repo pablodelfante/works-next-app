@@ -37,7 +37,7 @@ export default function technologies() {
     return (
         <>
             {/* contenedor */}
-            <section className={`w-full mb-40 grid grid-flow-row xl:grid-cols-2 gap-10 overflow-hidden sm:overflow-visible`}>
+            <section className={`w-full mb-40 grid grid-flow-row xl:grid-cols-2 gap-10`}>
 
                 <figure className='grid grid-flow-row auto-rows-max gap-5 border-l'>
                     <picture className=''>
