@@ -45,6 +45,9 @@ export default function technologies() {
                         {avatar_url.value ?
                             (<Image
                                 src={avatar_url?.value}
+                                placeholder="blur"
+                                blurDataURL={avatar_url?.value}
+
                                 alt='sin image'
                                 layout={'responsive'}
                                 width={1}
@@ -63,10 +66,10 @@ export default function technologies() {
 
                         <p className='mb-5'>
                             Soy Pablo! diseñador gráfico, estudiante de gráfico web, apasionado por la tecnología, desde pequeño curioso, activo, me gusta compartir, aprender, escucuchar, ayudar y conocer gente.
-                            </p>
+                        </p>
                         <p className=''>
                             Me considero un colgado resolviendo problemas, de chico fuí muy observador, ver diferentes fromas y posibilidades a problemas... disfruto ser analítico y creativo =D
-                            </p>
+                        </p>
                     </figcaption>
 
                 </figure>
@@ -82,10 +85,10 @@ export default function technologies() {
                         <div className='grid gap-5'>
                             <p >
                                 Me atraen pilas como la mern o jam, lo que no descarta ampliar mis conocimientos en cualquier otra o expandirme más en formas como UX UI!
-                        </p>
+                            </p>
                             <p >
                                 Además de lo estrictamente tecnológico, creo en las muchas herramientas e ingenio para mejorar experiencias de usuarios crear sistemas que mejoren la vida de las personas, me emocionan desafíos, aprender, crecer y con ello ayudar a la gente!
-                        </p>
+                            </p>
                         </div>
                     </div>
                 </div>

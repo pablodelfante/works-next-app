@@ -14,7 +14,7 @@ export default function About() {
 
                         <h3 className='mb-5'>Sobre este sitio</h3>
                         <p className='mb-5'>
-                            Nace de la idea de poder mostrar quién soy, que hago y poder de cierta manera, presentar trabajos! <wbr/>
+                            Nace de la idea de poder mostrar quién soy, que hago y poder de cierta manera, presentar trabajos! <wbr />
                             Mi idea es encontrar en la simplicidad algo funional y con un buen rendimiento.
                         </p>
 
@@ -26,7 +26,11 @@ export default function About() {
                         {/* <img src='https://media.giphy.com/media/xT1Ra7uxTuOssARKda/giphy.gif' alt='sin img' className='h-full'></img> */}
                         <Image
                             className='h-full'
+                            
                             src={'https://media.giphy.com/media/xT1Ra7uxTuOssARKda/giphy.gif'}
+                            placeholder="blur"
+                            blurDataURL={'https://media.giphy.com/media/xT1Ra7uxTuOssARKda/giphy.gif'}
+
                             alt='sin img'
                             layout={'responsive'}
                             objectFit={'cover'}
