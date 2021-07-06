@@ -4,6 +4,7 @@ import Image from 'next/image';
 
 export default function About() {
 
+
     return (
         <>
             {/* acerca de mi general */}
@@ -26,10 +27,7 @@ export default function About() {
                         {/* <img src='https://media.giphy.com/media/xT1Ra7uxTuOssARKda/giphy.gif' alt='sin img' className='h-full'></img> */}
                         <Image
                             className='h-full'
-                            
                             src={'https://media.giphy.com/media/xT1Ra7uxTuOssARKda/giphy.gif'}
-                            placeholder="blur"
-                            blurDataURL={'https://media.giphy.com/media/xT1Ra7uxTuOssARKda/giphy.gif'}
 
                             alt='sin img'
                             layout={'responsive'}

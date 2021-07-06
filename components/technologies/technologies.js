@@ -45,8 +45,6 @@ export default function technologies() {
                         {avatar_url.value ?
                             (<Image
                                 src={avatar_url?.value}
-                                placeholder="blur"
-                                blurDataURL={avatar_url?.value}
 
                                 alt='sin image'
                                 layout={'responsive'}
