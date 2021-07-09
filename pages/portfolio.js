@@ -10,7 +10,6 @@ import formatDate from './../helpers/formatDate';
 export default function Portfolio({ works }) {
     const { titlePortada, iconPortada, contentPortada } = CONTENT_PORTADA.portfolio;
 
-    
 
     return (
         <Layout>
@@ -41,8 +40,8 @@ export default function Portfolio({ works }) {
                                 {/* ------- */}
                                 <div className='md:px-8'>
                                     <h3>{work?.title}</h3>
+                                    <time dateTime={work?.updatedAt} className='text-gray-500 block mb-2 font-light'>Actualizado: {formatDate(work?.updatedAt)}</time>
                                     <p className='line-clamp-3'>{work?.description}</p>
-                                    <time dateTime={formatDate(work?.published_at)} className='text-gray-500 block mb-2 font-light'>Publicado: {formatDate(work?.published_at)}</time>
                                 </div>
                             </li>
                         </a>

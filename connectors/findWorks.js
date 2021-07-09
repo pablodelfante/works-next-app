@@ -5,7 +5,10 @@ import { HOST_BACKEND } from '../utils/constants';
 
 // traer trabajos and especificos
 export const getWorks = async (_id) => {
-    const QUERY = _id ? `/${_id}` : ''; //si hay query usala sino vacio
+
+    // si hay id usalo, sino ordename los trabajos ASC
+    const QUERY = _id ? `/${_id}` : '?_sort=updatedAt:DESC';
+
     try {
         //de la response tomo data con datos devueltos
         const { data } = await axios.get(`${HOST_BACKEND}/works${QUERY}`);
