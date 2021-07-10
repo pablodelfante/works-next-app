@@ -39,7 +39,7 @@ export default function Portfolio({ works }) {
                                 {/* work.image.formats.small.url */}
                                 {/* ------- */}
                                 <div className='md:px-8'>
-                                    <h3>{work?.title}</h3>
+                                    <h3 className='line-clamp-1'> {work?.title} </h3>
                                     <time dateTime={work?.updatedAt} className='text-gray-500 block mb-2 font-light'>Actualizado: {formatDate(work?.updatedAt)}</time>
                                     <p className='line-clamp-3'>{work?.description}</p>
                                 </div>
