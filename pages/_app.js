@@ -4,11 +4,12 @@ import DarkProvider from '../contexts/darkMode/DarkProvider';
 import GAnalytics from "./../components/GAnalytics";
 
 function MyApp({ Component, pageProps }) {
+  console.log(process.env.NODE_ENV)
   return <>
 
-    {/* === GOOGLE ANALYTICS ==== */}
-    <GAnalytics/>
-    {/* ======================= */}
+    {/* <GAnalytics/> alone in production enviroment */}
+    {process.env.NODE_ENV === 'production' && <GAnalytics />}
+
     <DarkProvider>
       <Component {...pageProps} />
     </DarkProvider>
