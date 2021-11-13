@@ -9,6 +9,7 @@ module.exports = withPWA({
       'avatars.githubusercontent.com'
     ],
   },
+  // https://dev.to/byteslash/how-to-create-a-pwa-with-next-js-4dbm
   pwa: {
     dest: 'public',
     register: true,

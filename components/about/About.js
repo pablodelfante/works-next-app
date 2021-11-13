@@ -27,7 +27,7 @@ export default function About() {
                         <Image
                             className='h-full'
                             src={'https://media.giphy.com/media/xT1Ra7uxTuOssARKda/giphy.gif'}
-
+                            
                             alt='sin img'
                             layout={'responsive'}
                             objectFit={'cover'}
