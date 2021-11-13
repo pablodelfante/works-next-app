@@ -3,4 +3,6 @@
 * se agrego metodo para cargar scripts en determinados tiempos
 https://blog.logrocket.com/new-features-in-next-js-11/
 
-Probar a cambiar y usar daisy como biblioteca para botones etc.
+* Probar a cambiar y usar daisy como biblioteca para botones etc.
+* Tomar los datos con graphql
+* Revisar pwa
