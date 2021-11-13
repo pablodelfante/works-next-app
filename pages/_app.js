@@ -4,7 +4,6 @@ import DarkProvider from '../contexts/darkMode/DarkProvider';
 import GAnalytics from "./../components/GAnalytics";
 
 function MyApp({ Component, pageProps }) {
-  console.log(process.env.NODE_ENV)
   return <>
 
     {/* <GAnalytics/> alone in production enviroment */}

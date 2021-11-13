@@ -1,0 +1,17 @@
+{
+    "theme_color": "#4f46e5",
+    "background_color": "#fff",
+    "display": "browser",
+    "scope": "/",
+    "start_url": "/",
+    "name": "works-pwa",
+    "short_name": "works",
+    "description": "this is a simple pwa for my works",
+    "icons": [
+        {
+            "src": "/lapabla-ico.ico",
+            "sizes": "256x256",
+            "type": "image/png"
+          }
+    ]
+}

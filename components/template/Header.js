@@ -26,8 +26,10 @@ export default function Header() {
                 {/* meta description for accesibility */}
                 <meta name="description" content="Web portfolio, presentation of work and projects. In order to display and provide a personal web image."></meta>
 
-                {/* my content */}
+                {/* title */}
                 <title>pablodelfante | blog</title>
+
+                {/* Google fonts */}
                 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
 
                 {/* icono pagina */}
@@ -42,6 +44,10 @@ export default function Header() {
                 {/* ScrollReveal */}
                 <script src="https://unpkg.com/scrollreveal"></script>
 
+                {/* PWA assets */}
+                <link rel="manifest" href="/manifest.json" />
+                <link rel="apple-touch-icon" href="/lapabla-ico.ico"></link>
+                <meta name="theme-color" content="#fff" />
             </Head>
 
             <header className='sticky top-0 z-10 bg-white border border-l-0 border-r-0'>
