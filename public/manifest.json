@@ -3,7 +3,7 @@
     "background_color": "#fff",
     "display": "standalone",
     "scope": "/",
-    "start_url": ".",
+    "start_url": "/",
     "name": "works-pwa",
     "short_name": "works",
     "description": "this is a simple pwa for my works",
