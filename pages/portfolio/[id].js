@@ -1,9 +1,9 @@
-import Layout from '../../components/template';
-import { getWorks } from '../../connectors/findWorks';
+import Layout from 'components/template';
+import { getWorks } from 'connectors/findWorks';
 import Head from "next/head";
 import style from './id.module.scss'
 import Image from 'next/image';
-import formatDate from './../../helpers/formatDate';
+import formatDate from 'helpers/formatDate';
 
 import Markdown from 'markdown-to-jsx';
 

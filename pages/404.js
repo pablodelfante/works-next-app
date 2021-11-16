@@ -1,4 +1,4 @@
-import Layout from '../components/template';
+import Layout from 'components/template';
 
 export default function p404() {
     return (
