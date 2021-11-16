@@ -10,7 +10,7 @@ module.exports = withPWA({
     ],
   },
   // https://dev.to/byteslash/how-to-create-a-pwa-with-next-js-4dbm
-  basePath: '/',
+  // basePath: '/',
   pwa: {
     dest: 'public',
     register: true,
