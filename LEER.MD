@@ -5,4 +5,4 @@ https://blog.logrocket.com/new-features-in-next-js-11/
 
 * Probar a cambiar y usar daisy como biblioteca para botones etc.
 * Tomar los datos con graphql
-* Revisar pwa
+* Revisar pwa (acomodar archivos modificados y mezclar eso con dev?)

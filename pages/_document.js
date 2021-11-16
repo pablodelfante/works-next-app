@@ -11,9 +11,6 @@ class MyDocument extends Document {
           {/* meta description for accesibility */}
           <meta name="description" content="Web portfolio, presentation of work and projects. In order to display and provide a personal web image."></meta>
 
-          {/* title */}
-          {/* <title>pablodelfante | blog</title> */}
-
           {/* Google fonts */}
           <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
 
