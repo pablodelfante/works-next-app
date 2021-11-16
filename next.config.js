@@ -15,6 +15,8 @@ module.exports = withPWA({
     register: true,
     skipWaiting: true,
     // disable: process.env.NODE_ENV === "development",
-    sw: 'sw.js'
+    sw: 'sw.js',
+
+    scope: '/app'
   }
 })
