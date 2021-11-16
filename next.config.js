@@ -10,6 +10,7 @@ module.exports = withPWA({
     ],
   },
   // https://dev.to/byteslash/how-to-create-a-pwa-with-next-js-4dbm
+  basePath: '/',
   pwa: {
     dest: 'public',
     register: true,
@@ -17,6 +18,6 @@ module.exports = withPWA({
     // disable: process.env.NODE_ENV === "development",
     sw: 'sw.js',
 
-    scope: '/app'
+    scope: '/'
   }
 })
