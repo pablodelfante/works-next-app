@@ -9,7 +9,7 @@ import NProgress from 'nprogress';
 
 export default function Layout(props) {
     const { children } = props;
-    const classPersonalBlog = `personal-blog px-4 lg:px-40 2xl:px-80 overflow-hidden`;
+    const classContainer = `px-4 container m-auto overflow-hidden`;
     const classMain = 'xl:container';
 
     const router = useRouter();
@@ -29,7 +29,7 @@ export default function Layout(props) {
 
     return (
         <div
-            className={classPersonalBlog}>
+            className={classContainer}>
             {/* HEADER */}
             <Header />
 
