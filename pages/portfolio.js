@@ -44,7 +44,13 @@ export default function Portfolio({ works }) {
                                     {/* ------- */}
                                     <div className='md:px-8'>
                                         <h3 className='line-clamp-1'> {work?.title} </h3>
-                                        <time dateTime={work?.updatedAt} className='text-gray-500 block mb-2 font-light'>Actualizado: {formatDate(work?.updatedAt)}</time>
+                                        <ul className='hidden xl:grid xl:justify-start xl:gap-3 xl:grid-flow-col'>
+                                            {work?.tecnologies.map((tech) => (
+                                                <li className='text-primary text-sm truncate'>
+                                                    {tech}
+                                                </li>
+                                            ))}
+                                        </ul>
                                         <p className='line-clamp-3'>{work?.description}</p>
                                     </div>
                                 </li>
@@ -65,7 +71,6 @@ export async function getStaticProps(context) {
 
     // getWorks(query); la query es opcional
     const res = await getWorks();
-    // console.log(res)
     if (res) {
         const works = await JSON.parse(JSON.stringify(res));
         return {
