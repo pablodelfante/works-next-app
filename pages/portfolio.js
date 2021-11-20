@@ -44,7 +44,7 @@ export default function Portfolio({ works }) {
                                     {/* ------- */}
                                     <div className='md:px-8'>
                                         <h3 className='line-clamp-1'> {work?.title} </h3>
-                                        <ul className='hidden xl:grid xl:justify-start xl:gap-3 xl:grid-flow-col'>
+                                        <ul className='hidden sm:grid sm:justify-start sm:gap-3 sm:grid-flow-col'>
                                             {work?.tecnologies.map((tech) => (
                                                 <li className='text-primary text-sm truncate'>
                                                     {tech}
