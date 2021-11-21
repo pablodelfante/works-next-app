@@ -19,8 +19,6 @@ svg {
     width: 1.5rem;
 }
  
-//@tailwind base;
-@layer base {
     h1 {
         @apply text-5xl;
     }
@@ -36,7 +34,6 @@ svg {
     ul {
         @apply list-inside;
     }
-}
 
 // color texto en dark mode
 .dark * {
