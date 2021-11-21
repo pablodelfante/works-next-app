@@ -10,7 +10,7 @@ import NProgress from 'nprogress';
 export default function Layout(props) {
     const { children } = props;
     const classContainer = `px-4 container m-auto overflow-hidden`;
-    const classMain = 'xl:container';
+    const classMain = '';
 
     const router = useRouter();
 

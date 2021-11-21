@@ -19,7 +19,7 @@ export default function Work({ work }) {
                 <title>pablodelfante | {title}</title>
             </Head>
             <Layout>
-                <article className='py-14 xl:w-8/12 mx-auto'>
+                <article className='py-14 max-w-5xl mx-auto'>
                     {/* Titulo descripcion e imagen */}
                     <h2 className='mb-5'>{title}</h2>
                     <time className='text-gray-500 block font-light border-b mb-10'>Actualizado: {dateUpdate}</time>
