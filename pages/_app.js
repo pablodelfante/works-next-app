@@ -4,11 +4,15 @@ import DarkProvider from 'contexts/darkMode/DarkProvider';
 import GAnalytics from "components/GAnalytics";
 
 function MyApp({ Component, pageProps }) {
+  // check Google analytics
+  if (process.env.NODE_ENV === 'production') {
+    console.log('>>>Proyect is on production enviroment')
+  }
   return <>
 
     {/* <GAnalytics/> alone in production enviroment */}
-    {process.env.NODE_ENV === 'production' && <GAnalytics />}
-
+    {(process.env.NODE_ENV === 'production') && <GAnalytics />}
+    
     <DarkProvider>
       <Component {...pageProps} />
     </DarkProvider>
