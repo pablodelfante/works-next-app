@@ -8,7 +8,8 @@ function MyApp({ Component, pageProps }) {
   /* if (process.env.NODE_ENV === 'production') {
     console.log('>>>Proyect is on production enviroment')
   } */
-  console.log(process.env.NODE_ENV)
+  console.log("VERCEL_ENV",process.env.VERCEL_ENV)
+  console.log("NEXT_PUBLIC_VERCEL_ENV",process.env.NEXT_PUBLIC_VERCEL_ENV)
   return <>
 
     {/* <GAnalytics/> alone in production enviroment */}
