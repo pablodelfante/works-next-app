@@ -1,6 +1,7 @@
 
 import Button from '../button/Button.js';
 import Image from 'next/image';
+import giphy from "./giphy.webp";
 
 export default function About() {
 
@@ -24,7 +25,7 @@ export default function About() {
                     </div>
                     <div className='pointer-events-none'>
                         {/* <img src='https://media.giphy.com/media/xT1Ra7uxTuOssARKda/giphy.gif' alt='sin img' className='h-full'></img> */}
-                        <Image
+                      {/*   <Image
                             className='h-full'
                             src={'https://media.giphy.com/media/xT1Ra7uxTuOssARKda/giphy.gif'}
                             
@@ -33,7 +34,8 @@ export default function About() {
                             objectFit={'cover'}
                             width={100}
                             height={70}
-                        />
+                        /> */}
+                        <Image src={giphy} />
                     </div>
                 </div>
             </section>
