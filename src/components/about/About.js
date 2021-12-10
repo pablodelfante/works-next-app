@@ -14,7 +14,7 @@ export default function About() {
                 <div className='grid xl:grid-cols-2 gap-10'>
                     <div>
 
-                        <h3 className='mb-5'>Sobre este sitio</h3>
+                        <h2 className='mb-5'>Sobre este sitio</h2>
                         <p className='mb-5'>
                             Nace de la idea de poder mostrar quién soy, <wbr /> que hago y poder presentar trabajos! La idea es encontrar en la simplicidad algo funional y con un buen rendimiento.
                         </p>
@@ -35,7 +35,7 @@ export default function About() {
                             width={100}
                             height={70}
                         /> */}
-                        <Image src={giphy} />
+                        <Image src={giphy} alt='no image provided'/>
                     </div>
                 </div>
             </section>

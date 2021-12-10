@@ -59,7 +59,7 @@ export default function technologies() {
                     </picture>
                     <figcaption className='pl-8 pb-8'>
                         {/* titulo */}
-                        <h3>Sobre mi</h3>
+                        <h2>Sobre mi</h2>
                         <em className='font-extralight block mb-5'>...quién soy?</em>
 
                         <p className='mb-5'>
