@@ -1,10 +1,10 @@
-import Layout from "../components/template";
-import Portada from "../components/portada";
-import { getWorks } from '../connectors/findWorks';
+import Layout from "components/template";
+import Portada from "components/portada";
+import { getWorks } from 'connectors/findWorks';
 import Link from 'next/link';
-import { CONTENT_PORTADA } from '../utils/contentPortada';
+import { CONTENT_PORTADA } from 'utils/contentPortada';
 import Image from 'next/image';
-import formatDate from './../helpers/formatDate';
+import formatDate from 'helpers/formatDate';
 import Head from "next/head";
 
 export default function Portfolio({ works }) {
@@ -25,7 +25,7 @@ export default function Portfolio({ works }) {
                     {works?.map((work) => (
                         <Link href={`/portfolio/${work._id}`} key={work._id}>
                             <a className='md:py-8 rounded lg:shadow-md lg:hover:shadow-xl transition-shadow duration-300'>
-                                <li>
+                                <li key={work._id}>
                                     {/* agregar imagen aca */}
                                     <div className='mb-5 opacity-90'>
                                         <Image
