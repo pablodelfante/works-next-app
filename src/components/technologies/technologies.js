@@ -82,7 +82,7 @@ export default function technologies() {
                         {/* lista de tecnologias */}
                         <div className='grid gap-5'>
                             <p >
-                                Me atraen pilas como la mern o jam, lo que no descarta ampliar mis conocimientos en cualquier otra o expandirme más en formas como UX UI!
+                                Me atrapan pilas como la jam, o tecnologías como las PWA, lo que no descarta ampliar mis conocimientos en cualquier otra o expandirme más en formas como UX UI!
                             </p>
                             <p >
                                 Además de lo estrictamente tecnológico, creo en las muchas herramientas e ingenio para mejorar experiencias de usuarios crear sistemas que mejoren la vida de las personas, me emocionan desafíos, aprender, crecer y con ello ayudar a la gente!

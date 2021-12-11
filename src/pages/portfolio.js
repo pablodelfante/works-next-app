@@ -25,7 +25,7 @@ export default function Portfolio({ works }) {
                     {works?.map((work) => (
                         <Link href={`/portfolio/${work._id}`} key={work._id}>
                             <a className='md:py-8 rounded lg:shadow-md lg:hover:shadow-xl transition-shadow duration-300'>
-                                <li key={work._id}>
+                                <li>
                                     {/* agregar imagen aca */}
                                     <div className='mb-5 opacity-90'>
                                         <Image
@@ -45,8 +45,8 @@ export default function Portfolio({ works }) {
                                     <div className='md:px-8'>
                                         <h3 className='line-clamp-1'> {work?.title} </h3>
                                         <ul className='hidden sm:grid sm:justify-start sm:gap-3 sm:grid-flow-col'>
-                                            {work?.tecnologies.map((tech) => (
-                                                <li className='text-primary text-sm truncate'>
+                                            {work?.tecnologies.map((tech, key) => (
+                                                <li key={key} className='text-primary text-sm truncate'>
                                                     {tech}
                                                 </li>
                                             ))}
