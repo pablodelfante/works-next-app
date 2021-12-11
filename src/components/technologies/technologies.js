@@ -26,11 +26,15 @@ export default function technologies() {
     // manejador de github api
     useEffect(() => {
         (async () => {
-            const res = await fetch('https://api.github.com/users/pablodelfante');
-            const data = await res.json();
-            avatar_url.value = data.avatar_url;
-            setAvatar_url({ value: avatar_url.value });
-            // console.log(data)
+            try {
+                const res = await fetch('https://api.github.com/users/pablodelfante');
+                const data = await res.json();
+                avatar_url.value = data.avatar_url;
+                setAvatar_url({ value: avatar_url.value });
+            } catch (error) {
+                console.log("error on fetch image from github");
+            }
+
         })()
     }, [])
 
