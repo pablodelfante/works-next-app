@@ -32,7 +32,7 @@ export default function technologies() {
                 avatar_url.value = data.avatar_url;
                 setAvatar_url({ value: avatar_url.value });
             } catch (error) {
-                console.log("error on fetch image from github");
+                console.warn("error on fetch image from github");
             }
 
         })()
