@@ -1,12 +1,11 @@
 import Link from 'next/link';
-import style from './Footer.module.scss';
 
 export default function Footer() {
     const date = new Date();
     const year = date.getFullYear();
 
     return (
-        <footer className={style.footer}>
+        <footer className='py-10'>
             <ul className='grid grid-flow-row xl:grid-flow-col auto-cols-max | justify-between items-end gap-3'>
 
                 {/* REDES */}
