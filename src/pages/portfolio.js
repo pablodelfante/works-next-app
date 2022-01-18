@@ -4,7 +4,6 @@ import { getWorks } from 'connectors/findWorks';
 import Link from 'next/link';
 import { CONTENT_PORTADA } from 'utils/contentPortada';
 import Image from 'next/image';
-import formatDate from 'helpers/formatDate';
 import Head from "next/head";
 
 export default function Portfolio({ works }) {

@@ -12,7 +12,6 @@ export default function Work({ work }) {
     const { title, description, content, tecnologies, url_github, url_deploy, url_image, url_video, updatedAt, image } = work;
     const dateUpdate = formatDate(updatedAt);
 
-
     return (
         <>
             <Head>
