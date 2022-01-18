@@ -7,11 +7,7 @@ import NProgress from 'nprogress';
 
 
 
-export default function Layout(props) {
-    const { children } = props;
-    const classContainer = `px-4 container m-auto overflow-hidden`;
-    const classMain = '';
-
+export default function Layout({children}) {
     const router = useRouter();
 
     useEffect(() => {
@@ -29,12 +25,12 @@ export default function Layout(props) {
 
     return (
         <div
-            className={classContainer}>
+            className='px-4 container m-auto overflow-hidden'>
             {/* HEADER */}
             <Header />
 
             {/* CONTENIDO PRINCIPAL */}
-            <main className={classMain}>
+            <main className=''>
                 {children}
             </main>
 

@@ -1,8 +1,4 @@
-import { useState } from "react";
 import Link from 'next/link'
-import Head from 'next/head'
-import { COLOR_DARK } from '../../utils/constants';
-
 import { useContext } from 'react';
 import DarkContext from '../../contexts/darkMode/DarkContext';
 
