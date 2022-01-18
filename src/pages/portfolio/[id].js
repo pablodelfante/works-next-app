@@ -15,7 +15,7 @@ export default function Work({ work }) {
     return (
         <>
             <Head>
-                <title>pablodelfante | {title}</title>
+                <title>{title} | pablodelfante</title>
             </Head>
             <Layout>
                 <article className='py-14 max-w-5xl mx-auto'>

@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
     <Head>
-           <title>pablodelfante | blog</title>
+           <title>pablodelfante</title>
     </Head>
       <Layout>
         <Portada titlePortada={titlePortada} iconoPortada={iconPortada} contentPortada={contentPortada} />

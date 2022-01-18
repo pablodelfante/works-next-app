@@ -13,7 +13,7 @@ export default function Portfolio({ works }) {
     return (
         <>
             <Head>
-                <title>pablodelfante | portfolio</title>
+                <title>portfolio | pablodelfante</title>
             </Head>
             <Layout>
                 <Portada titlePortada={titlePortada} iconoPortada={iconPortada} contentPortada={contentPortada} />
