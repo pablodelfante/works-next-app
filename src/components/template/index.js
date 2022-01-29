@@ -25,7 +25,7 @@ export default function Layout({children}) {
 
     return (
         <div
-            className='px-4 container m-auto overflow-hidden'>
+            className='container m-auto overflow-hidden'>
             {/* HEADER */}
             <Header />
 
