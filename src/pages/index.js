@@ -6,7 +6,7 @@ import { CONTENT_PORTADA } from 'utils/contentPortada';
 import Head from "next/head";
 
 export default function Home() {
-  const { titlePortada, iconPortada, contentPortada } = CONTENT_PORTADA.index;
+  const { titlePortada, contentPortada } = CONTENT_PORTADA.index;
 
   return (
     <>
@@ -14,7 +14,7 @@ export default function Home() {
            <title>pablodelfante</title>
     </Head>
       <Layout>
-        <Portada titlePortada={titlePortada} iconoPortada={iconPortada} contentPortada={contentPortada} />
+        <Portada titlePortada={titlePortada} contentPortada={contentPortada} />
         <hr />
         <About />
         <Technologies />

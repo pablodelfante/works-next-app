@@ -16,7 +16,7 @@ export default function Portfolio({ works }) {
                 <title>portfolio | pablodelfante</title>
             </Head>
             <Layout>
-                <Portada titlePortada={titlePortada} iconoPortada={iconPortada} contentPortada={contentPortada} />
+                <Portada titlePortada={titlePortada} contentPortada={contentPortada} />
 
                 <ul className='container grid grid-cols-1 xl:grid-cols-2 gap-10'>
                     {/* si no hay works */}

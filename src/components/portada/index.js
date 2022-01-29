@@ -1,5 +1,5 @@
 
-export default function Portada({ titlePortada, iconoPortada, contentPortada }) {
+export default function Portada({ titlePortada, contentPortada }) {
 
     const stripe = `border-l-8 border-primary pl-5`;
 
