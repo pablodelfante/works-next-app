@@ -1,10 +1,8 @@
 
-import Button from 'components/Button';
+import Button from 'components/button';
 import Image from 'next/image';
-import giphy from "./giphy.webp";
 
 export default function About() {
-
 
     return (
         <>
@@ -25,17 +23,18 @@ export default function About() {
                     </div>
                     <div className='pointer-events-none'>
                         {/* <img src='https://media.giphy.com/media/xT1Ra7uxTuOssARKda/giphy.gif' alt='sin img' className='h-full'></img> */}
-                      {/*   <Image
+                        <Image
                             className='h-full'
                             src={'https://media.giphy.com/media/xT1Ra7uxTuOssARKda/giphy.gif'}
                             
-                            alt='sin img'
+                            alt='no image provided'
                             layout={'responsive'}
                             objectFit={'cover'}
                             width={100}
                             height={70}
-                        /> */}
-                        <Image src={giphy} alt='no image provided'/>
+                            priority
+                        />
+                        {/* <Image width='auto' src={`/giphy.webp`} alt='no image provided'/> */}
                     </div>
                 </div>
             </section>
