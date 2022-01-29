@@ -1,5 +1,5 @@
 import Layout from "components/template";
-import Portada from "components/portada";
+import TitlePage from "components/titlePage";
 import { getWorks } from 'connectors/findWorks';
 import Link from 'next/link';
 import { CONTENT_PORTADA } from 'utils/contentPortada';
@@ -17,9 +17,9 @@ export default function Portfolio({ works }) {
                 <title>portfolio | pablodelfante</title>
             </Head>
             <Layout>
-                <Portada titlePortada={titlePortada} contentPortada={contentPortada} />
+                <TitlePage titlePortada={titlePortada} contentPortada={contentPortada} />
 
-                <ul className='container grid grid-cols-1 xl:grid-cols-2 gap-10 items-stretch'>
+                <ul className='grid grid-cols-1 xl:grid-cols-2 gap-10 items-stretch'>
                     {/* si no hay works */}
                     {!works ? <p>UPS! no se encontraron trabajos, seguramente estoy en mantenimiento o dejé algo mal, disculpa =(</p> : ''}
                     {works?.map((work, index) => (

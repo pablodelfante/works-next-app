@@ -1,5 +1,5 @@
 import Layout from 'components/template';
-import Portada from 'components/portada';
+import TitlePage from 'components/titlePage';
 import About from 'components/about';
 import Technologies from 'components/technologies';
 import { CONTENT_PORTADA } from 'utils/contentPortada';
@@ -14,7 +14,7 @@ export default function Home() {
            <title>pablodelfante</title>
     </Head>
       <Layout>
-        <Portada titlePortada={titlePortada} contentPortada={contentPortada} />
+        <TitlePage titlePortada={titlePortada} contentPortada={contentPortada} />
         <div className="border-t"></div>
         <About />
         <Technologies />
