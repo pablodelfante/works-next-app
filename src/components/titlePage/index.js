@@ -5,8 +5,7 @@ export default function TitlePage({ titlePortada, contentPortada }) {
 
     return (
         <section className={`${stripe} my-10 md:my-40 md:max-w-sm`}>
-                <h1 className='text-primary font-bold mb-4 w-min'>{titlePortada}</h1>
-
+            <h1 className='text-primary dark:text-primary font-bold mb-4 w-min'>{titlePortada}</h1>
             <p>{contentPortada}</p>
         </section>
     )
