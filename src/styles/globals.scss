@@ -5,7 +5,7 @@
       -aqui cambio body header y lunita svg */
 
 * {
-    font-family: "Roboto Mono", monospace;
+    font-family: 'Montserrat', sans-serif;
     @apply text-gray-700;
 }
 // general de imagenes
@@ -48,12 +48,5 @@ svg {
         transition: background 0.2s ease-out;
     }
 }
-
-// mi contenedor principal
-/* .personal-blog {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    height: 100vh;
-} */
 
 

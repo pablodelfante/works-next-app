@@ -12,7 +12,9 @@ class MyDocument extends Document {
           <meta name="description" content="Web portfolio, presentation of work and projects. In order to display and provide a personal web image."></meta>
 
           {/* Google fonts */}
-          <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
           {/* icono pagina */}
           <link rel="shortcut icon" href="/lapabla-ico.ico" />

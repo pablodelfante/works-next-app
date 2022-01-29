@@ -20,7 +20,7 @@ export default function Portfolio({ works }) {
 
                 <ul className='container grid grid-cols-1 xl:grid-cols-2 gap-10'>
                     {/* si no hay works */}
-                    {!works ? <em>UPS! no se encontraron trabajos, seguramente estoy en mantenimiento o dejé algo mal, disculpa =(</em> : ''}
+                    {!works ? <p>UPS! no se encontraron trabajos, seguramente estoy en mantenimiento o dejé algo mal, disculpa =(</p> : ''}
                     {works?.map((work) => (
                         <Link href={`/portfolio/${work._id}`} key={work._id}>
                             <a className='md:py-8 rounded lg:shadow-md lg:hover:shadow-xl transition-shadow duration-300'>

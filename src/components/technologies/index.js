@@ -64,7 +64,7 @@ export default function technologies() {
                     <figcaption className='pl-8 pb-8'>
                         {/* titulo */}
                         <h2>Sobre mi</h2>
-                        <em className='font-extralight block mb-5'>...quién soy?</em>
+                        <p className='font-extralight block mb-5'>...quién soy?</p>
 
                         <p className='mb-5'>
                             Soy Pablo! diseñador gráfico, estudiante de gráfico web, apasionado por la tecnología, desde pequeño curioso, activo, me gusta compartir, aprender, escucuchar, ayudar y conocer gente.
@@ -81,7 +81,7 @@ export default function technologies() {
                     <div className='bg-white dark:bg-black grid gap-2 p-8'>
                         {/* titulo */}
                         <h3>Tecnologías</h3>
-                        <em className='font-extralight'>Proyección</em>
+                        <p className='font-extralight'>Proyección</p>
 
                         {/* lista de tecnologias */}
                         <div className='grid gap-5'>
