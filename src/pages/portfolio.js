@@ -8,7 +8,7 @@ import Head from "next/head";
 import Card from "components/Card";
 
 export default function Portfolio({ works }) {
-    const { titlePortada, iconPortada, contentPortada } = CONTENT_PORTADA.portfolio;
+    const { titlePortada, contentPortada } = CONTENT_PORTADA.portfolio;
 
 
     return (
@@ -19,13 +19,13 @@ export default function Portfolio({ works }) {
             <Layout>
                 <Portada titlePortada={titlePortada} contentPortada={contentPortada} />
 
-                <ul className='container grid grid-cols-1 xl:grid-cols-2 gap-10'>
+                <ul className='container grid grid-cols-1 xl:grid-cols-2 gap-10 items-stretch'>
                     {/* si no hay works */}
                     {!works ? <p>UPS! no se encontraron trabajos, seguramente estoy en mantenimiento o dejé algo mal, disculpa =(</p> : ''}
-                    {works?.map((work) => (
+                    {works?.map((work, index) => (
                         <Link href={`/portfolio/${work._id}`} key={work._id}>
-                            <a>
-                                <Card {...{work}} />
+                            <a className="grid">
+                                <Card {...{work, index}} />
                             </a>
                         </Link>
 

@@ -1,9 +1,10 @@
 import Image from 'next/image';
 
-export default function Card({ work }) {
+export default function Card({ work, index }) {
+
     return (
         <>
-            <li className="md:py-8 rounded lg:shadow-md lg:hover:shadow-xl transition-shadow duration-300">
+            <li className="md:py-8 rounded lg:border lg:hover:shadow-xl transition-shadow duration-300">
                 {/* agregar imagen aca */}
                 <div className="mb-5 opacity-90">
                     <Image
@@ -20,6 +21,7 @@ export default function Card({ work }) {
                         width={3}
                         height={1}
                         quality={100}
+                        priority={true}
                     />
                 </div>
                 {/* work.image.formats.small.url */}
