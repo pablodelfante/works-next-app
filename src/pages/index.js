@@ -15,7 +15,7 @@ export default function Home() {
     </Head>
       <Layout>
         <Portada titlePortada={titlePortada} contentPortada={contentPortada} />
-        <hr />
+        <div className="border-t"></div>
         <About />
         <Technologies />
       </Layout>
