@@ -5,9 +5,7 @@ export default function Portada({ titlePortada, contentPortada }) {
 
     return (
         <section className={`${stripe} my-10 md:my-40 md:max-w-sm`}>
-            <div className='grid grid-flow-col auto-cols-min justify-start items-center gap-5 pb-4'>
-                <h1 className='text-primary font-bold m-0 p-0'>{titlePortada}</h1>
-            </div>
+                <h1 className='text-primary font-bold mb-4 w-min'>{titlePortada}</h1>
 
             <p>{contentPortada}</p>
         </section>

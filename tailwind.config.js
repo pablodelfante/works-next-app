@@ -13,7 +13,14 @@ module.exports = {
         primary: colors.indigo['600']
       }
     },
+    container: {
+      padding: {
+        DEFAULT: '1rem',
+        lg: '5rem',
+      },
+    }
   },
+  
   variants: {
     extend: {},
   },
