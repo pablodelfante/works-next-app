@@ -11,7 +11,7 @@ export default function TitlePage({ titlePortada, contentPortada }) {
                 <h1 className='text-primary dark:text-primary font-bold mb-4 w-min'>{titlePortada}</h1>
                 <p className="text-xl font-light">{contentPortada}</p>
             </section>
-            <aside>
+            <aside className="hidden md:block">
                 <Blob/>
             </aside>
         </section>
