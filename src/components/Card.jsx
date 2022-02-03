@@ -4,7 +4,7 @@ export default function Card({ work, index }) {
 
     return (
         <>
-            <li className="md:py-8 rounded lg:border lg:hover:shadow-xl transition-shadow duration-300">
+            <li className="py-3 md:py-8 rounded border hover:border-primary hover:shadow-lg hover:shadow-indigo-500/40 transition duration-300">
                 {/* agregar imagen aca */}
                 <div className="mb-5 opacity-90">
                     <Image
@@ -26,7 +26,7 @@ export default function Card({ work, index }) {
                 </div>
                 {/* work.image.formats.small.url */}
                 {/* ------- */}
-                <div className="md:px-8">
+                <div className="px-3 md:px-8">
                     <h3 className="line-clamp-1"> {work?.title} </h3>
                     <ul className="hidden sm:grid sm:justify-start sm:gap-3 sm:grid-flow-col">
                         {work?.tecnologies.map((tech, key) => (
