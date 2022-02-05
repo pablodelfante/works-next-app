@@ -49,7 +49,7 @@ svg {
 .dark {
     header,
     body {
-        @apply bg-black;
+        background-color: rgb(16, 15, 56);
         transition: background 0.2s ease-out;
     }
 }
