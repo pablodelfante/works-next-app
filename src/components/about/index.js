@@ -12,13 +12,12 @@ export default function About() {
                 <div className='grid xl:grid-cols-2 gap-10'>
                     <div>
 
-                        <h2 className='mb-5'>Sobre este sitio</h2>
+                        <h2 className='mb-5'>About this site</h2>
                         <p className='mb-5'>
-                            Nace de la idea de poder mostrar quién soy, <wbr /> que hago y poder presentar trabajos! La idea es encontrar en la simplicidad algo funional y con un buen rendimiento.
+                            Born from the idea about to show how are am, show and expose works! <wbr /> The idea is find something easy that work with well performance.
                         </p>
-
-                        <p className='mb-5'>¿como hice esta web?</p>
-                        <Button href='/portfolio/6025b8ae31c60c396885113c'>VER</Button>
+                        <p className='mb-5'>How I do this web?</p>
+                        <Button href='/portfolio/6025b8ae31c60c396885113c'>See proyect</Button>
 
                     </div>
                     <div className='pointer-events-none'>
@@ -26,7 +25,7 @@ export default function About() {
                         <Image
                             className='h-full'
                             src={'https://media.giphy.com/media/xT1Ra7uxTuOssARKda/giphy.gif'}
-                            
+
                             alt='no image provided'
                             layout={'responsive'}
                             objectFit={'cover'}

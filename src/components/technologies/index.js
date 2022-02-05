@@ -63,14 +63,14 @@ export default function technologies() {
                     </picture>
                     <figcaption className='pl-8 pb-8'>
                         {/* titulo */}
-                        <h2>Sobre mi</h2>
-                        <p className='font-extralight block mb-5'>...quién soy?</p>
+                        <h2>About me... Who I am?</h2>
+                        <p className='font-extralight block mb-5'>...who i am?</p>
 
                         <p className='mb-5'>
-                            Soy Pablo! diseñador gráfico, estudiante de gráfico web, apasionado por la tecnología, desde pequeño curioso, activo, me gusta compartir, aprender, escucuchar, ayudar y conocer gente.
+                        I am Pablo! I am graphic design, web designer student, passionate for the technology, from child was curious, active. I love share, learn, listen, help and meet to somebody new!
                         </p>
                         <p className=''>
-                            Me considero un colgado resolviendo problemas, de chico fuí muy observador, ver diferentes fromas y posibilidades a problemas... disfruto ser analítico y creativo =D
+                        I love solve problems! I enjoy so much be analytic and creative!
                         </p>
                     </figcaption>
 
@@ -80,17 +80,15 @@ export default function technologies() {
                 <div className={`${style.customShadow} lapabla-reveal`}>
                     <div className='bg-white dark:bg-black grid gap-2 p-8'>
                         {/* titulo */}
-                        <h3>Tecnologías</h3>
-                        <p className='font-extralight'>Proyección</p>
+                        <h3>Technologies</h3>
+                        <p className='font-extralight'>Proyection</p>
 
                         {/* lista de tecnologias */}
                         <div className='grid gap-5'>
                             <p >
-                                Me atrapan pilas como la jam, o tecnologías como las PWA, lo que no descarta ampliar mis conocimientos en cualquier otra o expandirme más en formas como UX UI!
-                            </p>
+                            I am interestesting on stacks like jam, technologies like PWA, and others. This dont mean that expand my knlowledge on other forms like UX UI.</p>
                             <p >
-                                Además de lo estrictamente tecnológico, creo en las muchas herramientas e ingenio para mejorar experiencias de usuarios crear sistemas que mejoren la vida de las personas, me emocionan desafíos, aprender, crecer y con ello ayudar a la gente!
-                            </p>
+                            I belive in the many tools and wit to get best the user’s experiences to create systems to get best the people’s life. I am excited for challenges, learn, grow up and help the people!                            </p>
                         </div>
                     </div>
                 </div>
