@@ -71,7 +71,7 @@ export default function Work({ work }) {
                             <div className="my-5" style={{ aspectRatio: "16/9" }}>
                                 <iframe className="w-full h-full" src={url_video} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                             </div>
-                            <p className="text-sm">Si no ves el video: <a className="underline text-primary" href={url_video} target="_blank">ver</a></p>
+                            <p className="text-sm">If you can't watch the video: <a className="underline text-primary" href={url_video} target="_blank">watch on youtube</a></p>
                         </>
                     )}
 
