@@ -9,9 +9,6 @@ import Card from "components/Card";
 
 export default function Portfolio({ works }) {
     const { titlePortada, contentPortada } = CONTENT_PORTADA.portfolio;
-
-    const worksFiltered = works.filter(work => work.priority);
-    console.log(worksFiltered);
     return (
         <>
             <Head>

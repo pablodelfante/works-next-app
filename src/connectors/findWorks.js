@@ -6,8 +6,8 @@ import { HOST_BACKEND } from '../utils/constants';
 // traer trabajos and especificos
 export const getWorks = async (_id) => {
 
-    // si hay id usalo, sino ordename los trabajos ASC
-    const QUERY = _id ? `/${_id}` : '?_sort=updatedAt:DESC';
+    // si hay id usalo, sino ordename los trabajos ASC y priority
+    const QUERY = _id ? `/${_id}` : '?_sort=updatedAt:DESC,priority:DESC';
 
     try {
         //de la response tomo data con datos devueltos
