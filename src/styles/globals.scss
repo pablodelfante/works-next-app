@@ -1,17 +1,20 @@
-@use './NProgress.module.scss' as nprogress;
-@use './blobV2.scss';
+@use "./NProgress.module.scss" as nprogress;
+@use "./blobV2.scss";
 
 // NOTAS
 /* Modo dark: 
       -en header.js cambio clase dark en html
       -aqui cambio body header y lunita svg */
+:root {
+    --velocity-transition: .2s;
+}
 
 * {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     @apply text-gray-700;
 }
 // general de imagenes
-img{
+img {
     @apply w-full;
     @apply object-cover;
     image-rendering: -webkit-optimize-contrast;
@@ -20,38 +23,36 @@ img{
 svg {
     width: 1.5rem;
 }
- 
-    h1 {
-        @apply text-8xl;
-    }
-    h2 {
-        @apply text-4xl;
-        @apply font-bold;
-    }
-    h3 {
-        @apply text-3xl;
-        @apply font-bold;
-    }
-    h4 {
-        @apply text-2xl;
-        @apply font-bold;
-    }
-    ul {
-        @apply list-inside;
-    }
+
+h1 {
+    @apply text-8xl;
+}
+h2 {
+    @apply text-4xl;
+    @apply font-bold;
+}
+h3 {
+    @apply text-3xl;
+    @apply font-bold;
+}
+h4 {
+    @apply text-2xl;
+    @apply font-bold;
+}
+ul {
+    @apply list-inside;
+}
 
 // color texto en dark mode
 .dark * {
     @apply text-white;
-    transition: color 0.5s 0.2s ease-out;
+    transition: color var(--velocity-transition) ease-out;
 }
 // cuando este dark pon negro estos elementos
 .dark {
     header,
     body {
-        background-color: theme('colors.dark');
-        transition: background 0.2s ease-out;
+        background-color: theme("colors.dark");
+        transition: background var(--velocity-transition) ease-out;
     }
 }
-
-

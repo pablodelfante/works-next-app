@@ -14,12 +14,12 @@ export default function Button({ href, children }) {
                 bg-white
                 hover:bg-black
                 hover:text-white
-                dark:bg-black
+                dark:bg-dark
                 dark:hover:bg-white
                 dark:hover:text-black
                 
                 transition
-                duration-300
+                duration-[theme(var(--velocity-transition))]
                 border-2
                 border-gray-900
                 dark:border-white
