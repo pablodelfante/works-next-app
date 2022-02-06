@@ -10,7 +10,8 @@ import Card from "components/Card";
 export default function Portfolio({ works }) {
     const { titlePortada, contentPortada } = CONTENT_PORTADA.portfolio;
 
-
+    const worksFiltered = works.filter(work => work.priority);
+    console.log(worksFiltered);
     return (
         <>
             <Head>
@@ -21,11 +22,11 @@ export default function Portfolio({ works }) {
 
                 <ul className='my-20 lg:my-40 grid grid-cols-1 xl:grid-cols-2 gap-10 items-stretch'>
                     {/* si no hay works */}
-                    {!works ? <p>UPS! no se encontraron trabajos, seguramente estoy en mantenimiento o dejé algo mal, disculpa =(</p> : ''}
+                    {!works ? <p>oops! I don't find works, sure i am on maintenance or break something, sorry😥. If yu can write me! pablodelfantexp@gmail.com</p> : ''}
                     {works?.map((work, index) => (
                         <Link href={`/portfolio/${work._id}`} key={work._id}>
                             <a className="grid">
-                                <Card {...{work, index}} />
+                                <Card {...{ work, index }} />
                             </a>
                         </Link>
 
