@@ -19,7 +19,7 @@ export default function Button({ href, children }) {
                 dark:hover:text-black
                 
                 transition
-                duration-[theme(var(--velocity-transition))]
+                duration-100
                 border-2
                 border-gray-900
                 dark:border-white

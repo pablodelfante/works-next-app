@@ -6,7 +6,6 @@
       -en header.js cambio clase dark en html
       -aqui cambio body header y lunita svg */
 :root {
-    --velocity-transition: .2s;
 }
 
 * {
@@ -46,13 +45,14 @@ ul {
 // color texto en dark mode
 .dark * {
     @apply text-white;
-    transition: color var(--velocity-transition) ease-out;
+    @apply transition-[color];
+    @apply duration-700;
 }
 // cuando este dark pon negro estos elementos
 .dark {
     header,
     body {
         background-color: theme("colors.dark");
-        transition: background var(--velocity-transition) ease-out;
+        @apply transition
     }
 }
