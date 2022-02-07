@@ -84,7 +84,7 @@ export default function Work({ work }) {
 
 
                     {/* Link github */}
-                    {url_github ? (<a href={url_github} target="_blank" rel="noopener" className='underline'>see proyect on github</a>) : ''}
+                    {url_github ? (<a href={url_github} target="_blank" rel="noopener" className='underline'>see project on github</a>) : ''}
                     <br />
                     <br />
 

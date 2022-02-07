@@ -81,7 +81,7 @@ export default function technologies() {
                     <div className='bg-white dark:bg-black grid gap-2 p-8'>
                         {/* titulo */}
                         <h3>Technologies</h3>
-                        <p className='font-extralight'>Proyection</p>
+                        <p className='font-extralight'>Projection</p>
 
                         {/* lista de tecnologias */}
                         <div className='grid gap-5'>
