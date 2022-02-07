@@ -21,12 +21,12 @@ export default function Work({ work }) {
                 <article className='py-14 max-w-5xl mx-auto'>
                     {/* Titulo descripcion e imagen */}
                     <h2 className='mb-5'>{title}</h2>
-                    <time className='text-gray-500 block font-light border-b mb-10'>Actualizado: {dateUpdate}</time>
+                    <time className='text-gray-500 block font-light border-b mb-10'>Updated at: {dateUpdate}</time>
 
                     {/* Tecnologias*/}
                     {/* <h4 className=''>Tecnologías usadas</h4> */}
                     <ul className='flex flex-wrap gap-x-3 mb-0.5'>
-                        <li className="font-bold">Tecnologías usadas</li>
+                        <li className="font-bold">Used technologies</li>
                         {tecnologies.map((tecnologie, key) => (
                             <li className="text-primary dark:text-primary" key={key}>{tecnologie}</li>
                         ))}
