@@ -11,7 +11,7 @@ export default function Footer() {
                 {/* REDES */}
                 <li className='flex flex-col gap-3'>
                     {/* GITHUB */}
-                    <h4 className='block'>Redes:</h4>
+                    <h4 className='block'>Networks:</h4>
                     <Link href='https://github.com/pablodelfante'>
                             {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className='inline-flex mr-2'>
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />

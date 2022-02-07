@@ -23,7 +23,7 @@ export default function Header() {
 
                     <li className='mr-auto'>
                         <Link href='/'>
-                            <a>INICIO</a>
+                            <a>HOME</a>
                         </Link>
                     </li>
                     <li>
