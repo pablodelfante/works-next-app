@@ -67,7 +67,7 @@ export default function technologies() {
                         <p className='font-extralight block mb-5'>...who i am?</p>
 
                         <p className='mb-5'>
-                        I am Pablo! I am graphic design, web designer student, passionate for the technology, from child was curious, active. I love share, learn, listen, help and meet to somebody new!
+                        I am Pablo! I am graphic design and i am studing web design, i passionate about  technology, from child was curious, active. I love share, learn, listen, help and meet to somebody new!
                         </p>
                         <p className=''>
                         I love solve problems! I enjoy so much be analytic and creative!
