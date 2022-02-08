@@ -2,7 +2,7 @@
 export const CONTENT_PORTADA = {
     portfolio: {
         titlePortada: `Nice to see you!!`,
-        contentPortada : `Hi!! welcome to my site! Here I tell you about me, who I am, ahead on!`
+        contentPortada : `Hi!! welcome to my site! Here I'm going to tell you about me, who I am, ahead on!`
     },
     index: {
         titlePortada: `Hi welcome!`,

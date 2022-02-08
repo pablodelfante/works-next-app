@@ -88,7 +88,7 @@ export default function technologies() {
                             <p >
                             I'm interestesting in stacks like jam, technologies like PWA, and others. This dont mean that expand my knlowledge on other forms like UX UI.</p>
                             <p >
-                            I belive in the many tools and wit to get better the user’s experiences to create systems to get best the people’s life. I am excited for challenges, learn, grow up and help the people!                            </p>
+                            I think that the many tools and wit can help to get better the user’s experiences to create systems to improve the people’s life. I am excited for challenges, learn new things, grow as professional and help the people!               </p>
                         </div>
                     </div>
                 </div>
