@@ -67,7 +67,7 @@ export default function technologies() {
                         <p className='font-extralight block mb-5'>...who i am?</p>
 
                         <p className='mb-5'>
-                        I am Pablo! I am graphic design and i am studing web design, i passionate about  technology, from child was curious, active. I love share, learn, listen, help and meet to somebody new!
+                        I am Pablo! I am graphic design and i am studing web design, i passionate about  technology, since i was a child was curious and active. I love share, learn, help and I like meet new people!
                         </p>
                         <p className=''>
                         I love solve problems! I enjoy so much be analytic and creative!
@@ -86,9 +86,9 @@ export default function technologies() {
                         {/* lista de tecnologias */}
                         <div className='grid gap-5'>
                             <p >
-                            I am interestesting on stacks like jam, technologies like PWA, and others. This dont mean that expand my knlowledge on other forms like UX UI.</p>
+                            I'm interestesting in stacks like jam, technologies like PWA, and others. This dont mean that expand my knlowledge on other forms like UX UI.</p>
                             <p >
-                            I belive in the many tools and wit to get best the user’s experiences to create systems to get best the people’s life. I am excited for challenges, learn, grow up and help the people!                            </p>
+                            I belive in the many tools and wit to get better the user’s experiences to create systems to get best the people’s life. I am excited for challenges, learn, grow up and help the people!                            </p>
                         </div>
                     </div>
                 </div>
