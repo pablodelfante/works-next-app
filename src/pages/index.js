@@ -14,6 +14,7 @@ export default function Home() {
            <title>pablodelfante</title>
     </Head>
       <Layout>
+        
         <TitlePage titlePortada={titlePortada} contentPortada={contentPortada} />
         <div className="border-t"></div>
         <About />
