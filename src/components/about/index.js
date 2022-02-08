@@ -14,7 +14,7 @@ export default function About() {
 
                         <h2 className='mb-5'>About this site</h2>
                         <p className='mb-5'>
-                        Born from the idea to show who I am, show and expose works! The idea is to find something easy that works with good performance.
+                        Born from the idea of showing who i am, show and expose works! The aim is find something easy that works with good performance.
                         </p>
                         <p className='mb-5'>How I do this web?</p>
                         <Button href='/portfolio/6025b8ae31c60c396885113c'>See project</Button>

@@ -5,7 +5,7 @@ export const CONTENT_PORTADA = {
         contentPortada : `Hi!! welcome to my site! Here I tell you about me, who I am, ahead on!`
     },
     index: {
-        titlePortada: `How are you?`,
-        contentPortada : `In this section I have some works that I would like show with you!`
+        titlePortada: `Hi welcome!`,
+        contentPortada : `In this section I have some works that I would like to share with you!`
     }
 }
