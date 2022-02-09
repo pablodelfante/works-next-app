@@ -7,7 +7,7 @@ export default function About() {
     return (
         <>
             {/* acerca de mi general */}
-            <section className='my-40'>
+            <section className='my-20 lg:my-40'>
 
                 <div className='grid xl:grid-cols-2 gap-10'>
                     <div>
