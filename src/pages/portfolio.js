@@ -2,7 +2,7 @@ import Layout from "components/template";
 import TitlePage from "components/titlePage";
 import { getWorks } from 'connectors/findWorks';
 import Link from 'next/link';
-import { CONTENT_PORTADA } from 'utils/contentPortada';
+import { CONTENT_PORTADA } from 'utils/dataSite';
 
 import Head from "next/head";
 import Card from "components/Card";
