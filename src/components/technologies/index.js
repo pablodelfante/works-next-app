@@ -63,14 +63,14 @@ export default function technologies() {
                     </picture>
                     <figcaption className='pl-8 pb-8'>
                         {/* titulo */}
-                        <h2>About me... Who I am?</h2>
-                        <p className='font-extralight block mb-5'>...who i am?</p>
+                        <h2>About me... Who am I?</h2>
+                        <p className='font-extralight block mb-5'>...Who am I?</p>
 
                         <p className='mb-5'>
-                        I am Pablo! I'm graphic design and i'm studing web design. I passionate about  technology. Since i was a child was curious and active. I love share, learn, help and I like meet new people!
+                            I am a graphic designer and I am currrently studying web design. I have been passionate about technology since I was a curious and active child. I love sharing, learning and helping others as well as meeting new people!
                         </p>
                         <p className=''>
-                        I love solve problems! I enjoy so much be analytic and creative!
+                            I love sorting out problems and I really enjoy being analytic and creative!
                         </p>
                     </figcaption>
 
@@ -85,10 +85,12 @@ export default function technologies() {
 
                         {/* lista de tecnologias */}
                         <div className='grid gap-5'>
-                            <p >
-                            I interested in stacks like jam, technologies like PWA, and others. This dont mean that expand my knlowledge on other forms like UX UI.</p>
-                            <p >
-                            I think that many tools and wit can help to get better the user’s experiences to create systems to improve the people’s life. I am excited for challenges, learn new things, improve my skills as professional and help the people!               </p>
+                            <p>
+                                I am interested in stacks like jam, technologies like PWA, and others. This does not mean that I don't consider other forms such as UX UI.
+                            </p>
+                            <p>
+                            In my opinion these tools can help improve the user experinece to create systems to enhance people lives. I am excited about accepting challenges, improving my skills as a professional and helping people
+                            </p>
                         </div>
                     </div>
                 </div>
