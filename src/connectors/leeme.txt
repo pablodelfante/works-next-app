@@ -1,1 +1,0 @@
-aqui pensaba usar funciones para conectarme a strapi, podria haberse llamado api la carpeta pero me gusta mas connector

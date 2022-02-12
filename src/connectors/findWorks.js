@@ -10,7 +10,7 @@ export const getWorks = async (id) => {
     try {
         const query = id ? queryGetWork : queryGetWorks;
         
-        const res = await fetch("https://works-backend-v4.herokuapp.com/graphql", {
+        const res = await fetch(HOST_BACKEND, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
