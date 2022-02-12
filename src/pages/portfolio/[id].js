@@ -1,5 +1,5 @@
 import Layout from 'components/template';
-import { getWorks } from 'connectors/findWorks';
+import { getWorks, getWorksV2 } from 'connectors/findWorks';
 import Head from "next/head";
 import style from './id.module.scss'
 import Image from 'next/image';
@@ -7,9 +7,8 @@ import formatDate from 'helpers/formatDate';
 
 import Markdown from 'markdown-to-jsx';
 
-export default function Work({ work }) {
-
-    const { title, description, content, tecnologies, url_github, url_deploy, url_image, url_video, updatedAt, image } = work;
+export default function Work({ work: { attributes: work } }) {
+    const { title, description, content, technologies, url_github, url_deploy, url_image, url_video, updatedAt, image } = work;
     const dateUpdate = formatDate(updatedAt);
 
     return (
@@ -27,7 +26,7 @@ export default function Work({ work }) {
                     {/* <h4 className=''>Tecnologías usadas</h4> */}
                     <ul className='flex flex-wrap gap-x-3 mb-0.5'>
                         <li className="font-bold">Used technologies</li>
-                        {tecnologies.map((tecnologie, key) => (
+                        {technologies.map((tecnologie, key) => (
                             <li className="text-primary dark:text-primary" key={key}>{tecnologie}</li>
                         ))}
                     </ul>
@@ -46,8 +45,9 @@ export default function Work({ work }) {
                         (url_image || image) && (
                             <div className='mb-5'>
                                 <Image
-                                    src={url_image ? url_image : image ? image.url : 'null'}
+                                    src={url_image ? url_image : image ? image.data.attributes.url : 'null'}
                                     alt='sin imagen optimizada'
+                                    priority={true}
                                     //define como se comporta en el layout
                                     layout="responsive"
                                     //como se comporta la imagen dentro de su propio contenedor
@@ -102,7 +102,7 @@ export default function Work({ work }) {
 export async function getStaticPaths() {
 
     // obtener works
-    const works = await getWorks();
+    const works = await getWorksV2();
 
     // obtener las id para pre renderizar
     // retorna un array[] que contienen objetos asi: {params: {id: id}}
@@ -121,18 +121,10 @@ export async function getStaticPaths() {
             paths: [], fallback: false
         }
     }
-}//fin obtencion de id's
+}
 
 export async function getStaticProps({ params }) {
-
     const { id } = params;
-    // getWorks(query); la query es opcional
-    const res = await getWorks(id);
-    const work = await JSON.parse(JSON.stringify(res));
-
-
-    // aca props es requerido retornar
-    return {
-        props: { work }
-    }
-}//fin get static props
+    const work = await getWorksV2(id);
+    return { props: { work } }
+}

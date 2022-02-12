@@ -1,6 +1,6 @@
 import Layout from "components/template";
 import TitlePage from "components/titlePage";
-import { getWorks } from 'connectors/findWorks';
+import { getWorks, getWorksV2 } from 'connectors/findWorks';
 import Link from 'next/link';
 import { CONTENT_PORTADA } from 'utils/dataSite';
 
@@ -21,28 +21,21 @@ export default function Portfolio({ works }) {
                     {/* si no hay works */}
                     {!works ? <p>oops! I don't find works, sure i am on maintenance or break something, sorry😥. If yu can write me! pablodelfantexp@gmail.com</p> : ''}
                     {works?.map((work, index) => (
-                        <Link href={`/portfolio/${work._id}`} key={work._id}>
+                        <Link href={`/portfolio/${work.id}`} key={work.id}>
                             <a className="grid">
                                 <Card {...{ work, index }} />
                             </a>
                         </Link>
-
-
                     ))}
                 </ul>
-
-
             </Layout>
         </>
     )
 }
 
 export async function getStaticProps(context) {
-
-    // getWorks(query); la query es opcional
-    const res = await getWorks();
-    if (res) {
-        const works = await JSON.parse(JSON.stringify(res));
+    const works = await getWorksV2();
+    if (works) {
         return {
             props: {
                 works
@@ -50,8 +43,6 @@ export async function getStaticProps(context) {
         }
     } else {
         // regreso un objeto res como nullo
-        const works = { res }
-        return { props: works }
+        return { props: { works } }
     }
-
 }

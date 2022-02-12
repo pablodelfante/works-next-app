@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
-export default function Card({ work, index }) {
-
+export default function Card({ work: {attributes: work}, index }) {
+console.log(work)
     return (
         <>
             <li className="py-3 md:py-8 rounded border hover:border-primary hover:shadow-lg hover:shadow-indigo-500/40 transition duration-300">
@@ -10,7 +10,7 @@ export default function Card({ work, index }) {
                     <Image
                         src={
                             work?.image
-                                ? work.image.formats.medium.url
+                                ? work.image.data.attributes.url
                                 : "https://blog.aulaformativa.com/wp-content/uploads/2016/08/ventajas-optimizacion-de-codigo-codigo-fuente-limpio.jpg"
                         }
                         alt=""
@@ -29,7 +29,7 @@ export default function Card({ work, index }) {
                 <div className="px-3 md:px-8">
                     <h3 className="line-clamp-1"> {work?.title} </h3>
                     <ul className="hidden sm:grid sm:justify-start sm:gap-3 sm:grid-flow-col">
-                        {work?.tecnologies.map((tech, key) => (
+                        {work?.technologies?.map((tech, key) => (
                             <li
                                 key={key}
                                 className="text-primary text-sm truncate"

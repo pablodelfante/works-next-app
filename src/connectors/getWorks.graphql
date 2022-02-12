@@ -1,0 +1,20 @@
+{
+    works {
+        data {
+            id
+            attributes {
+                title
+                content
+                priority
+                image {
+                    data {
+                        id
+                        attributes {
+                            url
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

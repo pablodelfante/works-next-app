@@ -1,0 +1,81 @@
+<Head>
+<title>{title} | pablodelfante</title>
+</Head>
+<Layout>
+<article className='py-14 max-w-5xl mx-auto'>
+    {/* Titulo descripcion e imagen */}
+    <h2 className='mb-5'>{title}</h2>
+    <time className='text-gray-500 block font-light border-b mb-10'>Updated at: {dateUpdate}</time>
+
+    {/* Tecnologias*/}
+    {/* <h4 className=''>Tecnologías usadas</h4> */}
+    <ul className='flex flex-wrap gap-x-3 mb-0.5'>
+        <li className="font-bold">Used technologies</li>
+        {tecnologies.map((tecnologie, key) => (
+            <li className="text-primary dark:text-primary" key={key}>{tecnologie}</li>
+        ))}
+    </ul>
+
+    {/* description of page */}
+    <p className='mb-5'>{description}</p>
+
+
+    {/* SI existe un video y la imagen está seteada, mostrame SOLO el video */}
+
+
+    {/* imagen */}
+    {!url_video ?  //si video no existe intenta mostrarme la imagen
+
+        // si una de las imagenes existe retornalas
+        (url_image || image) && (
+            <div className='mb-5'>
+                <Image
+                    src={url_image ? url_image : image ? image.url : 'null'}
+                    alt='sin imagen optimizada'
+                    //define como se comporta en el layout
+                    layout="responsive"
+                    //como se comporta la imagen dentro de su propio contenedor
+                    objectFit='contain'
+                    //obligatorios, no hacen mucho cuando layouyt responsive
+                    //en este caso use 16:9 para darle cierta proporción
+                    width={16}
+                    height={9}
+                    quality={100}
+                />
+            </div>
+        )
+        : ''
+    }
+
+
+    {/* video */}
+    {url_video && (
+        // este posicionamiento y padding son para mantener la relacion aspecto del video (16/9)
+        <>
+            <div className="my-5" style={{ aspectRatio: "16/9" }}>
+                <iframe className="w-full h-full" src={url_video} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+            </div>
+            <p className="text-sm">If you can't watch the video: <a className="underline text-primary" href={url_video} target="_blank">watch on youtube</a></p>
+        </>
+    )}
+
+
+    {/* MARKDOWN */}
+    {/* este es un campo extra cuando desee agregar contenido */}
+    <Markdown className={style.markdown}>
+        {content ? content : ''}
+    </Markdown>
+
+
+    {/* Link github */}
+    {url_github ? (<a href={url_github} target="_blank" rel="noopener" className='underline'>see project on github</a>) : ''}
+    <br />
+    <br />
+
+    {/* Link deploy */}
+    {url_deploy ? (<a href={url_deploy} target="_blank" rel="noopener" className='underline'>see deploy</a>) : ''}
+
+
+
+</article>
+</Layout>

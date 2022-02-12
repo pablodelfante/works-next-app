@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { HOST_BACKEND } from '../utils/constants';
+export {getWorksV2} from 'connectors/findWorksV2';
 
 // http://localhost:1337/works
 
