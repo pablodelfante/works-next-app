@@ -1,5 +1,5 @@
 import Layout from 'components/template';
-import { getWorks, getWorksV2 } from 'connectors/findWorks';
+import { getWorks} from 'connectors/findWorks';
 import Head from "next/head";
 import style from './id.module.scss'
 import Image from 'next/image';
@@ -102,7 +102,7 @@ export default function Work({ work: { attributes: work } }) {
 export async function getStaticPaths() {
 
     // obtener works
-    const works = await getWorksV2();
+    const works = await getWorks();
 
     // obtener las id para pre renderizar
     // retorna un array[] que contienen objetos asi: {params: {id: id}}
@@ -125,6 +125,6 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
     const { id } = params;
-    const work = await getWorksV2(id);
+    const work = await getWorks(id);
     return { props: { work } }
 }

@@ -1,4 +1,4 @@
-import { getWorksV2 } from "connectors/findWorksV2";
+import { getWorksV2 } from "connectors/findWorks";
 
 
 export default function test({works}) {

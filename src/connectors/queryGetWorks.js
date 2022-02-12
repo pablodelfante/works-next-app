@@ -2,7 +2,7 @@
 export const queryGetWorks = `
 
 {
-    works {
+    works(sort: ["priority:desc"]) {
       data {
         id
         attributes {

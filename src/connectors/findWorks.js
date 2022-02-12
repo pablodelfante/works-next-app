@@ -1,23 +1,45 @@
-import axios from 'axios';
-import { HOST_BACKEND } from '../utils/constants';
-export {getWorksV2} from 'connectors/findWorksV2';
+// This can only used on getStatic props is size server only
 
-// http://localhost:1337/works
+import { queryGetWorks } from "connectors/queryGetWorks";
+import { queryGetWork } from "connectors/queryGetWork";
+import { HOST_BACKEND } from "utils/constants";
 
-// traer trabajos and especificos
-export const getWorks = async (_id) => {
-
-    // si hay id usalo, sino ordename los trabajos ASC y priority
-    const QUERY = _id ? `/${_id}` : '?_sort=updatedAt:DESC,priority:DESC';
-
+export const getWorks = async (id) => {
+    // to check for see the meaning of import .graphql files
+    // https://dev.to/ivanms1/next-js-graphql-typescript-setup-5bog
     try {
-        //de la response tomo data con datos devueltos
-        const { data } = await axios.get(`${HOST_BACKEND}/works${QUERY}`);
-        //dependiendo el caso es un array de datos o un objeto con dato especifico
-        return data;
+        const query = id ? queryGetWork : queryGetWorks;
+        
+        const res = await fetch("https://works-backend-v4.herokuapp.com/graphql", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+            },
+            body: JSON.stringify({
+                query: query,
+                variables: { id }
+            }),
+        })
+        // Desembarco de query -> data -> works -> data
+        // https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
+
+        // data from query
+        const { data } = await res.json();
+        
+        //si hay query...
+        if (id) {
+            return data.work.data;
+        }
+        // si no hay query...
+        return data.works.data;
+
     } catch (error) {
-        //retornar esto falso me sirve para pruebas mias cuando no tengo conexion
-        console.log({ getWorks_dice: error.message })
-        return null
+        console.log({ 'getWorks dice': error })
+        return { works: null }
     }
+    /*
+    Estructuras que retorna el plugin de graphql 
+    data.works[].data[].id||atributes.title etc
+    */
 }
