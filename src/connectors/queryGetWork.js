@@ -7,6 +7,7 @@ query getWork($id: ID) {
         title
         description
         description
+        content
         url_image
         url_video
         url_deploy

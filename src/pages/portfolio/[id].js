@@ -10,7 +10,6 @@ import Markdown from 'markdown-to-jsx';
 export default function Work({ work: { attributes: work } }) {
     const { title, description, content, technologies, url_github, url_deploy, url_image, url_video, updatedAt, image } = work;
     const dateUpdate = formatDate(updatedAt);
-
     return (
         <>
             <Head>
