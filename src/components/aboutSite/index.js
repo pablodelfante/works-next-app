@@ -2,7 +2,7 @@
 import Button from 'components/button';
 import Image from 'next/image';
 
-export default function About() {
+export default function () {
 
     return (
         <>
@@ -17,7 +17,7 @@ export default function About() {
                             Born from the idea of showing who I am, show and expose! The aim is to find something easy that works with good performance.
                         </p>
                         <p className='mb-5'>How did I do this web?</p>
-                        <Button href='/portfolio/6025b8ae31c60c396885113c'>See project</Button>
+                        <Button href='/portfolio/2'>See project</Button>
 
                     </div>
                     <div className='pointer-events-none'>

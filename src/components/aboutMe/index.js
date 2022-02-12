@@ -4,7 +4,7 @@ import { useState } from 'react';
 import style from './technologies.module.scss';
 import Image from 'next/image';
 
-export default function technologies() {
+export default function () {
 
 
     const [avatar_url, setAvatar_url] = useState({ value: null })
