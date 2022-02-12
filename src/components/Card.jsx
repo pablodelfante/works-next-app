@@ -1,7 +1,6 @@
 import Image from 'next/image';
 
 export default function Card({ work: {attributes: work}, index }) {
-console.log(work)
     return (
         <>
             <li className="py-3 md:py-8 rounded border hover:border-primary hover:shadow-lg hover:shadow-indigo-500/40 transition duration-300">

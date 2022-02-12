@@ -36,7 +36,7 @@ export const getWorks = async (id) => {
 
     } catch (error) {
         console.log({ 'getWorks dice': error })
-        return { works: null }
+        return null;
     }
     /*
     Estructuras que retorna el plugin de graphql 

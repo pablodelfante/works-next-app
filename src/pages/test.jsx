@@ -1,14 +1,9 @@
-import { getWorksV2 } from "connectors/findWorks";
 
 
-export default function test({works}) {
+
+export default function test() {
     return <>
     
     </>;
 }
 
-
-export async function getStaticProps() {
-  const works = await getWorksV2();
-  return { props: {works}}
-}
