@@ -25,12 +25,9 @@ export const getWorks = async (id) => {
         // data from query
         const { data } = await res.json();
         
-        //si hay query...
-        if (id) {
-            return data.work.data;
-        }
-        // si no hay query...
-        return data.works.data;
+        // check si hay query...
+        const works = id ? data?.work?.data : data?.works?.data;
+        return works;
 
     } catch (error) {
         console.log({ 'getWorks dice': error })
