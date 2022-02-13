@@ -1,14 +1,12 @@
 // This can only used on getStatic props is size server only
-
-import { queryGetWorks } from "connectors/queryGetWorks";
-import { queryGetWork } from "connectors/queryGetWork";
 import { HOST_BACKEND } from "utils/constants";
+import { readFile } from "connectors/readFile";
 
 export const getWorks = async (id) => {
     // to check for see the meaning of import .graphql files
     // https://dev.to/ivanms1/next-js-graphql-typescript-setup-5bog
     try {
-        const query = id ? queryGetWork : queryGetWorks;
+        const query = id ? await readFile('src/connectors/getWork.graphql') : await readFile('src/connectors/getWorks.graphql');
         
         const res = await fetch(HOST_BACKEND, {
             method: "POST",

@@ -1,4 +1,3 @@
-export const queryGetWork = `
 query getWork($id: ID) {
   work(id: $id){
     data{
@@ -25,4 +24,3 @@ query getWork($id: ID) {
     }
   }
 }
-`;

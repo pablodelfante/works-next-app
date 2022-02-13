@@ -1,20 +1,24 @@
+
 {
-    works {
-        data {
-            id
-            attributes {
-                title
-                content
-                priority
-                image {
-                    data {
-                        id
-                        attributes {
-                            url
-                        }
-                    }
-                }
+    works(sort: ["priority:desc"]) {
+      data {
+        id
+        attributes {
+          title
+          description
+          content
+          priority
+          technologies
+          image{
+            data{
+              id
+              attributes{
+                url
+              }
             }
+          }
         }
+      }
+      
     }
-}
+  }
