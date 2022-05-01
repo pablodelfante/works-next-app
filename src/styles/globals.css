@@ -1,24 +1,24 @@
-@use "./NProgress.module.scss" as nprogress;
-@use "./blobV2.scss";
+@import "NProgress.css";
+@import "blob.css";
 
-// NOTAS
 /* Modo dark: 
       -en header.js cambio clase dark en html
       -aqui cambio body header y lunita svg */
-:root {
-}
+:root {}
 
 * {
     font-family: "Montserrat", sans-serif;
     @apply text-gray-700;
 }
-// general de imagenes
+
+/* general de imagenes */
 img {
     @apply w-full;
     @apply object-cover;
     image-rendering: -webkit-optimize-contrast;
 }
-// tamaño minimo de los svg
+
+/* tamaño minimo de los svg */
 svg {
     width: 1.5rem;
 }
@@ -26,33 +26,35 @@ svg {
 h1 {
     @apply text-8xl;
 }
+
 h2 {
     @apply text-4xl;
     @apply font-bold;
 }
+
 h3 {
     @apply text-3xl;
     @apply font-bold;
 }
+
 h4 {
     @apply text-2xl;
     @apply font-bold;
 }
+
 ul {
     @apply list-inside;
 }
 
-// color texto en dark mode
+/* color texto en dark mode */
 .dark * {
     @apply text-white;
     @apply transition-[color];
     @apply duration-700;
 }
-// cuando este dark pon negro estos elementos
-.dark {
-    header,
-    body {
-        background-color: theme("colors.dark");
-        @apply transition
-    }
+
+/* cuando este dark pon negro estos elementos */
+.dark :is(header, body) {
+    background-color: theme("colors.dark");
+    @apply transition
 }

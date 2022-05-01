@@ -1,5 +1,5 @@
 import "tailwindcss/tailwind.css";
-import 'styles/globals.scss'
+import 'styles/globals.css'
 import DarkProvider from 'contexts/darkMode/DarkProvider';
 import GAnalytics from "components/GAnalytics";
 

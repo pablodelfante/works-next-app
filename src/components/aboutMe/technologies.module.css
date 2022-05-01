@@ -1,0 +1,3 @@
+.customShadow > div {
+    box-shadow: 2rem -2rem 0 -14px black;
+}

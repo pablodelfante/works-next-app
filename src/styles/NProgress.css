@@ -1,0 +1,9 @@
+
+#nprogress .bar{
+    @apply bg-primary;
+}
+
+#nprogress .spinner-icon {
+    display: none;
+    @apply border-primary;
+  }

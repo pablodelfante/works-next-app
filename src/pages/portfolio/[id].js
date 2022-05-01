@@ -1,7 +1,7 @@
 import Layout from 'components/template';
 import { getWorks} from 'connectors/findWorks';
 import Head from "next/head";
-import style from './id.module.scss'
+import style from './id.module.css'
 import Image from 'next/image';
 import formatDate from 'helpers/formatDate';
 

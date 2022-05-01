@@ -1,7 +1,7 @@
 
 import { useEffect } from 'react';
 import { useState } from 'react';
-import style from './technologies.module.scss';
+import style from './technologies.module.css';
 import Image from 'next/image';
 
 export default function () {
