@@ -8,6 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install dependencies
-        run: npm install
+        run: npm i -D
       - name: Run test
         run: npm run test
