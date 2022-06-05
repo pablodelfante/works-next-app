@@ -1,8 +1,10 @@
-name: demo-name
+name: chekers-to-integrate-to-production
 on:
   push:
     branches:
       - add-test-enviroment
+env:
+  HOST_BACKEND: ${{ secrets.HOST_BACKEND }}
 
 jobs:
   check-backend-status:
@@ -18,6 +20,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v3
+      if: ${{ env.HOST_BACKEND }}
       - name: Install all dependencies
-        run: echo ""
+        run: echo "facke installing dependencies"
   
