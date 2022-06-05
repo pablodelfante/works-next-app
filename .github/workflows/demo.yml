@@ -4,11 +4,10 @@ on:
     branches:
       - add-test-enviroment
 
-
 jobs:
   check-backend-status:
+    runs-on: ubuntu-20.04
     steps:
-      runs-on: ubuntu-20.04
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
       - name: Install only dev dependencies
@@ -17,8 +16,8 @@ jobs:
         run: npm run test
 
   check-correct-build:
+    runs-on: ubuntu-20.04
     steps:
-      runs-on: ubuntu-20.04
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
       - name: Install all dependencies
