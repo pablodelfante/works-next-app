@@ -1,14 +1,8 @@
+[![chekers-to-integrate-to-production](https://github.com/pablodelfante/works-next-app/actions/workflows/demo.yml/badge.svg)](https://github.com/pablodelfante/works-next-app/actions/workflows/demo.yml)
+
 # Sitio Personal! 🚀
-_Repositorio de sitio web personal. Un poco de exploración y aprendizaje acompañado de buena vibra!_
+_Personal website_
 
-## Getting Started
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
 ```
-
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
