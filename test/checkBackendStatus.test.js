@@ -23,6 +23,7 @@ describe('checking if backend is running', async () => {
 	});
 
 	test('checking server status', async () => {
+		console.log('Entire response: ', response);
 		expect(response.status).toEqual(200);
 	});
 	test('checking data on response', async () => {
