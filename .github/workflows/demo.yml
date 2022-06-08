@@ -1,4 +1,4 @@
-name: chekers-to-integrate-to-production
+name: chekers-to-integrate-into-production
 on:
   push:
     branches:
