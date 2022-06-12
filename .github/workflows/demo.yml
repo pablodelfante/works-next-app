@@ -1,20 +1,13 @@
-name: chekers-to-integrate-into-production
+name: basic-checkers
 on:
   push:
     branches:
       - add-test-enviroment
+      - test
 env:
   HOST_BACKEND: ${{ secrets.HOST_BACKEND }}
 
 jobs:
-  check-backend-status:
-    runs-on: ubuntu-20.04
-    steps:
-      - uses: actions/checkout@v3
-      - name: Install only dev dependencies
-        run: npm i -D
-      - name: Run test
-        run: npm run test
 
   check-correct-build:
     runs-on: ubuntu-20.04

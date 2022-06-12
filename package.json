@@ -11,20 +11,16 @@
   },
   "dependencies": {
     "@tailwindcss/line-clamp": "^0.2.1",
-    "dotenv": "^16.0.1",
     "markdown-to-jsx": "^7.1.1",
     "next": "^12.0.4",
     "next-pwa": "^5.4.0",
-    "node-fetch": "^3.2.5",
     "nprogress": "^0.2.0",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "vite-tsconfig-paths": "^3.5.0"
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.0",
     "postcss": "^8.4.4",
-    "tailwindcss": "^3.0.0",
-    "vitest": "^0.13.1"
+    "tailwindcss": "^3.0.0"
   }
 }
