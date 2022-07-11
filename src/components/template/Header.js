@@ -1,18 +1,18 @@
 import Link from 'next/link'
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import DarkContext from '../../contexts/darkMode/DarkContext';
 
 export default function Header() {
 
     const { dark, setDark, icono, setIcono, sun, moon } = useContext(DarkContext);
 
-    // Funcion modo dark
-    const modeDark = () => {
+    useEffect(() => {
         const html = document.getElementsByTagName('html')[0];
-
-        // html
-        html.className = !dark ? 'dark' : undefined;
-        if (dark) { setIcono(sun) } else { setIcono(moon) }
+        html.className = dark ? 'dark' : '';
+        if (dark) { setIcono(moon) } else { setIcono(sun) }
+    }, [dark]);
+    
+    const modeDark = () => {
         setDark(!dark);
     }
 
