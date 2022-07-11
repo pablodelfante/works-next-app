@@ -34,7 +34,7 @@ class MyDocument extends Document {
           <meta name="theme-color" content="#fff" />
         </Head>
         {/* <Head /> */}
-        <body>
+        <body className='dark:bg-dark transition'>
           <Main />
           <NextScript />
         </body>

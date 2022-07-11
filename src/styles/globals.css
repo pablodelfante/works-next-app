@@ -52,9 +52,3 @@ ul {
     @apply transition-[color];
     @apply duration-700;
 }
-
-/* cuando este dark pon negro estos elementos */
-.dark :is(header, body) {
-    background-color: theme("colors.dark");
-    @apply transition
-}

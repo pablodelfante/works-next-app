@@ -18,7 +18,7 @@ export default function Header() {
 
     return (
         <>
-            <header className='sticky top-0 z-10 border-b'>
+            <header className='border-b'>
                 <ul className='flex justify-end gap-3 md:gap-10 py-10'>
 
                     <li className='mr-auto'>
