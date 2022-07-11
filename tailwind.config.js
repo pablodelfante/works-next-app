@@ -9,8 +9,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // defino color personalizado
-        primary: colors.indigo['600'],
+        // defino color personalizado, inicial fue colors.indigo['600']
+        primary: 'hwb(243deg 30% 0%)',
         dark: '#100f38'
       }
     },
