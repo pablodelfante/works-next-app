@@ -10,7 +10,7 @@ module.exports = {
     extend: {
       colors: {
         // defino color personalizado, inicial fue colors.indigo['600']
-        primary: 'hwb(243deg 30% 0%)',
+        primary: 'hwb(243deg 30% 1%)',
         dark: '#100f38'
       }
     },
