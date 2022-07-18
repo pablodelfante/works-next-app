@@ -31,7 +31,7 @@ export default function Card({ work: {attributes: work}, index }) {
                         {work?.technologies?.map((tech, key) => (
                             <li
                                 key={key}
-                                className="text-white text-xs font-medium truncate px-2 py-1 bg-primary rounded-full"
+                                className="text-white text-xs font-medium truncate px-2 py-1 bg-gray-500 rounded-full"
                             >
                                 {tech}
                             </li>

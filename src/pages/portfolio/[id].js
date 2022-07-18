@@ -26,7 +26,7 @@ export default function Work({ work: { attributes: work } }) {
                     <ul className='flex flex-wrap gap-x-3 mb-0.5'>
                         <li className="font-bold">Used technologies</li>
                         {technologies.map((tecnologie, key) => (
-                            <li className="text-white text-xs font-medium truncate px-2 py-1 bg-primary rounded-full" key={key}>{tecnologie}</li>
+                            <li className="text-white text-xs font-medium truncate px-2 py-1 bg-gray-500 rounded-full" key={key}>{tecnologie}</li>
                         ))}
                     </ul>
 
