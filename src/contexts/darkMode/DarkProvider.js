@@ -13,7 +13,7 @@ export default function DarkProvider(props) {
 
 
     // estado para el modo dark
-    const [dark, setDark] = useState(false);
+    const [dark, setDark] = useState(true);
     //estado para icono modo dark
     const [icono, setIcono] = useState(sun);
     // -----------------------------------------
