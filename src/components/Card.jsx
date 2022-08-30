@@ -8,8 +8,8 @@ export default function Card({ work, index }) {
                 <div className="mb-5 opacity-90">
                     <Image
                         src={
-                            work?.image
-                                ? work.image.data.attributes.url
+                            work?.url_image
+                                ? work.url_image
                                 : "https://blog.aulaformativa.com/wp-content/uploads/2016/08/ventajas-optimizacion-de-codigo-codigo-fuente-limpio.jpg"
                         }
                         alt=""
