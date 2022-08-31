@@ -8,8 +8,12 @@ export const getWorks = async (id) => {
         db.forEach((work) => {
             work.url_image = work.url_image && `/img/${work.url_image}`;
         })
-        
-        console.log(db);
+
+        if (id) {
+            const work = db.find((work) => work.id == id)
+            return work
+        }
+        // console.log(db);
         return db;
 
     } catch (error) {

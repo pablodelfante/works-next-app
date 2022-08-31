@@ -7,7 +7,8 @@ import formatDate from 'helpers/formatDate';
 
 import Markdown from 'markdown-to-jsx';
 
-export default function Work({ work: { attributes: work } }) {
+export default function Work({ work }) {
+    // console.log(work);
     const { title, description, content, technologies, url_github, url_deploy, url_image, url_video, updatedAt, image } = work;
     const dateUpdate = formatDate(updatedAt);
     return (
@@ -102,13 +103,11 @@ export async function getStaticPaths() {
 
     // obtener works
     const works = await getWorks();
-
     // obtener las id para pre renderizar
     // retorna un array[] que contienen objetos asi: {params: {id: id}}
     const paths = works?.map((work) => ({
         params: { id: work?.id },
     }))
-
     // aqui es obligatorio retornar paths y fallback
     // paths aqui por estar dentro de {} se transforma a paths:[a,b,c...]
     if (paths) {
@@ -125,5 +124,6 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
     const { id } = params;
     const work = await getWorks(id);
+    // console.log(work);
     return { props: { work } }
 }
