@@ -20,7 +20,7 @@ export default function Work({ work }) {
                 <article className='py-14 max-w-5xl mx-auto'>
                     {/* Titulo descripcion e imagen */}
                     <h2 className='mb-5'>{title}</h2>
-                    <time className='text-gray-500 block font-light border-b mb-10'>Updated at: {dateUpdate}</time>
+                    {/* <time className='text-gray-500 block font-light border-b mb-10'>Updated at: {dateUpdate}</time> */}
 
                     {/* Tecnologias*/}
                     {/* <h4 className=''>Tecnologías usadas</h4> */}
