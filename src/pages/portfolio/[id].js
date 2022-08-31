@@ -9,7 +9,7 @@ import Markdown from 'markdown-to-jsx';
 
 export default function Work({ work }) {
     // console.log(work);
-    const { title, description, content, technologies, url_github, url_deploy, url_image, url_video, updatedAt, image } = work;
+    const { title, description, content, technologies, url_github, url_deploy, url_image, url_video, updatedAt } = work;
     const dateUpdate = formatDate(updatedAt);
     return (
         <>
@@ -34,26 +34,18 @@ export default function Work({ work }) {
                     {/* description of page */}
                     <p className='mb-5'>{description}</p>
 
-
-                    {/* SI existe un video y la imagen está seteada, mostrame SOLO el video */}
-
-
-                    {/* imagen */}
-                    {!url_video ?  //si video no existe intenta mostrarme la imagen
-
-                        // si una de las imagenes existe retornalas
-                        (url_image || image) && (
+                    {/* multimedia */}
+                    {!url_video ? 
+                        url_image && (
                             <div className='mb-5'>
                                 <Image
-                                    src={url_image ? url_image : image ? image.data.attributes.url : 'null'}
-                                    alt='sin imagen optimizada'
+                                    src={url_image ? url_image : ''}
+                                    alt='cant find the image'
                                     priority={true}
                                     //define como se comporta en el layout
                                     layout="responsive"
                                     //como se comporta la imagen dentro de su propio contenedor
                                     objectFit='contain'
-                                    //obligatorios, no hacen mucho cuando layouyt responsive
-                                    //en este caso use 16:9 para darle cierta proporción
                                     width={16}
                                     height={9}
                                     quality={100}
