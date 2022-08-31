@@ -101,7 +101,6 @@ export default function Work({ work }) {
 
 export async function getStaticPaths() {
 
-    // obtener works
     const works = await getWorks();
     // obtener las id para pre renderizar
     // retorna un array[] que contienen objetos asi: {params: {id: id}}
@@ -124,6 +123,5 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
     const { id } = params;
     const work = await getWorks(id);
-    // console.log(work);
     return { props: { work } }
 }
