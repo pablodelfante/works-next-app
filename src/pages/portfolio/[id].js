@@ -1,14 +1,11 @@
 import Layout from 'components/template';
 import { getWorks} from 'connectors/findWorks';
 import Head from "next/head";
-import style from './id.module.css'
 import Image from 'next/image';
 import formatDate from 'helpers/formatDate';
-
-import Markdown from 'markdown-to-jsx';
+import parse from "html-react-parser";
 
 export default function Work({ work }) {
-    // console.log(work);
     const { title, description, content, technologies, url_github, url_deploy, url_image, url_video, updatedAt } = work;
     const dateUpdate = formatDate(updatedAt);
     return (
@@ -70,9 +67,7 @@ export default function Work({ work }) {
 
                     {/* MARKDOWN */}
                     {/* este es un campo extra cuando desee agregar contenido */}
-                    <Markdown className={style.markdown}>
-                        {content ? content : ''}
-                    </Markdown>
+                   {content ? <section className='py-3'> {parse(content)} </section>: ''}
 
 
                     {/* Link github */}

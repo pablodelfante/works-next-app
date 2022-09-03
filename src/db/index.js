@@ -105,7 +105,9 @@ export const db = [
     },
     {
         "id": "9970d36a-c4e6-4d71-8c66-8559e3b0f04se",
-        "content": "### Node integration\nThe system, manage the users getting the data from localstorage or local with ajax, save the data on localstorage and after that try use the server express who manage the local saved. If you download the proyect on local machine, intall the packages and start the server!\n\n1. npm install\n2. node serverLocal.js\n\n**NOTE: **To start session, you can use ‘1’ as user and pasword!",
+        "content": `<h2>Node integration</h2>
+        <p>The system, manage the users getting the data from localstorage or local with ajax, save the data on localstorage and after that try use the server express who manage the local saved.</p>
+        <p><br  ><strong>NOTE:</strong> To start session, you can use ‘1’ as user and pasword!</p>`,
         "title": "JS - Dashboard people managment",
         "description": "Dashboard for people managment, created with Javascript vanilla, the focus was to show the skills obtained with javascript and jquery like library to understand the libraries concept. And other integratios!",
         "url_image": "/img/dashboard-js.png",
