@@ -17,7 +17,7 @@ export default function () {
                             Born from the idea of showing who I am, show and expose! The aim is to find something easy that works with good performance.
                         </p>
                         <p className='mb-5'>How did I do this web?</p>
-                        <Button href='/portfolio/2'>See project</Button>
+                        <Button href='/portfolio/57765139-6e57-4915-be50-b1cbafc120d0'>See project</Button>
 
                     </div>
                     <div className='pointer-events-none'>

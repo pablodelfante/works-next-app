@@ -1,5 +1,17 @@
 export const db = [
     {
+        id: "93d59f19-ba4a-4b78-8c56-13945d48cc2a",
+        content: null,
+        title: "Teacher at ORT University",
+        description: "description here",
+        url_image: null,
+        url_github: null,
+        url_video: null,
+        url_deploy: null,
+        priority: true,
+        technologies: [],
+    },
+    {
         id: "6f23baea-b3c0-465b-9ecc-446ac5834c69",
         content: null,
         title: "React web Developer at Studio4D",
@@ -134,16 +146,5 @@ export const db = [
         priority: false,
         technologies: ["Figma", "Photoshop", "Ilustrator"],
     },
-    {
-        id: "93d59f19-ba4a-4b78-8c56-13945d48cc2a",
-        content: null,
-        title: "Teacher at ORT University",
-        description: "description here",
-        url_image: null,
-        url_github: null,
-        url_video: null,
-        url_deploy: null,
-        priority: true,
-        technologies: [],
-    },
+   
 ];
