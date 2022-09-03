@@ -8,7 +8,18 @@ export const getWorks = async (id) => {
             const work = db.find((work) => work.id == id)
             return work
         }
-        return db;
+        // order
+        const orderedDb = db.sort((a,b)=>{
+           if (a.priority && !b.priority) {
+             return -1  
+           }
+           if (!a.priority && b.priority) {
+            return 1
+           }
+           return 0
+        })
+        console.log(orderedDb);
+        return orderedDb;
 
     } catch (error) {
         console.log({ 'getWorks dice': error })
