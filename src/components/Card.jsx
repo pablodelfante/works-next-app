@@ -6,7 +6,7 @@ export default function Card({ work, index }) {
             <li className="py-3 md:py-8 rounded border hover:border-primary hover:shadow-lg hover:shadow-indigo-500/40 transition duration-300">
                 {/* agregar imagen aca */}
                 <figure className="mb-5 opacity-90">
-                   {/*  <Image
+                    <Image
                         src={
                             work?.url_image
                                 ? work.url_image
@@ -21,8 +21,8 @@ export default function Card({ work, index }) {
                         height={1}
                         quality={100}
                         priority={true}
-                    /> */}
-                    <img src={work?.url_image} alt="" />
+                    />
+                    {/* <img src={work?.url_image} alt="" /> */}
                 </figure>
                 {/* work.image.formats.small.url */}
                 {/* ------- */}

@@ -4,6 +4,7 @@ import Head from "next/head";
 import Image from 'next/image';
 import formatDate from 'helpers/formatDate';
 import parse from "html-react-parser";
+import { defaultUrlImage } from "utils/config";
 
 export default function Work({ work }) {
     const { title, description, content, technologies, url_github, url_deploy, url_image, url_video, updatedAt } = work;
@@ -32,11 +33,10 @@ export default function Work({ work }) {
                     <p className='mb-5'>{description}</p>
 
                     {/* multimedia */}
-                    {!url_video ? 
-                        url_image && (
+                    {!url_video && 
                             <div className='mb-5'>
                                 <Image
-                                    src={url_image ? url_image : ''}
+                                    src={url_image ? url_image : defaultUrlImage}
                                     alt='cant find the image'
                                     priority={true}
                                     //define como se comporta en el layout
@@ -48,8 +48,6 @@ export default function Work({ work }) {
                                     quality={100}
                                 />
                             </div>
-                        )
-                        : ''
                     }
 
 
