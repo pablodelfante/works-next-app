@@ -1,4 +1,3 @@
-import { HOST_BACKEND } from "utils/constants";
 import { db } from "db/index";
 
 export const getWorks = async (id) => {
@@ -8,7 +7,7 @@ export const getWorks = async (id) => {
             const work = db.find((work) => work.id == id)
             return work
         }
-        // order
+        // order db
         const orderedDb = db.sort((a,b)=>{
            if (a.priority && !b.priority) {
              return -1  
@@ -18,7 +17,6 @@ export const getWorks = async (id) => {
            }
            return 0
         })
-        console.log(orderedDb);
         return orderedDb;
 
     } catch (error) {
