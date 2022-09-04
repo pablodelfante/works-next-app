@@ -22,12 +22,15 @@ export default function Work({ work }) {
 
                     {/* Tecnologias*/}
                     {/* <h4 className=''>Tecnologías usadas</h4> */}
-                    <ul className='flex flex-wrap lg:gap-x-3 gap-1 mb-0.5'>
+                    {(technologies && technologies.length) ? (
+                        <ul className='flex flex-wrap lg:gap-x-3 gap-1 mb-0.5'>
                         <li className="font-bold">Used technologies</li>
                         {technologies.map((tecnologie, key) => (
                             <li className="text-white text-xs font-medium truncate px-2 py-1 bg-gray-500 rounded-full" key={key}>{tecnologie}</li>
                         ))}
                     </ul>
+                    ) : <></>}
+                    
 
                     {/* description of page */}
                     <p className='mb-5'>{description}</p>

@@ -8,7 +8,7 @@ import { getWorks } from "connectors/findWorks";
 
 export default function Home() {
   const { titlePortada, contentPortada } = CONTENT_PORTADA.index;
-  getWorks()
+  // getWorks()
   return (
     <>
     <Head>
