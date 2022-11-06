@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 export default function Card({ work, index }) {
     return (
@@ -26,7 +26,7 @@ export default function Card({ work, index }) {
                 </figure>
                 {/* work.image.formats.small.url */}
                 {/* ------- */}
-                <div className="px-3 md:px-8">
+                <div className="px-3 md:px-8 grid gap-2">
                     <h3 className="line-clamp-1"> {work?.title} </h3>
                     <ul className="hidden sm:grid sm:justify-start sm:gap-3 sm:grid-flow-col">
                         {work?.technologies?.map((tech, key) => (
