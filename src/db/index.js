@@ -62,7 +62,7 @@ export const db = [
         title: "PWA - This web site",
         description:
             "This site was born out of the need to show works that have produced technological changes inside me. I try to show my profile both as a professional and as an individual. Every day I try to get better, to learn, explore and in this way be a better person enjoying what I do.",
-        url_image: "/img/audits.jpg",
+        url_image: "/img/site.png",
         url_github: "https://github.com/pablodelfante/works-next-app",
         url_video: "",
         url_deploy: "",
