@@ -1,5 +1,1 @@
-* se pueden sacar los tamaños de imagen
-* hay una propiedad para que se vean borrosas las imagenes hasat q carguen
-
-
-* remover axios
+-   revisar integraciones nuevas dentro de mongodb altas como sdk y graph endpoints

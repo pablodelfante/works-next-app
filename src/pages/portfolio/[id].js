@@ -1,14 +1,13 @@
 import Layout from 'components/template';
 import { getWorks} from 'connectors/findWorks';
 import Head from "next/head";
-import style from './id.module.css'
 import Image from 'next/image';
 import formatDate from 'helpers/formatDate';
+import parse from "html-react-parser";
+import { defaultUrlImage } from "utils/config";
 
-import Markdown from 'markdown-to-jsx';
-
-export default function Work({ work: { attributes: work } }) {
-    const { title, description, content, technologies, url_github, url_deploy, url_image, url_video, updatedAt, image } = work;
+export default function Work({ work }) {
+    const { title, description, content, technologies, url_github, url_deploy, url_image, url_video, updatedAt } = work;
     const dateUpdate = formatDate(updatedAt);
     return (
         <>
@@ -19,47 +18,39 @@ export default function Work({ work: { attributes: work } }) {
                 <article className='py-14 max-w-5xl mx-auto'>
                     {/* Titulo descripcion e imagen */}
                     <h2 className='mb-5'>{title}</h2>
-                    <time className='text-gray-500 block font-light border-b mb-10'>Updated at: {dateUpdate}</time>
+                    {/* <time className='text-gray-500 block font-light border-b mb-10'>Updated at: {dateUpdate}</time> */}
 
                     {/* Tecnologias*/}
                     {/* <h4 className=''>Tecnologías usadas</h4> */}
-                    <ul className='flex flex-wrap lg:gap-x-3 gap-1 mb-0.5'>
+                    {(technologies && technologies.length) ? (
+                        <ul className='flex flex-wrap lg:gap-x-3 gap-1 mb-0.5'>
                         <li className="font-bold">Used technologies</li>
                         {technologies.map((tecnologie, key) => (
                             <li className="text-white text-xs font-medium truncate px-2 py-1 bg-gray-500 rounded-full" key={key}>{tecnologie}</li>
                         ))}
                     </ul>
+                    ) : <></>}
+                    
 
                     {/* description of page */}
                     <p className='mb-5'>{description}</p>
 
-
-                    {/* SI existe un video y la imagen está seteada, mostrame SOLO el video */}
-
-
-                    {/* imagen */}
-                    {!url_video ?  //si video no existe intenta mostrarme la imagen
-
-                        // si una de las imagenes existe retornalas
-                        (url_image || image) && (
+                    {/* multimedia */}
+                    {!url_video && 
                             <div className='mb-5'>
                                 <Image
-                                    src={url_image ? url_image : image ? image.data.attributes.url : 'null'}
-                                    alt='sin imagen optimizada'
+                                    src={url_image ? url_image : defaultUrlImage}
+                                    alt='cant find the image'
                                     priority={true}
                                     //define como se comporta en el layout
                                     layout="responsive"
                                     //como se comporta la imagen dentro de su propio contenedor
                                     objectFit='contain'
-                                    //obligatorios, no hacen mucho cuando layouyt responsive
-                                    //en este caso use 16:9 para darle cierta proporción
                                     width={16}
                                     height={9}
                                     quality={100}
                                 />
                             </div>
-                        )
-                        : ''
                     }
 
 
@@ -77,9 +68,7 @@ export default function Work({ work: { attributes: work } }) {
 
                     {/* MARKDOWN */}
                     {/* este es un campo extra cuando desee agregar contenido */}
-                    <Markdown className={style.markdown}>
-                        {content ? content : ''}
-                    </Markdown>
+                   {content ? <section className='py-3'> {parse(content)} </section>: ''}
 
 
                     {/* Link github */}
@@ -100,15 +89,12 @@ export default function Work({ work: { attributes: work } }) {
 
 export async function getStaticPaths() {
 
-    // obtener works
     const works = await getWorks();
-
     // obtener las id para pre renderizar
     // retorna un array[] que contienen objetos asi: {params: {id: id}}
     const paths = works?.map((work) => ({
         params: { id: work?.id },
     }))
-
     // aqui es obligatorio retornar paths y fallback
     // paths aqui por estar dentro de {} se transforma a paths:[a,b,c...]
     if (paths) {
