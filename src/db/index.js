@@ -51,7 +51,7 @@ export const db = [
         url_image: "/img/chat-app.png",
         url_github: "https://github.com/pablodelfante/socket-chat-app",
         url_video: null,
-        url_deploy: "https://first-socket-chat-app.herokuapp.com/",
+        url_deploy: null,
         priority: false,
         technologies: ["Express", "Tailwind CSS", "Socket.io", "nodemon"],
         draft: false,
