@@ -3,14 +3,15 @@ export const db = [
         id: "93d59f19-ba4a-4b78-8c56-13945d48cc2a",
         content: null,
         title: "Teacher at ORT University",
-        description: "I have had the oportunity to integrate a team at the ORT University as a professor. Now days I give a web design course at the University and I'm finding new chalenges at the position. I'm very happy for this oportunity and the new chalenges!",
+        description:
+            "I have had the oportunity to integrate a team at the ORT University as a professor. Now days I give a web design course at the University and I'm finding new chalenges at the position. I'm very happy for this oportunity and the new chalenges!",
         url_image: "/img/professor.jpg",
         url_github: null,
         url_video: null,
         url_deploy: null,
         priority: true,
         technologies: [],
-        draft: true
+        draft: true,
     },
     {
         id: "6f23baea-b3c0-465b-9ecc-446ac5834c69",
@@ -24,7 +25,7 @@ export const db = [
         url_deploy: null,
         priority: true,
         technologies: ["React", "Tailwind", "Express", "Storybook react"],
-        draft: false
+        draft: false,
     },
     {
         id: "71c0bb50-101d-4e72-a947-456f78af495f",
@@ -39,7 +40,7 @@ export const db = [
         url_deploy: null,
         priority: false,
         technologies: ["Svelte", "PWA", "Firebase", "Bootstrap"],
-        draft: false
+        draft: false,
     },
     {
         id: "f7e1cd51-cb94-4e4b-8ebd-a30713e736d6",
@@ -53,7 +54,7 @@ export const db = [
         url_deploy: "https://first-socket-chat-app.herokuapp.com/",
         priority: false,
         technologies: ["Express", "Tailwind CSS", "Socket.io", "nodemon"],
-        draft: false
+        draft: false,
     },
     {
         id: "57765139-6e57-4915-be50-b1cbafc120d0",
@@ -75,7 +76,7 @@ export const db = [
             "GraphQL",
             "Figma",
         ],
-        draft: false
+        draft: false,
     },
     {
         id: "d0913cd7-6330-4a9d-b6be-a5520ab83d84",
@@ -89,7 +90,7 @@ export const db = [
         url_deploy: null,
         priority: false,
         technologies: ["PHP", "MySQL", "BrowserSync"],
-        draft: false
+        draft: false,
     },
     {
         id: "9970d36a-c4e6-4d71-8c66-8559e3b0f04e",
@@ -103,7 +104,7 @@ export const db = [
         url_deploy: "https://pablo-university.github.io/W3-Obligatorio1/src/",
         priority: false,
         technologies: ["HTML", "CSS", "JS", "Gulp"],
-        draft: false
+        draft: false,
     },
     {
         id: "9970d36a-c4e6-4d71-8c66-8559e3b0f04se",
@@ -120,14 +121,14 @@ export const db = [
             "https://pablo-university.github.io/P1-obligatorio/public/index.html",
         priority: false,
         technologies: ["HTML", "JavaScript", "Figma", "SCSS", "Node js"],
-        draft: false
+        draft: false,
     },
     {
         id: "9970d36a-c4e6-4d71-8c66-8559e3b0f04es",
         content: "",
         title: "DW2 - Strip to Australia",
         description:
-            " Overall, it is about tourist information, general information about Australia, the target of the web is to show differents skills thgrough with techologies as CSS, SCSS or the different libraries implementation to do the web site.",
+            "Overall, it is about tourist information, general information about Australia, the target of the web is to show differents skills thgrough with techologies as CSS, SCSS or the different libraries implementation to do the web site.",
         url_image: "/img/dw2-viaje-a-australia.png",
         url_github: "https://github.com/pablodelfante/W2-obligatorio2",
         url_video: null,
@@ -140,7 +141,7 @@ export const db = [
             "JavaScript",
             "Bibliotecas CSS y JS",
         ],
-        draft: false
+        draft: false,
     },
     {
         id: "9970d36a-c4e6-4d71-8cx66-8559e3b0f04es",
@@ -154,7 +155,6 @@ export const db = [
         url_deploy: null,
         priority: false,
         technologies: ["Figma", "Photoshop", "Ilustrator"],
-        draft: false
+        draft: false,
     },
-   
 ];
