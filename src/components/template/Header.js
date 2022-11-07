@@ -9,17 +9,9 @@ export default function Header() {
     useEffect(() => {
         const html = document.getElementsByTagName("html")[0];
         html.className = dark ? "dark" : "";
-        if (dark) {
-            setIcono(moon);
-        } else {
-            setIcono(sun);
-        }
-        /* 
-        solo cambia la clase en el html
-        */
     }, [dark]);
 
-    const modeDark = () => {
+    const switchMode = () => {
         setDark(!dark);
     };
 
@@ -37,7 +29,7 @@ export default function Header() {
                             <a>PORTFOLIO</a>
                         </Link>
                     </li>
-                    <li onClick={() => modeDark()} className="cursor-pointer">
+                    <li onClick={() => switchMode()} className="cursor-pointer">
                         {icono}
                     </li>
                 </ul>

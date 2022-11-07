@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import DarkContext from "./DarkContext";
 
 export default function DarkProvider(props) {
@@ -38,9 +38,9 @@ export default function DarkProvider(props) {
     //estado para icono modo dark
     const [icono, setIcono] = useState(moon);
     // -----------------------------------------
-    /*   useEffect(() => {
-        setIcono();
-    }, [dark]); */
+    useEffect(() => {
+        setIcono(dark ? moon : sun);
+    }, [dark]);
 
     return (
         <DarkContext.Provider
@@ -48,10 +48,6 @@ export default function DarkProvider(props) {
                 dark,
                 setDark,
                 icono,
-                setIcono,
-                sun,
-                moon,
-                // switchIcon,
             }}
         >
             {props.children}
