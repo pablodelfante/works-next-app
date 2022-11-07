@@ -33,20 +33,18 @@ export default function DarkProvider(props) {
         </svg>
     );
 
-    // estado para el modo dark
-    const [dark, setDark] = useState(true);
-    //estado para icono modo dark
+    const [isDark, setIsDark] = useState(true);
     const [icono, setIcono] = useState(moon);
-    // -----------------------------------------
+
     useEffect(() => {
-        setIcono(dark ? moon : sun);
-    }, [dark]);
+        setIcono(isDark ? moon : sun);
+    }, [isDark]);
 
     return (
         <DarkContext.Provider
             value={{
-                dark,
-                setDark,
+                isDark,
+                setIsDark,
                 icono,
             }}
         >

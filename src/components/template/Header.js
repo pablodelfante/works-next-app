@@ -3,16 +3,15 @@ import { useContext, useEffect } from "react";
 import DarkContext from "../../contexts/darkMode/DarkContext";
 
 export default function Header() {
-    const { dark, setDark, icono, setIcono, sun, moon } =
-        useContext(DarkContext);
+    const { isDark, setIsDark, icono } = useContext(DarkContext);
 
     useEffect(() => {
         const html = document.getElementsByTagName("html")[0];
-        html.className = dark ? "dark" : "";
-    }, [dark]);
+        html.className = isDark ? "dark" : "";
+    }, [isDark]);
 
-    const switchMode = () => {
-        setDark(!dark);
+    const switchModeDark = () => {
+        setIsDark(!isDark);
     };
 
     return (
@@ -29,7 +28,10 @@ export default function Header() {
                             <a>PORTFOLIO</a>
                         </Link>
                     </li>
-                    <li onClick={() => switchMode()} className="cursor-pointer">
+                    <li
+                        onClick={() => switchModeDark()}
+                        className="cursor-pointer"
+                    >
                         {icono}
                     </li>
                 </ul>
