@@ -1,13 +1,14 @@
-@import "NProgress.css";
-@import "blob.css";
+@import 'NProgress.css';
+@import 'blob.css';
 
 /* Modo dark: 
       -en header.js cambio clase dark en html
       -aqui cambio body header y lunita svg */
-:root {}
+:root {
+}
 
 * {
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     @apply text-gray-700;
 }
 

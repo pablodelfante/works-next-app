@@ -1,12 +1,12 @@
-import Link from 'next/link';
+import Link from 'next/link'
 
 export default function Button({ href, children }) {
     return (
         <>
             <Link href={href}>
-                <a 
-                style={{minWidth:"10rem"}}
-                className='
+                <a
+                    style={{ minWidth: '10rem' }}
+                    className="
                 inline-block
                 px-6 py-2
                 text-center
@@ -23,7 +23,8 @@ export default function Button({ href, children }) {
                 border-2
                 border-gray-900
                 dark:border-white
-                '>
+                "
+                >
                     {children}
                 </a>
             </Link>
