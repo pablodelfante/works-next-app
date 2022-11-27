@@ -4,6 +4,9 @@ import Image from 'next/image'
 export default function ({ work, imageSrc, title, technologies, description }) {
     return (
         <>
+            {/* 
+        resolver problemass con dark mode
+        */}
             <Card
                 style={{
                     backgroundColor: 'transparent',
