@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image'
 
 export default function Card({ work, index }) {
     return (
@@ -10,7 +10,7 @@ export default function Card({ work, index }) {
                         src={
                             work?.url_image
                                 ? work.url_image
-                                : "https://blog.aulaformativa.com/wp-content/uploads/2016/08/ventajas-optimizacion-de-codigo-codigo-fuente-limpio.jpg"
+                                : 'https://blog.aulaformativa.com/wp-content/uploads/2016/08/ventajas-optimizacion-de-codigo-codigo-fuente-limpio.jpg'
                         }
                         alt=""
                         layout="responsive"
@@ -42,5 +42,5 @@ export default function Card({ work, index }) {
                 </div>
             </li>
         </>
-    );
+    )
 }

@@ -1,18 +1,18 @@
-import Link from "next/link";
-import { useContext, useEffect } from "react";
-import DarkContext from "../../contexts/darkMode/DarkContext";
+import Link from 'next/link'
+import { useContext, useEffect } from 'react'
+import DarkContext from '../../contexts/darkMode/DarkContext'
 
 export default function Header() {
-    const { isDark, setIsDark, icono } = useContext(DarkContext);
+    const { isDark, setIsDark, icono } = useContext(DarkContext)
 
     useEffect(() => {
-        const html = document.getElementsByTagName("html")[0];
-        html.className = isDark ? "dark" : "";
-    }, [isDark]);
+        const html = document.getElementsByTagName('html')[0]
+        html.className = isDark ? 'dark' : ''
+    }, [isDark])
 
     const switchModeDark = () => {
-        setIsDark(!isDark);
-    };
+        setIsDark(!isDark)
+    }
 
     return (
         <>
@@ -37,5 +37,5 @@ export default function Header() {
                 </ul>
             </header>
         </>
-    );
+    )
 }

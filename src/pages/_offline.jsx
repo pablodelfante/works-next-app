@@ -1,5 +1,5 @@
-import Head from "next/head";
-import Layout from "components/template";
+import Head from 'next/head'
+import Layout from 'components/template'
 
 export default () => (
     <Layout>
@@ -11,4 +11,4 @@ export default () => (
             <h2>Connect to internet and try again! Thanks, Pablo!</h2>
         </section>
     </Layout>
-);
+)

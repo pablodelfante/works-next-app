@@ -1,6 +1,5 @@
 // https://codepen.io/uchardon/pen/jXzeXz
 
-
 export default () => {
     return (
         <>
@@ -16,7 +15,6 @@ export default () => {
                     />
                 </g>
             </svg>
-           
         </>
-    );
-};
+    )
+}

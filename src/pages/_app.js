@@ -1,24 +1,27 @@
-import "tailwindcss/tailwind.css";
+import 'tailwindcss/tailwind.css'
 import 'styles/globals.css'
-import DarkProvider from 'contexts/darkMode/DarkProvider';
-import GAnalytics from "components/GAnalytics";
+import DarkProvider from 'contexts/darkMode/DarkProvider'
+import GAnalytics from 'components/GAnalytics'
 
 function MyApp({ Component, pageProps }) {
-  // check Google analytics
-  if (process.env.NEXT_PUBLIC_VERCEL_ENV === 'production') {
-    console.log('>>>NEXT_PUBLIC_VERCEL_ENV is on production enviroment')
-  }
-  /* console.log("VERCEL_ENV",process.env.VERCEL_ENV)
+    // check Google analytics
+    if (process.env.NEXT_PUBLIC_VERCEL_ENV === 'production') {
+        console.log('>>>NEXT_PUBLIC_VERCEL_ENV is on production enviroment')
+    }
+    /* console.log("VERCEL_ENV",process.env.VERCEL_ENV)
   console.log("NEXT_PUBLIC_VERCEL_ENV",process.env.NEXT_PUBLIC_VERCEL_ENV) */
-  return <>
+    return (
+        <>
+            {/* <GAnalytics/> alone in production enviroment */}
+            {process.env.NEXT_PUBLIC_VERCEL_ENV === 'production' && (
+                <GAnalytics />
+            )}
 
-    {/* <GAnalytics/> alone in production enviroment */}
-    {(process.env.NEXT_PUBLIC_VERCEL_ENV === 'production') && <GAnalytics />}
-    
-    <DarkProvider>
-      <Component {...pageProps} />
-    </DarkProvider>
-  </>
+            <DarkProvider>
+                <Component {...pageProps} />
+            </DarkProvider>
+        </>
+    )
 }
 
 export default MyApp

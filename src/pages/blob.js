@@ -1,13 +1,9 @@
-import Blob from "components/blob";
+import Blob from 'components/blob'
 
 export default () => {
-  return (
-    <>
-    
-      <Blob />
-    </>
-  )
-
+    return (
+        <>
+            <Blob />
+        </>
+    )
 }
-
-
