@@ -3,7 +3,7 @@ import Image from 'next/image'
 export default function ({ work, imageSrc, title, technologies, description }) {
     return (
         <>
-            <li className="py-3 md:py-8 border hover:border-primary hover:shadow hover:shadow-primary dark:border-white">
+            <li className="py-3 md:py-8 rounded border hover:border-primary hover:shadow-lg hover:shadow-indigo-500/40 transition duration-300">
                 {/* agregar imagen aca */}
                 <figure className="mb-5 opacity-90">
                     <Image
