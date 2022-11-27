@@ -32,20 +32,34 @@ export default function Portfolio({ works }) {
                     )}
 
                     {works &&
-                        works?.map((work, index) => (
-                            <>
-                                {draftControl(work.draft) && (
-                                    <Link
-                                        href={`/portfolio/${work.id}`}
-                                        key={work.id}
-                                    >
-                                        <a className="grid">
-                                            <Card {...{ work, index }} />
-                                        </a>
-                                    </Link>
-                                )}
-                            </>
-                        ))}
+                        works?.map(
+                            ({
+                                draft,
+                                id,
+                                url_image,
+                                title,
+                                description,
+                                technologies,
+                            }) => (
+                                <>
+                                    {draftControl(draft) && (
+                                        <Link
+                                            href={`/portfolio/${id}`}
+                                            key={id}
+                                        >
+                                            <a className="grid">
+                                                <Card
+                                                    imageSrc={url_image}
+                                                    title={title}
+                                                    technologies={technologies}
+                                                    description={description}
+                                                />
+                                            </a>
+                                        </Link>
+                                    )}
+                                </>
+                            )
+                        )}
                 </ul>
             </Layout>
         </>
