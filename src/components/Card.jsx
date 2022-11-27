@@ -1,16 +1,15 @@
-import Image from "next/image";
+import Image from 'next/image'
 
-export default function Card({ work, index }) {
+export default function ({ imageSrc, title, technologies, description }) {
     return (
         <>
             <li className="py-3 md:py-8 rounded border hover:border-primary hover:shadow-lg hover:shadow-indigo-500/40 transition duration-300">
-                {/* agregar imagen aca */}
                 <figure className="mb-5 opacity-90">
                     <Image
                         src={
-                            work?.url_image
-                                ? work.url_image
-                                : "https://blog.aulaformativa.com/wp-content/uploads/2016/08/ventajas-optimizacion-de-codigo-codigo-fuente-limpio.jpg"
+                            imageSrc
+                                ? imageSrc
+                                : 'https://blog.aulaformativa.com/wp-content/uploads/2016/08/ventajas-optimizacion-de-codigo-codigo-fuente-limpio.jpg'
                         }
                         alt=""
                         layout="responsive"
@@ -22,14 +21,11 @@ export default function Card({ work, index }) {
                         quality={100}
                         priority={true}
                     />
-                    {/* <img src={work?.url_image} alt="" /> */}
                 </figure>
-                {/* work.image.formats.small.url */}
-                {/* ------- */}
                 <div className="px-3 md:px-8 grid gap-2">
-                    <h3 className="line-clamp-1"> {work?.title} </h3>
+                    <h3 className="line-clamp-1"> {title} </h3>
                     <ul className="hidden sm:grid sm:justify-start sm:gap-3 sm:grid-flow-col">
-                        {work?.technologies?.map((tech, key) => (
+                        {technologies?.map((tech, key) => (
                             <li
                                 key={key}
                                 className="text-white text-xs font-medium truncate px-2 py-1 bg-gray-500 rounded-full"
@@ -38,9 +34,9 @@ export default function Card({ work, index }) {
                             </li>
                         ))}
                     </ul>
-                    <p className="line-clamp-3">{work?.description}</p>
+                    <p className="line-clamp-3">{description}</p>
                 </div>
             </li>
         </>
-    );
+    )
 }
