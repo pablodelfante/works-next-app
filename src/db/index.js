@@ -164,7 +164,7 @@ export const db = [
         description:
             'The Hemocentro project is part and objective of the degree completion project, which aims, among other things, to show a little of the evolution of the profile acquired during the course of the degree. Exhibit and work in different areas such as management, marketing, development and design.',
         url_image: '/img/hemocentro.jpg',
-        url_github: null,
+        url_github: 'https://github.com/pablo-university/web-project',
         url_video: null,
         url_deploy: null,
         priority: true,
