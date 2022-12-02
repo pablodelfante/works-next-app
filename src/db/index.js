@@ -169,6 +169,6 @@ export const db = [
         url_deploy: null,
         priority: true,
         technologies: ['Nextjs', 'Figma', 'Docker', 'Hasura', 'Postgress'],
-        draft: true,
+        draft: false,
     },
 ]
