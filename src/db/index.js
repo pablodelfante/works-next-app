@@ -157,4 +157,18 @@ export const db = [
         technologies: ['Figma', 'Photoshop', 'Ilustrator'],
         draft: false,
     },
+    {
+        id: '73373a59b8161fa799ae6600fc03964d31a4544a',
+        content: null,
+        title: 'Hemocentro',
+        description:
+            'The Hemocentro project is part and objective of the degree completion project, which aims, among other things, to show a little of the evolution of the profile acquired during the course of the degree. Exhibit and work in different areas such as management, marketing, development and design.',
+        url_image: '/img/hemocentro.jpg',
+        url_github: 'https://github.com/pablo-university/web-project',
+        url_video: null,
+        url_deploy: null,
+        priority: true,
+        technologies: ['Nextjs', 'Figma', 'Docker', 'Hasura', 'Postgress'],
+        draft: true,
+    },
 ]
