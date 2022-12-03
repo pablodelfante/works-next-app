@@ -4,7 +4,7 @@ import style from './technologies.module.css'
 import Image from 'next/image'
 
 export default function () {
-    const [avatar_url, setAvatar_url] = useState({ value: null })
+    const [avatar_url, setAvatar_url] = useState({ src: '/img/home/profile.jpg' })
 
     useEffect(() => {
         const options = {
@@ -21,7 +21,7 @@ export default function () {
 
     // manejador de github api
     useEffect(() => {
-        ;(async () => {
+        /* ;(async () => {
             try {
                 const res = await fetch(
                     'https://api.github.com/users/pablodelfante'
@@ -32,7 +32,7 @@ export default function () {
             } catch (error) {
                 console.warn('error on fetch image from github')
             }
-        })()
+        })() */
     }, [])
 
     return (
@@ -44,15 +44,15 @@ export default function () {
                 <figure className="grid grid-flow-row auto-rows-max gap-5 border-l">
                     <picture className="">
                         {/* si hay imagen retornala sino none prri */}
-                        {avatar_url.value ? (
+                        {avatar_url.src ? (
                             <Image
-                                src={avatar_url?.value}
+                                src={avatar_url?.src}
                                 alt="sin image"
                                 layout={'responsive'}
                                 width={1}
-                                height={1}
+                                height={1.3}
                                 quality={100}
-                                objectFit={'contain'}
+                                objectFit={'cover'}
                                 objectPosition={'left center'}
                             />
                         ) : (
@@ -60,10 +60,10 @@ export default function () {
                                 src="/img/home/profile.jpg"
                                 alt="profile image"
                                 layout="responsive"
-                                width={1}
+                                width={100}
                                 height={1}
                                 quality={100}
-                                objectFit={'contain'}
+                                objectFit={'cover'}
                                 objectPosition={'left center'}
                             />
                         )}
