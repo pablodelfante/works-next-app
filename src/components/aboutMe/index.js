@@ -4,7 +4,7 @@ import style from './technologies.module.css'
 import Image from 'next/image'
 
 export default function () {
-    const [avatar_url, setAvatar_url] = useState({ src: '/img/home/profile.jpg' })
+    const [avatar] = useState({ src: '/img/home/profile.jpg' })
 
     useEffect(() => {
         const options = {
@@ -19,54 +19,23 @@ export default function () {
         ScrollReveal().reveal('.lapabla-reveal', options)
     }, [])
 
-    // manejador de github api
-    useEffect(() => {
-        /* ;(async () => {
-            try {
-                const res = await fetch(
-                    'https://api.github.com/users/pablodelfante'
-                )
-                const data = await res.json()
-                avatar_url.value = data.avatar_url
-                setAvatar_url({ value: avatar_url.value })
-            } catch (error) {
-                console.warn('error on fetch image from github')
-            }
-        })() */
-    }, [])
-
     return (
         <>
-            {/* contenedor */}
             <section
                 className={`w-full mb-40 grid grid-flow-row xl:grid-cols-2 gap-10`}
             >
                 <figure className="grid grid-flow-row auto-rows-max gap-5 border-l">
                     <picture className="">
-                        {/* si hay imagen retornala sino none prri */}
-                        {avatar_url.src ? (
-                            <Image
-                                src={avatar_url?.src}
-                                alt="sin image"
-                                layout={'responsive'}
-                                width={1}
-                                height={1.3}
-                                quality={100}
-                                objectFit={'cover'}
-                                objectPosition={'left center'}
-                            />
-                        ) : (
-                            <Image
-                                src="/img/home/profile.jpg"
-                                alt="profile image"
-                                layout="responsive"
-                                width={100}
-                                height={1}
-                                quality={100}
-                                objectFit={'cover'}
-                                objectPosition={'left center'}
-                            />
-                        )}
+                        <Image
+                            src={avatar.src}
+                            alt="sin image"
+                            layout={'responsive'}
+                            width={1}
+                            height={1.3}
+                            quality={100}
+                            objectFit={'cover'}
+                            objectPosition={'left center'}
+                        />
                     </picture>
                     <figcaption className="pl-8 pb-8">
                         {/* titulo */}
