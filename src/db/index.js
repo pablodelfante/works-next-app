@@ -171,4 +171,18 @@ export const db = [
         technologies: ['Nextjs', 'Figma', 'Docker', 'Hasura', 'Postgress'],
         draft: false,
     },
+    {
+        id: '11f6ad8ec52a2984abaafd7c3b516503785c2072',
+        content: null,
+        title: 'Web workers',
+        description:
+            'Recently I had been learning about Web Workers, I had a curiosity about functionality and have deep knowledge about this. Always I have been curious about javascript, technicals details and for example, the event loop, these subjects have given me some path to get more knowledge about technical improvement, and performance and this knowledge takes me to search and investigate other technologies, such as web APIs, PWA’s and others. In this case, I wanted to learn about web workers and improve on the main js thread. I have thought of a process that required some more powerful image management and others. My first point for start was didn’t block the main thread on js. This was my point for learning and investigating another alternative to do some tasks that required more powerful in the background for don"t block the main thread. This is a very basic example that try to test the multi threads usage.',
+        url_image: '/img/web-workers.jpg',
+        url_github: 'https://github.com/pablo-learn/workers',
+        url_video: null,
+        url_deploy: null,
+        priority: false,
+        technologies: ['Node', 'Expressjs', 'Web Workers', 'SSR'],
+        draft: true,
+    },
 ]
