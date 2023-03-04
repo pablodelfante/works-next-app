@@ -11,7 +11,7 @@ export const db = [
         url_deploy: null,
         priority: true,
         tags: ['teach', 'mentor', 'lead', 'team work'],
-        draft: true,
+        draft: false,
     },
     {
         id: '6f23baea-b3c0-465b-9ecc-446ac5834c69',
