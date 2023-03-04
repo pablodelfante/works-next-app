@@ -183,6 +183,6 @@ export const db = [
         url_deploy: null,
         priority: true,
         technologies: ['Node', 'Expressjs', 'Web Workers', 'SSR'],
-        draft: true,
+        draft: false,
     },
 ]
