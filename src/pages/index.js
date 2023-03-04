@@ -4,11 +4,9 @@ import AboutSite from 'components/aboutSite'
 import AboutMe from 'components/aboutMe'
 import { CONTENT_PORTADA } from 'utils/dataSite'
 import Head from 'next/head'
-import { getWorks } from 'connectors/findWorks'
 
 export default function Home() {
     const { titlePortada, contentPortada } = CONTENT_PORTADA.index
-    // getWorks()
     return (
         <>
             <Head>
