@@ -181,7 +181,7 @@ export const db = [
         url_github: 'https://github.com/pablo-learn/workers',
         url_video: null,
         url_deploy: null,
-        priority: false,
+        priority: true,
         technologies: ['Node', 'Expressjs', 'Web Workers', 'SSR'],
         draft: true,
     },
