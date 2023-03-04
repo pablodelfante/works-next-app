@@ -11,7 +11,7 @@ export default function Work({ work }) {
         title,
         description,
         content,
-        technologies,
+        tags,
         url_github,
         url_deploy,
         url_image,
@@ -32,10 +32,10 @@ export default function Work({ work }) {
 
                     {/* Tecnologias*/}
                     {/* <h4 className=''>Tecnologías usadas</h4> */}
-                    {technologies && technologies.length ? (
+                    {tags && tags.length ? (
                         <ul className="flex flex-wrap lg:gap-x-3 gap-1 mb-0.5">
-                            <li className="font-bold">Used technologies</li>
-                            {technologies.map((tecnologie, key) => (
+                            <li className="font-bold">Used tags</li>
+                            {tags.map((tecnologie, key) => (
                                 <li
                                     className="text-white text-xs font-medium truncate px-2 py-1 bg-gray-500 rounded-full"
                                     key={key}

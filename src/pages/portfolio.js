@@ -39,7 +39,7 @@ export default function Portfolio({ works }) {
                                 url_image,
                                 title,
                                 description,
-                                technologies,
+                                tags,
                             }) => (
                                 <>
                                     {draftControl(draft) && (
@@ -51,7 +51,7 @@ export default function Portfolio({ works }) {
                                                 <Card
                                                     imageSrc={url_image}
                                                     title={title}
-                                                    technologies={technologies}
+                                                    tags={tags}
                                                     description={description}
                                                 />
                                             </a>
