@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-export default function ({ imageSrc, title, technologies, description }) {
+export default function ({ imageSrc, title, tags, description }) {
     return (
         <>
             <li className="py-3 md:py-8 rounded border hover:border-primary hover:shadow-lg hover:shadow-indigo-500/40 transition duration-300">
@@ -25,7 +25,7 @@ export default function ({ imageSrc, title, technologies, description }) {
                 <div className="px-3 md:px-8 grid gap-2">
                     <h3 className="line-clamp-1"> {title} </h3>
                     <ul className="hidden sm:grid sm:justify-start sm:gap-3 sm:grid-flow-col">
-                        {technologies?.map((tech, key) => (
+                        {tags?.map((tech, key) => (
                             <li
                                 key={key}
                                 className="text-white text-xs font-medium truncate px-2 py-1 bg-gray-500 rounded-full"

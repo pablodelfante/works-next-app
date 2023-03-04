@@ -73,9 +73,11 @@ export default function Footer() {
                 </li>
             </ul>
 
-            <address className="w-max mt-5 mx-auto">
-                &copy; 2021-{year} | Pablo Delfante
-            </address>
+            <div className="grid">
+                <span className="w-max mx-auto d-block">
+                    &copy; {year} | Pablo Delfante
+                </span>
+            </div>
         </footer>
     )
 }

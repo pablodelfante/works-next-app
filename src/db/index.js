@@ -10,7 +10,7 @@ export const db = [
         url_video: null,
         url_deploy: null,
         priority: true,
-        technologies: [],
+        tags: ['teach', 'mentor', 'lead', 'team work'],
         draft: true,
     },
     {
@@ -24,7 +24,7 @@ export const db = [
         url_video: null,
         url_deploy: null,
         priority: true,
-        technologies: ['React', 'Tailwind', 'Express', 'Storybook react'],
+        tags: ['React', 'Tailwind', 'Express', 'Storybook react'],
         draft: false,
     },
     {
@@ -32,14 +32,14 @@ export const db = [
         content: null,
         title: 'PWA - Garden app',
         description:
-            'This app is a draft. I would like to show this from an early stage. The objective is to understand the concept of pwa. Practising the written code and implementing. Different new web technologies , with Svelte framework firebase and more.',
+            'This app is a draft. I would like to show this from an early stage. The objective is to understand the concept of pwa. Practising the written code and implementing. Different new web tags , with Svelte framework firebase and more.',
         url_image: '/img/eraser.png',
         url_github:
             'https://github.com/pablodelfante/svelte-proyects/tree/pwa-garden',
         url_video: null,
         url_deploy: null,
         priority: false,
-        technologies: ['Svelte', 'PWA', 'Firebase', 'Bootstrap'],
+        tags: ['Svelte', 'PWA', 'Firebase', 'Bootstrap'],
         draft: false,
     },
     {
@@ -53,7 +53,7 @@ export const db = [
         url_video: null,
         url_deploy: null,
         priority: false,
-        technologies: ['Express', 'Tailwind CSS', 'Socket.io', 'nodemon'],
+        tags: ['Express', 'Tailwind CSS', 'Socket.io', 'nodemon'],
         draft: false,
     },
     {
@@ -67,7 +67,7 @@ export const db = [
         url_video: '',
         url_deploy: '',
         priority: true,
-        technologies: [
+        tags: [
             'Next js',
             'PWA',
             'Tailwind',
@@ -89,7 +89,7 @@ export const db = [
         url_video: 'https://www.youtube.com/embed/2Uspqad9kaU',
         url_deploy: null,
         priority: false,
-        technologies: ['PHP', 'MySQL', 'BrowserSync'],
+        tags: ['PHP', 'MySQL', 'BrowserSync'],
         draft: false,
     },
     {
@@ -103,7 +103,7 @@ export const db = [
         url_video: 'https://www.youtube.com/embed/zwcDITgrw-0',
         url_deploy: 'https://pablo-university.github.io/W3-Obligatorio1/src/',
         priority: false,
-        technologies: ['HTML', 'CSS', 'JS', 'Gulp'],
+        tags: ['HTML', 'CSS', 'JS', 'Gulp'],
         draft: false,
     },
     {
@@ -120,7 +120,7 @@ export const db = [
         url_deploy:
             'https://pablo-university.github.io/P1-obligatorio/public/index.html',
         priority: false,
-        technologies: ['HTML', 'JavaScript', 'Figma', 'SCSS', 'Node js'],
+        tags: ['HTML', 'JavaScript', 'Figma', 'SCSS', 'Node js'],
         draft: false,
     },
     {
@@ -134,13 +134,7 @@ export const db = [
         url_video: null,
         url_deploy: 'https://pablo-university.github.io/W2-obligatorio2/',
         priority: false,
-        technologies: [
-            'HTML',
-            'CSS',
-            'SASS',
-            'JavaScript',
-            'Bibliotecas CSS y JS',
-        ],
+        tags: ['HTML', 'CSS', 'SASS', 'JavaScript', 'Bibliotecas CSS y JS'],
         draft: false,
     },
     {
@@ -154,7 +148,7 @@ export const db = [
         url_video: 'https://www.youtube.com/embed/3cLymG7PwM4',
         url_deploy: null,
         priority: false,
-        technologies: ['Figma', 'Photoshop', 'Ilustrator'],
+        tags: ['Figma', 'Photoshop', 'Ilustrator'],
         draft: false,
     },
     {
@@ -168,7 +162,21 @@ export const db = [
         url_video: null,
         url_deploy: null,
         priority: true,
-        technologies: ['Nextjs', 'Figma', 'Docker', 'Hasura', 'Postgress'],
+        tags: ['Nextjs', 'Figma', 'Docker', 'Hasura', 'Postgress'],
+        draft: false,
+    },
+    {
+        id: '11f6ad8ec52a2984abaafd7c3b516503785c2072',
+        content: null,
+        title: 'Web workers',
+        description:
+            'I have recently been learning about Web Workers, I had a curiosity about functionality and can have deep knowledge about this. I have Always been curious about javascript, technical details and for example, the event loop, have paved the way for me to get more knowledge about technical improvement, and performance and this knowledge has led me to search and investigate other tags, such as web APIs, PWA’s and others. I have thought of a process that requires some more powerful for example, image management and others. My first point to start with was not blocking the main thread on js. This was my point for learning and investigating other alternative to do some tasks that required more power in the background.',
+        url_image: '/img/web-workers.jpg',
+        url_github: 'https://github.com/pablo-learn/workers',
+        url_video: null,
+        url_deploy: null,
+        priority: true,
+        tags: ['Node', 'Expressjs', 'Web Workers', 'SSR'],
         draft: false,
     },
 ]
