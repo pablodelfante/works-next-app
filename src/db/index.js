@@ -10,7 +10,7 @@ export const db = [
         url_video: null,
         url_deploy: null,
         priority: true,
-        tags: [],
+        tags: ['teach', 'mentor', 'lead', 'team work'],
         draft: true,
     },
     {
