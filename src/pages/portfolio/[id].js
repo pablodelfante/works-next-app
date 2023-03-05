@@ -33,8 +33,7 @@ export default function Work({ work }) {
                     {/* Tecnologias*/}
                     {/* <h4 className=''>Tecnologías usadas</h4> */}
                     {tags && tags.length ? (
-                        <ul className="flex flex-wrap lg:gap-x-3 gap-1 mb-0.5">
-                            <li className="font-bold">Used tags</li>
+                        <ul className="flex flex-wrap lg:gap-x-3 gap-1 mb-3">
                             {tags.map((tecnologie, key) => (
                                 <li
                                     className="text-white text-xs font-medium truncate px-2 py-1 bg-gray-500 rounded-full"
