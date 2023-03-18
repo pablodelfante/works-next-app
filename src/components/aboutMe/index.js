@@ -58,19 +58,15 @@ export default function () {
                     </figcaption>
                 </figure>
 
-                {/* TECHNOLOGIES */}
                 <div className={`${style.customShadow} lapabla-reveal`}>
                     <div className="bg-white dark:bg-black grid gap-2 p-8">
-                        {/* titulo */}
-                        <h3>Technologies</h3>
-                        <p className="font-extralight">Projection</p>
-
-                        {/* lista de tecnologias */}
+                        <h3>Projections</h3>
                         <div className="grid gap-5">
                             <p>
-                                I am interested in stacks like jam, technologies
-                                like PWA, and others. This does not mean that I
-                                don't consider other forms such as UX UI.
+                                I am interested in a stacks like JAM,
+                                technologies like PWA, serverless products, AIs
+                                and others. This does not mean that I don't
+                                consider other forms.
                             </p>
                             <p>
                                 In my opinion these tools can help improve the
