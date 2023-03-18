@@ -63,9 +63,10 @@ export default function () {
                         <h3>Projections</h3>
                         <div className="grid gap-5">
                             <p>
-                                I am interested in stacks like jam, technologies
-                                like PWA, Ai and others. This does not mean that
-                                I don't consider other forms.
+                                I am interested in a stacks like JAM,
+                                technologies like PWA, serverless products, AIs
+                                and others. This does not mean that I don't
+                                consider other forms.
                             </p>
                             <p>
                                 In my opinion these tools can help improve the
