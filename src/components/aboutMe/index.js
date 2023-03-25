@@ -4,7 +4,7 @@ import style from './technologies.module.css'
 import Image from 'next/image'
 
 export default function () {
-    const [avatar] = useState({ src: '/img/home/profile.jpg' })
+    const avatar = { src: '/img/home/profile.jpg' }
 
     useEffect(() => {
         const options = {
