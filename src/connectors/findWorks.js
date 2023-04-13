@@ -41,7 +41,7 @@ async function fetchWorks() {
     `;
     
     try {
-      const response = await fetch('https://us-east-1-shared-usea1-02.cdn.hygraph.com/content/clfysdkjd6oat01una6l5472g/master', {
+      const response = await fetch('', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
