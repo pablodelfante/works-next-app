@@ -1,24 +1,21 @@
 import Layout from 'components/template'
-import { getWorks } from 'connectors/findWorks'
 import Head from 'next/head'
 import Image from 'next/image'
 import formatDate from 'helpers/formatDate'
 import parse from 'html-react-parser'
 import { defaultUrlImage } from 'utils/config'
+import { getWorks, getWorkById } from 'connectors/findWorks'
 
 export default function Work({ work }) {
     const {
         title,
         description,
-        content,
         tags,
-        url_github,
-        url_deploy,
-        url_image,
-        url_video,
-        updatedAt,
+        highlighted,
+        githubUrl,
+        deployUrl,
+        image: {url: imageUrl},
     } = work
-    const dateUpdate = formatDate(updatedAt)
     return (
         <>
             <Head>
@@ -26,12 +23,8 @@ export default function Work({ work }) {
             </Head>
             <Layout>
                 <article className="py-14 max-w-5xl mx-auto">
-                    {/* Titulo descripcion e imagen */}
                     <h2 className="mb-5">{title}</h2>
-                    {/* <time className='text-gray-500 block font-light border-b mb-10'>Updated at: {dateUpdate}</time> */}
 
-                    {/* Tecnologias*/}
-                    {/* <h4 className=''>Tecnologías usadas</h4> */}
                     {tags && tags.length ? (
                         <ul className="flex flex-wrap lg:gap-x-3 gap-1 mb-3">
                             {tags.map((tecnologie, key) => (
@@ -47,14 +40,12 @@ export default function Work({ work }) {
                         <></>
                     )}
 
-                    {/* description of page */}
                     <p className="mb-5">{description}</p>
 
-                    {/* multimedia */}
-                    {!url_video && (
+                    {imageUrl && (
                         <div className="mb-5">
                             <Image
-                                src={url_image ? url_image : defaultUrlImage}
+                                src={imageUrl ? imageUrl : defaultUrlImage}
                                 alt="cant find the image"
                                 priority={true}
                                 //define como se comporta en el layout
@@ -68,9 +59,8 @@ export default function Work({ work }) {
                         </div>
                     )}
 
-                    {/* video */}
-                    {url_video && (
-                        // este posicionamiento y padding son para mantener la relacion aspecto del video (16/9)
+                    {/* TODO: resolver funcionalidad de video */}
+                    {/* {url_video && (
                         <>
                             <div
                                 className="my-5"
@@ -95,45 +85,33 @@ export default function Work({ work }) {
                                 </a>
                             </p>
                         </>
-                    )}
+                    )} */}
 
-                    {/* MARKDOWN */}
-                    {/* este es un campo extra cuando desee agregar contenido */}
-                    {content ? (
-                        <section className="py-3"> {parse(content)} </section>
-                    ) : (
-                        ''
-                    )}
+                    {/* TODO: agregar componentes */}
 
-                    {/* Link github */}
-                    {url_github ? (
+                    {githubUrl && (
                         <a
-                            href={url_github}
+                            href={githubUrl}
                             target="_blank"
                             rel="noopener"
                             className="underline"
                         >
-                            see project on github
+                            see project on repository
                         </a>
-                    ) : (
-                        ''
                     )}
                     <br />
                     <br />
 
-                    {/* Link deploy */}
-                    {url_deploy ? (
+                    {deployUrl && (
                         <a
-                            href={url_deploy}
+                            href={deployUrl}
                             target="_blank"
                             rel="noopener"
                             className="underline"
                         >
-                            see deploy
+                            check deploy
                         </a>
-                    ) : (
-                        ''
-                    )}
+                    ) }
                 </article>
             </Layout>
         </>
@@ -164,6 +142,6 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
     const { id } = params
-    const work = await getWorks(id)
+    const work = await getWorkById(id)
     return { props: { work } }
 }

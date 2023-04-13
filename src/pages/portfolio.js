@@ -1,6 +1,6 @@
 import Layout from 'components/template'
 import TitlePage from 'components/titlePage'
-import { getWorksV2 } from 'connectors/findWorks'
+import { getWorks } from 'connectors/findWorks'
 import Link from 'next/link'
 import { CONTENT_PORTADA } from 'utils/dataSite'
 
@@ -67,6 +67,6 @@ export default function Portfolio({ works }) {
 }
 
 export async function getStaticProps() {
-    const works = await getWorksV2();
+    const works = await getWorks();
     return { props: { works } }
 }
