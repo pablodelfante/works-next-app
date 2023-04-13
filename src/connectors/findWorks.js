@@ -25,7 +25,7 @@ export const getWorks = async (id) => {
 async function fetchWorks() {
     const query = `
       query Works {
-        works {
+        works(orderBy: highlighted_DESC) {
           id
           title
           description
@@ -41,7 +41,7 @@ async function fetchWorks() {
     `;
     
     try {
-      const response = await fetch('', {
+      const response = await fetch(process.env.HOST_BACKEND, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -57,12 +57,12 @@ async function fetchWorks() {
     }
   }
 // import { getWorksIds, getWorkById } from 'connectors/findWorks'
-export const getWorksIds = async () => {
+export const getWorksV2 = async () => {
     try {
      const response = await fetchWorks();
-     const worksIds = response.data.works.map(({id})=>id);
-     console.log('worksIds', worksIds);
-     return worksIds
+     const works = response.data.works
+     console.log('works', works);
+     return works
     } catch (error) {
         console.log({ 'getWorksIds': error })
         return null

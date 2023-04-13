@@ -1,6 +1,6 @@
 import Layout from 'components/template'
 import TitlePage from 'components/titlePage'
-import { getWorks } from 'connectors/findWorks'
+import { getWorksV2 } from 'connectors/findWorks'
 import Link from 'next/link'
 import { CONTENT_PORTADA } from 'utils/dataSite'
 
@@ -10,7 +10,7 @@ import Card from 'components/Card'
 export default function Portfolio({ works }) {
     const { titlePortada, contentPortada } = CONTENT_PORTADA.portfolio
     const draftControl = (draft) =>
-        process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production' || !draft
+        process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production' || draft !== "DRAFT"
 
     return (
         <>
@@ -26,7 +26,7 @@ export default function Portfolio({ works }) {
                     {!works && (
                         <p>
                             oops! I don't find works, sure i am on maintenance
-                            or break something, sorry😥. If yu can write me!
+                            or break something, sorry😥. If you can write me!
                             pablodelfantexp@gmail.com
                         </p>
                     )}
@@ -34,22 +34,22 @@ export default function Portfolio({ works }) {
                     {works &&
                         works?.map(
                             ({
-                                draft,
+                                stage,
                                 id,
-                                url_image,
+                                image: {url: imageUrl},
                                 title,
                                 description,
                                 tags,
                             }) => (
                                 <>
-                                    {draftControl(draft) && (
+                                    {draftControl(stage) && (
                                         <Link
                                             href={`/portfolio/${id}`}
                                             key={id}
                                         >
                                             <a className="grid">
                                                 <Card
-                                                    imageSrc={url_image}
+                                                    imageSrc={imageUrl}
                                                     title={title}
                                                     tags={tags}
                                                     description={description}
@@ -66,7 +66,7 @@ export default function Portfolio({ works }) {
     )
 }
 
-export async function getStaticProps(context) {
-    const works = await getWorks()
+export async function getStaticProps() {
+    const works = await getWorksV2();
     return { props: { works } }
 }
