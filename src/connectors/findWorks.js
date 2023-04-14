@@ -40,6 +40,7 @@ async function fetchWorks() {
       return data;
     } catch (error) {
       console.error(error);
+      throw new Error(error)
     }
   }
 export const getWorks = async () => {
@@ -49,7 +50,7 @@ export const getWorks = async () => {
      return works
     } catch (error) {
         console.log({ 'getWorksIds': error })
-        return null
+        throw new Error(error)
     }
 }
 export const getWorkById = async (workId) => {
@@ -59,7 +60,7 @@ export const getWorkById = async (workId) => {
         return candidate
     } catch (error) {
         console.log({ 'getWorkById': error })
-        return null
+       throw new Error(error)
     }
 }
 
