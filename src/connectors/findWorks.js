@@ -2,7 +2,7 @@ async function fetchWorks() {
   /* revisar documentación sobre first */
     const query = `
       query Works {
-        works(orderBy: highlighted_DESC, first: 12) {
+        works(orderBy: highlighted_DESC, first: 20) {
           id
           title
           description

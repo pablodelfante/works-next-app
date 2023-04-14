@@ -1,7 +1,6 @@
 import Layout from 'components/template'
 import Head from 'next/head'
 import Image from 'next/image'
-import formatDate from 'helpers/formatDate'
 import ReactMarkdown from 'react-markdown'
 import { defaultUrlImage } from 'utils/config'
 import { getWorks, getWorkById } from 'connectors/findWorks'
@@ -12,13 +11,11 @@ export default function Work({ work }) {
         title,
         description,
         tags,
-        highlighted,
         components,
         githubUrl,
         deployUrl,
         image: {url: imageUrl},
     } = work;
-    console.log(work);
     return (
         <>
             <Head>
