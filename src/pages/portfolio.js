@@ -9,9 +9,8 @@ import Card from 'components/Card'
 
 export default function Portfolio({ works }) {
     const { titlePortada, contentPortada } = CONTENT_PORTADA.portfolio
-    const draftControl = (draft) =>
-        process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production' || draft !== "DRAFT"
-
+    const draftControl = (draft) => process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production' || draft !== "DRAFT"
+    console.log(works);
     return (
         <>
             <Head>

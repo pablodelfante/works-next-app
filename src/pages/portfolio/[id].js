@@ -2,7 +2,7 @@ import Layout from 'components/template'
 import Head from 'next/head'
 import Image from 'next/image'
 import formatDate from 'helpers/formatDate'
-import parse from 'html-react-parser'
+import ReactMarkdown from 'react-markdown'
 import { defaultUrlImage } from 'utils/config'
 import { getWorks, getWorkById } from 'connectors/findWorks'
 
@@ -12,10 +12,12 @@ export default function Work({ work }) {
         description,
         tags,
         highlighted,
+        components,
         githubUrl,
         deployUrl,
         image: {url: imageUrl},
-    } = work
+    } = work;
+    console.log(work);
     return (
         <>
             <Head>
@@ -88,6 +90,36 @@ export default function Work({ work }) {
                     )} */}
 
                     {/* TODO: agregar componentes */}
+                    {/* <ReactMarkdown children={markdown} /> */}
+                    {/* 
+                    {
+                    "__typename": "Video",
+                    "videoUrl": "https://www.youtube.com/embed/3cLymG7PwM4"
+                     }
+                    */}
+                    <div className="my-5">
+                        {components && components.length && components.map((component, key) => <>
+
+                            {component.__typename === "Video" && 
+                                <div
+                                style={{ aspectRatio: '16/9' }}
+                            >
+                                <iframe
+                                    className="w-full h-full"
+                                    src={component.videoUrl}
+                                    title="YouTube video player"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>}
+
+                            {component.__typename === "Markdown"  &&  <ReactMarkdown children={component.markdown} />}
+
+                            {/* otros componentes */}
+                        </>)}
+                    </div>
+
+
 
                     {githubUrl && (
                         <a

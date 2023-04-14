@@ -1,7 +1,8 @@
 async function fetchWorks() {
+  /* revisar documentación sobre first */
     const query = `
       query Works {
-        works(orderBy: highlighted_DESC) {
+        works(orderBy: highlighted_DESC, first: 12) {
           id
           title
           description
@@ -12,6 +13,15 @@ async function fetchWorks() {
             url
           }
           tags
+          components {
+            __typename
+            ... on Video {
+              videoUrl
+            }
+            ... on Markdown {
+              markdown
+            }
+          }
         }
       }
     `;
