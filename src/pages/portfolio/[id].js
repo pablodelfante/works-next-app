@@ -5,6 +5,7 @@ import formatDate from 'helpers/formatDate'
 import ReactMarkdown from 'react-markdown'
 import { defaultUrlImage } from 'utils/config'
 import { getWorks, getWorkById } from 'connectors/findWorks'
+import Video from 'components/Video'
 
 export default function Work({ work }) {
     const {
@@ -61,65 +62,12 @@ export default function Work({ work }) {
                         </div>
                     )}
 
-                    {/* TODO: resolver funcionalidad de video */}
-                    {/* {url_video && (
-                        <>
-                            <div
-                                className="my-5"
-                                style={{ aspectRatio: '16/9' }}
-                            >
-                                <iframe
-                                    className="w-full h-full"
-                                    src={url_video}
-                                    title="YouTube video player"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowFullScreen
-                                ></iframe>
-                            </div>
-                            <p className="text-sm">
-                                If you can't watch the video:{' '}
-                                <a
-                                    className="underline text-primary"
-                                    href={url_video}
-                                    target="_blank"
-                                >
-                                    watch on youtube
-                                </a>
-                            </p>
-                        </>
-                    )} */}
-
-                    {/* TODO: agregar componentes */}
-                    {/* <ReactMarkdown children={markdown} /> */}
-                    {/* 
-                    {
-                    "__typename": "Video",
-                    "videoUrl": "https://www.youtube.com/embed/3cLymG7PwM4"
-                     }
-                    */}
-                    <div className="my-5">
-                        {components && components.length && components.map((component, key) => <>
-
-                            {component.__typename === "Video" && 
-                                <div
-                                style={{ aspectRatio: '16/9' }}
-                            >
-                                <iframe
-                                    className="w-full h-full"
-                                    src={component.videoUrl}
-                                    title="YouTube video player"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowFullScreen
-                                ></iframe>
-                            </div>}
-
+                    <ul className="my-5">
+                        {components && components.length && components.map((component, key) => <li key={key}>
+                            {component.__typename === "Video" && <Video src={component.videoUrl}/>}
                             {component.__typename === "Markdown"  &&  <ReactMarkdown children={component.markdown} />}
-
-                            {/* otros componentes */}
-                        </>)}
-                    </div>
-
-
+                        </li>)}
+                    </ul>
 
                     {githubUrl && (
                         <a
