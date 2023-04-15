@@ -14,8 +14,8 @@ export default function Work({ work }) {
         components,
         githubUrl,
         deployUrl,
-        image: {url: imageUrl},
-    } = work;
+        image: { url: imageUrl },
+    } = work
     return (
         <>
             <Head>
@@ -60,10 +60,20 @@ export default function Work({ work }) {
                     )}
 
                     <ul className="my-5">
-                        {components && components.length && components.map((component, key) => <li key={key}>
-                            {component.__typename === "Video" && <Video src={component.videoUrl}/>}
-                            {component.__typename === "Markdown"  &&  <ReactMarkdown children={component.markdown} />}
-                        </li>)}
+                        {components &&
+                            components.length &&
+                            components.map((component, key) => (
+                                <li key={key}>
+                                    {component.__typename === 'Video' && (
+                                        <Video src={component.videoUrl} />
+                                    )}
+                                    {component.__typename === 'Markdown' && (
+                                        <ReactMarkdown
+                                            children={component.markdown}
+                                        />
+                                    )}
+                                </li>
+                            ))}
                     </ul>
 
                     {githubUrl && (
@@ -88,7 +98,7 @@ export default function Work({ work }) {
                         >
                             check deploy
                         </a>
-                    ) }
+                    )}
                 </article>
             </Layout>
         </>
@@ -118,7 +128,8 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-    const { id } = params
-    const work = await getWorkById(id)
+    const { id: workId } = params
+    const works = await getWorks()
+    const work = works.find(({ id }) => id == workId)
     return { props: { work } }
 }
