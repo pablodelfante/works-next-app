@@ -20,10 +20,7 @@ export default function Work({ work, works }) {
     } = work
 
     function getRandonElementFromArray(array) {
-        return Array.from(
-            { length: 4 },
-            () => array[Math.floor(Math.random() * array.length)]
-        )
+        return array.sort(() => Math.random() - 0.5).slice(0, 4)
     }
 
     const worksForContinueNavigation = getRandonElementFromArray(works)
