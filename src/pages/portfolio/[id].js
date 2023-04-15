@@ -6,6 +6,7 @@ import { defaultUrlImage } from 'utils/config'
 import { getWorks, getWorkById } from 'connectors/findWorks'
 import Video from 'components/Video'
 import Works from 'components/Works'
+import MacWindow from 'components/MacWindow'
 
 export default function Work({ work, works }) {
     const {
@@ -52,19 +53,24 @@ export default function Work({ work, works }) {
 
                     <p>{description}</p>
 
+                   
+
+
                     {imageUrl && (
-                        <Image
-                            src={imageUrl ? imageUrl : defaultUrlImage}
-                            alt="cant find the image"
-                            priority={true}
-                            //define como se comporta en el layout
-                            layout="responsive"
-                            //como se comporta la imagen dentro de su propio contenedor
-                            objectFit="contain"
-                            width={16}
-                            height={9}
-                            quality={100}
-                        />
+                        <MacWindow>
+                            <Image
+                                src={imageUrl ? imageUrl : defaultUrlImage}
+                                alt="cant find the image"
+                                priority={true}
+                                //define como se comporta en el layout
+                                layout="responsive"
+                                //como se comporta la imagen dentro de su propio contenedor
+                                objectFit="contain"
+                                width={16}
+                                height={9}
+                                quality={100}
+                                />
+                        </MacWindow>
                     )}
 
                     {Boolean(components.length) && (
