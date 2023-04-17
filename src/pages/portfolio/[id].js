@@ -1,34 +1,40 @@
 import Layout from 'components/template'
 import Head from 'next/head'
 import Image from 'next/image'
-import formatDate from 'helpers/formatDate'
 import ReactMarkdown from 'react-markdown'
 import { defaultUrlImage } from 'utils/config'
 import { getWorks, getWorkById } from 'connectors/findWorks'
+import Video from 'components/Video'
+import Works from 'components/Works'
+import MacWindow from 'components/MacWindow'
 
-export default function Work({ work }) {
+export default function Work({ work, works }) {
     const {
         title,
         description,
         tags,
-        highlighted,
         components,
         githubUrl,
         deployUrl,
-        image: {url: imageUrl},
-    } = work;
-    console.log(work);
+        image: { url: imageUrl },
+    } = work
+
+    function getRandonElementFromArray(array) {
+        return array.sort(() => Math.random() - 0.5).slice(0, 4)
+    }
+
+    const worksForContinueNavigation = getRandonElementFromArray(works)
     return (
         <>
             <Head>
                 <title>{title} | pablodelfante</title>
             </Head>
             <Layout>
-                <article className="py-14 max-w-5xl mx-auto">
-                    <h2 className="mb-5">{title}</h2>
+                <article className="py-14 max-w-5xl mx-auto grid gap-6">
+                    <h2>{title}</h2>
 
                     {tags && tags.length ? (
-                        <ul className="flex flex-wrap lg:gap-x-3 gap-1 mb-3">
+                        <ul className="flex flex-wrap lg:gap-x-3 gap-1">
                             {tags.map((tecnologie, key) => (
                                 <li
                                     className="text-white text-xs font-medium truncate px-2 py-1 bg-gray-500 rounded-full"
@@ -42,10 +48,13 @@ export default function Work({ work }) {
                         <></>
                     )}
 
-                    <p className="mb-5">{description}</p>
+                    <p>{description}</p>
+
+                   
+
 
                     {imageUrl && (
-                        <div className="mb-5">
+                        <MacWindow>
                             <Image
                                 src={imageUrl ? imageUrl : defaultUrlImage}
                                 alt="cant find the image"
@@ -57,69 +66,26 @@ export default function Work({ work }) {
                                 width={16}
                                 height={9}
                                 quality={100}
-                            />
-                        </div>
+                                />
+                        </MacWindow>
                     )}
 
-                    {/* TODO: resolver funcionalidad de video */}
-                    {/* {url_video && (
-                        <>
-                            <div
-                                className="my-5"
-                                style={{ aspectRatio: '16/9' }}
-                            >
-                                <iframe
-                                    className="w-full h-full"
-                                    src={url_video}
-                                    title="YouTube video player"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowFullScreen
-                                ></iframe>
-                            </div>
-                            <p className="text-sm">
-                                If you can't watch the video:{' '}
-                                <a
-                                    className="underline text-primary"
-                                    href={url_video}
-                                    target="_blank"
-                                >
-                                    watch on youtube
-                                </a>
-                            </p>
-                        </>
-                    )} */}
-
-                    {/* TODO: agregar componentes */}
-                    {/* <ReactMarkdown children={markdown} /> */}
-                    {/* 
-                    {
-                    "__typename": "Video",
-                    "videoUrl": "https://www.youtube.com/embed/3cLymG7PwM4"
-                     }
-                    */}
-                    <div className="my-5">
-                        {components && components.length && components.map((component, key) => <>
-
-                            {component.__typename === "Video" && 
-                                <div
-                                style={{ aspectRatio: '16/9' }}
-                            >
-                                <iframe
-                                    className="w-full h-full"
-                                    src={component.videoUrl}
-                                    title="YouTube video player"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowFullScreen
-                                ></iframe>
-                            </div>}
-
-                            {component.__typename === "Markdown"  &&  <ReactMarkdown children={component.markdown} />}
-
-                            {/* otros componentes */}
-                        </>)}
-                    </div>
-
-
+                    {Boolean(components.length) && (
+                        <ul>
+                            {components.map((component, key) => (
+                                <li key={key}>
+                                    {component.__typename === 'Video' && (
+                                        <Video src={component.videoUrl} />
+                                    )}
+                                    {component.__typename === 'Markdown' && (
+                                        <ReactMarkdown
+                                            children={component.markdown}
+                                        />
+                                    )}
+                                </li>
+                            ))}
+                        </ul>
+                    )}
 
                     {githubUrl && (
                         <a
@@ -131,8 +97,6 @@ export default function Work({ work }) {
                             see project on repository
                         </a>
                     )}
-                    <br />
-                    <br />
 
                     {deployUrl && (
                         <a
@@ -143,7 +107,14 @@ export default function Work({ work }) {
                         >
                             check deploy
                         </a>
-                    ) }
+                    )}
+
+                    <hr className="my-24" />
+
+                    <section className="grid gap-2">
+                        <h4>More to check</h4>
+                        <Works works={worksForContinueNavigation} />
+                    </section>
                 </article>
             </Layout>
         </>
@@ -173,7 +144,8 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-    const { id } = params
-    const work = await getWorkById(id)
-    return { props: { work } }
+    const { id: workId } = params
+    const works = await getWorks()
+    const work = works.find(({ id }) => id == workId)
+    return { props: { work, works } }
 }

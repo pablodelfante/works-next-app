@@ -10,13 +10,12 @@ export default function () {
                     <div>
                         <h2 className="mb-5">About this site</h2>
                         <p className="mb-5">
-                            Born from the idea of showing who I am, show and
-                            expose! The aim is to find something easy that works
-                            with good performance.
+                            Here you can check how I built this page, some of my
+                            profile, and a little of me.
                         </p>
                         <p className="mb-5">How did I do this web?</p>
-                        <Button href="/portfolio/57765139-6e57-4915-be50-b1cbafc120d0">
-                            See project
+                        <Button href="/portfolio/clgebpniz458o0ale7dygmodk">
+                            Check project
                         </Button>
                     </div>
                     <div className="pointer-events-none">

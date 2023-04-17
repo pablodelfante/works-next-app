@@ -20,12 +20,12 @@ export default function Header() {
                 <ul className="flex justify-end gap-3 md:gap-10 py-10">
                     <li className="mr-auto">
                         <Link href="/">
-                            <a>HOME</a>
+                            <a>Pablo Delfante</a>
                         </Link>
                     </li>
                     <li>
                         <Link href="/portfolio">
-                            <a>PORTFOLIO</a>
+                            <a>Portfolio</a>
                         </Link>
                     </li>
                     <li

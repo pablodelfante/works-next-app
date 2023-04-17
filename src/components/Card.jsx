@@ -3,7 +3,7 @@ import Image from 'next/image'
 export default function ({ imageSrc, title, tags, description }) {
     return (
         <>
-            <li className="py-3 md:py-8 rounded border hover:border-primary hover:shadow-lg hover:shadow-indigo-500/40 transition duration-300">
+            <li className="pb-8 rounded-lg overflow-clip [ shadow-md shadow-gray-200 hover:shadow-lg hover:shadow-indigo-500/40 ] [ dark:shadow-sm dark:hover:shadow-lg dark:hover:shadow-indigo-500/40 dark:transition dark:duration-300 ] transition duration-300 [ bg-white bg-opacity-5 hover:bg-opacity-10 backdrop-blur-lg ]">
                 <figure className="mb-5 opacity-90">
                     <Image
                         src={
