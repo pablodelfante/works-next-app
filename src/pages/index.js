@@ -29,15 +29,22 @@ export default function Home() {
                         </Terminal>
                     </div>
                     <div className="grid">
-                        <div className="grid justify-center">
+                        <div className="grid justify-center col-span-full row-span-full">
                             <BlobV2
                                 blobConfig={{ color: 'hwb(243deg 30% 1%)' }}
                                 canvasStyles={{ width: '300px' }}
                             />
                         </div>
+                        <figure className="grid justify-center col-span-full row-span-full w-48">
+                            <img
+                                className="w-60"
+                                src="/img/home/serious.png"
+                                alt=""
+                            />
+                        </figure>
                     </div>
                 </Intro>
-                <AboutMe />
+                {/* <AboutMe /> */}
                 <AboutSite />
             </Layout>
         </>
