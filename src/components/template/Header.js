@@ -16,7 +16,7 @@ export default function Header() {
 
     return (
         <>
-            <header className="border-b">
+            <header>
                 <ul className="flex justify-end gap-3 md:gap-10 py-10">
                     <li className="mr-auto">
                         <Link href="/">
