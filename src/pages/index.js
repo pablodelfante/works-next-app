@@ -4,11 +4,13 @@ import TitlePage from 'components/titlePage'
 import AboutSite from 'components/aboutSite'
 import AboutMe from 'components/aboutMe'
 import { CONTENT_PORTADA } from 'utils/dataSite'
-import Terminal from "components/Terminal";
-import Intro from "components/template/Intro";
+import Terminal from 'components/Terminal'
+import Intro from 'components/template/Intro'
+import BlobV2 from 'components/BlobV2'
 
 export default function Home() {
     const { titlePortada, contentPortada } = CONTENT_PORTADA.index
+
     return (
         <>
             <Head>
@@ -16,13 +18,23 @@ export default function Home() {
             </Head>
             <Layout>
                 <Intro>
-                    <div>
-                        <h1 className='font-bold text-9xl'>Hi</h1>
-                        <h2 className='font-bold text-7xl text-primary'>Welcome!</h2>
-                        <Terminal init="hello">In this section I have some works that I would like to share with you!</Terminal>
+                    <div className="grid gap-4">
+                        <h1 className="font-bold text-9xl">Hi</h1>
+                        <h2 className="font-bold text-7xl text-primary dark:text-primary">
+                            Welcome!
+                        </h2>
+                        <Terminal init="hello">
+                            In this section I have some works that I would like
+                            to share with you!
+                        </Terminal>
                     </div>
-                    <div>
-                        side content
+                    <div className="grid">
+                        <div className="grid justify-center">
+                            <BlobV2
+                                blobConfig={{ color: 'hwb(243deg 30% 1%)' }}
+                                canvasStyles={{ width: '300px' }}
+                            />
+                        </div>
                     </div>
                 </Intro>
                 <AboutMe />
