@@ -5,7 +5,7 @@ export default function () {
     return (
         <>
             {/* acerca de mi general */}
-            <section className="my-20 lg:my-40">
+            <section>
                 <div className="grid xl:grid-cols-2 gap-10">
                     <div>
                         <h2 className="mb-5">About this site</h2>

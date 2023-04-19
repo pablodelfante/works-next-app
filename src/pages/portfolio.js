@@ -4,6 +4,7 @@ import { getWorks } from 'connectors/findWorks'
 import { CONTENT_PORTADA } from 'utils/dataSite'
 import Head from 'next/head'
 import Works from 'components/Works'
+import Container from 'components/layouts/Container'
 
 export default function Portfolio({ works }) {
     const { titlePortada, contentPortada } = CONTENT_PORTADA.portfolio
@@ -13,10 +14,12 @@ export default function Portfolio({ works }) {
                 <title>portfolio | pablodelfante</title>
             </Head>
             <Layout>
-                <TitlePage title={titlePortada} content={contentPortada} />
-                <section className="my-20 lg:my-40">
-                    <Works works={works} />
-                </section>
+                <Container>
+                    <TitlePage title={titlePortada} content={contentPortada} />
+                    <section className="my-20 lg:my-40">
+                        <Works works={works} />
+                    </section>
+                </Container>
             </Layout>
         </>
     )
