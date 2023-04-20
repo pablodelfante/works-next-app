@@ -22,13 +22,15 @@ export default function Home() {
                     <Intro>
                         <div className="grid gap-4 pb-16">
                             <h1 className="font-bold text-9xl">Hi</h1>
-                            <h2 className="font-bold text-7xl text-primary dark:text-primary">
+                            <h2 className="font-bold text-6xl md:text-7xl text-primary dark:text-primary">
                                 Welcome!
                             </h2>
-                            <Terminal init="hello">
-                                In this section I have some works that I would
-                                like to share with you!
-                            </Terminal>
+                            <div className='md:w-[24em]'>
+                                <Terminal init="hello">
+                                    In this section I have some works that I would
+                                    like to share with you!
+                                </Terminal>
+                            </div>
                         </div>
                         <div className="hidden lg:grid">
                             <div className="grid justify-center col-span-full row-span-full">
