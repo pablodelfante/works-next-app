@@ -10,6 +10,7 @@ import BlobV2 from 'components/BlobV2'
 import Container from 'components/layouts/Container'
 import { getWorks } from 'connectors/findWorks'
 import Works from 'components/Works'
+import WhoIam from "components/aboutMe/WhoIam";
 
 export default function Home({works}) {
     const { titlePortada, contentPortada } = CONTENT_PORTADA.index
@@ -63,9 +64,16 @@ export default function Home({works}) {
                 </div>
 
 
+                <div className="py-16">
+                    <Container>
+                         <WhoIam/>
+                    </Container>
+                </div>
+
                 <div className="bg-primary py-16">
                     <Container>
-                   
+                        referencia
+                        <AboutMe />
                     </Container>
                 </div>
                         {/* <AboutSite /> */}
