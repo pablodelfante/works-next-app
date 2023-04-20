@@ -17,7 +17,7 @@ export default function Portfolio({ works }) {
                 <Container>
                     <TitlePage title={titlePortada} content={contentPortada} />
                     <section className="my-20 lg:my-40">
-                        <Works works={works} />
+                        <Works works={worksHighlightedReduced} />
                     </section>
                 </Container>
             </Layout>

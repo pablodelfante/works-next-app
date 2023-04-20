@@ -8,10 +8,13 @@ import Terminal from 'components/Terminal'
 import Intro from 'components/template/Intro'
 import BlobV2 from 'components/BlobV2'
 import Container from 'components/layouts/Container'
+import { getWorks } from 'connectors/findWorks'
+import Works from 'components/Works'
 
-export default function Home() {
+export default function Home({works}) {
     const { titlePortada, contentPortada } = CONTENT_PORTADA.index
 
+    const worksHighlightedReduced = works.filter((work) => work.highlighted).slice(0,2)
     return (
         <>
             <Head>
@@ -50,12 +53,30 @@ export default function Home() {
                     </Intro>
                 </Container>
 
-                <div className="bg-primary py-16">
+                <div className="bg-primary/10 py-16">
                     <Container>
-                        <AboutSite />
+                        <h3 className='m-auto w-max mb-16'>Highlighted works</h3>
+                        <ul className='grid grid-flow-row md:grid-flow-col gap-2'>
+                        {worksHighlightedReduced && <Works works={worksHighlightedReduced} />}
+                        </ul>
                     </Container>
                 </div>
+
+
+                <div className="bg-primary py-16">
+                    <Container>
+                   
+                    </Container>
+                </div>
+                        {/* <AboutSite /> */}
             </Layout>
         </>
     )
+}
+
+// get all the posts
+export async function getStaticProps() {
+    // const works = await getWorks()
+    const works = []
+    return { props: { works } }
 }
