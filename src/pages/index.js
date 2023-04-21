@@ -16,66 +16,70 @@ import Projections from "components/aboutMe/Projections";
 export default function Home({works}) {
     const { titlePortada, contentPortada } = CONTENT_PORTADA.index
 
-    const worksHighlightedReduced = works.filter((work) => work.highlighted).slice(0,2)
+    const worksHighlightedReduced = works.filter((work) => work.highlighted).slice(0,2);
+
+    const sectionColorizedClass = 'bg-slate-50 dark:bg-slate-800 [ py-16 ]'
     return (
         <>
             <Head>
                 <title>pablodelfante</title>
             </Head>
             <Layout>
-                <Container>
-                    <Intro>
-                        <div className="grid gap-4 pb-16">
-                            <h1 className="font-bold text-9xl">Hi</h1>
-                            <h2 className="font-bold text-6xl md:text-7xl text-primary dark:text-primary">
-                                Welcome!
-                            </h2>
-                            <div className='md:w-[24em]'>
-                                <Terminal init="hello">
-                                    In this section I have some works that I would
-                                    like to share with you!
-                                </Terminal>
+                <section>
+                    <Container>
+                        <Intro>
+                            <div className="grid gap-4 pb-16">
+                                <h1 className="font-bold text-9xl">Hi</h1>
+                                <h2 className="font-bold text-6xl md:text-7xl text-primary dark:text-primary">
+                                    Welcome!
+                                </h2>
+                                <div className='md:w-[24em]'>
+                                    <Terminal init="hello">
+                                        In this section I have some works that I would
+                                        like to share with you!
+                                    </Terminal>
+                                </div>
                             </div>
-                        </div>
-                        <div className="hidden lg:grid">
-                            <div className="grid justify-center col-span-full row-span-full">
-                                <BlobV2
-                                    blobConfig={{ color: 'hwb(243deg 30% 1%)' }}
-                                    canvasStyles={{ width: '400px' }}
-                                />
+                            <div className="hidden lg:grid">
+                                <div className="grid justify-center col-span-full row-span-full">
+                                    <BlobV2
+                                        blobConfig={{ color: 'hwb(243deg 30% 1%)' }}
+                                        canvasStyles={{ width: '400px' }}
+                                    />
+                                </div>
+                                <figure className="grid justify-center items-end col-span-full row-span-full">
+                                    <img
+                                        className="w-80 drop-shadow-[0_0px_40px_rgba(0,0,0,0.30)]"
+                                        src="/img/home/serious.png"
+                                        alt=""
+                                    />
+                                </figure>
                             </div>
-                            <figure className="grid justify-center items-end col-span-full row-span-full">
-                                <img
-                                    className="w-80 drop-shadow-[0_0px_40px_rgba(0,0,0,0.30)]"
-                                    src="/img/home/serious.png"
-                                    alt=""
-                                />
-                            </figure>
-                        </div>
-                    </Intro>
-                </Container>
+                        </Intro>
+                    </Container>
+                </section>
 
-                <div className="bg-primary/10 py-16">
+
+                <section className={`${sectionColorizedClass}`}>
                     <Container>
                         <h3 className='m-auto w-max mb-16'>Highlighted works</h3>
                         <ul className='grid grid-flow-row md:grid-flow-col gap-2'>
                         {worksHighlightedReduced && <Works works={worksHighlightedReduced} />}
                         </ul>
                     </Container>
-                </div>
+                </section>
 
-                <div className="py-16">
+                <section className="py-16">
                     <Container>
                          <WhoIam/>
                     </Container>
-                </div>
+                </section>
 
-                <div className="bg-primary py-16">
+                <section className={`${sectionColorizedClass}`}>
                     <Container>
                         <Projections/>
                     </Container>
-                </div>
-                        {/* <AboutSite /> */}
+                </section>
             </Layout>
         </>
     )
@@ -83,7 +87,7 @@ export default function Home({works}) {
 
 // get all the posts
 export async function getStaticProps() {
-    // const works = await getWorks()
-    const works = []
+    const works = await getWorks()
+    // const works = []
     return { props: { works } }
 }

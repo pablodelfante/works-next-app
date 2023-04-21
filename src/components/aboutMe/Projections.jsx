@@ -6,7 +6,7 @@ export default function WhoIam() {
     return (
         <div className="grid justify-center gap-8">
             <h3>Projections</h3>
-            <div className="lg:w-[35em] text-white">
+            <div className="lg:w-[40em] text-white">
                 <Terminal init="projections">
                     <p className="mb-8">
                         I am interested in a stacks like JAM, technologies like
