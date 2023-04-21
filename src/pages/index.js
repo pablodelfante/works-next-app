@@ -11,6 +11,7 @@ import Container from 'components/layouts/Container'
 import { getWorks } from 'connectors/findWorks'
 import Works from 'components/Works'
 import WhoIam from "components/aboutMe/WhoIam";
+import Projections from "components/aboutMe/Projections";
 
 export default function Home({works}) {
     const { titlePortada, contentPortada } = CONTENT_PORTADA.index
@@ -63,7 +64,6 @@ export default function Home({works}) {
                     </Container>
                 </div>
 
-
                 <div className="py-16">
                     <Container>
                          <WhoIam/>
@@ -72,8 +72,7 @@ export default function Home({works}) {
 
                 <div className="bg-primary py-16">
                     <Container>
-                        referencia
-                        <AboutMe />
+                        <Projections/>
                     </Container>
                 </div>
                         {/* <AboutSite /> */}

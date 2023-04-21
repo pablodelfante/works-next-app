@@ -3,6 +3,7 @@ import BlobV2 from 'components/BlobV2'
 import maskPng from './mask-done.png'
 import { useRef } from 'react'
 
+/* FIXME: quedó sin terminar esta sección */
 export default function WhoIam() {
     console.log()
     // example use ref with react
@@ -27,16 +28,16 @@ export default function WhoIam() {
                     /> */}
             </div>
             <div>
-                <div className="md:w-[35em]">
+                <div className="lg:w-[35em]">
                     <Terminal init="whoIam">
-                        <p className="mb-5">
+                        <p className="mb-5 text-white">
                             I am a graphic designer and I am currrently studying
                             web design. I have been passionate about technology
                             since I was a curious and active child. I love
                             sharing, learning and helping others as well as
                             meeting new people!
                         </p>
-                        <p>
+                        <p className="text-white">
                             I love sorting out problems and I really enjoy being
                             analytic and creative!
                         </p>
