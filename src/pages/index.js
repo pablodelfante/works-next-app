@@ -10,15 +10,16 @@ import BlobV2 from 'components/BlobV2'
 import Container from 'components/layouts/Container'
 import { getWorks } from 'connectors/findWorks'
 import Works from 'components/Works'
-import WhoIam from "components/aboutMe/WhoIam";
-import Projections from "components/aboutMe/Projections";
+import WhoIam from 'components/aboutMe/WhoIam'
+import Projections from 'components/aboutMe/Projections'
 
-export default function Home({works}) {
+export default function Home({ works }) {
     const { titlePortada, contentPortada } = CONTENT_PORTADA.index
 
-    const worksHighlightedReduced = works.filter((work) => work.highlighted).slice(0,2);
+    const worksHighlightedReduced = works.filter((work) => work.highlighted).slice(0, 2)
 
-    const sectionColorizedClass = 'bg-slate-50 dark:bg-slate-800 [ py-16 ]'
+    const sectionPadding = 'py-40'
+    const sectionColorizedClass = `bg-slate-50 dark:bg-slate-800 [ ${sectionPadding} ]`
     return (
         <>
             <Head>
@@ -33,17 +34,19 @@ export default function Home({works}) {
                                 <h2 className="font-bold text-6xl md:text-7xl text-primary dark:text-primary">
                                     Welcome!
                                 </h2>
-                                <div className='md:w-[24em]'>
+                                <div className="md:w-[24em]">
                                     <Terminal init="hello">
-                                        In this section I have some works that I would
-                                        like to share with you!
+                                        In this section I have some works that I would like to share
+                                        with you!
                                     </Terminal>
                                 </div>
                             </div>
                             <div className="hidden lg:grid">
                                 <div className="grid justify-center col-span-full row-span-full">
                                     <BlobV2
-                                        blobConfig={{ color: 'hwb(243deg 30% 1%)' }}
+                                        blobConfig={{
+                                            color: 'hwb(243deg 30% 1%)',
+                                        }}
                                         canvasStyles={{ width: '400px' }}
                                     />
                                 </div>
@@ -59,25 +62,24 @@ export default function Home({works}) {
                     </Container>
                 </section>
 
-
                 <section className={`${sectionColorizedClass}`}>
                     <Container>
-                        <h3 className='m-auto w-max mb-16'>Highlighted works</h3>
-                        <ul className='grid grid-flow-row md:grid-flow-col gap-2'>
-                        {worksHighlightedReduced && <Works works={worksHighlightedReduced} />}
+                        <h3 className="m-auto w-max mb-16">Highlighted works</h3>
+                        <ul className="grid grid-flow-row md:grid-flow-col gap-2">
+                            {worksHighlightedReduced && <Works works={worksHighlightedReduced} />}
                         </ul>
                     </Container>
                 </section>
 
-                <section className="py-16">
+                <section className={sectionPadding}>
                     <Container>
-                         <WhoIam/>
+                        <WhoIam />
                     </Container>
                 </section>
 
                 <section className={`${sectionColorizedClass}`}>
                     <Container>
-                        <Projections/>
+                        <Projections />
                     </Container>
                 </section>
             </Layout>

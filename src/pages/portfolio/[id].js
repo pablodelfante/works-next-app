@@ -7,6 +7,7 @@ import { getWorks, getWorkById } from 'connectors/findWorks'
 import Video from 'components/Video'
 import Works from 'components/Works'
 import MacWindow from 'components/MacWindow'
+import Container from 'components/layouts/Container'
 
 export default function Work({ work, works }) {
     const {
@@ -30,92 +31,92 @@ export default function Work({ work, works }) {
                 <title>{title} | pablodelfante</title>
             </Head>
             <Layout>
-                <article className="py-14 max-w-5xl mx-auto grid gap-6">
-                    <h2>{title}</h2>
+                <Container>
+                    <article className="py-14 max-w-5xl mx-auto grid gap-6">
+                        <h2>{title}</h2>
 
-                    {tags && tags.length ? (
-                        <ul className="flex flex-wrap lg:gap-x-3 gap-1">
-                            {tags.map((tecnologie, key) => (
-                                <li
-                                    className="text-white text-xs font-medium truncate px-2 py-1 bg-gray-500 rounded-full"
-                                    key={key}
-                                >
-                                    {tecnologie}
-                                </li>
-                            ))}
-                        </ul>
-                    ) : (
-                        <></>
-                    )}
+                        {tags && tags.length ? (
+                            <ul className="flex flex-wrap lg:gap-x-3 gap-1">
+                                {tags.map((tecnologie, key) => (
+                                    <li
+                                        className="text-white text-xs font-medium truncate px-2 py-1 bg-gray-500 rounded-full"
+                                        key={key}
+                                    >
+                                        {tecnologie}
+                                    </li>
+                                ))}
+                            </ul>
+                        ) : (
+                            <></>
+                        )}
 
-                    <p>{description}</p>
+                        <p>{description}</p>
 
-                   
-
-
-                    {imageUrl && (
-                        <MacWindow>
-                            <Image
-                                src={imageUrl ? imageUrl : defaultUrlImage}
-                                alt="cant find the image"
-                                priority={true}
-                                //define como se comporta en el layout
-                                layout="responsive"
-                                //como se comporta la imagen dentro de su propio contenedor
-                                objectFit="contain"
-                                width={16}
-                                height={9}
-                                quality={100}
+                        {imageUrl && (
+                            <MacWindow>
+                                <Image
+                                    src={imageUrl ? imageUrl : defaultUrlImage}
+                                    alt="cant find the image"
+                                    priority={true}
+                                    //define como se comporta en el layout
+                                    layout="responsive"
+                                    //como se comporta la imagen dentro de su propio contenedor
+                                    objectFit="contain"
+                                    width={16}
+                                    height={9}
+                                    quality={100}
                                 />
-                        </MacWindow>
-                    )}
+                            </MacWindow>
+                        )}
 
-                    {Boolean(components.length) && (
-                        <ul>
-                            {components.map((component, key) => (
-                                <li key={key}>
-                                    {component.__typename === 'Video' && (
-                                        <Video src={component.videoUrl} />
-                                    )}
-                                    {component.__typename === 'Markdown' && (
-                                        <ReactMarkdown
-                                            children={component.markdown}
-                                        />
-                                    )}
-                                </li>
-                            ))}
-                        </ul>
-                    )}
+                        {Boolean(components.length) && (
+                            <ul>
+                                {components.map((component, key) => (
+                                    <li key={key}>
+                                        {component.__typename === 'Video' && (
+                                            <Video src={component.videoUrl} />
+                                        )}
+                                        {component.__typename ===
+                                            'Markdown' && (
+                                            <ReactMarkdown
+                                                children={component.markdown}
+                                            />
+                                        )}
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
 
-                    {githubUrl && (
-                        <a
-                            href={githubUrl}
-                            target="_blank"
-                            rel="noopener"
-                            className="underline"
-                        >
-                            see project on repository
-                        </a>
-                    )}
+                        {githubUrl && (
+                            <a
+                                href={githubUrl}
+                                target="_blank"
+                                rel="noopener"
+                                className="underline"
+                            >
+                                see project on repository
+                            </a>
+                        )}
 
-                    {deployUrl && (
-                        <a
-                            href={deployUrl}
-                            target="_blank"
-                            rel="noopener"
-                            className="underline"
-                        >
-                            check deploy
-                        </a>
-                    )}
+                        {deployUrl && (
+                            <a
+                                href={deployUrl}
+                                target="_blank"
+                                rel="noopener"
+                                className="underline"
+                            >
+                                check deploy
+                            </a>
+                        )}
 
-                    <hr className="my-24" />
+                        <hr className="my-24" />
 
-                    <section className="grid gap-2">
-                        <h4>More to check</h4>
-                        <Works works={worksForContinueNavigation} />
-                    </section>
-                </article>
+                        <section className="grid gap-2">
+                            <h4>More to check</h4>
+                            <Works works={worksForContinueNavigation} />
+                        </section>
+                    </article>
+                </Container>
             </Layout>
         </>
     )
