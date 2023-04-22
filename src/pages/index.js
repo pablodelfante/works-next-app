@@ -8,6 +8,7 @@ import { getWorks } from 'connectors/findWorks'
 import Works from 'components/Works'
 import WhoIam from 'components/pages/home/aboutMe/WhoIam'
 import Projections from 'components/pages/home/aboutMe/Projections'
+import { TypeAnimation } from 'react-type-animation';
 
 export default function Home({ works }) {
     const worksHighlighted = works.filter((work) => work.highlighted)
@@ -24,9 +25,22 @@ export default function Home({ works }) {
                         <Intro>
                             <div className="grid gap-4 pb-16">
                                 <h1 className="font-bold text-9xl">Hi</h1>
-                                <h2 className="font-bold text-6xl md:text-7xl text-primary dark:text-primary">
-                                    Welcome!
-                                </h2>
+                                <TypeAnimation
+                                    className="font-bold text-primary text-4xl md:text-5xl xl:text-6xl dark:text-primary"
+                                    sequence={[
+                                        'Welcome!',
+                                        2500,
+                                        'new Wel...',
+                                        1000, 
+                                        'new Welcome()',
+                                        1000,
+                                        '<Welcome/>',
+                                        1500,
+                                    ]}
+                                    wrapper="h2"
+                                    cursor={true}
+                                    repeat={Infinity}
+                                />
                                 <div className="md:w-[24em]">
                                     <Terminal init="hello">
                                         In this section I have some works that I would like to share
@@ -82,7 +96,7 @@ export default function Home({ works }) {
 
 // get all the posts
 export async function getStaticProps() {
-    const works = await getWorks()
-    // const works = []
+    // const works = await getWorks()
+    const works = []
     return { props: { works } }
 }
