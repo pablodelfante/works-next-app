@@ -3,7 +3,7 @@ export const mock = [
         id: 'clgec3grj45gi0bljvhbrltli',
         title: 'Hemocentro',
         description:
-            'The Hemocentro project is part and objective of the degree completion project, which aims, among other things, to show a little of the evolution of the profile acquired during the course of the degree. Exhibit and work in different areas such as management, marketing, development and design.',
+            'El proyecto Hemocentro es parte y objetivo del proyecto de finalización de la carrera, que tiene como objetivo, entre otras cosas, mostrar un poco de la evolución del perfil adquirido durante el transcurso de la carrera. Exposición y trabajo en diferentes áreas como gestión, marketing, desarrollo y diseño.',
         stage: 'DRAFT',
         highlighted: true,
         githubUrl: 'https://github.com/pablo-university/web-project',
@@ -13,9 +13,9 @@ export const mock = [
     },
     {
         id: 'clgebpniz458o0ale7dygmodk',
-        title: 'PWA - This web site',
+        title: 'PWA - Este sitio web',
         description:
-            'I try to show my profile both as a professional and as an individual. Every day I try to get better, to learn, explore and in this way be a better person enjoying what I do. I build this website with a Jamstack and used next and hygraph as my main technologies stack.',
+            'Intento mostrar mi perfil tanto como profesional como individual. Todos los días intento mejorar, aprender, explorar y de esta manera ser una mejor persona disfrutando lo que hago. Construí este sitio web con Jamstack y usé Next y Hygraph como mi pila de tecnologías principales.',
         stage: 'DRAFT',
         highlighted: true,
         githubUrl: 'https://github.com/pablodelfante/works-next-app',
@@ -27,7 +27,7 @@ export const mock = [
         id: 'clgec4ep146rg0bl9e2r9h5kt',
         title: 'Web workers',
         description:
-            'I have recently been learning about Web Workers, I had a curiosity about functionality and can have deep knowledge about this. I have Always been curious about javascript, technical details and for example, the event loop, have paved the way for me to get more knowledge about technical improvement, and performance and this knowledge has led me to search and investigate other tags, such as web APIs, PWA’s and others. I have thought of a process that requires some more powerful for example, image management and others. My first point to start with was not blocking the main thread on js. This was my point for learning and investigating other alternative to do some tasks that required more power in the background.',
+            'Recientemente he estado aprendiendo sobre Web Workers, tenía curiosidad por su funcionalidad y profundizar en mi conocimiento sobre esto. Siempre he sido curioso acerca de JavaScript, los detalles técnicos y, por ejemplo, el bucle de eventos, han pavimentado el camino para que obtenga más conocimiento sobre la mejora técnica y el rendimiento, y este conocimiento me ha llevado a buscar e investigar otras etiquetas, como las APIs web, las PWA y otras. He pensado en un proceso que requiere más potencia, por ejemplo, la gestión de imágenes y otros. Mi primer punto de partida no era bloquear el hilo principal en JS. Este fue mi punto para aprender e investigar otras alternativas para realizar tareas que requieren más potencia en segundo plano.',
         stage: 'DRAFT',
         highlighted: false,
         githubUrl: 'https://github.com/pablo-learn/workers',
@@ -37,9 +37,9 @@ export const mock = [
     },
     {
         id: 'clgec20v345fg0bljs6thxcmj',
-        title: 'Prototype - NATURAL',
+        title: 'Prototipo - NATURAL',
         description:
-            'Academic project, the target was to understand matters and different proceses in diciplines such as UX and UI, had and introduction to the digital interfaces world web develop.',
+            'Proyecto académico cuyo objetivo era comprender temas y procesos diferentes en disciplinas como UX y UI, tuvo una introducción al mundo del desarrollo de interfaces digitales.',
         stage: 'DRAFT',
         highlighted: false,
         githubUrl: null,
@@ -49,9 +49,9 @@ export const mock = [
     },
     {
         id: 'clgec0plc46p00bl9f7c98fz6',
-        title: 'DW2 - Strip to Australia',
+        title: 'DW2 - Viaje a Australia',
         description:
-            'Overall, it is about tourist information, general information about Australia, the target of the web is to show differents skills thgrough with techologies as CSS, SCSS or the different libraries implementation to do the web site.',
+            'En general, se trata de información turística, información general sobre Australia, el objetivo del sitio web es mostrar diferentes habilidades a través de tecnologías como CSS, SCSS o la implementación de diferentes bibliotecas para hacer el sitio web.',
         stage: 'DRAFT',
         highlighted: false,
         githubUrl: 'https://github.com/pablodelfante/W2-obligatorio2',
@@ -61,9 +61,9 @@ export const mock = [
     },
     {
         id: 'clgebwo1f45dw0aletm1m9ius',
-        title: 'PWA - Garden app',
+        title: 'PWA - App de jardín',
         description:
-            'This app is a draft. I would like to show this from an early stage. The objective is to understand the concept of pwa. Practising the written code and implementing. Different new web tags , with Svelte framework firebase and more.',
+            'Esta aplicación es un borrador. Me gustaría mostrar esto desde una etapa temprana. El objetivo es comprender el concepto de PWA. Practicar el código escrito e implementarlo. Diferentes nuevas etiquetas web, con el framework Svelte, Firebase y más.',
         stage: 'DRAFT',
         highlighted: false,
         githubUrl: 'https://github.com/pablodelfante/svelte-proyects/tree/pwa-garden',
@@ -73,9 +73,9 @@ export const mock = [
     },
     {
         id: 'clgebrif446js0bl9txdgq78s',
-        title: 'Socket.io - Express Chat App',
+        title: 'Aplicación de chat Socket.io - Express',
         description:
-            'Here the socket io implementation on chat application is shown as a recently acquired technology. I use cookies management and a basic system of sessions to register the current user.',
+            'Aquí se muestra la implementación de Socket.io en una aplicación de chat como tecnología recientemente adquirida. Uso la gestión de cookies y un sistema básico de sesiones para registrar al usuario actual.',
         stage: 'DRAFT',
         highlighted: false,
         githubUrl: 'https://github.com/pablodelfante/socket-chat-app',
@@ -85,9 +85,9 @@ export const mock = [
     },
     {
         id: 'clgebm3qm455p0bljq5mrklpz',
-        title: 'P2 - Watch Shop',
+        title: 'P2 - Tienda de relojes',
         description:
-            'Academic project, use PHP and MYSQL as database, the proposal was do two sections in the target. One where you had the client and another, with a dashboard panel for content managment. I underlineed the personal growth out of the proyect and the evolution on structures of data and organization, work methodologies and experience obtained with front and back tools. This opened experiences and doors to other projects with node and different databases.',
+            'Proyecto académico, utiliza PHP y MYSQL como base de datos, la propuesta fue hacer dos secciones en el objetivo. Una donde tenías al cliente y otra, con un panel de control para la gestión de contenido. Destaco el crecimiento personal fuera del proyecto y la evolución en las estructuras de datos y organización, metodologías de trabajo y experiencia obtenida con herramientas de front y back. Esto abrió experiencias y puertas a otros proyectos con node y diferentes bases de datos.',
         stage: 'DRAFT',
         highlighted: false,
         githubUrl: 'https://github.com/pablodelfante/P2-obligatorio',
@@ -97,9 +97,9 @@ export const mock = [
     },
     {
         id: 'clgeb4wza45080ale9pjc0qy7',
-        title: 'DW3 - Neuralink Redesign',
+        title: 'DW3 - Rediseño de Neuralink',
         description:
-            'Redesign of the web Neuralink, the objective of the work was to get a website and doing the redesign. I focused on UX and project structure, made a performance improvement in comparison with the original website, overall produce fast and more fluid navegation.',
+            'Rediseño del sitio web Neuralink, el objetivo del trabajo fue obtener un sitio web y hacer el rediseño. Me enfoqué en la experiencia de usuario y la estructura del proyecto, logré una mejora de rendimiento en comparación con el sitio web original, en general produce una navegación rápida y más fluida.',
         stage: 'DRAFT',
         highlighted: false,
         githubUrl: 'https://github.com/pablodelfante/W3-Obligatorio1',
@@ -109,9 +109,9 @@ export const mock = [
     },
     {
         id: 'clgdn9vpu3ouo0bk6qopdowfg',
-        title: 'JS - Dashboard people managment',
+        title: 'JS - Dashboard de gestión de personas',
         description:
-            'Dashboard for people managment, created with Javascript vanilla, the focus was to show the skills obtained with javascript and jquery like library to understand the libraries concept. And other integratios!',
+            'Dashboard de gestión de personas, creado con Javascript vanilla, el enfoque fue mostrar las habilidades obtenidas con javascript y jquery como biblioteca para comprender el concepto de las bibliotecas. ¡Y otras integraciones!',
         stage: 'DRAFT',
         highlighted: false,
         githubUrl: 'https://github.com/pablodelfante/P1-obligatorio',
@@ -121,7 +121,7 @@ export const mock = [
             {
                 __typename: 'Markdown',
                 markdown:
-                    '### Node integration\nThe system, manage the users getting the data from localstorage or local with ajax, save the data on localstorage and after that try use the server express who manage the local saved.',
+                    '### Integración con Node\nEl sistema maneja a los usuarios obteniendo los datos del almacenamiento local o del servidor local con ajax, guarda los datos en el almacenamiento local y después intenta usar el servidor express que gestiona el almacenamiento local.',
             },
         ],
     },
