@@ -24,13 +24,13 @@ export default function WhoIam() {
             </div>
             <div>
                 <div className="grid gap-6 lg:w-[35em]">
-                    <h3>Who am I?</h3>
-                    <Terminal init="whoIam">
+                    <h3>¿Quién soy?</h3>
+                    <Terminal init="quiensoy">
                         <p className="mb-5 text-white">
-                            I am a graphic designer and I am currrently studying web design. I have been passionate about technology since I was a
-                            curious and active child. I love sharing, learning and helping others as well as meeting new people!
+                            Soy diseñador gráfico y actualmente estoy estudiando diseño web. Soy un apasionado de la tecnología desde que era un niño
+                            curioso y activo. ¡Me encanta compartir, aprender y ayudar a los demás, así como conocer gente nueva!
                         </p>
-                        <p className="text-white">I love sorting out problems and I really enjoy being analytic and creative!</p>
+                        <p className="text-white">¡Me encanta resolver problemas y disfruto mucho siendo analítico y creativo!</p>
                     </Terminal>
                 </div>
             </div>

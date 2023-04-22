@@ -25,16 +25,16 @@ export default function Home({ works }) {
                     <Container>
                         <Intro>
                             <div className="grid gap-4 pb-16">
-                                <h1 className="font-bold text-[10rem]">Hi</h1>
+                                <h1 className="font-bold text-[10rem]">Hola</h1>
                                 <TypeAnimation
                                     className="font-bold text-primary text-4xl md:text-5xl xl:text-6xl dark:text-primary"
-                                    sequence={['Welcome!', 2500, 'new Wel...', 1000, 'new Welcome();', 1000, '<Welcome/>', 1500]}
+                                    sequence={['Bienvenido!', 2500, 'new Bienv...', 1000, 'new Bienvenido();', 1000, '<Bienvenido/>', 1500]}
                                     wrapper="h2"
                                     cursor={true}
                                     repeat={Infinity}
                                 />
                                 <div className="md:w-[24em]">
-                                    <Terminal init="hello">In this section I have some works that I would like to share with you!</Terminal>
+                                    <Terminal init="saludar">¡En esta sección tengo algunos trabajos que me gustaría compartir con ustedes!</Terminal>
                                 </div>
                             </div>
                             <div className="hidden lg:grid">
@@ -64,7 +64,7 @@ export default function Home({ works }) {
 
                 <section className={`${sectionColorizedClass}`}>
                     <Container>
-                        <h3 className="m-auto w-max mb-16">Highlighted works</h3>
+                        <h3 className="m-auto w-max mb-16">Trabajos destacados</h3>
                         <ul className="grid grid-flow-row md:grid-flow-col gap-2">{worksHighlighted && <Works works={worksHighlighted} />}</ul>
                     </Container>
                 </section>

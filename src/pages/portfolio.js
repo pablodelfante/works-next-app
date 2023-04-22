@@ -17,10 +17,10 @@ export default function Portfolio({ works }) {
                     <section>
                         <section className="my-10 md:my-30 grid lg:grid-cols-[1.5fr_1fr] items-center">
                             <div className={`md:max-w-sm h-min`}>
-                                <h1 className="text-primary dark:text-primary font-bold mb-4 lg:w-min text-6xl lg:text-8xl">Nice to see you!!</h1>
+                                <h1 className="text-primary dark:text-primary font-bold mb-4 lg:w-min text-6xl lg:text-8xl">Gusto de verte !!</h1>
                                 <Terminal init="portfolio">
                                     <p className="text-xl font-light text-white">
-                                        Hi!! welcome to my site! Here I'm going to tell you about me, about myself. Go ahead!
+                                        ¡¡Hola!! ¡Bienvenido a mi sitio! Aquí les voy a hablar de mí, de mí. ¡Adelante!
                                     </p>
                                 </Terminal>
                             </div>
