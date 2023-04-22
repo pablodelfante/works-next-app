@@ -5,6 +5,7 @@
       -en header.js cambio clase dark en html
       -aqui cambio body header y lunita svg */
 :root {
+    --primary-color: theme(colors.primary)
 }
 
 * {

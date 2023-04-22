@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { useContext, useEffect } from 'react'
-import DarkContext from '../../contexts/darkMode/DarkContext'
+import DarkContext from 'contexts/darkMode/DarkContext'
+import BlobV2 from 'components/BlobV2'
 
 export default function Header() {
     const { isDark, setIsDark, icono } = useContext(DarkContext)
@@ -16,9 +17,15 @@ export default function Header() {
 
     return (
         <>
-            <header className="border-b">
+            <header>
                 <ul className="flex justify-end gap-3 md:gap-10 py-10">
-                    <li className="mr-auto">
+                    <li className="mr-auto flex gap-1">
+                        <BlobV2
+                            blobConfig={{
+                                color: 'hwb(243deg 30% 1%)',
+                            }}
+                            canvasStyles={{ width: '20px' }}
+                        />
                         <Link href="/">
                             <a>Pablo Delfante</a>
                         </Link>
@@ -28,10 +35,7 @@ export default function Header() {
                             <a>Portfolio</a>
                         </Link>
                     </li>
-                    <li
-                        onClick={() => switchModeDark()}
-                        className="cursor-pointer"
-                    >
+                    <li onClick={() => switchModeDark()} className="cursor-pointer">
                         {icono}
                     </li>
                 </ul>
