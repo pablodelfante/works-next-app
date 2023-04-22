@@ -1,9 +1,6 @@
 import Head from 'next/head'
 import Layout from 'components/template'
-import TitlePage from 'components/titlePage'
 import AboutSite from 'components/aboutSite'
-import AboutMe from 'components/aboutMe'
-import { CONTENT_PORTADA } from 'utils/dataSite'
 import Terminal from 'components/Terminal'
 import Intro from 'components/template/Intro'
 import BlobV2 from 'components/BlobV2'
@@ -14,10 +11,7 @@ import WhoIam from 'components/aboutMe/WhoIam'
 import Projections from 'components/aboutMe/Projections'
 
 export default function Home({ works }) {
-    const { titlePortada, contentPortada } = CONTENT_PORTADA.index
-
     const worksHighlightedReduced = works.filter((work) => work.highlighted).slice(0, 2)
-
     const sectionPadding = 'py-40'
     const sectionColorizedClass = `bg-slate-50 dark:bg-slate-800 [ ${sectionPadding} ]`
     return (
