@@ -1,3 +1,6 @@
+import { mock } from 'db/mock'
+import { IS_BACKEND_MOCKED } from 'utils/constants'
+
 async function fetchWorks() {
     const query = `
       query Works {
@@ -41,8 +44,10 @@ async function fetchWorks() {
         throw new Error(error)
     }
 }
+export const fetchWorksMock = () => mock
 export const getWorks = async () => {
     try {
+        if (IS_BACKEND_MOCKED) return fetchWorksMock()
         const response = await fetchWorks()
         const works = response.data.works
         return works
