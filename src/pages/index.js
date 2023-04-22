@@ -6,8 +6,8 @@ import BlobV2 from 'components/BlobV2'
 import Container from 'components/layouts/Container'
 import { getWorks } from 'connectors/findWorks'
 import Works from 'components/Works'
-import WhoIam from 'components/aboutMe/WhoIam'
-import Projections from 'components/aboutMe/Projections'
+import WhoIam from 'components/pages/home/aboutMe/WhoIam'
+import Projections from 'components/pages/home/aboutMe/Projections'
 
 export default function Home({ works }) {
     const worksHighlighted = works.filter((work) => work.highlighted)
