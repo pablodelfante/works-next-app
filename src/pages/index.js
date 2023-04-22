@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Layout from 'components/template'
-import AboutSite from 'components/aboutSite'
 import Terminal from 'components/Terminal'
 import Intro from 'components/template/Intro'
 import BlobV2 from 'components/BlobV2'
@@ -11,7 +10,7 @@ import WhoIam from 'components/aboutMe/WhoIam'
 import Projections from 'components/aboutMe/Projections'
 
 export default function Home({ works }) {
-    const worksHighlightedReduced = works.filter((work) => work.highlighted).slice(0, 2)
+    const worksHighlighted = works.filter((work) => work.highlighted)
     const sectionPadding = 'py-40'
     const sectionColorizedClass = `bg-slate-50 dark:bg-slate-800 [ ${sectionPadding} ]`
     return (
@@ -60,7 +59,7 @@ export default function Home({ works }) {
                     <Container>
                         <h3 className="m-auto w-max mb-16">Highlighted works</h3>
                         <ul className="grid grid-flow-row md:grid-flow-col gap-2">
-                            {worksHighlightedReduced && <Works works={worksHighlightedReduced} />}
+                            {worksHighlighted && <Works works={worksHighlighted} />}
                         </ul>
                     </Container>
                 </section>
