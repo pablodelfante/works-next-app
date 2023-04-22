@@ -1,6 +1,4 @@
 import Terminal from 'components/Terminal'
-import maskPng from './mask-done.png'
-import { useRef } from 'react'
 
 export default function WhoIam() {
     return (
@@ -9,15 +7,14 @@ export default function WhoIam() {
             <div className="lg:w-[40em] ">
                 <Terminal init="projections">
                     <p className="mb-8 text-white">
-                        I am interested in a stacks like JAM, technologies like
-                        PWA, serverless products, AIs and others. This does not
-                        mean that I don't consider other forms.
+                        I am interested in a stacks like JAM, technologies like PWA, serverless
+                        products, AIs and others. This does not mean that I don't consider other
+                        forms.
                     </p>
                     <p className="text-white">
-                        In my opinion these tools can help improve the user
-                        experinece to create systems to enhance people lives. I
-                        am excited about accepting challenges, improving my
-                        skills as a professional and helping people
+                        In my opinion these tools can help improve the user experinece to create
+                        systems to enhance people lives. I am excited about accepting challenges,
+                        improving my skills as a professional and helping people
                     </p>
                 </Terminal>
             </div>
