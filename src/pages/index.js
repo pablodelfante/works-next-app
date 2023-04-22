@@ -96,7 +96,7 @@ export default function Home({ works }) {
 
 // get all the posts
 export async function getStaticProps() {
-    // const works = await getWorks()
-    const works = []
+    const works = await getWorks()
+    //const works = []
     return { props: { works } }
 }
