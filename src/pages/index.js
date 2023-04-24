@@ -47,7 +47,6 @@ export default function Home({ works }) {
                                     />
                                 </div>
                                 <figure className="grid justify-center items-end col-span-full row-span-full">
-                                    {/* <img className="w-80 drop-shadow-[0_0px_40px_rgba(0,0,0,0.30)]" src="/img/home/serious.png" alt="" /> */}
                                     <Image
                                         src="/img/home/serious.png"
                                         alt=""
