@@ -2,6 +2,7 @@ import Terminal from 'components/Terminal'
 import BlobV2 from 'components/BlobV2'
 import maskPng from './mask-done.png'
 import { useRef } from 'react'
+import { TypeAnimation } from 'react-type-animation'
 
 /* FIXME: quedó sin terminar esta sección */
 export default function WhoIam() {
@@ -24,7 +25,26 @@ export default function WhoIam() {
             </div>
             <div>
                 <div className="grid gap-6 lg:w-[35em]">
-                    <h3>Who am I?</h3>
+                    <h3 className="font-bold text-4xl md:text-5xl xl:text-6xl ">
+                        <span>I'm...</span>
+                        <TypeAnimation
+                            style={{ whiteSpace: 'pre-line', height: '2em', display: 'block' }}
+                            className="text-primary dark:text-primary "
+                            sequence={[
+                                'web\n designer 🙇‍♂️🖌',
+                                500,
+                                'graphic\n designer 🌐',
+                                500,
+                                'web\n developer 🤖🌆',
+                                500,
+                                'creative\n dev 🪐 ',
+                                500,
+                            ]}
+                            wrapper="span"
+                            cursor={true}
+                            repeat={Infinity}
+                        />
+                    </h3>
                     <Terminal init="whoIam">
                         <p className="mb-5 text-white">
                             I am a graphic designer and I am currrently studying web design. I have been passionate about technology since I was a
