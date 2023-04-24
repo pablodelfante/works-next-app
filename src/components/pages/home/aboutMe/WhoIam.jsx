@@ -28,16 +28,20 @@ export default function WhoIam() {
                     <h3 className="font-bold text-4xl md:text-5xl xl:text-6xl ">
                         <span>I'm...</span>
                         <TypeAnimation
-                            style={{ whiteSpace: 'pre-line', height: '2em', display: 'block' }}
-                            className="text-primary dark:text-primary "
+                            style={{ whiteSpace: 'pre-line', height: '2.5em', display: 'block' }}
+                            className="text-primary dark:text-primary leading-[1.2em]"
                             sequence={[
                                 'web\n designer 🙇‍♂️🖌',
                                 500,
-                                'graphic\n designer 🌐',
+                                'graphic\n designer 🎨👨‍🏫',
                                 500,
                                 'web\n developer 🤖🌆',
                                 500,
-                                'creative\n dev 🪐 ',
+                                'creative\n dev 🪐🚀',
+                                500,
+                                'a\n begginer 🏊‍♂️',
+                                500,
+                                'Queen\n lover 👑🎸',
                                 500,
                             ]}
                             wrapper="span"
