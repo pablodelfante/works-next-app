@@ -46,10 +46,10 @@ export default function Home({ works }) {
                                         canvasStyles={{ width: '400px' }}
                                     />
                                 </div>
-                                <figure className="grid justify-center items-end col-span-full row-span-full">
+                                <figure className="[ figure-home ] grid justify-center items-end col-span-full row-span-full">
                                     <Image
                                         src="/img/home/serious.png"
-                                        alt=""
+                                        alt="image on home page"
                                         width={400}
                                         height={600}
                                         quality={100}

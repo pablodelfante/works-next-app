@@ -54,3 +54,8 @@ ul {
     @apply transition-[color];
     @apply duration-700;
 }
+
+/* fix to image on cover, next image problem with styles inline */
+.figure-home span {
+    overflow: initial !important;
+}
