@@ -31,7 +31,7 @@ export default function WhoIam() {
                             style={{ whiteSpace: 'pre-line', height: '2.5em', display: 'block' }}
                             className="text-primary dark:text-primary leading-[1.2em]"
                             sequence={[
-                                'web\n designer 🙇‍♂️🖌',
+                                'web\n designer 🧑‍💻🖌',
                                 500,
                                 'graphic\n designer 🎨👨‍🏫',
                                 500,
@@ -39,9 +39,11 @@ export default function WhoIam() {
                                 500,
                                 'creative\n dev 🪐🚀',
                                 500,
-                                'a\n begginer 🏊‍♂️',
+                                'a\n begginer 🌊🏊‍♂️',
                                 500,
                                 'Queen\n lover 👑🎸',
+                                500,
+                                'Team 🧉👨‍🦱 \n and ☕️☕️',
                                 500,
                             ]}
                             wrapper="span"
