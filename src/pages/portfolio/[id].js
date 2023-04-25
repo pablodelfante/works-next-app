@@ -70,7 +70,7 @@ export default function Work({ work, works }) {
                         )}
 
                         {Boolean(components.length) && (
-                            <ul>
+                            <ul className='grid gap-1'>
                                 {components.map((component, key) => (
                                     <li key={key}>
                                         {component.__typename === 'Video' && (
@@ -81,6 +81,12 @@ export default function Work({ work, works }) {
                                             <ReactMarkdown
                                                 children={component.markdown}
                                             />
+                                        )}
+                                        {component.__typename ===
+                                            'Image' && (
+                                            <Image src={component.image.url}  width={16}
+                                            height={9} quality={100} alt="image component" objectFit='contain' layout="responsive"
+                                           />
                                         )}
                                     </li>
                                 ))}

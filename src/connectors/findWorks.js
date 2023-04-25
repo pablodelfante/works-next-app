@@ -23,6 +23,11 @@ async function fetchWorks() {
             ... on Markdown {
               markdown
             }
+            ... on Image {
+              image {
+                url
+              }
+            }
           }
         }
       }
