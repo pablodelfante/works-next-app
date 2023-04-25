@@ -1,5 +1,5 @@
 import Terminal from 'components/Terminal'
-import BlobV2 from 'components/BlobV2'
+// import BlobV2 from 'components/BlobV2'
 import maskPng from './mask-done.png'
 import { useRef } from 'react'
 import { TypeAnimation } from 'react-type-animation'
