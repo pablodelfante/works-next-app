@@ -5,6 +5,7 @@
       -en header.js cambio clase dark en html
       -aqui cambio body header y lunita svg */
 :root {
+    --primary-color: theme(colors.primary)
 }
 
 * {
@@ -52,4 +53,9 @@ ul {
     @apply text-white;
     @apply transition-[color];
     @apply duration-700;
+}
+
+/* fix to image on cover, next image problem with styles inline */
+.figure-home span {
+    overflow: initial !important;
 }

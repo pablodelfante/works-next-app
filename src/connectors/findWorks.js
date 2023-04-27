@@ -1,24 +1,63 @@
-import { db } from 'db/index'
+import { mock } from 'db/mock'
+import { IS_BACKEND_MOCKED } from 'utils/constants'
 
-export const getWorks = async (id) => {
-    try {
-        if (id) {
-            const work = db.find((work) => work.id == id)
-            return work
+async function fetchWorks() {
+    const query = `
+      query Works {
+        works(orderBy: highlighted_DESC, first: 20) {
+          id
+          title
+          description
+          stage
+          highlighted
+          githubUrl
+          image {
+            url
+          }
+          tags
+          components {
+            __typename
+            ... on Video {
+              videoUrl
+            }
+            ... on Markdown {
+              markdown
+            }
+            ... on Image {
+              image {
+                url
+              }
+            }
+          }
         }
-        // order db
-        const orderedDb = db.sort((a, b) => {
-            if (a.priority && !b.priority) {
-                return -1
-            }
-            if (!a.priority && b.priority) {
-                return 1
-            }
-            return 0
+      }
+    `
+
+    try {
+        const response = await fetch(process.env.HOST_BACKEND, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ query }),
         })
-        return orderedDb
+
+        const data = await response.json()
+        return data
     } catch (error) {
-        console.log({ 'getWorks dice': error })
-        return null
+        console.error(error)
+        throw new Error(error)
+    }
+}
+export const fetchWorksMock = () => mock
+export const getWorks = async () => {
+    try {
+        if (IS_BACKEND_MOCKED) return fetchWorksMock()
+        const response = await fetchWorks()
+        const works = response.data.works
+        return works
+    } catch (error) {
+        console.error({ getWorksIds: error })
+        throw new Error(error)
     }
 }
