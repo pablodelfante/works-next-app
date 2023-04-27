@@ -1,27 +1,13 @@
 import Terminal from 'components/Terminal'
-// import BlobV2 from 'components/BlobV2'
 import maskPng from './mask-done.png'
-import { useRef } from 'react'
 import { TypeAnimation } from 'react-type-animation'
 
-/* FIXME: quedó sin terminar esta sección */
 export default function WhoIam() {
     console.log()
-    // example use ref with react
-    const maskedElement = useRef(null)
     return (
         <div className="grid justify-center grid-flow-row md:grid-flow-col gap-16">
             <div>
-                <img className="max-w-sm" src={maskPng.src} alt="" ref={maskedElement} />
-                {/*
-                 TODO: to solve
-                 <BlobV2
-                        blobConfig={{
-                            color: 'hwb(243deg 30% 1%)',
-                            maskedElement: maskedElement.current,
-                        }}
-                        canvasStyles={{ width: '400px' }}
-                    /> */}
+                <img className="max-w-sm" src={maskPng.src} alt="who i am masked image" />
             </div>
             <div>
                 <div className="grid gap-6 lg:w-[35em]">

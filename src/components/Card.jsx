@@ -11,7 +11,7 @@ export default function ({ imageSrc, title, tags, description }) {
                                 ? imageSrc
                                 : 'https://blog.aulaformativa.com/wp-content/uploads/2016/08/ventajas-optimizacion-de-codigo-codigo-fuente-limpio.jpg'
                         }
-                        alt=""
+                        alt="card image"
                         layout="responsive"
                         objectFit="cover"
                         objectPosition="top"
@@ -26,10 +26,7 @@ export default function ({ imageSrc, title, tags, description }) {
                     <h3 className="line-clamp-1"> {title} </h3>
                     <ul className="hidden sm:grid sm:justify-start sm:gap-3 sm:grid-flow-col">
                         {tags?.map((tech, key) => (
-                            <li
-                                key={key}
-                                className="text-white text-xs font-medium truncate px-2 py-1 bg-gray-500 rounded-full"
-                            >
+                            <li key={key} className="text-white text-xs font-medium truncate px-2 py-1 bg-gray-500 rounded-full">
                                 {tech}
                             </li>
                         ))}

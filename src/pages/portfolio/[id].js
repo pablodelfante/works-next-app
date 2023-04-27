@@ -56,11 +56,9 @@ export default function Work({ work, works }) {
                             <MacWindow>
                                 <Image
                                     src={imageUrl ? imageUrl : defaultUrlImage}
-                                    alt="cant find the image"
+                                    alt="main image on work"
                                     priority={true}
-                                    //define como se comporta en el layout
                                     layout="responsive"
-                                    //como se comporta la imagen dentro de su propio contenedor
                                     objectFit="contain"
                                     width={16}
                                     height={9}
