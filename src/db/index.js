@@ -1,33 +1,5 @@
 export const db = [
     {
-        id: '93d59f19-ba4a-4b78-8c56-13945d48cc2a',
-        content: null,
-        title: 'Teacher at ORT University',
-        description:
-            "I have had the oportunity to integrate a team at the ORT University as a professor. Now days I give a web design course at the University and I'm finding new chalenges at the position. I'm very happy for this oportunity and the new chalenges!",
-        url_image: '/img/professor.jpg',
-        url_github: null,
-        url_video: null,
-        url_deploy: null,
-        priority: true,
-        tags: ['teach', 'mentor', 'lead', 'team work'],
-        draft: false,
-    },
-    {
-        id: '6f23baea-b3c0-465b-9ecc-446ac5834c69',
-        content: null,
-        title: 'React web Developer at Studio4D',
-        description:
-            'Studio 4D offers different experiences of virtual reality created through apps like Unreal Engine and served through web apps with services on the cloud as AWS. I was responsible for the first implementation of React on projects of experience and frameworks as tailwind associated, the communication with a node server and Unreal platform. Also, I do other tasks associated with the position of IT. I understood better the work in group and different project methodologies. I integrated the team of developers in the future different new application and structure!',
-        url_image: '/img/react dev studio.png',
-        url_github: null,
-        url_video: null,
-        url_deploy: null,
-        priority: true,
-        tags: ['React', 'Tailwind', 'Express', 'Storybook react'],
-        draft: false,
-    },
-    {
         id: '71c0bb50-101d-4e72-a947-456f78af495f',
         content: null,
         title: 'PWA - Garden app',
@@ -149,20 +121,6 @@ export const db = [
         url_deploy: null,
         priority: false,
         tags: ['Figma', 'Photoshop', 'Ilustrator'],
-        draft: false,
-    },
-    {
-        id: '73373a59b8161fa799ae6600fc03964d31a4544a',
-        content: null,
-        title: 'Hemocentro',
-        description:
-            'The Hemocentro project is part and objective of the degree completion project, which aims, among other things, to show a little of the evolution of the profile acquired during the course of the degree. Exhibit and work in different areas such as management, marketing, development and design.',
-        url_image: '/img/hemocentro.jpg',
-        url_github: 'https://github.com/pablo-university/web-project',
-        url_video: null,
-        url_deploy: null,
-        priority: true,
-        tags: ['Nextjs', 'Figma', 'Docker', 'Hasura', 'Postgress'],
         draft: false,
     },
     {

@@ -6,3 +6,5 @@ _Personal website_
 
 backups
 http://localhost:3000/api/backup
+
+Required node `16.x.x`

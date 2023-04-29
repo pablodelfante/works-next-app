@@ -3,7 +3,6 @@ import maskPng from './mask-done.png'
 import { TypeAnimation } from 'react-type-animation'
 
 export default function WhoIam() {
-    console.log()
     return (
         <div className="grid justify-center grid-flow-row md:grid-flow-col gap-16">
             <div>

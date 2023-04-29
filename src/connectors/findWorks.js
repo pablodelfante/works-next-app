@@ -11,6 +11,7 @@ async function fetchWorks() {
           stage
           highlighted
           githubUrl
+          deployUrl
           image {
             url
           }
