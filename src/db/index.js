@@ -79,23 +79,6 @@ export const db = [
         draft: false,
     },
     {
-        id: '9970d36a-c4e6-4d71-8c66-8559e3b0f04se',
-        content: `<h2>Node integration</h2>
-        <p>The system, manage the users getting the data from localstorage or local with ajax, save the data on localstorage and after that try use the server express who manage the local saved.</p>
-        <p><br><strong>NOTE:</strong> To start session, you can use ‘1’ as user and pasword!</p>`,
-        title: 'JS - Dashboard people managment',
-        description:
-            'Dashboard for people managment, created with Javascript vanilla, the focus was to show the skills obtained with javascript and jquery like library to understand the libraries concept. And other integratios!',
-        url_image: '/img/dashboard-js.png',
-        url_github: 'https://github.com/pablodelfante/P1-obligatorio',
-        url_video: null,
-        url_deploy:
-            'https://pablo-university.github.io/P1-obligatorio/public/index.html',
-        priority: false,
-        tags: ['HTML', 'JavaScript', 'Figma', 'SCSS', 'Node js'],
-        draft: false,
-    },
-    {
         id: '9970d36a-c4e6-4d71-8c66-8559e3b0f04es',
         content: '',
         title: 'DW2 - Strip to Australia',
