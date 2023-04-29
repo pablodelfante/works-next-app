@@ -29,28 +29,6 @@ export const db = [
         draft: false,
     },
     {
-        id: '57765139-6e57-4915-be50-b1cbafc120d0',
-        content: '',
-        title: 'PWA - This web site',
-        description:
-            'This site was born out of the need to show works that have produced technological changes inside me. I try to show my profile both as a professional and as an individual. Every day I try to get better, to learn, explore and in this way be a better person enjoying what I do.',
-        url_image: '/img/site.png',
-        url_github: 'https://github.com/pablodelfante/works-next-app',
-        url_video: '',
-        url_deploy: '',
-        priority: true,
-        tags: [
-            'Next js',
-            'PWA',
-            'Tailwind',
-            'Strapi',
-            'Docker',
-            'GraphQL',
-            'Figma',
-        ],
-        draft: false,
-    },
-    {
         id: 'd0913cd7-6330-4a9d-b6be-a5520ab83d84',
         content: null,
         title: 'P2 - Watch Shop',
