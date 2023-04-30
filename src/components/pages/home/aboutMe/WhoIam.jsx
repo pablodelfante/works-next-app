@@ -1,12 +1,22 @@
 import Terminal from 'components/Terminal'
 import maskPng from './mask-done.png'
 import { TypeAnimation } from 'react-type-animation'
+import Image from 'next/image'
 
 export default function WhoIam() {
     return (
         <div className="grid justify-center grid-flow-row md:grid-flow-col gap-16">
-            <div>
-                <img className="max-w-sm" src={maskPng.src} alt="who i am masked image" />
+            <div className="flex justify-center">
+                <Image
+                    className="max-w-sm"
+                    src={maskPng.src}
+                    alt="who i am masked image"
+                    objectFit="contain"
+                    width={300}
+                    height={300}
+                    quality={100}
+                    priority={true}
+                />
             </div>
             <div>
                 <div className="grid gap-6 lg:w-[35em]">
