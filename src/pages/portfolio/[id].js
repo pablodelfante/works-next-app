@@ -13,7 +13,7 @@ import Overlay from 'components/Overlay'
 
 export default function Work({ work, works }) {
     const [overlayContent, setOverlayContent] = useState(null)
-    
+
     const {
         title,
         description,
@@ -42,10 +42,7 @@ export default function Work({ work, works }) {
                         {tags && tags.length ? (
                             <ul className="flex flex-wrap lg:gap-x-3 gap-1">
                                 {tags.map((tecnologie, key) => (
-                                    <li
-                                        className="text-white text-xs font-medium truncate px-2 py-1 bg-gray-500 rounded-full"
-                                        key={key}
-                                    >
+                                    <li className="text-white text-xs font-medium truncate px-2 py-1 bg-gray-500 rounded-full" key={key}>
                                         {tecnologie}
                                     </li>
                                 ))}
@@ -72,33 +69,39 @@ export default function Work({ work, works }) {
                         )}
 
                         {Boolean(components.length) && (
-                            <ul className='grid gap-1'>
+                            <ul className="grid gap-1">
                                 {components.map((component, key) => (
                                     <li key={key}>
-                                        {component.__typename === 'Video' && (
-                                            <Video src={component.videoUrl} />
-                                        )}
-                                        {component.__typename ===
-                                            'Markdown' && (
-                                            <ReactMarkdown
-                                                children={component.markdown}
+                                        {component.__typename === 'Video' && <Video src={component.videoUrl} />}
+                                        {component.__typename === 'Markdown' && <ReactMarkdown children={component.markdown} />}
+                                        {component.__typename === 'Image' && (
+                                            <Image
+                                                onClick={() => {
+                                                    setOverlayContent(
+                                                        <>
+                                                            <Image
+                                                                src={component.image.url}
+                                                                width={1920}
+                                                                height={1080}
+                                                                style={{
+                                                                    width: '100%',
+                                                                    height: 'auto',
+                                                                }}
+                                                                quality={100}
+                                                                alt="image component"
+                                                                objectFit="contain"
+                                                            />
+                                                        </>
+                                                    )
+                                                }}
+                                                src={component.image.url}
+                                                width={16}
+                                                height={9}
+                                                quality={100}
+                                                alt="image component"
+                                                objectFit="contain"
+                                                layout="responsive"
                                             />
-                                        )}
-                                        {component.__typename ===
-                                            'Image' && (
-                                            <Image onClick={()=>{
-                                                setOverlayContent(<>
-                                                 <Image src={component.image.url}  width={1920}
-      height={1080}
-      style={{
-        width: '100%',
-        height: 'auto',
-      }} quality={100} alt="image component" objectFit='contain' 
-                                           />
-                                                </>)
-                                            }} src={component.image.url}  width={16}
-                                            height={9} quality={100} alt="image component" objectFit='contain' layout="responsive"
-                                           />
                                         )}
                                     </li>
                                 ))}
@@ -106,33 +109,20 @@ export default function Work({ work, works }) {
                         )}
 
                         {/* testing overlay */}
-                        {
-                        overlayContent && (
-                            <Overlay onClose={()=>setOverlayContent(null)}>
-                                <p className='bg-red-100 text-slate-800'>
-                                    {overlayContent}
-                                </p>
-                            </Overlay>)
-                        }
+                        {overlayContent && (
+                            <Overlay onClose={() => setOverlayContent(null)}>
+                                <p className="bg-red-100 text-slate-800">{overlayContent}</p>
+                            </Overlay>
+                        )}
 
                         {githubUrl && (
-                            <a
-                                href={githubUrl}
-                                target="_blank"
-                                rel="noopener"
-                                className="underline"
-                            >
+                            <a href={githubUrl} target="_blank" rel="noopener" className="underline">
                                 see project on repository
                             </a>
                         )}
 
                         {deployUrl && (
-                            <a
-                                href={deployUrl}
-                                target="_blank"
-                                rel="noopener"
-                                className="underline"
-                            >
+                            <a href={deployUrl} target="_blank" rel="noopener" className="underline">
                                 check deploy
                             </a>
                         )}
