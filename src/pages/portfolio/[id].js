@@ -1,15 +1,19 @@
-import Layout from 'components/template'
+import { useState } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import ReactMarkdown from 'react-markdown'
 import { defaultUrlImage } from 'utils/config'
-import { getWorks, getWorkById } from 'connectors/findWorks'
+import { getWorks } from 'connectors/findWorks'
+import Layout from 'components/template'
 import Video from 'components/Video'
 import Works from 'components/Works'
 import MacWindow from 'components/MacWindow'
 import Container from 'components/layouts/Container'
+import Overlay from 'components/Overlay'
 
 export default function Work({ work, works }) {
+    const [overlayContent, setOverlayContent] = useState(null)
+    
     const {
         title,
         description,
@@ -82,7 +86,17 @@ export default function Work({ work, works }) {
                                         )}
                                         {component.__typename ===
                                             'Image' && (
-                                            <Image src={component.image.url}  width={16}
+                                            <Image onClick={()=>{
+                                                setOverlayContent(<>
+                                                 <Image src={component.image.url}  width={1920}
+      height={1080}
+      style={{
+        width: '100%',
+        height: 'auto',
+      }} quality={100} alt="image component" objectFit='contain' 
+                                           />
+                                                </>)
+                                            }} src={component.image.url}  width={16}
                                             height={9} quality={100} alt="image component" objectFit='contain' layout="responsive"
                                            />
                                         )}
@@ -90,6 +104,16 @@ export default function Work({ work, works }) {
                                 ))}
                             </ul>
                         )}
+
+                        {/* testing overlay */}
+                        {
+                        overlayContent && (
+                            <Overlay onClose={()=>setOverlayContent(null)}>
+                                <p className='bg-red-100 text-slate-800'>
+                                    {overlayContent}
+                                </p>
+                            </Overlay>)
+                        }
 
                         {githubUrl && (
                             <a
