@@ -28,6 +28,26 @@ export default function Work({ work, works }) {
         return array.sort(() => Math.random() - 0.5).slice(0, 4)
     }
 
+    const handleClickImage = (url) => {
+        setOverlayContent(
+            <>
+                <p>note: click somwhere to close overlay</p>
+                <Image
+                    src={url}
+                    width={1920}
+                    height={1080}
+                    style={{
+                        width: '100%',
+                        height: 'auto',
+                    }}
+                    quality={100}
+                    alt="image component"
+                    objectFit="contain"
+                />
+            </>
+        )
+    }
+
     const worksForContinueNavigation = getRandonElementFromArray(works)
     return (
         <>
@@ -76,24 +96,7 @@ export default function Work({ work, works }) {
                                         {component.__typename === 'Markdown' && <ReactMarkdown children={component.markdown} />}
                                         {component.__typename === 'Image' && (
                                             <Image
-                                                onClick={() => {
-                                                    setOverlayContent(
-                                                        <>
-                                                            <Image
-                                                                src={component.image.url}
-                                                                width={1920}
-                                                                height={1080}
-                                                                style={{
-                                                                    width: '100%',
-                                                                    height: 'auto',
-                                                                }}
-                                                                quality={100}
-                                                                alt="image component"
-                                                                objectFit="contain"
-                                                            />
-                                                        </>
-                                                    )
-                                                }}
+                                                onClick={() => handleClickImage(component.image.url)}
                                                 src={component.image.url}
                                                 width={16}
                                                 height={9}
