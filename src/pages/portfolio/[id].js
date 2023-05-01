@@ -30,8 +30,7 @@ export default function Work({ work, works }) {
 
     const handleClickImage = (url) => {
         setOverlayContent(
-            <>
-                <p>note: click somwhere to close overlay</p>
+            <div className="grid">
                 <Image
                     src={url}
                     width={1920}
@@ -44,7 +43,8 @@ export default function Work({ work, works }) {
                     alt="image component"
                     objectFit="contain"
                 />
-            </>
+                <p className="bg-black text-white">note: click somwhere to close overlay</p>
+            </div>
         )
     }
 
@@ -112,11 +112,7 @@ export default function Work({ work, works }) {
                         )}
 
                         {/* testing overlay */}
-                        {overlayContent && (
-                            <Overlay onClose={() => setOverlayContent(null)}>
-                                <p className="bg-red-100 text-slate-800">{overlayContent}</p>
-                            </Overlay>
-                        )}
+                        {overlayContent && <Overlay onClose={() => setOverlayContent(null)}>{overlayContent}</Overlay>}
 
                         {githubUrl && (
                             <a href={githubUrl} target="_blank" rel="noopener" className="underline">
