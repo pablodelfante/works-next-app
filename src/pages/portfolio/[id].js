@@ -32,6 +32,7 @@ export default function Work({ work, works }) {
         setOverlayContent(
             <div className="grid">
                 <Image
+                    className="hover:cursor-zoom-out"
                     src={url}
                     width={1920}
                     height={1080}
@@ -96,6 +97,7 @@ export default function Work({ work, works }) {
                                         {component.__typename === 'Markdown' && <ReactMarkdown children={component.markdown} />}
                                         {component.__typename === 'Image' && (
                                             <Image
+                                                className="hover:cursor-zoom-in"
                                                 onClick={() => handleClickImage(component.image.url)}
                                                 src={component.image.url}
                                                 width={16}
