@@ -1,140 +1,140 @@
-import Layout from 'components/template'
-import { getWorks } from 'connectors/findWorks'
+import { useState } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
-import formatDate from 'helpers/formatDate'
-import parse from 'html-react-parser'
+import ReactMarkdown from 'react-markdown'
 import { defaultUrlImage } from 'utils/config'
+import { getWorks } from 'connectors/findWorks'
+import Layout from 'components/template'
+import Video from 'components/Video'
+import Works from 'components/Works'
+import MacWindow from 'components/MacWindow'
+import Container from 'components/layouts/Container'
+import Overlay from 'components/Overlay'
 
-export default function Work({ work }) {
+export default function Work({ work, works }) {
+    const [overlayContent, setOverlayContent] = useState(null)
+
     const {
         title,
         description,
-        content,
         tags,
-        url_github,
-        url_deploy,
-        url_image,
-        url_video,
-        updatedAt,
+        components,
+        githubUrl,
+        deployUrl,
+        image: { url: imageUrl },
     } = work
-    const dateUpdate = formatDate(updatedAt)
+
+    function getRandonElementFromArray(array) {
+        return array.sort(() => Math.random() - 0.5).slice(0, 4)
+    }
+
+    const handleClickImage = (url) => {
+        setOverlayContent(
+            <div className="grid">
+                <Image
+                    src={url}
+                    width={1920}
+                    height={1080}
+                    style={{
+                        width: '100%',
+                        height: 'auto',
+                    }}
+                    quality={100}
+                    alt="image component"
+                    objectFit="contain"
+                />
+                <p className="bg-black text-white">click somwhere to close overlay</p>
+            </div>
+        )
+    }
+
+    const worksForContinueNavigation = getRandonElementFromArray(works)
     return (
         <>
             <Head>
                 <title>{title} | pablodelfante</title>
             </Head>
             <Layout>
-                <article className="py-14 max-w-5xl mx-auto">
-                    {/* Titulo descripcion e imagen */}
-                    <h2 className="mb-5">{title}</h2>
-                    {/* <time className='text-gray-500 block font-light border-b mb-10'>Updated at: {dateUpdate}</time> */}
+                <Container>
+                    <article className="py-14 max-w-5xl mx-auto grid gap-6">
+                        <h2>{title}</h2>
 
-                    {/* Tecnologias*/}
-                    {/* <h4 className=''>Tecnologías usadas</h4> */}
-                    {tags && tags.length ? (
-                        <ul className="flex flex-wrap lg:gap-x-3 gap-1 mb-3">
-                            {tags.map((tecnologie, key) => (
-                                <li
-                                    className="text-white text-xs font-medium truncate px-2 py-1 bg-gray-500 rounded-full"
-                                    key={key}
-                                >
-                                    {tecnologie}
-                                </li>
-                            ))}
-                        </ul>
-                    ) : (
-                        <></>
-                    )}
+                        {tags && tags.length ? (
+                            <ul className="flex flex-wrap lg:gap-x-3 gap-1">
+                                {tags.map((tecnologie, key) => (
+                                    <li className="text-white text-xs font-medium truncate px-2 py-1 bg-gray-500 rounded-full" key={key}>
+                                        {tecnologie}
+                                    </li>
+                                ))}
+                            </ul>
+                        ) : (
+                            <></>
+                        )}
 
-                    {/* description of page */}
-                    <p className="mb-5">{description}</p>
+                        <p>{description}</p>
 
-                    {/* multimedia */}
-                    {!url_video && (
-                        <div className="mb-5">
-                            <Image
-                                src={url_image ? url_image : defaultUrlImage}
-                                alt="cant find the image"
-                                priority={true}
-                                //define como se comporta en el layout
-                                layout="responsive"
-                                //como se comporta la imagen dentro de su propio contenedor
-                                objectFit="contain"
-                                width={16}
-                                height={9}
-                                quality={100}
-                            />
-                        </div>
-                    )}
+                        {imageUrl && (
+                            <MacWindow>
+                                <Image
+                                    src={imageUrl ? imageUrl : defaultUrlImage}
+                                    alt="main image on work"
+                                    priority={true}
+                                    layout="responsive"
+                                    objectFit="contain"
+                                    width={16}
+                                    height={9}
+                                    quality={100}
+                                />
+                            </MacWindow>
+                        )}
 
-                    {/* video */}
-                    {url_video && (
-                        // este posicionamiento y padding son para mantener la relacion aspecto del video (16/9)
-                        <>
-                            <div
-                                className="my-5"
-                                style={{ aspectRatio: '16/9' }}
-                            >
-                                <iframe
-                                    className="w-full h-full"
-                                    src={url_video}
-                                    title="YouTube video player"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowFullScreen
-                                ></iframe>
-                            </div>
-                            <p className="text-sm">
-                                If you can't watch the video:{' '}
-                                <a
-                                    className="underline text-primary"
-                                    href={url_video}
-                                    target="_blank"
-                                >
-                                    watch on youtube
-                                </a>
-                            </p>
-                        </>
-                    )}
+                        {Boolean(components.length) && (
+                            <ul className="grid gap-1">
+                                {components.map((component, key) => (
+                                    <li key={key}>
+                                        {component.__typename === 'Video' && <Video src={component.videoUrl} />}
+                                        {component.__typename === 'Markdown' && <ReactMarkdown children={component.markdown} />}
+                                        {component.__typename === 'Image' && (
+                                            <Image
+                                                className="hover:cursor-pointer"
+                                                onClick={() => handleClickImage(component.image.url)}
+                                                src={component.image.url}
+                                                width={16}
+                                                height={9}
+                                                quality={100}
+                                                alt="image component"
+                                                objectFit="contain"
+                                                layout="responsive"
+                                            />
+                                        )}
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
 
-                    {/* MARKDOWN */}
-                    {/* este es un campo extra cuando desee agregar contenido */}
-                    {content ? (
-                        <section className="py-3"> {parse(content)} </section>
-                    ) : (
-                        ''
-                    )}
+                        {/* testing overlay */}
+                        {overlayContent && <Overlay onClose={() => setOverlayContent(null)}>{overlayContent}</Overlay>}
 
-                    {/* Link github */}
-                    {url_github ? (
-                        <a
-                            href={url_github}
-                            target="_blank"
-                            rel="noopener"
-                            className="underline"
-                        >
-                            see project on github
-                        </a>
-                    ) : (
-                        ''
-                    )}
-                    <br />
-                    <br />
+                        {githubUrl && (
+                            <a href={githubUrl} target="_blank" rel="noopener" className="underline">
+                                see project on repository
+                            </a>
+                        )}
 
-                    {/* Link deploy */}
-                    {url_deploy ? (
-                        <a
-                            href={url_deploy}
-                            target="_blank"
-                            rel="noopener"
-                            className="underline"
-                        >
-                            see deploy
-                        </a>
-                    ) : (
-                        ''
-                    )}
-                </article>
+                        {deployUrl && (
+                            <a href={deployUrl} target="_blank" rel="noopener" className="underline">
+                                check deploy
+                            </a>
+                        )}
+
+                        <hr className="my-24" />
+
+                        <section className="grid gap-2">
+                            <h4>More to check</h4>
+                            <Works works={worksForContinueNavigation} />
+                        </section>
+                    </article>
+                </Container>
             </Layout>
         </>
     )
@@ -163,7 +163,8 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-    const { id } = params
-    const work = await getWorks(id)
-    return { props: { work } }
+    const { id: workId } = params
+    const works = await getWorks()
+    const work = works.find(({ id }) => id == workId)
+    return { props: { work, works } }
 }

@@ -1,1 +1,0 @@
--   revisar integraciones nuevas dentro de mongodb altas como sdk y graph endpoints

@@ -3,6 +3,7 @@ import Footer from './Footer'
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import NProgress from 'nprogress'
+import Container from 'components/layouts/Container'
 
 export default function Layout({ children }) {
     const router = useRouter()
@@ -21,15 +22,18 @@ export default function Layout({ children }) {
     }, [])
 
     return (
-        <div className="container m-auto overflow-hidden">
-            {/* HEADER */}
-            <Header />
+        <>
+            <Container>
+                <Header />
+            </Container>
 
             {/* CONTENIDO PRINCIPAL */}
             <main className="">{children}</main>
 
             {/* FOOTER */}
-            <Footer />
-        </div>
+            <Container>
+                <Footer />
+            </Container>
+        </>
     )
 }
