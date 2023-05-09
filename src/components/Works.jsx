@@ -4,9 +4,8 @@ import Card from 'components/Card'
 function Works({ works = null }) {
     const draftControl = (draft) =>
         process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production' || draft !== 'DRAFT'
-    const worksAvailablesToRender = works.filter((work) =>
-        draftControl(work.stage)
-    )
+
+    const worksAvailablesToRender = works.filter((work) => true)
     return (
         <>
             <ul className="grid grid-cols-1 xl:grid-cols-2 gap-10 items-stretch">
