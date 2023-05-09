@@ -48,7 +48,7 @@ export default function Home({ works }) {
                                 </div>
                                 <figure className="[ figure-home ] grid justify-center items-end col-span-full row-span-full">
                                     <Image
-                                        src="/img/home/serious.png"
+                                        src="/img/home/[removed_ai]serious.png"
                                         alt="image on home page"
                                         width={400}
                                         height={600}
