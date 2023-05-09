@@ -19,9 +19,7 @@ export default function Portfolio({ works }) {
                             <div className={`md:max-w-sm h-min`}>
                                 <h1 className="text-primary dark:text-primary font-bold mb-4 lg:w-min text-6xl lg:text-8xl">Nice to see you!!</h1>
                                 <Terminal init="portfolio">
-                                    <p className="text-xl font-light text-white">
-                                        Hi!! welcome to my site! Here I'm going to tell you about me, about myself. Go ahead!
-                                    </p>
+                                    Hi!! welcome to my site! Here I'm going to tell you about me, about myself. Go ahead!
                                 </Terminal>
                             </div>
                             <div className="hidden lg:block">
