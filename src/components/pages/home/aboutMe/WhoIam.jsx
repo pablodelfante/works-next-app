@@ -34,7 +34,7 @@ export default function WhoIam() {
                                 500,
                                 'creative\n dev 🪐🚀',
                                 500,
-                                'a\n begginer 🌊🏊‍♂️',
+                                'a\n beginner 🌊🏊‍♂️',
                                 500,
                                 'Queen\n lover 👑🎸',
                                 500,
