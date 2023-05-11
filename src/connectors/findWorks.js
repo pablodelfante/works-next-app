@@ -2,9 +2,12 @@ import { mock } from 'db/mock'
 import { IS_BACKEND_MOCKED } from 'utils/constants'
 
 async function fetchWorks() {
+    const isProduction = process.env.NODE_ENV === 'production'
+    const filterStageOnProduction = isProduction ? ', stage: PUBLISHED' : ''
+
     const query = `
       query Works {
-        works(orderBy: highlighted_DESC, first: 20) {
+        works(orderBy: highlighted_DESC, first: 20 ${filterStageOnProduction}) {
           id
           title
           description
