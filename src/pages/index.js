@@ -50,10 +50,9 @@ export default function Home({ works }) {
                                     <Image
                                         src="/img/home/[removed_ai]serious.png"
                                         alt="image on home page"
-                                        width={400}
+                                        width={300}
                                         height={600}
-                                        quality={100}
-                                        priority
+                                        priority={true}
                                         className="drop-shadow-[0_0px_40px_rgba(0,0,0,0.30)]"
                                     />
                                 </figure>
