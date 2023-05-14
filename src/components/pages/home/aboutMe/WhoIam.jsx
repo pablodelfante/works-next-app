@@ -5,22 +5,13 @@ import Image from 'next/image'
 
 export default function WhoIam() {
     return (
-        <div className="grid justify-center grid-flow-row md:grid-flow-col gap-16">
+        <div className="grid justify-center md:grid-cols-[.5fr_1fr] xl:grid-cols-[25em_.8fr] gap-16">
             <div className="flex justify-center">
-                <Image
-                    className="max-w-sm"
-                    src={maskPng.src}
-                    alt="who i am masked image"
-                    objectFit="contain"
-                    width={300}
-                    height={300}
-                    quality={100}
-                    priority={true}
-                />
+                <Image className="object-contain" src={maskPng.src} alt="who i am masked image" width={400} height={400} priority={true} />
             </div>
             <div>
-                <div className="grid gap-6 lg:w-[35em]">
-                    <h3 className="font-bold text-4xl md:text-5xl xl:text-6xl ">
+                <div className="grid gap-6">
+                    <h3 className="font-bold text-3xl sm:text-4xl md:text-5xl xl:text-6xl ">
                         <span>I'm...</span>
                         <TypeAnimation
                             style={{ whiteSpace: 'pre-line', height: '2.5em', display: 'block' }}
