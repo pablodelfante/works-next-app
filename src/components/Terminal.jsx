@@ -11,7 +11,7 @@ export default function Terminal({ children, init }) {
         <MacWindow>
             <div className="bg-dark p-4">
                 <TerminalStartPrompt {...{ init }} />
-                <p className="text-white">{children}</p>
+                <span className="text-white">{children}</span>
                 <TerminalStartPrompt />
             </div>
         </MacWindow>
