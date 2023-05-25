@@ -7,7 +7,15 @@ export default function WhoIam() {
     return (
         <div className="grid justify-center md:grid-cols-[.5fr_1fr] xl:grid-cols-[25em_.8fr] gap-16">
             <div className="flex justify-center">
-                <Image className="object-contain" src={maskPng.src} alt="who i am masked image" width={400} height={400} priority={true} />
+                <Image
+                    className="object-contain"
+                    src={maskPng.src}
+                    quality={100}
+                    alt="who i am masked image"
+                    width={400}
+                    height={400}
+                    priority={true}
+                />
             </div>
             <div>
                 <div className="grid gap-6">
