@@ -26,14 +26,10 @@ export default function Header() {
                             }}
                             canvasStyles={{ width: '20px' }}
                         />
-                        <Link href="/">
-                            <a>Pablo Delfante</a>
-                        </Link>
+                        <Link href="/">Pablo Delfante</Link>
                     </li>
                     <li>
-                        <Link href="/portfolio">
-                            <a>Portfolio</a>
-                        </Link>
+                        <Link href="/portfolio">Portfolio</Link>
                     </li>
                     <li onClick={() => switchModeDark()} className="cursor-pointer">
                         {icono}

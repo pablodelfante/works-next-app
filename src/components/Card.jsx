@@ -12,12 +12,8 @@ export default function ({ imageSrc, title, tags, description }) {
                                 : 'https://blog.aulaformativa.com/wp-content/uploads/2016/08/ventajas-optimizacion-de-codigo-codigo-fuente-limpio.jpg'
                         }
                         alt="card image"
-                        layout="responsive"
-                        objectFit="cover"
-                        objectPosition="top"
-                        // 16/9 es el formato de origen de la imagen
-                        width={3}
-                        height={1}
+                        width={700}
+                        height={400}
                         quality={100}
                         priority={true}
                     />

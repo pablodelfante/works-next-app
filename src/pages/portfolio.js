@@ -10,7 +10,7 @@ export default function Portfolio({ works }) {
     return (
         <>
             <Head>
-                <title>portfolio | pablodelfante</title>
+                <title>portfolio | Pablo Delfante</title>
             </Head>
             <Layout>
                 <Container>
