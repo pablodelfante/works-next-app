@@ -18,7 +18,7 @@ export default function Home({ works }) {
     return (
         <>
             <Head>
-                <title>pablodelfante</title>
+                <title>Pablo Delfante</title>
             </Head>
             <Layout>
                 <section>

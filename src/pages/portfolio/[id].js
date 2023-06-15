@@ -52,7 +52,7 @@ export default function Work({ work, works }) {
     return (
         <>
             <Head>
-                <title>{title} | pablodelfante</title>
+                <title>{title} | Pablo Delfante</title>
             </Head>
             <Layout>
                 <Container>
