@@ -1,5 +1,7 @@
 import 'tailwindcss/tailwind.css'
 import 'styles/globals.css'
+import DarkProvider from 'contexts/darkMode/DarkProvider'
+import GAnalytics from 'components/GAnalytics'
 
 export const metadata = {
     title: 'Next.js',
@@ -9,7 +11,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
-            <body>{children}</body>
+            <body>
+                {/* <GAnalytics/> alone in production enviroment */}
+                {process.env.NEXT_PUBLIC_VERCEL_ENV === 'production' && <GAnalytics />}
+                <DarkProvider>{children}</DarkProvider>
+            </body>
         </html>
     )
 }

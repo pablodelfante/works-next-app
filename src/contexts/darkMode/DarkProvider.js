@@ -1,14 +1,10 @@
+'use client'
 import { useState, useEffect } from 'react'
 import DarkContext from './DarkContext'
 
 export default function DarkProvider(props) {
     const sun = (
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="yellow"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-        >
+        <svg xmlns="http://www.w3.org/2000/svg" fill="yellow" viewBox="0 0 24 24" stroke="currentColor">
             <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -18,12 +14,7 @@ export default function DarkProvider(props) {
         </svg>
     )
     const moon = (
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-        >
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor">
             <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
