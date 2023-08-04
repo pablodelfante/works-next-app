@@ -1,5 +1,6 @@
 function page() {
-    return <div>page on app folder</div>
+    console.log('client page')
+    return <div></div>
 }
 
 export default page
