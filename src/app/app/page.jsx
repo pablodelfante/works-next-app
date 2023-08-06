@@ -11,8 +11,9 @@ import WhoIam from 'components/pages/home/aboutMe/WhoIam'
 import Projections from 'components/pages/home/aboutMe/Projections'
 import TypeAnimation from 'components/TypeAnimation'
 
-export default function Home({ works }) {
-    // const worksHighlighted = works.filter((work) => work.highlighted)
+export default async function Home() {
+    const works = await getWorks()
+    const worksHighlighted = works.filter((work) => work.highlighted)
     const sectionPadding = 'py-40'
     const sectionColorizedClass = `bg-slate-50 dark:bg-slate-800 [ ${sectionPadding} ]`
     return (
@@ -65,7 +66,7 @@ export default function Home({ works }) {
                 <section className={`${sectionColorizedClass}`}>
                     <Container>
                         <h3 className="m-auto w-max mb-16">Highlighted works</h3>
-                        {/* <ul className="grid grid-flow-row md:grid-flow-col gap-2">{worksHighlighted && <Works works={worksHighlighted} />}</ul> */}
+                        <ul className="grid grid-flow-row md:grid-flow-col gap-2">{worksHighlighted && <Works works={worksHighlighted} />}</ul>
                     </Container>
                 </section>
 
