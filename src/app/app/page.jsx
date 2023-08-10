@@ -2,7 +2,6 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Layout from 'components/template'
 import Terminal from 'components/Terminal'
-import Intro from 'components/template/Intro'
 import BlobV2 from 'components/BlobV2'
 import Container from 'components/layouts/Container'
 import { getWorks } from 'connectors/findWorks'
@@ -24,7 +23,7 @@ export default async function Home() {
             <Layout>
                 <section>
                     <Container>
-                        <Intro>
+                        <section className="grid lg:grid-cols-[1fr_1fr] items-end">
                             <div className="grid gap-4 pb-16">
                                 <h1 className="font-bold text-[10rem]">Hi</h1>
                                 <TypeAnimation
@@ -59,7 +58,7 @@ export default async function Home() {
                                     />
                                 </figure>
                             </div>
-                        </Intro>
+                        </section>
                     </Container>
                 </section>
 

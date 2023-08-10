@@ -5,8 +5,6 @@ function Works({ works = null }) {
     return (
         <>
             <ul className="grid grid-cols-1 xl:grid-cols-2 gap-10 items-stretch">
-                {/* si no hay works */}
-
                 {!works && (
                     <p>
                         oops! I don't find works, sure i am on maintenance or break something, sorry😥. If you can write me! pablodelfantexp@gmail.com
