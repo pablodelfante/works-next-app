@@ -1,18 +1,12 @@
-'use client'
-
-import { useState } from 'react'
-import Head from 'next/head'
-import Image from 'next/image'
-import ReactMarkdown from 'react-markdown'
-import { defaultUrlImage } from 'utils/config'
 import { getWorks } from 'connectors/findWorks'
+import Head from 'next/head'
 import Layout from 'components/template'
+import Container from 'components/layouts/Container'
+import MacWindow from 'components/MacWindow'
+import Image from 'next/image'
+import Overlay from 'components/Overlay'
 import Video from 'components/Video'
 import Works from 'components/Works'
-import MacWindow from 'components/MacWindow'
-import Container from 'components/layouts/Container'
-import Overlay from 'components/Overlay'
-import { getWorks } from 'connectors/findWorks'
 
 // Return a list of `params` to populate the [slug] dynamic segment
 export async function generateStaticParams() {
@@ -30,8 +24,6 @@ export default async function Page({ params }) {
     const works = await getWorks()
     const work = works.find(({ id }) => id == workId)
 
-    const [overlayContent, setOverlayContent] = useState(null)
-
     const {
         title,
         description,
@@ -44,26 +36,6 @@ export default async function Page({ params }) {
 
     function getRandonElementFromArray(array) {
         return array.sort(() => Math.random() - 0.5).slice(0, 4)
-    }
-
-    const handleClickImage = (url) => {
-        setOverlayContent(
-            <div className="grid">
-                <Image
-                    src={url}
-                    width={1920}
-                    height={1080}
-                    style={{
-                        width: '100%',
-                        height: 'auto',
-                    }}
-                    quality={100}
-                    alt="image component"
-                    objectFit="contain"
-                />
-                <p className="bg-black text-white">click somwhere to close overlay</p>
-            </div>
-        )
     }
 
     const worksForContinueNavigation = getRandonElementFromArray(works)
@@ -114,17 +86,33 @@ export default async function Page({ params }) {
                                         {component.__typename === 'Video' && <Video src={component.videoUrl} />}
                                         {component.__typename === 'Markdown' && <ReactMarkdown children={component.markdown} />}
                                         {component.__typename === 'Image' && (
-                                            <Image
-                                                className="hover:cursor-pointer"
-                                                onClick={() => handleClickImage(component.image.url)}
-                                                src={component.image.url}
-                                                width={16}
-                                                height={9}
-                                                quality={100}
-                                                alt="image component"
-                                                objectFit="contain"
-                                                layout="responsive"
-                                            />
+                                            <Overlay
+                                                content={
+                                                    <div className="grid">
+                                                        <Image
+                                                            src={component.image.url}
+                                                            width={1920}
+                                                            height={1080}
+                                                            style={{
+                                                                width: '100%',
+                                                                height: 'auto',
+                                                            }}
+                                                            quality={100}
+                                                            alt="image component"
+                                                        />
+                                                        <p className="bg-black text-white">click somwhere to close overlay</p>
+                                                    </div>
+                                                }
+                                            >
+                                                <Image
+                                                    className="hover:cursor-pointer"
+                                                    src={component.image.url}
+                                                    width={16}
+                                                    height={9}
+                                                    quality={100}
+                                                    alt="image component"
+                                                />
+                                            </Overlay>
                                         )}
                                     </li>
                                 ))}
@@ -132,7 +120,7 @@ export default async function Page({ params }) {
                         )}
 
                         {/* testing overlay */}
-                        {overlayContent && <Overlay onClose={() => setOverlayContent(null)}>{overlayContent}</Overlay>}
+                        {/* {overlayContent && <Overlay onClose={() => setOverlayContent(null)}>{overlayContent}</Overlay>} */}
 
                         {githubUrl && (
                             <a href={githubUrl} target="_blank" rel="noopener" className="underline">
