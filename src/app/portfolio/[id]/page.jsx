@@ -107,8 +107,8 @@ export default async function Page({ params }) {
                                                 <Image
                                                     className="hover:cursor-pointer"
                                                     src={component.image.url}
-                                                    width={16}
-                                                    height={9}
+                                                    width={1400}
+                                                    height={700}
                                                     quality={100}
                                                     alt="image component"
                                                 />
