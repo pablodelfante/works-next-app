@@ -7,6 +7,7 @@ import Image from 'next/image'
 import Overlay from 'components/Overlay'
 import Video from 'components/Video'
 import Works from 'components/Works'
+import ReactMarkdown from 'react-markdown'
 
 // Return a list of `params` to populate the [slug] dynamic segment
 export async function generateStaticParams() {
@@ -118,9 +119,6 @@ export default async function Page({ params }) {
                                 ))}
                             </ul>
                         )}
-
-                        {/* testing overlay */}
-                        {/* {overlayContent && <Overlay onClose={() => setOverlayContent(null)}>{overlayContent}</Overlay>} */}
 
                         {githubUrl && (
                             <a href={githubUrl} target="_blank" rel="noopener" className="underline">
