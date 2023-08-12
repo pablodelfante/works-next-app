@@ -2,7 +2,6 @@ import { NextResponse } from 'next/server'
 import { getWorks } from 'connectors/findWorks'
 export async function GET(req, res) {
     try {
-        throw new Error('Not implemented')
         const works = await getWorks()
         return NextResponse.json(works)
     } catch (error) {
