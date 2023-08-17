@@ -9,7 +9,6 @@ import Video from 'components/Video'
 import Works from 'components/Works'
 import ReactMarkdown from 'react-markdown'
 
-// Return a list of `params` to populate the [slug] dynamic segment
 export async function generateStaticParams() {
     const works = await getWorks()
 
@@ -18,8 +17,6 @@ export async function generateStaticParams() {
     }))
 }
 
-// Multiple versions of this page will be statically generated
-// using the `params` returned by `generateStaticParams`
 export default async function Page({ params }) {
     const { id: workId } = params
     const works = await getWorks()
