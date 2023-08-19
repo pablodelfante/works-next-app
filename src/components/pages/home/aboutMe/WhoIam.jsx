@@ -1,7 +1,7 @@
 import Terminal from 'components/Terminal'
 import maskPng from './mask-done.png'
-import { TypeAnimation } from 'react-type-animation'
 import Image from 'next/image'
+import TypeAnimation from 'components/TypeAnimation'
 
 export default function WhoIam() {
     return (
