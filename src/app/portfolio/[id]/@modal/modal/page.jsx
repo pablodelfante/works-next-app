@@ -9,24 +9,21 @@ const page = () => {
     const searchParams = useSearchParams()
     const imageUrl = searchParams.get('imageUrl')
     return (
-        <div onClick={() => router.back()}>
-            <Modal>
-                <div className="grid">
-                    <Image
-                        src={imageUrl}
-                        width={1920}
-                        height={1080}
-                        style={{
-                            width: '100%',
-                            height: 'auto',
-                        }}
-                        quality={100}
-                        alt="image component"
-                    />
-                    <p className="bg-black text-white">click somwhere to close overlay</p>
-                </div>
-            </Modal>
-        </div>
+        <Modal onClose={() => router.back()} onOpenInAnotherTab={() => window.open(imageUrl, '_ blank')}>
+            <div className="grid">
+                <Image
+                    src={imageUrl}
+                    width={1920}
+                    height={1080}
+                    style={{
+                        width: '100%',
+                        height: 'auto',
+                    }}
+                    quality={100}
+                    alt="image component"
+                />
+            </div>
+        </Modal>
     )
 }
 
