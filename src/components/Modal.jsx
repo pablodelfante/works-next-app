@@ -1,8 +1,11 @@
 'use client'
 function Modal({ children, onClose, onOpenInAnotherTab }) {
+    const handleClick = (e) => {
+        if (e.target.classList.contains('closeable')) onClose()
+    }
     return (
         <div className="fixed bg-black/20 backdrop-blur-sm top-0 left-0 w-screen h-screen">
-            <div className="grid justify-items-center items-center h-full w-full">
+            <div className="grid justify-items-center items-center h-full w-full [ closeable ]" onClick={handleClick}>
                 <div className="p-3 pr-0 m-auto rounded-md bg-slate-700 w-full md:w-3/4 grid grid-flow-col grid-cols-[1fr_auto] items-center justify-center">
                     <div>{children}</div>
                     <div className="grid gap-2">
