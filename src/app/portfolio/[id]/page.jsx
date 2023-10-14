@@ -1,20 +1,29 @@
-import { useState } from 'react'
-import Head from 'next/head'
-import Image from 'next/image'
-import ReactMarkdown from 'react-markdown'
-import { defaultUrlImage } from 'utils/config'
+import Link from 'next/link'
 import { getWorks } from 'connectors/findWorks'
+import Head from 'next/head'
 import Layout from 'components/template'
+import Container from 'components/layouts/Container'
+import MacWindow from 'components/MacWindow'
+import Image from 'next/image'
 import Video from 'components/Video'
 import Works from 'components/Works'
-import MacWindow from 'components/MacWindow'
-import Container from 'components/layouts/Container'
-import Overlay from 'components/Overlay'
+import ReactMarkdown from 'react-markdown'
 
-export default function Work({ work, works }) {
-    const [overlayContent, setOverlayContent] = useState(null)
+export async function generateStaticParams() {
+    const works = await getWorks()
+
+    return works?.map((work) => ({
+        id: work?.id,
+    }))
+}
+
+export default async function Page({ params }) {
+    const { id: workId } = params
+    const works = await getWorks()
+    const work = works.find(({ id }) => id == workId)
 
     const {
+        id,
         title,
         description,
         tags,
@@ -28,27 +37,8 @@ export default function Work({ work, works }) {
         return array.sort(() => Math.random() - 0.5).slice(0, 4)
     }
 
-    const handleClickImage = (url) => {
-        setOverlayContent(
-            <div className="grid">
-                <Image
-                    src={url}
-                    width={1920}
-                    height={1080}
-                    style={{
-                        width: '100%',
-                        height: 'auto',
-                    }}
-                    quality={100}
-                    alt="image component"
-                    objectFit="contain"
-                />
-                <p className="bg-black text-white">click somwhere to close overlay</p>
-            </div>
-        )
-    }
-
     const worksForContinueNavigation = getRandonElementFromArray(works)
+
     return (
         <>
             <Head>
@@ -79,10 +69,8 @@ export default function Work({ work, works }) {
                                     src={imageUrl ? imageUrl : defaultUrlImage}
                                     alt="main image on work"
                                     priority={true}
-                                    layout="responsive"
-                                    objectFit="contain"
-                                    width={16}
-                                    height={9}
+                                    width={1400}
+                                    height={700}
                                     quality={100}
                                 />
                             </MacWindow>
@@ -95,25 +83,21 @@ export default function Work({ work, works }) {
                                         {component.__typename === 'Video' && <Video src={component.videoUrl} />}
                                         {component.__typename === 'Markdown' && <ReactMarkdown children={component.markdown} />}
                                         {component.__typename === 'Image' && (
-                                            <Image
-                                                className="hover:cursor-pointer"
-                                                onClick={() => handleClickImage(component.image.url)}
-                                                src={component.image.url}
-                                                width={16}
-                                                height={9}
-                                                quality={100}
-                                                alt="image component"
-                                                objectFit="contain"
-                                                layout="responsive"
-                                            />
+                                            <Link href={`/portfolio/${id}/modal?imageUrl=${component.image.url}`}>
+                                                <Image
+                                                    className="hover:cursor-pointer"
+                                                    src={component.image.url}
+                                                    width={1400}
+                                                    height={700}
+                                                    quality={100}
+                                                    alt="image component"
+                                                />
+                                            </Link>
                                         )}
                                     </li>
                                 ))}
                             </ul>
                         )}
-
-                        {/* testing overlay */}
-                        {overlayContent && <Overlay onClose={() => setOverlayContent(null)}>{overlayContent}</Overlay>}
 
                         {githubUrl && (
                             <a href={githubUrl} target="_blank" rel="noopener" className="underline">
@@ -138,33 +122,4 @@ export default function Work({ work, works }) {
             </Layout>
         </>
     )
-}
-
-export async function getStaticPaths() {
-    const works = await getWorks()
-    // obtener las id para pre renderizar
-    // retorna un array[] que contienen objetos asi: {params: {id: id}}
-    const paths = works?.map((work) => ({
-        params: { id: work?.id },
-    }))
-    // aqui es obligatorio retornar paths y fallback
-    // paths aqui por estar dentro de {} se transforma a paths:[a,b,c...]
-    if (paths) {
-        return {
-            paths,
-            fallback: false,
-        }
-    } else {
-        return {
-            paths: [],
-            fallback: false,
-        }
-    }
-}
-
-export async function getStaticProps({ params }) {
-    const { id: workId } = params
-    const works = await getWorks()
-    const work = works.find(({ id }) => id == workId)
-    return { props: { work, works } }
 }
