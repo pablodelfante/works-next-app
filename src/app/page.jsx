@@ -25,7 +25,7 @@ export default async function Home() {
                 <section className="bg-slate-50 dark:bg-slate-800 py-40">
                     <Container>
                         <h3 className="m-auto w-max mb-16">Highlighted works</h3>
-                        <ul className="grid grid-flow-row md:grid-flow-col gap-2">{worksHighlighted && <Works works={worksHighlighted} />}</ul>
+                        <div className="grid grid-flow-row md:grid-flow-col gap-2">{worksHighlighted && <Works works={worksHighlighted} />}</div>
                     </Container>
                 </section>
 
