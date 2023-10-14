@@ -13,7 +13,6 @@ function Works({ works = null }) {
 
                 {works?.map(({ id, image: { url: imageUrl }, title, description, tags }) => (
                     <Link href={`/portfolio/${id}`} key={id}>
-                        {/* rome-ignore lint/a11y/useValidAnchor: <explanation> */}
                         <div className="grid">
                             <Card imageSrc={imageUrl} title={title} tags={tags} description={description} />
                         </div>
