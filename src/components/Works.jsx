@@ -12,11 +12,13 @@ function Works({ works = null }) {
                 )}
 
                 {works?.map(({ id, image: { url: imageUrl }, title, description, tags }) => (
-                    <Link href={`/portfolio/${id}`} key={id}>
-                        <div className="grid">
-                            <Card imageSrc={imageUrl} title={title} tags={tags} description={description} />
-                        </div>
-                    </Link>
+                    <li key={id}>
+                        <Link href={`/portfolio/${id}`}>
+                            <div className="grid">
+                                <Card imageSrc={imageUrl} title={title} tags={tags} description={description} />
+                            </div>
+                        </Link>
+                    </li>
                 ))}
             </ul>
         </>
