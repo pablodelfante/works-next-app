@@ -9,7 +9,7 @@ const Header = () => {
             <div className="grid gap-4 pb-16">
                 <h1 className="font-bold text-[10rem]">Hi</h1>
                 <TypeAnimation
-                    className="font-bold text-primary text-4xl md:text-5xl xl:text-6xl dark:text-primary"
+                    className="font-bold text-primary text-4xl md:text-5xl xl:text-6xl dark:text-primary min-h-[.375em]"
                     sequence={['Welcome!', 2500, 'new Wel...', 1000, 'new Welcome();', 1000, '<Welcome/>', 1500]}
                     wrapper="h2"
                     cursor={true}
