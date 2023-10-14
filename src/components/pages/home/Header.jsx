@@ -35,7 +35,7 @@ const Header = () => {
                         width={350}
                         height={600}
                         priority={true}
-                        quality={100}
+                        quality={80}
                         className="drop-shadow-[0_0px_40px_rgba(0,0,0,0.30)]"
                     />
                 </figure>
