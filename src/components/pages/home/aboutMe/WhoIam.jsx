@@ -29,7 +29,7 @@ export default function WhoIam() {
                                 500,
                                 'graphic\n designer 🎨👨‍🏫',
                                 500,
-                                'web\n developer 🤖🌆',
+                                'full stack web\n developer 🤖🌆',
                                 500,
                                 'creative\n dev 🪐🚀',
                                 500,
