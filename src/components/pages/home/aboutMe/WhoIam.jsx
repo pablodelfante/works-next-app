@@ -47,7 +47,7 @@ export default function WhoIam() {
                     </h3>
                     <Terminal init="whoIam">
                         <p className="mb-5 text-white">
-                            I am a graphic designer and I am currrently studying web design. I have been passionate about technology since I was a
+                            I am full stack developer, graphic designer and digital designer. I have been passionate about technology since I was a
                             curious and active child. I love sharing, learning and helping others as well as meeting new people!
                         </p>
                         <p className="text-white">I love sorting out problems and I really enjoy being analytic and creative!</p>
