@@ -16,7 +16,7 @@ const Header = () => {
                     repeat={Infinity}
                 />
                 <div className="md:w-[24em]">
-                    <Terminal init="hello">In this section I have some works that I would like to share with you!</Terminal>
+                    <Terminal init="hello">How are you? I would like to share you some of myself 🧑‍💻 Come on!</Terminal>
                 </div>
             </div>
             <div className="hidden lg:grid">
