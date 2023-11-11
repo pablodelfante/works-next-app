@@ -1,0 +1,15 @@
+name: checkers for test
+on:
+    push:
+        branches:
+            - dev
+            - develop
+
+jobs:
+    first-job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout-repository
+              uses: actions/checkout@v4
+            - name: run-checkers
+              run: yarn
