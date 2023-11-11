@@ -2,8 +2,9 @@ name: basic-checkers
 on:
   push:
     branches:
-      - add-test-enviroment
+      - dev
       - test
+      - develop
 env:
   HOST_BACKEND: ${{ secrets.HOST_BACKEND }}
 
