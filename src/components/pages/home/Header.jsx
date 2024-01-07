@@ -1,7 +1,7 @@
-import Image from 'next/image'
 import Terminal from 'components/Terminal'
 import BlobV2 from 'components/BlobV2'
 import TypeAnimation from 'components/TypeAnimation'
+import MeImage from 'components/pages/home/MeImage'
 
 const Header = () => {
     return (
@@ -31,15 +31,7 @@ const Header = () => {
                     />
                 </div>
                 <figure className="[ figure-home ] grid justify-center items-end col-span-full row-span-full">
-                    <Image
-                        src="/img/home/[removed_ai]serious.png"
-                        alt="image on home page"
-                        width={350}
-                        height={600}
-                        priority={true}
-                        quality={80}
-                        className="drop-shadow-[0_0px_40px_rgba(0,0,0,0.30)]"
-                    />
+                    <MeImage />
                 </figure>
             </div>
         </div>
