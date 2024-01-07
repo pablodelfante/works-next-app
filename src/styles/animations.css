@@ -1,4 +1,13 @@
+.fade-in-300 {
+    animation: 3s fade-in ease-out;
+}
+
+.fade-in-500 {
+    animation: 5s fade-in ease-out;
+}
+
 @supports (animation-timeline: view()) {
+
     .fade-in-from-left {
         animation: fade-in-from-left ease-out;
         animation-timeline: view();
@@ -11,6 +20,16 @@
         animation-range: entry contain 20%;
     }
 
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes fade-in-from-left {
