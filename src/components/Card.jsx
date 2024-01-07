@@ -13,8 +13,8 @@ export default function ({ imageSrc, title, tags, description }) {
                     alt="card image"
                     width={700}
                     height={400}
-                    quality={100}
-                    priority={true}
+                    quality={80}
+                    priority={false}
                 />
             </figure>
             <div className="px-3 md:px-8 grid gap-2">
