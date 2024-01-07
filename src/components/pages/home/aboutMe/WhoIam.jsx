@@ -8,7 +8,7 @@ export default function WhoIam() {
         <div className="grid justify-center md:grid-cols-[.5fr_1fr] xl:grid-cols-[25em_.8fr] gap-16">
             <div className="flex justify-center">
                 <Image
-                    className="object-contain"
+                    className="object-contain fade-in-from-left "
                     src={maskPng.src}
                     quality={100}
                     alt="who i am masked image"

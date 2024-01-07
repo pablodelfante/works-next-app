@@ -1,5 +1,6 @@
 @import 'NProgress.css';
 @import 'blob.css';
+@import 'animations.css';
 
 /* Modo dark: 
       -en header.js cambio clase dark en html
