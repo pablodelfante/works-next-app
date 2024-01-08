@@ -2,7 +2,7 @@
 import Image from 'next/image'
 
 const MeImage = () => {
-    const meImage = new Date().getMonth() === 11 ? '/img/home/me-christmas.png' : '/img/home/me.png'
+    const meImage = new Date().getMonth() === 11 ? '/img/home/me-christmas.png' : '/img/home/me-v2.webp'
     return (
         <Image
             src={meImage}
