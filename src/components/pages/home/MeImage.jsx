@@ -11,7 +11,7 @@ const MeImage = () => {
             height={600}
             priority={true}
             quality={80}
-            className="drop-shadow-[0_0px_40px_rgba(0,0,0,0.30)] fade-in-300"
+            className="drop-shadow-[0_0px_40px_rgba(0,0,0,0.30)] "
         />
     )
 }

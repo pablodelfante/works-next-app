@@ -14,7 +14,7 @@ export default function WhoIam() {
                     alt="who i am masked image"
                     width={400}
                     height={400}
-                    priority={true}
+                    priority={false}
                 />
             </div>
             <div>

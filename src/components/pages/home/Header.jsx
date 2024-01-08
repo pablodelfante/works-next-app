@@ -22,7 +22,7 @@ const Header = () => {
                 </div>
             </div>
             <div className="hidden lg:grid">
-                <div className="grid justify-center col-span-full row-span-full fade-in-500">
+                <div className="grid justify-center col-span-full row-span-full">
                     <BlobV2
                         blobConfig={{
                             color: 'hwb(243deg 30% 1%)',
