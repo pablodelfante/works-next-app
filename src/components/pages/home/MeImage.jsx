@@ -10,7 +10,7 @@ const MeImage = () => {
             width={350}
             height={600}
             priority={true}
-            quality={80}
+            quality={100}
             className="drop-shadow-[0_0px_40px_rgba(0,0,0,0.30)] "
         />
     )
