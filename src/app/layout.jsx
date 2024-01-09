@@ -32,9 +32,6 @@ export default function RootLayout({ children }) {
                 {/* NProgress */}
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.css" />
 
-                {/* ScrollReveal */}
-                <script src="https://unpkg.com/scrollreveal"></script>
-
                 {/* PWA assets */}
                 <link rel="manifest" href="/manifest.json" />
                 <link rel="apple-touch-icon" href="/lapabla-ico.ico"></link>
