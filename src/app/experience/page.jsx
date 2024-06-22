@@ -1,12 +1,22 @@
 import Layout from 'components/template'
 import Container from 'components/layouts/Container'
-import Xp from 'components/Xp'
+import Xps from 'components/Xps'
 import main from 'app/experience/main.png'
 
 const XpPage = () => {
     const xps = [
         {
-            title: 'random-title',
+            title: 'vexels',
+            about: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. ipsum dolor sit amet consectetur adipisicing elit. ipsum dolor sit amet consectetur adipisicing elit. Culpa, praesentium. Illum libero possimus animi? Velit quia aperiam vero nostrum reprehenderit sapiente, molestiae repudiandae nihil quidem sequi temporibus ipsum aut dolorum? ',
+            responsabilities: ['some', 'some2-123', 'nj23ke', '3e23e23e23e', '23eio32eio23', 'oim2i3mei2'],
+        },
+        {
+            title: 'ort',
+            about: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. ipsum dolor sit amet consectetur adipisicing elit. ipsum dolor sit amet consectetur adipisicing elit. Culpa, praesentium. Illum libero possimus animi? Velit quia aperiam vero nostrum reprehenderit sapiente, molestiae repudiandae nihil quidem sequi temporibus ipsum aut dolorum? ',
+            responsabilities: ['some', 'some2-123', 'nj23ke', '3e23e23e23e', '23eio32eio23', 'oim2i3mei2'],
+        },
+        {
+            title: 'Studio',
             about: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. ipsum dolor sit amet consectetur adipisicing elit. ipsum dolor sit amet consectetur adipisicing elit. Culpa, praesentium. Illum libero possimus animi? Velit quia aperiam vero nostrum reprehenderit sapiente, molestiae repudiandae nihil quidem sequi temporibus ipsum aut dolorum? ',
             responsabilities: ['some', 'some2-123', 'nj23ke', '3e23e23e23e', '23eio32eio23', 'oim2i3mei2'],
         },
@@ -31,7 +41,7 @@ const XpPage = () => {
                     <div className="border-r border-dashed m-4"></div>
                     <div>
                         <div className="grid">
-                            <Xp xps={xps} />
+                            <Xps xps={xps} />
                         </div>
                     </div>
                 </div>

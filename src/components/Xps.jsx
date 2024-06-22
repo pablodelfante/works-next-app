@@ -3,11 +3,11 @@ import XpItem from 'components/XpItem'
 
 const Xp = ({ xps }) => {
     return (
-        <div>
+        <div className="grid gap-8">
             {xps.map(({ title, about, responsabilities }, index) => (
-                <div key={index}>
+                <div key={index} className="grid gap-2">
                     <h3>{title}</h3>
-                    <XpItem title={title}>{(state) => <p className={state ? '' : 'line-clamp-3'}>{about}</p>}</XpItem>
+                    <XpItem title="About">{(state) => <p className={state ? '' : 'line-clamp-3'}>{about}</p>}</XpItem>
 
                     <XpItem title="Responsabilities">
                         {(state) => (

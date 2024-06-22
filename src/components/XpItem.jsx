@@ -4,12 +4,11 @@ import { useState } from 'react'
 const ItemXp = ({ title, children }) => {
     const [state, setState] = useState(false)
     return (
-        <div>
-            <h4>{title}</h4>
+        <div className="grid">
+            <h4 className="text-lg">{title}</h4>
             {children(state)}
-            {/* {children} */}
             <span className="cursor-pointer underline" onClick={() => setState(!state)}>
-                {state ? 'show more' : 'show less'}
+                {state ? 'show less' : 'show more'}
             </span>
         </div>
     )
