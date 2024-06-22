@@ -31,6 +31,9 @@ export default function Header() {
                     <li>
                         <Link href="/portfolio">Portfolio</Link>
                     </li>
+                    <li className='font-extralight'>
+                        <Link href="/experience">Journey</Link>
+                    </li>
                     <li onClick={() => switchModeDark()} className="cursor-pointer">
                         {icono}
                     </li>

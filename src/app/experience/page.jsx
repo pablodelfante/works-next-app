@@ -16,6 +16,48 @@ const Xp = () => {
                     </div>
                 </div>
             </Container>
+
+            <Container>
+                <div className="grid grid-cols-2 justify-center">
+                    <div className="border-r border-dashed m-4"></div>
+                    <div>
+                        <div className="grid">
+                            <h3>Title</h3>
+                            <h4>Subtitle</h4>
+                            <ul>
+                                <li>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae cumque natus numquam magni asperiores iusto,
+                                    laboriosam nemo consectetur reprehenderit ex suscipit debitis, amet aliquam, non obcaecati hic corporis at
+                                    quisquam.
+                                </li>
+                                <li>aaaa</li>
+                                <li>aaaa</li>
+                            </ul>
+                            <h4>Subtitle</h4>
+                            <ul>
+                                <li>aaaa</li>
+                                <li>aaaa</li>
+                                <li>aaaa</li>
+                            </ul>
+                        </div>
+                        <div className="grid">
+                            <h3>Title</h3>
+                            <h4>Subtitle</h4>
+                            <ul>
+                                <li>aaaa</li>
+                                <li>aaaa</li>
+                                <li>aaaa</li>
+                            </ul>
+                            <h4>Subtitle</h4>
+                            <ul>
+                                <li>aaaa</li>
+                                <li>aaaa</li>
+                                <li>aaaa</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </Container>
         </Layout>
     )
 }
