@@ -37,7 +37,7 @@ const XpPage = () => {
             </Container>
 
             <Container>
-                <div className="grid grid-cols-2 justify-center">
+                <div className="grid grid-cols-2 justify-center lg:w-2/3 lg:m-auto">
                     <div className="border-r border-dashed m-4"></div>
                     <div>
                         <div className="grid">
