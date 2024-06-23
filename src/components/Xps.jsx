@@ -10,17 +10,19 @@ const Xp = ({ xps }) => {
                     <h3>{title}</h3>
                     <XpItem title="About">{(state) => <p className={state ? '' : 'line-clamp-3'}>{about}</p>}</XpItem>
 
-                    <XpItem title="Responsabilities">
-                        {(state) => (
-                            <div>
-                                {responsabilities.map((responsability, index) => (
-                                    <div key={index} className={state ? '' : index > 3 ? 'hidden' : ''}>
-                                        {responsability}
-                                    </div>
-                                ))}
-                            </div>
-                        )}
-                    </XpItem>
+                    {responsabilities && (
+                        <XpItem title="Responsabilities">
+                            {(state) => (
+                                <div>
+                                    {responsabilities.map((responsability, index) => (
+                                        <div key={index} className={state ? '' : index > 3 ? 'hidden' : ''}>
+                                            {responsability}
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
+                        </XpItem>
+                    )}
 
                     {skills && (
                         <XpItem title="Skills aquired">
