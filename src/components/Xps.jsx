@@ -8,6 +8,12 @@ const Xp = ({ xps }) => {
             {xps.map(({ title, about, responsabilities, skills, projects, collaboration }, index) => (
                 <div key={index} className="grid gap-6">
                     <h3>{title}</h3>
+
+                    <div className="flex items-center ml-[-1.5em]">
+                        <span className="block rounded-full w-4 aspect-square bg-white"></span>
+                        <span className="block border-dashed border-white border-[1px] w-20"></span>
+                    </div>
+
                     <XpItem title="About">{(state) => <p className={state ? '' : 'line-clamp-3'}>{about}</p>}</XpItem>
 
                     {responsabilities && (
