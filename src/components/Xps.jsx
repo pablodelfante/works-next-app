@@ -39,7 +39,7 @@ const Xp = ({ xps }) => {
                     )}
 
                     {projects && (
-                        <XpItem title="Skills aquired">
+                        <XpItem title="Projects">
                             {(state) => (
                                 <div className="flex flex-wrap gap-2">
                                     {projects.map((project, index) => (
