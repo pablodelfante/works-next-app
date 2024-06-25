@@ -4,15 +4,17 @@ import Pill from 'components/Pill'
 
 const Xp = ({ xps }) => {
     return (
-        <div className="grid gap-8">
+        <div className="grid gap-12">
             {xps.map(({ title, about, responsabilities, skills, projects, collaboration }, index) => (
                 <div key={index} className="grid gap-6">
-                    <h3>{title}</h3>
+                    <div>
+                        <h3>{title}</h3>
 
-                    {/* line */}
-                    <div className="flex items-center ml-[-1.5em]">
-                        <span className="block rounded-full w-4 aspect-square bg-white"></span>
-                        <span className="block border-dashed border-white border-[1px] w-20"></span>
+                        {/* line  */}
+                        <div className="flex items-center ml-[-1.5em]">
+                            <span className="block rounded-full w-4 aspect-square bg-white"></span>
+                            <span className="block border-dashed border-t border-white w-40"></span>
+                        </div>
                     </div>
 
                     {about && <XpItem title="About">{(state) => <p className={state ? '' : 'line-clamp-3'}>{about}</p>}</XpItem>}
