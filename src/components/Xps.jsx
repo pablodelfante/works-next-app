@@ -3,6 +3,8 @@ import XpItem from 'components/XpItem'
 import Pill from 'components/Pill'
 
 const Xp = ({ xps }) => {
+    const itemsToShow = 2
+    const itemsToShowOnPIlls = 4
     return (
         <div className="grid gap-12">
             {xps.map(({ title, about, responsabilities, skills, accomplishments, projects, collaboration }, index) => (
@@ -17,14 +19,14 @@ const Xp = ({ xps }) => {
                         </div>
                     </div>
 
-                    {about && <XpItem title="About">{(state) => <p className={state ? '' : 'line-clamp-3'}>{about}</p>}</XpItem>}
+                    {about && <XpItem title="About">{(state) => <p className={state ? '' : 'line-clamp-2'}>{about}</p>}</XpItem>}
 
                     {responsabilities && (
                         <XpItem title="Responsabilities">
                             {(state) => (
                                 <ul className="list-disc list-outside pl-4">
                                     {responsabilities.map((responsability, index) => (
-                                        <li key={index} className={`${state ? '' : index > 2 ? 'hidden' : ''}`}>
+                                        <li key={index} className={`${state ? '' : index + 1 > itemsToShow ? 'hidden' : ''}`}>
                                             {responsability}
                                         </li>
                                     ))}
@@ -38,7 +40,7 @@ const Xp = ({ xps }) => {
                             {(state) => (
                                 <div className="flex flex-wrap gap-2">
                                     {skills.map((skill, index) => (
-                                        <div key={index} className={state ? '' : index > 2 ? 'hidden' : ''}>
+                                        <div key={index} className={state ? '' : index + 1 > itemsToShowOnPIlls ? 'hidden' : ''}>
                                             <Pill type="outline">{skill}</Pill>
                                         </div>
                                     ))}
@@ -48,11 +50,11 @@ const Xp = ({ xps }) => {
                     )}
 
                     {accomplishments && (
-                        <XpItem title="Collaboration">
+                        <XpItem title="Accomplishment and contributions">
                             {(state) => (
                                 <ul className="list-disc list-outside pl-4">
                                     {accomplishments.map((accomplishment, index) => (
-                                        <li key={index} className={state ? '' : index > 2 ? 'hidden' : ''}>
+                                        <li key={index} className={state ? '' : index + 1 > itemsToShow ? 'hidden' : ''}>
                                             {accomplishment}
                                         </li>
                                     ))}
@@ -66,7 +68,7 @@ const Xp = ({ xps }) => {
                             {(state) => (
                                 <div className="flex flex-wrap gap-2">
                                     {projects.map((project, index) => (
-                                        <div key={index} className={state ? '' : index > 2 ? 'hidden' : ''}>
+                                        <div key={index} className={state ? '' : index + 1 > itemsToShowOnPIlls ? 'hidden' : ''}>
                                             <Pill>{project}</Pill>
                                         </div>
                                     ))}
@@ -80,7 +82,7 @@ const Xp = ({ xps }) => {
                             {(state) => (
                                 <ul className="list-disc list-outside pl-4">
                                     {collaboration.map((collaboration, index) => (
-                                        <li key={index} className={state ? '' : index > 2 ? 'hidden' : ''}>
+                                        <li key={index} className={state ? '' : index + 1 > itemsToShow ? 'hidden' : ''}>
                                             {collaboration}
                                         </li>
                                     ))}
