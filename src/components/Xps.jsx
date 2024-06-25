@@ -5,7 +5,7 @@ import Pill from 'components/Pill'
 const Xp = ({ xps }) => {
     return (
         <div className="grid gap-12">
-            {xps.map(({ title, about, responsabilities, skills, projects, collaboration }, index) => (
+            {xps.map(({ title, about, responsabilities, skills, accomplishments, projects, collaboration }, index) => (
                 <div key={index} className="grid gap-6">
                     <div>
                         <h3>{title}</h3>
@@ -43,6 +43,20 @@ const Xp = ({ xps }) => {
                                         </div>
                                     ))}
                                 </div>
+                            )}
+                        </XpItem>
+                    )}
+
+                    {accomplishments && (
+                        <XpItem title="Collaboration">
+                            {(state) => (
+                                <ul className="list-disc list-outside pl-4">
+                                    {accomplishments.map((accomplishment, index) => (
+                                        <li key={index} className={state ? '' : index > 2 ? 'hidden' : ''}>
+                                            {accomplishment}
+                                        </li>
+                                    ))}
+                                </ul>
                             )}
                         </XpItem>
                     )}
