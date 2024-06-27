@@ -1,7 +1,7 @@
 import Layout from 'components/template'
 import Container from 'components/layouts/Container'
 import Xps from 'components/Xps'
-import main from 'app/experience/main.png'
+import AnimatedBlobWithStroke from 'components/AnimatedBlobWithStroke'
 
 const XpPage = () => {
     const xps = [
@@ -99,7 +99,10 @@ const XpPage = () => {
             <div className="grid gap-24 my-24">
                 <Container>
                     <div className="grid justify-center">
-                        <img width={300} height={200} className="col-start-1 grid- col-end-2 row-start-1 row-end-2 w-64" src={main.src} alt="" />
+                        <div className="col-start-1 grid- col-end-2 row-start-1 row-end-2">
+                            <AnimatedBlobWithStroke />
+                        </div>
+
                         <div className="col-start-1 col-end-2 row-start-1 row-end-2 pl-8">
                             <h1 className="text-center grid">
                                 <span className="pl-32 text-8xl lg:text-9xl font-bold">My</span>
