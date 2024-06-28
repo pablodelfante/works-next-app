@@ -8,7 +8,7 @@ const ItemXp = ({ title, children, disableShowMore = false }) => {
             <h4 className="text-lg">{title}</h4>
             {children(state)}
             {!disableShowMore && (
-                <span className="cursor-pointer underline" onClick={() => setState(!state)}>
+                <span className="font-light cursor-pointer underline" onClick={() => setState(!state)}>
                     {state ? 'show less' : 'show more'}
                 </span>
             )}

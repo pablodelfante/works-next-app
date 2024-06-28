@@ -4,6 +4,9 @@ import Pill from 'components/Pill'
 
 const Xps = ({ xps }) => {
     const itemsToShow = 3
+    const resolveHiddenClassName = (showMoreActive, index, itemsToShow) => {
+        return showMoreActive ? '' : index + 1 > itemsToShow ? 'hidden' : ''
+    }
     return (
         <div className="grid gap-12">
             {xps.map(({ title, about, responsabilities, skills, accomplishments, projects, collaboration }, index) => (
@@ -25,7 +28,7 @@ const Xps = ({ xps }) => {
                             {(state) => (
                                 <ul className="list-disc list-outside pl-4">
                                     {responsabilities.map((responsability, index) => (
-                                        <li key={index} className={`${state ? '' : index + 1 > itemsToShow ? 'hidden' : ''}`}>
+                                        <li key={index} className={resolveHiddenClassName(state, index, itemsToShow)}>
                                             {responsability}
                                         </li>
                                     ))}
@@ -39,7 +42,7 @@ const Xps = ({ xps }) => {
                             {(state) => (
                                 <div className="flex flex-wrap gap-2">
                                     {skills.map((skill, index) => (
-                                        <div key={index} className={state ? '' : index + 1 > itemsToShow ? 'hidden' : ''}>
+                                        <div key={index} className={resolveHiddenClassName(state, index, itemsToShow)}>
                                             <Pill type="outline">{skill}</Pill>
                                         </div>
                                     ))}
@@ -53,7 +56,7 @@ const Xps = ({ xps }) => {
                             {(state) => (
                                 <ul className="list-disc list-outside pl-4">
                                     {accomplishments.map((accomplishment, index) => (
-                                        <li key={index} className={state ? '' : index + 1 > itemsToShow ? 'hidden' : ''}>
+                                        <li key={index} className={resolveHiddenClassName(state, index, itemsToShow)}>
                                             {accomplishment}
                                         </li>
                                     ))}
@@ -67,7 +70,7 @@ const Xps = ({ xps }) => {
                             {(state) => (
                                 <div className="flex flex-wrap gap-2">
                                     {projects.map((project, index) => (
-                                        <div key={index} className={state ? '' : index + 1 > itemsToShow ? 'hidden' : ''}>
+                                        <div key={index} className={resolveHiddenClassName(state, index, itemsToShow)}>
                                             <Pill>{project}</Pill>
                                         </div>
                                     ))}
@@ -82,7 +85,7 @@ const Xps = ({ xps }) => {
                                 {(state) => (
                                     <ul className="list-disc list-outside pl-4">
                                         {collaboration.map((collaboration, index) => (
-                                            <li key={index} className={state ? '' : index + 1 > itemsToShow ? 'hidden' : ''}>
+                                            <li key={index} className={resolveHiddenClassName(state, index, itemsToShow)}>
                                                 {collaboration}
                                             </li>
                                         ))}
