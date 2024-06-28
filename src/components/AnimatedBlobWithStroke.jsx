@@ -6,7 +6,7 @@ const AnimatedBlobWithStroke = ({ isFillActive = true, repetitions = 2, distance
                 {items.map((_, index) => {
                     const command = `M ${42 + (index + 1) * distance} ${190 + (index + 1) * distance}`
                     return (
-                        <path key={index} fill="transparent" stroke="hwb(243deg 30% 1%)" stroke-width="1" stroke-dasharray="4">
+                        <path key={index} fill="transparent" stroke="hwb(243deg 30% 1%)" strokeWidth="1" strokeDasharray="4">
                             <animate
                                 repeatCount="indefinite"
                                 attributeName="d"
