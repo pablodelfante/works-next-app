@@ -4,7 +4,6 @@ import Pill from 'components/Pill'
 
 const Xps = ({ xps }) => {
     const itemsToShow = 3
-    const itemsToShowOnPIlls = 4
     return (
         <div className="grid gap-12">
             {xps.map(({ title, about, responsabilities, skills, accomplishments, projects, collaboration }, index) => (
@@ -40,7 +39,7 @@ const Xps = ({ xps }) => {
                             {(state) => (
                                 <div className="flex flex-wrap gap-2">
                                     {skills.map((skill, index) => (
-                                        <div key={index} className={state ? '' : index + 1 > itemsToShowOnPIlls ? 'hidden' : ''}>
+                                        <div key={index} className={state ? '' : index + 1 > itemsToShow ? 'hidden' : ''}>
                                             <Pill type="outline">{skill}</Pill>
                                         </div>
                                     ))}
@@ -68,7 +67,7 @@ const Xps = ({ xps }) => {
                             {(state) => (
                                 <div className="flex flex-wrap gap-2">
                                     {projects.map((project, index) => (
-                                        <div key={index} className={state ? '' : index + 1 > itemsToShowOnPIlls ? 'hidden' : ''}>
+                                        <div key={index} className={state ? '' : index + 1 > itemsToShow ? 'hidden' : ''}>
                                             <Pill>{project}</Pill>
                                         </div>
                                     ))}
