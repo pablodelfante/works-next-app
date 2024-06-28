@@ -100,7 +100,7 @@ const XpPage = () => {
                 <Container>
                     <div className="grid justify-center">
                         <div className="col-start-1 grid- col-end-2 row-start-1 row-end-2">
-                            <AnimatedBlobWithStroke />
+                            <AnimatedBlobWithStroke distance={5} repetitions={3} />
                         </div>
 
                         <div className="col-start-1 col-end-2 row-start-1 row-end-2 pl-8">
