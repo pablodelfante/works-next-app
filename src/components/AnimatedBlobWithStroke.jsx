@@ -1,11 +1,12 @@
 const AnimatedBlobWithStroke = () => {
-    const repetitions = 3
+    const repetitions = 2
+    const distance = 6
     const items = Array.from({ length: repetitions }, (_, index) => index)
     return (
         <>
-            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" className=" w-80" viewBox="27 38 277 420">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" className=" w-80" viewBox="0 38 277 420">
                 {items.map((item, index) => {
-                    const command = `M ${42 + index * 10 + 1} ${190 + index * 10 + 1}`
+                    const command = `M ${42 + (index + 1) * distance} ${190 + (index + 1) * distance}`
                     return (
                         <path key={index} fill="transparent" stroke="hwb(243deg 30% 1%)" stroke-width="1" stroke-dasharray="4">
                             <animate
