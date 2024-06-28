@@ -3,7 +3,7 @@ import XpItem from 'components/XpItem'
 import Pill from 'components/Pill'
 
 const Xps = ({ xps }) => {
-    const itemsToShow = 2
+    const itemsToShow = 3
     const itemsToShowOnPIlls = 4
     return (
         <div className="grid gap-12">
@@ -22,7 +22,7 @@ const Xps = ({ xps }) => {
                     {about && <XpItem title="About">{(state) => <p className={state ? '' : 'line-clamp-2'}>{about}</p>}</XpItem>}
 
                     {responsabilities && (
-                        <XpItem title="Responsabilities">
+                        <XpItem title="Responsabilities" disableShowMore={responsabilities.length <= itemsToShow}>
                             {(state) => (
                                 <ul className="list-disc list-outside pl-4">
                                     {responsabilities.map((responsability, index) => (
@@ -36,7 +36,7 @@ const Xps = ({ xps }) => {
                     )}
 
                     {skills && (
-                        <XpItem title="Skills aquired">
+                        <XpItem title="Skills aquired" disableShowMore={skills.length <= itemsToShow}>
                             {(state) => (
                                 <div className="flex flex-wrap gap-2">
                                     {skills.map((skill, index) => (
@@ -50,7 +50,7 @@ const Xps = ({ xps }) => {
                     )}
 
                     {accomplishments && (
-                        <XpItem title="Accomplishment and contributions">
+                        <XpItem title="Accomplishment and contributions" disableShowMore={accomplishments.length <= itemsToShow}>
                             {(state) => (
                                 <ul className="list-disc list-outside pl-4">
                                     {accomplishments.map((accomplishment, index) => (
@@ -64,7 +64,7 @@ const Xps = ({ xps }) => {
                     )}
 
                     {projects && (
-                        <XpItem title="Projects">
+                        <XpItem title="Projects" disableShowMore={projects.length <= itemsToShow}>
                             {(state) => (
                                 <div className="flex flex-wrap gap-2">
                                     {projects.map((project, index) => (
@@ -78,17 +78,19 @@ const Xps = ({ xps }) => {
                     )}
 
                     {collaboration && (
-                        <XpItem title="Collaboration">
-                            {(state) => (
-                                <ul className="list-disc list-outside pl-4">
-                                    {collaboration.map((collaboration, index) => (
-                                        <li key={index} className={state ? '' : index + 1 > itemsToShow ? 'hidden' : ''}>
-                                            {collaboration}
-                                        </li>
-                                    ))}
-                                </ul>
-                            )}
-                        </XpItem>
+                        <>
+                            <XpItem title="Collaboration" disableShowMore={collaboration.length <= itemsToShow}>
+                                {(state) => (
+                                    <ul className="list-disc list-outside pl-4">
+                                        {collaboration.map((collaboration, index) => (
+                                            <li key={index} className={state ? '' : index + 1 > itemsToShow ? 'hidden' : ''}>
+                                                {collaboration}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )}
+                            </XpItem>
+                        </>
                     )}
                 </div>
             ))}
