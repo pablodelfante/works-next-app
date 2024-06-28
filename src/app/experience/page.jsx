@@ -111,6 +111,21 @@ const XpPage = () => {
                         </div>
                     </div>
                 </Container>
+                <div className="mr-auto h-0 grid content-center">
+                    <div className="overflow-clip translate-y-[100rem]">
+                        <div className="translate-x-[-50%]">
+                            <AnimatedBlobWithStroke isFillActive={false} repetitions={3} />
+                        </div>
+                    </div>
+                </div>
+
+                <div className="ml-auto h-0 grid content-center">
+                    <div className="overflow-clip translate-y-80">
+                        <div className="translate-x-[50%]">
+                            <AnimatedBlobWithStroke isFillActive={false} repetitions={3} />
+                        </div>
+                    </div>
+                </div>
 
                 <Container>
                     <div className="grid grid-cols-[auto_1fr] justify-center lg:w-2/5 lg:m-auto">
@@ -122,6 +137,14 @@ const XpPage = () => {
                         </div>
                     </div>
                 </Container>
+
+                <div className="mr-auto h-0 grid content-center">
+                    <div className="overflow-clip">
+                        <div className="translate-x-[-50%]">
+                            <AnimatedBlobWithStroke isFillActive={false} repetitions={3} />
+                        </div>
+                    </div>
+                </div>
             </div>
         </Layout>
     )

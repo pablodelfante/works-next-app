@@ -2,7 +2,7 @@
 import XpItem from 'components/XpItem'
 import Pill from 'components/Pill'
 
-const Xp = ({ xps }) => {
+const Xps = ({ xps }) => {
     const itemsToShow = 2
     const itemsToShowOnPIlls = 4
     return (
@@ -96,4 +96,4 @@ const Xp = ({ xps }) => {
     )
 }
 
-export default Xp
+export default Xps
