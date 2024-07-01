@@ -89,7 +89,7 @@ const XpPage = () => {
                 'Scrum flows, breaking down requirements, providing feedback',
                 'Suggested interface flows and variations',
             ],
-            projects: ['Frontend experiences', 'Code server', 'Unreal Engine', 'Design project'],
+            projects: ['Frontend experiences', 'Interface experiences', 'Cirrus node server', 'Unreal Engine', 'Design project'],
             collaboration: ['Introduced new technologies for projects', 'Helped the team to push processes and projects'],
         },
     ]
