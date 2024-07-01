@@ -9,7 +9,7 @@ const Xps = ({ xps }) => {
     }
     return (
         <div className="grid gap-12">
-            {xps.map(({ title, about, responsabilities, skills, accomplishments, projects, collaboration }, index) => (
+            {xps.map(({ title, about, responsibilities, skills, accomplishments, projects, collaboration }, index) => (
                 <div key={index} className="grid gap-6">
                     <div>
                         <h3>{title}</h3>
@@ -23,11 +23,11 @@ const Xps = ({ xps }) => {
 
                     {about && <XpItem title="About">{(state) => <p className={state ? '' : 'line-clamp-2'}>{about}</p>}</XpItem>}
 
-                    {responsabilities && (
-                        <XpItem title="Responsabilities" disableShowMore={responsabilities.length <= itemsToShow}>
+                    {responsibilities && (
+                        <XpItem title="Responsibilities" disableShowMore={responsibilities.length <= itemsToShow}>
                             {(state) => (
                                 <ul className="list-disc list-outside pl-4">
-                                    {responsabilities.map((responsability, index) => (
+                                    {responsibilities.map((responsability, index) => (
                                         <li key={index} className={resolveHiddenClassName(state, index, itemsToShow)}>
                                             {responsability}
                                         </li>
