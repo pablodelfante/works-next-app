@@ -90,7 +90,11 @@ const XpPage = () => {
                 'Suggested interface flows and variations',
             ],
             projects: ['Frontend experiences', 'Interface experiences', 'Cirrus node server', 'Unreal Engine', 'Design project'],
-            collaboration: ['Introduced new technologies for projects', 'Helped the team to push processes and projects'],
+            collaboration: [
+                'Separate the Node monolith and implement the first version of the React client, separating frontend and backend as different projects to facilitate scalability and maintenance.',
+                'Introduced new technologies for projects',
+                'Helped the team to push processes and projects',
+            ],
         },
     ]
 
