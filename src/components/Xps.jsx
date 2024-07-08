@@ -17,7 +17,7 @@ const Xps = ({ xps }) => {
                         {/* line  */}
                         <div className="flex items-center ml-[-1.4em]">
                             <span className="flex justify-center items-center rounded-full w-3 aspect-square bg-gray-600 dark:bg-white">
-                                <span className="block rounded-full w-2 aspect-square bg-white dark:bg-gray-600"></span>
+                                <span className="block rounded-full w-2 aspect-square bg-white dark:bg-dark"></span>
                             </span>
                             <span className="block border-dashed border-t border-gray-400 dark:border-white w-40"></span>
                         </div>
