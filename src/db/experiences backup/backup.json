@@ -9,12 +9,7 @@
         "image": {
             "url": "https://media.graphassets.com/wGa2E2XlT5OUGPvFTkrP"
         },
-        "tags": [
-            "teach",
-            "lead",
-            "teamWork",
-            "mentor"
-        ],
+        "tags": ["teach", "lead", "teamWork", "mentor"],
         "components": []
     },
     {
@@ -27,12 +22,7 @@
         "image": {
             "url": "https://media.graphassets.com/Xe3hLpcT5qcHms3qtFdc"
         },
-        "tags": [
-            "react",
-            "tailwind",
-            "expressJs",
-            "storybook"
-        ],
+        "tags": ["react", "tailwind", "expressJs", "storybook"],
         "components": []
     }
 ]

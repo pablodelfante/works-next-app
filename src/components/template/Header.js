@@ -28,10 +28,10 @@ export default function Header() {
                         />
                         <Link href="/">Pablo Delfante</Link>
                     </li>
-                    <li className='text-sm lg:text-base'>
+                    <li className="text-sm lg:text-base">
                         <Link href="/portfolio">Portfolio</Link>
                     </li>
-                    <li className='font-extralight text-sm lg:text-base'>
+                    <li className="font-extralight text-sm lg:text-base">
                         <Link href="/experience">Journey</Link>
                     </li>
                     <li onClick={() => switchModeDark()} className="cursor-pointer">
