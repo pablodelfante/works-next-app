@@ -15,9 +15,11 @@ const Xps = ({ xps }) => {
                         <h3>{title}</h3>
 
                         {/* line  */}
-                        <div className="flex items-center ml-[-1.5em]">
-                            <span className="block rounded-full w-4 aspect-square bg-white"></span>
-                            <span className="block border-dashed border-t border-white w-40"></span>
+                        <div className="flex items-center ml-[-1.4em]">
+                            <span className="flex justify-center items-center rounded-full w-3 aspect-square bg-gray-600 dark:bg-white">
+                                <span className="block rounded-full w-2 aspect-square bg-white dark:bg-gray-600"></span>
+                            </span>
+                            <span className="block border-dashed border-t border-gray-400 dark:border-white w-40"></span>
                         </div>
                     </div>
 
