@@ -6,7 +6,7 @@ import AnimatedBlobWithStroke from 'components/AnimatedBlobWithStroke'
 const XpPage = () => {
     const xps = [
         {
-            title: '2020 - today Vexels SA',
+            title: '2020 - today - Vexels SA',
             about: 'Vexels is a graphic design platform that caters to a worldwide audience of creatives and merch sellers with high-quality graphic resources. I consider Vexels one of the best experiences that I have had.',
             responsibilities: [
                 'Developed and maintained frontend applications',
