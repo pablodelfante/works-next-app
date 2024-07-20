@@ -11,16 +11,17 @@ const Xps = ({ xps }) => {
         <div className="grid gap-12">
             {xps.map(({ title, about, responsibilities, skills, accomplishments, projects, collaboration }, index) => (
                 <div key={index} className="grid gap-6">
-                    <div>
-                        <h3>{title}</h3>
-
+                    {/* heading */}
+                    <div className="flex items-center gap-4">
                         {/* line  */}
-                        <div className="flex items-center ml-[-1.4em]">
+                        <div className="flex items-center">
                             <span className="flex justify-center items-center rounded-full w-3 aspect-square bg-gray-600 dark:bg-white">
                                 <span className="block rounded-full w-2 aspect-square bg-white dark:bg-dark"></span>
                             </span>
-                            <span className="block border-dashed border-t border-gray-400 dark:border-white w-40"></span>
+                            <span className="block border-dashed border-t border-gray-400 dark:border-white w-10"></span>
                         </div>
+
+                        <h3>{title}</h3>
                     </div>
 
                     {about && <XpItem title="About">{(state) => <p className={state ? '' : 'line-clamp-2'}>{about}</p>}</XpItem>}
