@@ -21,6 +21,8 @@ const Xps = ({ xps }) => {
                             <span className="block border-dashed border-t border-gray-400 dark:border-white w-10"></span>
                         </div>
 
+                        <img className="w-10 aspect-square" width={50} height={50} src="/img/home/me-christmas.png" alt="" />
+
                         <h3>{title}</h3>
                     </div>
 
