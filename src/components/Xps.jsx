@@ -8,7 +8,7 @@ const Xps = ({ xps }) => {
         return showMoreActive ? '' : index + 1 > itemsToShow ? 'hidden' : ''
     }
     return (
-        <div className="grid gap-12">
+        <div className="grid gap-36">
             {xps.map(({ logo, title, date, about, responsibilities, skills, accomplishments, projects, collaboration }, index) => (
                 <div key={index} className="grid gap-6">
                     {/* heading */}
