@@ -52,7 +52,9 @@ const XpPage = () => {
             ],
         },
         {
-            title: '2020 - ORT University',
+            logo: '/img/experiences/ort.jpg',
+            date: '2020',
+            title: 'ORT University',
             about: 'With over 13,000 students, ORT is the most significant private university in Uruguay, chosen by those who seek the best option for studying in the country.',
             responsibilities: [
                 'As a professor, carried out the course of web design',
@@ -63,7 +65,9 @@ const XpPage = () => {
             ],
         },
         {
-            title: '2019 - 2020 - Studio 4D',
+            logo: '/img/experiences/studio.jpg',
+            date: '2019 - 2020',
+            title: 'Studio 4D',
             about: 'Studio 4D offers different virtual reality experiences created through apps like Unreal Engine and served through web apps with services on the cloud such as AWS.',
             responsibilities: [
                 'Worked as a consultant, advising on technologies for frontend migrations',
