@@ -1,6 +1,14 @@
 'use client'
 import XpItem from 'components/XpItem'
 import Pill from 'components/Pill'
+import {
+    InformationCircleIcon,
+    NewspaperIcon,
+    UserPlusIcon,
+    ChartPieIcon,
+    PresentationChartBarIcon,
+    UserGroupIcon,
+} from '@heroicons/react/24/outline'
 
 const Xps = ({ xps }) => {
     const itemsToShow = 3
@@ -29,10 +37,14 @@ const Xps = ({ xps }) => {
                         </div>
                     </div>
 
-                    {about && <XpItem title="About">{(state) => <p className={state ? '' : 'line-clamp-2'}>{about}</p>}</XpItem>}
+                    {about && (
+                        <XpItem icon={<InformationCircleIcon />} title="About">
+                            {(state) => <p className={state ? '' : 'line-clamp-2'}>{about}</p>}
+                        </XpItem>
+                    )}
 
                     {responsibilities && (
-                        <XpItem title="Responsibilities" disableShowMore={responsibilities.length <= itemsToShow}>
+                        <XpItem icon={<NewspaperIcon />} title="Responsibilities" disableShowMore={responsibilities.length <= itemsToShow}>
                             {(state) => (
                                 <ul className="list-disc list-outside pl-4">
                                     {responsibilities.map((responsability, index) => (
@@ -46,7 +58,7 @@ const Xps = ({ xps }) => {
                     )}
 
                     {skills && (
-                        <XpItem title="Skills aquired" disableShowMore={skills.length <= itemsToShow}>
+                        <XpItem icon={<UserPlusIcon />} title="Skills aquired" disableShowMore={skills.length <= itemsToShow}>
                             {(state) => (
                                 <div className="flex flex-wrap gap-2">
                                     {skills.map((skill, index) => (
@@ -60,7 +72,11 @@ const Xps = ({ xps }) => {
                     )}
 
                     {accomplishments && (
-                        <XpItem title="Accomplishment and contributions" disableShowMore={accomplishments.length <= itemsToShow}>
+                        <XpItem
+                            icon={<ChartPieIcon />}
+                            title="Accomplishment and contributions"
+                            disableShowMore={accomplishments.length <= itemsToShow}
+                        >
                             {(state) => (
                                 <ul className="list-disc list-outside pl-4">
                                     {accomplishments.map((accomplishment, index) => (
@@ -74,7 +90,7 @@ const Xps = ({ xps }) => {
                     )}
 
                     {projects && (
-                        <XpItem title="Projects" disableShowMore={projects.length <= itemsToShow}>
+                        <XpItem icon={<PresentationChartBarIcon />} title="Projects" disableShowMore={projects.length <= itemsToShow}>
                             {(state) => (
                                 <div className="flex flex-wrap gap-2">
                                     {projects.map((project, index) => (
@@ -89,7 +105,7 @@ const Xps = ({ xps }) => {
 
                     {collaboration && (
                         <>
-                            <XpItem title="Collaboration" disableShowMore={collaboration.length <= itemsToShow}>
+                            <XpItem icon={<UserGroupIcon />} title="Collaboration" disableShowMore={collaboration.length <= itemsToShow}>
                                 {(state) => (
                                     <ul className="list-disc list-outside pl-4">
                                         {collaboration.map((collaboration, index) => (
