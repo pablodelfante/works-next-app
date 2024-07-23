@@ -43,6 +43,8 @@ const Xps = ({ xps }) => {
                         </XpItem>
                     )}
 
+                    {/* TODO:
+inspiration: https://codepen.io/prasannapegu/pen/JdyrZP */}
                     {responsibilities && (
                         <XpItem icon={<NewspaperIcon />} title="Responsibilities" disableShowMore={responsibilities.length <= itemsToShow}>
                             {(state) => (
