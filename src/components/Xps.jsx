@@ -38,8 +38,6 @@ const Xps = ({ xps }) => {
                         </div>
                     </div>
 
-                    <Slider />
-
                     {about && (
                         <XpItem icon={<InformationCircleIcon />} title="About">
                             {(state) => <p className={state ? '' : 'line-clamp-2'}>{about}</p>}
