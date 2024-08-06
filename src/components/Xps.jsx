@@ -62,23 +62,6 @@ inspiration: https://codepen.io/prasannapegu/pen/JdyrZP */}
                             )}
                         </XpItem>
                     )}
-                    {accomplishments && (
-                        <XpItem
-                            icon={<ChartPieIcon />}
-                            title="Accomplishment and contributions"
-                            disableShowMore={accomplishments.length <= itemsToShow}
-                        >
-                            {(state) => (
-                                <ul className="list-disc list-outside pl-4">
-                                    {accomplishments.map((accomplishment, index) => (
-                                        <li key={index} className={resolveHiddenClassName(state, index, itemsToShow)}>
-                                            {accomplishment}
-                                        </li>
-                                    ))}
-                                </ul>
-                            )}
-                        </XpItem>
-                    )}
                     {projects && (
                         <XpItem icon={<PresentationChartBarIcon />} title="Projects" disableShowMore={projects.length <= itemsToShow}>
                             {(state) => (
