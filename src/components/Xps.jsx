@@ -9,7 +9,6 @@ import {
     PresentationChartBarIcon,
     UserGroupIcon,
 } from '@heroicons/react/24/outline'
-import Accordion from 'components/Accordion'
 
 const Xps = ({ xps }) => {
     const itemsToShow = 3
@@ -37,8 +36,6 @@ const Xps = ({ xps }) => {
                             <span className="font-thin">{date}</span>
                         </div>
                     </div>
-
-                    <Accordion />
 
                     {about && (
                         <XpItem icon={<InformationCircleIcon />} title="About">
