@@ -9,6 +9,7 @@ import {
     PresentationChartBarIcon,
     UserGroupIcon,
 } from '@heroicons/react/24/outline'
+import Slider from 'components/Slider'
 
 const Xps = ({ xps }) => {
     const itemsToShow = 3
@@ -36,6 +37,8 @@ const Xps = ({ xps }) => {
                             <span className="font-thin">{date}</span>
                         </div>
                     </div>
+
+                    <Slider />
 
                     {about && (
                         <XpItem icon={<InformationCircleIcon />} title="About">
