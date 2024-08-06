@@ -37,9 +37,6 @@ const XpPage = () => {
                 'Improved system performance, usability, and maintainability',
                 'Enhanced agility and flexibility, unblocking tasks within the team',
                 'Facilitated smooth collaboration among design, product, and development teams',
-            ],
-            projects: ['Vexels platform', 'Back offices', 'Vexels Stores', 'Editor'],
-            collaboration: [
                 'Participated in product decisions, such as product vision, evaluating user experiences, product trends, and requirements',
                 'Shared best practices with the development team',
                 'Improved communication skills, shared knowledge, and communicated effectively',
@@ -50,6 +47,7 @@ const XpPage = () => {
                 'Helped resolve conflicts with code, unlocked tasks, and pushed to surpass obstacles and goals',
                 'Participated in the delegation process, making it easier',
             ],
+            projects: ['Vexels platform', 'Back offices', 'Vexels Stores', 'Editor'],
         },
         {
             logo: '/img/experiences/ort.jpg',
@@ -94,13 +92,11 @@ const XpPage = () => {
                 'First React implementation in frontend experiences',
                 'Scrum flows, breaking down requirements, providing feedback',
                 'Suggested interface flows and variations',
-            ],
-            projects: ['Frontend experiences', 'Interface experiences', 'Cirrus node server', 'Unreal Engine', 'Design project'],
-            collaboration: [
                 'Separate the Node monolith and implement the first version of the React client, separating frontend and backend as different projects to facilitate scalability and maintenance.',
                 'Introduced new technologies for projects',
                 'Helped the team to push processes and projects',
             ],
+            projects: ['Frontend experiences', 'Interface experiences', 'Cirrus node server', 'Unreal Engine', 'Design project'],
         },
     ]
 

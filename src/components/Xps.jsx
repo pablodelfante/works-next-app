@@ -36,13 +36,11 @@ const Xps = ({ xps }) => {
                             <span className="font-thin">{date}</span>
                         </div>
                     </div>
-
                     {about && (
                         <XpItem icon={<InformationCircleIcon />} title="About">
                             {(state) => <p className={state ? '' : 'line-clamp-2'}>{about}</p>}
                         </XpItem>
                     )}
-
                     {/* TODO:
 inspiration: https://codepen.io/prasannapegu/pen/JdyrZP */}
                     {responsibilities && (
@@ -58,7 +56,6 @@ inspiration: https://codepen.io/prasannapegu/pen/JdyrZP */}
                             )}
                         </XpItem>
                     )}
-
                     {skills && (
                         <XpItem icon={<UserPlusIcon />} title="Skills aquired" disableShowMore={skills.length <= itemsToShow}>
                             {(state) => (
@@ -72,7 +69,6 @@ inspiration: https://codepen.io/prasannapegu/pen/JdyrZP */}
                             )}
                         </XpItem>
                     )}
-
                     {accomplishments && (
                         <XpItem
                             icon={<ChartPieIcon />}
@@ -90,7 +86,6 @@ inspiration: https://codepen.io/prasannapegu/pen/JdyrZP */}
                             )}
                         </XpItem>
                     )}
-
                     {projects && (
                         <XpItem icon={<PresentationChartBarIcon />} title="Projects" disableShowMore={projects.length <= itemsToShow}>
                             {(state) => (
@@ -104,21 +99,6 @@ inspiration: https://codepen.io/prasannapegu/pen/JdyrZP */}
                             )}
                         </XpItem>
                     )}
-
-                    {collaboration && (
-                        <>
-                            <XpItem icon={<UserGroupIcon />} title="Collaboration" disableShowMore={collaboration.length <= itemsToShow}>
-                                {(state) => (
-                                    <ul className="list-disc list-outside pl-4">
-                                        {collaboration.map((collaboration, index) => (
-                                            <li key={index} className={resolveHiddenClassName(state, index, itemsToShow)}>
-                                                {collaboration}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                )}
-                            </XpItem>
-                        </>
                     )}
                 </div>
             ))}
