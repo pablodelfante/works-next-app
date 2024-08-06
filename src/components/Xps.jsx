@@ -99,7 +99,6 @@ inspiration: https://codepen.io/prasannapegu/pen/JdyrZP */}
                             )}
                         </XpItem>
                     )}
-                    )}
                 </div>
             ))}
         </div>
