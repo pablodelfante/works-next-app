@@ -32,7 +32,6 @@ const XpPage = () => {
                 'Considered project targets',
             ],
             accomplishments: [
-                'Participated in the complete product process, contributing various ideas to build up the products',
                 'Involved in the UX process, validating ideas, user flows, components, user targets, and technical approaches',
                 'Improved system performance, usability, and maintainability',
                 'Enhanced agility and flexibility, unblocking tasks within the team',
@@ -42,10 +41,7 @@ const XpPage = () => {
                 'Improved communication skills, shared knowledge, and communicated effectively',
                 'Maintained empathy in all situations, considering different perspectives, ideas, and implementations',
                 'Motivated and inspired the team, encouraging them to strive for more and surpass themselves',
-                'Assisted the team in implementations while keeping in mind the strategic vision',
-                'Applied flexibility with timelines, creation processes, and various application areas',
                 'Helped resolve conflicts with code, unlocked tasks, and pushed to surpass obstacles and goals',
-                'Participated in the delegation process, making it easier',
             ],
             projects: ['Vexels platform', 'Back offices', 'Vexels Stores', 'Editor'],
         },

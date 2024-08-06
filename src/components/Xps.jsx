@@ -1,14 +1,7 @@
 'use client'
 import XpItem from 'components/XpItem'
 import Pill from 'components/Pill'
-import {
-    InformationCircleIcon,
-    NewspaperIcon,
-    UserPlusIcon,
-    ChartPieIcon,
-    PresentationChartBarIcon,
-    UserGroupIcon,
-} from '@heroicons/react/24/outline'
+import { InformationCircleIcon, NewspaperIcon, UserPlusIcon, ChartPieIcon, PresentationChartBarIcon } from '@heroicons/react/24/outline'
 
 const Xps = ({ xps }) => {
     const itemsToShow = 3
