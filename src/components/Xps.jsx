@@ -9,7 +9,6 @@ import {
     PresentationChartBarIcon,
     UserGroupIcon,
 } from '@heroicons/react/24/outline'
-import Slider from 'components/Slider'
 
 const Xps = ({ xps }) => {
     const itemsToShow = 3
