@@ -34,8 +34,7 @@ const Xps = ({ xps }) => {
                             {(state) => <p className={state ? '' : 'line-clamp-2'}>{about}</p>}
                         </XpItem>
                     )}
-                    {/* TODO:
-inspiration: https://codepen.io/prasannapegu/pen/JdyrZP */}
+
                     {responsibilities && (
                         <XpItem icon={<NewspaperIcon />} title="Responsibilities" disableShowMore={responsibilities.length <= itemsToShow}>
                             {(state) => (
