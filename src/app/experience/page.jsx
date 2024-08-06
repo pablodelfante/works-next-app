@@ -6,7 +6,9 @@ import AnimatedBlobWithStroke from 'components/AnimatedBlobWithStroke'
 const XpPage = () => {
     const xps = [
         {
-            title: '2020 - today - Vexels SA',
+            logo: '/img/experiences/vexels-logo.jpg',
+            title: 'Vexels SA',
+            date: '2020 - today',
             about: 'Vexels is a graphic design platform that caters to a worldwide audience of creatives and merch sellers with high-quality graphic resources. I consider Vexels one of the best experiences that I have had.',
             responsibilities: [
                 'Developed and maintained frontend applications',
@@ -50,7 +52,9 @@ const XpPage = () => {
             ],
         },
         {
-            title: '2020 - ORT University',
+            logo: '/img/experiences/ort.jpg',
+            date: '2020',
+            title: 'ORT University',
             about: 'With over 13,000 students, ORT is the most significant private university in Uruguay, chosen by those who seek the best option for studying in the country.',
             responsibilities: [
                 'As a professor, carried out the course of web design',
@@ -61,7 +65,9 @@ const XpPage = () => {
             ],
         },
         {
-            title: '2019 - 2020 - Studio 4D',
+            logo: '/img/experiences/studio.jpg',
+            date: '2019 - 2020',
+            title: 'Studio 4D',
             about: 'Studio 4D offers different virtual reality experiences created through apps like Unreal Engine and served through web apps with services on the cloud such as AWS.',
             responsibilities: [
                 'Worked as a consultant, advising on technologies for frontend migrations',
@@ -133,7 +139,7 @@ const XpPage = () => {
                 </div>
 
                 <Container>
-                    <div className="grid grid-cols-[auto_1fr] justify-center lg:w-2/5 lg:m-auto">
+                    <div className="grid gap-14 grid-cols-[auto_1fr] justify-center lg:w-[55%] lg:m-auto">
                         <div className="border-r border-dashed border-gray-400 dark:border-white m-4"></div>
                         <div>
                             <div className="grid">
