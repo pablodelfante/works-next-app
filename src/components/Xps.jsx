@@ -38,7 +38,7 @@ const Xps = ({ xps }) => {
                     {responsibilities && (
                         <XpItem icon={<NewspaperIcon />} title="Responsibilities" disableShowMore={responsibilities.length <= itemsToShow}>
                             {(state) => (
-                                <ul className="list-disc list-outside pl-4">
+                                <ul className="list-outside pl-4 list-[circle]">
                                     {responsibilities.map((responsability, index) => (
                                         <li key={index} className={resolveHiddenClassName(state, index, itemsToShow)}>
                                             {responsability}
