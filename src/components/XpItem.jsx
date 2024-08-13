@@ -4,7 +4,7 @@ import { useState } from 'react'
 const ItemXp = ({ title, children, disableShowMore = false, icon }) => {
     const [state, setState] = useState(false)
     return (
-        <div className="grid gap-2">
+        <div className="grid gap-2 fade-in-from-right">
             <h4 className="flex gap-2 text-lg">
                 {icon}
                 {title}
