@@ -52,16 +52,11 @@ const XpPage = () => {
             title: 'Studio 4D',
             about: 'Studio 4D offers different virtual reality experiences created through apps like Unreal Engine and served through web apps with services on the cloud such as AWS.',
             responsibilities: [
-                'Worked as a consultant, advising on technologies for frontend migrations',
                 'Migrated and implemented React in projects, defined frontend architecture',
                 'Maintained and added new features to a Node server project',
                 'Maintained communication between the Node server, Unreal Engine, and frontend application using technologies such as WebSockets and WebRTC',
-                'First React implementation in frontend experiences',
                 'Scrum flows, breaking down requirements, providing feedback',
-                'Suggested interface flows and variations',
                 'Separate the Node monolith and implement the first version of the React client, separating frontend and backend as different projects to facilitate scalability and maintenance.',
-                'Introduced new technologies for projects',
-                'Helped the team to push processes and projects',
             ],
             skills: [
                 'Node server',
