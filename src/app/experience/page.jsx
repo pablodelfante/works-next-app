@@ -39,7 +39,7 @@ const XpPage = () => {
             title: 'ORT University',
             about: 'With over 13,000 students, ORT is the most significant private university in Uruguay, chosen by those who seek the best option for studying in the country.',
             responsibilities: [
-                'As a professor, carried out the course of web design',
+                'As a professor, I carried out the course of web design',
                 'Shared knowledge in accordance with the course and provided students with skills for future performance in the field',
                 'Presented educational challenges and facilitated learning',
                 'Collaborated with other teachers and proposed educational and structural improvements to the course',
