@@ -10,7 +10,7 @@ const Xps = ({ xps }) => {
     }
     return (
         <div className="grid gap-36">
-            {xps.map(({ logo, title, date, about, responsibilities, skills, accomplishments, projects, collaboration }, index) => (
+            {xps.map(({ logo, title, date, about, responsibilities, skills, projects }, index) => (
                 <div key={index} className="grid gap-6">
                     {/* heading */}
                     <div className="flex items-center gap-3 translate-x-[-4rem]">
