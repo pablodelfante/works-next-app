@@ -6,7 +6,17 @@ import { InformationCircleIcon, NewspaperIcon, UserPlusIcon, ChartPieIcon, Prese
 const Xps = ({ xps }) => {
     const itemsToShow = 3
     const resolveHiddenClassName = (showMoreActive, currentItemIndex, itemsToShow) => {
-        return showMoreActive ? '' : currentItemIndex + 1 > itemsToShow ? 'hidden' : ''
+        return showMoreActive
+            ? {
+                  opacity: 1,
+                  transition: 'opacity 0.5s ease-in-out',
+              }
+            : currentItemIndex + 1 > itemsToShow
+            ? {
+                  opacity: 0,
+                  height: 0,
+              }
+            : {}
     }
     return (
         <div className="grid gap-36">
@@ -40,7 +50,7 @@ const Xps = ({ xps }) => {
                             {(showMore) => (
                                 <ul className="list-outside pl-4 list-[circle]">
                                     {responsibilities.map((responsability, index) => (
-                                        <li key={index} className={resolveHiddenClassName(showMore, index, itemsToShow)}>
+                                        <li key={index} style={resolveHiddenClassName(showMore, index, itemsToShow)}>
                                             {responsability}
                                         </li>
                                     ))}
@@ -53,7 +63,7 @@ const Xps = ({ xps }) => {
                             {(showMore) => (
                                 <div className="flex flex-wrap gap-2">
                                     {skills.map((skill, index) => (
-                                        <div key={index} className={resolveHiddenClassName(showMore, index, itemsToShow)}>
+                                        <div key={index} style={resolveHiddenClassName(showMore, index, itemsToShow)}>
                                             <Pill type="outline">{skill}</Pill>
                                         </div>
                                     ))}
@@ -66,7 +76,7 @@ const Xps = ({ xps }) => {
                             {(showMore) => (
                                 <div className="flex flex-wrap gap-2">
                                     {projects.map((project, index) => (
-                                        <div key={index} className={resolveHiddenClassName(showMore, index, itemsToShow)}>
+                                        <div key={index} style={resolveHiddenClassName(showMore, index, itemsToShow)}>
                                             <Pill>{project}</Pill>
                                         </div>
                                     ))}
