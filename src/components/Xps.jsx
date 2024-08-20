@@ -5,8 +5,8 @@ import { InformationCircleIcon, NewspaperIcon, UserPlusIcon, ChartPieIcon, Prese
 
 const Xps = ({ xps }) => {
     const itemsToShow = 3
-    const resolveHiddenClassName = (showMoreActive, index, itemsToShow) => {
-        return showMoreActive ? '' : index + 1 > itemsToShow ? 'hidden' : ''
+    const resolveHiddenClassName = (showMoreActive, currentItemIndex, itemsToShow) => {
+        return showMoreActive ? '' : currentItemIndex + 1 > itemsToShow ? 'hidden' : ''
     }
     return (
         <div className="grid gap-36">
