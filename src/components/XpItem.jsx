@@ -11,7 +11,7 @@ const ItemXp = ({ title, children, disableShowMore = false, icon }) => {
             </h4>
             {children(showMore)}
             {!disableShowMore && (
-                <span className="font-light cursor-pointer underline" onClick={() => setShowMore(!showMore)}>
+                <span className="block font-light cursor-pointer underline py-2 select-none" onClick={() => setShowMore(!showMore)}>
                     {showMore ? 'show less' : 'show more'}
                 </span>
             )}

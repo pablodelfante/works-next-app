@@ -15,6 +15,7 @@ const Xps = ({ xps }) => {
             ? {
                   opacity: 0,
                   height: 0,
+                  pointerEvents: 'none',
               }
             : {}
     }
@@ -48,7 +49,7 @@ const Xps = ({ xps }) => {
                     {responsibilities && (
                         <XpItem icon={<NewspaperIcon />} title="Responsibilities" disableShowMore={responsibilities.length <= itemsToShow}>
                             {(showMore) => (
-                                <ul className="list-outside pl-4 list-[circle]">
+                                <ul className="list-outside pl-4 list-[circle] select-none">
                                     {responsibilities.map((responsability, index) => (
                                         <li key={index} style={resolveHiddenClassName(showMore, index, itemsToShow)}>
                                             {responsability}
@@ -61,7 +62,7 @@ const Xps = ({ xps }) => {
                     {skills && (
                         <XpItem icon={<UserPlusIcon />} title="Skills aquired" disableShowMore={skills.length <= itemsToShow}>
                             {(showMore) => (
-                                <div className="flex flex-wrap gap-2">
+                                <div className="flex flex-wrap gap-2 select-none">
                                     {skills.map((skill, index) => (
                                         <div key={index} style={resolveHiddenClassName(showMore, index, itemsToShow)}>
                                             <Pill type="outline">{skill}</Pill>
@@ -74,7 +75,7 @@ const Xps = ({ xps }) => {
                     {projects && (
                         <XpItem icon={<PresentationChartBarIcon />} title="Projects" disableShowMore={projects.length <= itemsToShow}>
                             {(showMore) => (
-                                <div className="flex flex-wrap gap-2">
+                                <div className="flex flex-wrap gap-2 select-none">
                                     {projects.map((project, index) => (
                                         <div key={index} style={resolveHiddenClassName(showMore, index, itemsToShow)}>
                                             <Pill>{project}</Pill>
