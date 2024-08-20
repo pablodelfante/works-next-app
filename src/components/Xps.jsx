@@ -37,10 +37,10 @@ const Xps = ({ xps }) => {
 
                     {responsibilities && (
                         <XpItem icon={<NewspaperIcon />} title="Responsibilities" disableShowMore={responsibilities.length <= itemsToShow}>
-                            {(state) => (
+                            {(showMore) => (
                                 <ul className="list-outside pl-4 list-[circle]">
                                     {responsibilities.map((responsability, index) => (
-                                        <li key={index} className={resolveHiddenClassName(state, index, itemsToShow)}>
+                                        <li key={index} className={resolveHiddenClassName(showMore, index, itemsToShow)}>
                                             {responsability}
                                         </li>
                                     ))}
@@ -50,10 +50,10 @@ const Xps = ({ xps }) => {
                     )}
                     {skills && (
                         <XpItem icon={<UserPlusIcon />} title="Skills aquired" disableShowMore={skills.length <= itemsToShow}>
-                            {(state) => (
+                            {(showMore) => (
                                 <div className="flex flex-wrap gap-2">
                                     {skills.map((skill, index) => (
-                                        <div key={index} className={resolveHiddenClassName(state, index, itemsToShow)}>
+                                        <div key={index} className={resolveHiddenClassName(showMore, index, itemsToShow)}>
                                             <Pill type="outline">{skill}</Pill>
                                         </div>
                                     ))}
@@ -63,10 +63,10 @@ const Xps = ({ xps }) => {
                     )}
                     {projects && (
                         <XpItem icon={<PresentationChartBarIcon />} title="Projects" disableShowMore={projects.length <= itemsToShow}>
-                            {(state) => (
+                            {(showMore) => (
                                 <div className="flex flex-wrap gap-2">
                                     {projects.map((project, index) => (
-                                        <div key={index} className={resolveHiddenClassName(state, index, itemsToShow)}>
+                                        <div key={index} className={resolveHiddenClassName(showMore, index, itemsToShow)}>
                                             <Pill>{project}</Pill>
                                         </div>
                                     ))}
