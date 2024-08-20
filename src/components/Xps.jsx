@@ -30,8 +30,8 @@ const Xps = ({ xps }) => {
                         </div>
                     </div>
                     {about && (
-                        <XpItem icon={<InformationCircleIcon />} title="About">
-                            {(state) => <p className={state ? '' : 'line-clamp-2'}>{about}</p>}
+                        <XpItem icon={<InformationCircleIcon />} title="About" disableShowMore>
+                            {() => <p>{about}</p>}
                         </XpItem>
                     )}
 
