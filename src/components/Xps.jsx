@@ -33,7 +33,7 @@ const Xps = ({ xps }) => {
                             <span className="block border-dashed border-t border-gray-400 dark:border-white w-10"></span>
                         </div>
 
-                        <img className="w-12 aspect-square" width={50} height={50} src={logo} alt="" />
+                        <img className="w-14 aspect-square" width={50} height={50} src={logo} alt={title} />
 
                         <div>
                             <h3 className="leading-6">{title}</h3>
