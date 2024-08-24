@@ -36,7 +36,7 @@ const Xps = ({ xps }) => {
                         <img className="w-14 aspect-square" width={50} height={50} src={logo} alt={title} />
 
                         <div>
-                            <h3 className="leading-6">{title}</h3>
+                            <h3 className="leading-6 text-xl">{title}</h3>
                             <span className="font-thin">{date}</span>
                         </div>
                     </div>
