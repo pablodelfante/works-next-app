@@ -8,7 +8,7 @@ const XpPage = () => {
         {
             logo: '/img/experiences/vexels-logo.jpg',
             title: 'Vexels SA',
-            date: '2020 - today',
+            date: '2022 - today',
             about: 'Vexels is a graphic design platform that caters to a worldwide audience of creatives and merch sellers with high-quality graphic resources. I consider Vexels one of the best experiences that I have had.',
             responsibilities: [
                 'Developed and maintained frontend applications.',
@@ -35,7 +35,7 @@ const XpPage = () => {
         },
         {
             logo: '/img/experiences/ort.jpg',
-            date: '2020',
+            date: '2022',
             title: 'ORT University',
             about: 'With over 13,000 students, ORT is the most significant private university in Uruguay, chosen by those who seek the best option for studying in the country.',
             responsibilities: [
@@ -48,7 +48,7 @@ const XpPage = () => {
         },
         {
             logo: '/img/experiences/studio.jpg',
-            date: '2019 - 2020',
+            date: '2021 - 2022',
             title: 'Studio 4D',
             about: 'Studio 4D offers different virtual reality experiences created through apps like Unreal Engine and served through web apps with services on the cloud such as AWS.',
             responsibilities: [
