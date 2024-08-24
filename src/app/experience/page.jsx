@@ -35,7 +35,7 @@ const XpPage = () => {
         },
         {
             logo: '/img/experiences/ort.jpg',
-            date: '2022',
+            date: '2022 - 2023',
             title: 'ORT University',
             about: 'With over 13,000 students, ORT is the most significant private university in Uruguay, chosen by those who seek the best option for studying in the country.',
             responsibilities: [
