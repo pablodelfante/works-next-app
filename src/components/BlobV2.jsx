@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useRef } from 'react'
 import DrawBlob from 'blob-animated'
-export default function BlobV2({ canvasStyles, blobConfig, getBlob = () => {} }) {
+export default function Blob({ canvasStyles, blobConfig, getBlob = () => {} }) {
     const canvasRef = useRef(null)
     let Blob = () => {}
     useEffect(() => {

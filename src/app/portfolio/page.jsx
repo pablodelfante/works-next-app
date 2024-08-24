@@ -3,7 +3,7 @@ import { getWorks } from 'connectors/findWorks'
 import Head from 'next/head'
 import Works from 'components/Works'
 import Container from 'components/layouts/Container'
-import BlobV2 from 'components/BlobV2'
+import Blob from 'components/Blob'
 import Terminal from 'components/Terminal'
 
 export default async function Portfolio() {
@@ -23,7 +23,7 @@ export default async function Portfolio() {
                             </Terminal>
                         </div>
                         <div className="hidden lg:block">
-                            <BlobV2
+                            <Blob
                                 blobConfig={{
                                     color: 'hwb(243deg 30% 1%)',
                                 }}

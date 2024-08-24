@@ -1,4 +1,4 @@
-import BlobV2 from 'components/BlobV2'
+import Blob from 'components/Blob'
 
 export default function Footer() {
     const date = new Date()
@@ -62,7 +62,7 @@ export default function Footer() {
             <div className="grid">
                 <span className="w-max mx-auto flex gap-1">
                     &copy; {year} | Pablo Delfante
-                    <BlobV2
+                    <Blob
                         blobConfig={{
                             color: 'hwb(243deg 30% 1%)',
                         }}
