@@ -1,10 +1,14 @@
+import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { useContext, useEffect } from 'react'
 import DarkContext from 'contexts/darkMode/DarkContext'
 import Blob from 'components/Blob'
 
 export default function Header() {
+    const activeLinkClassName = 'border-b border-b-2 border-primary text-'
     const { isDark, setIsDark, icono } = useContext(DarkContext)
+
+    const pathname = usePathname()
 
     useEffect(() => {
         const html = document.getElementsByTagName('html')[0]
@@ -26,13 +30,13 @@ export default function Header() {
                             }}
                             canvasStyles={{ width: '20px' }}
                         />
-                        <Link href="/">Pablo Delfante</Link>
+                        <Link href="/" className={`${pathname === '/' ? activeLinkClassName : ''}`}>Pablo Delfante</Link>
                     </li>
                     <li className="text-sm lg:text-base">
-                        <Link href="/portfolio">Portfolio</Link>
+                        <Link href="/portfolio" className={`${pathname === '/portfolio' ? activeLinkClassName : ''}`}>Portfolio</Link>
                     </li>
                     <li className="font-extralight text-sm lg:text-base">
-                        <Link href="/experience">Journey</Link>
+                        <Link href="/experience" className={`${pathname === '/experience' ? activeLinkClassName : ''}`}>Journey</Link>
                     </li>
                     <li onClick={() => switchModeDark()} className="cursor-pointer">
                         {icono}
