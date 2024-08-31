@@ -112,7 +112,7 @@ const XpPage = () => {
                 </div>
 
                 <Container>
-                    <div className="grid gap-14 grid-cols-[auto_1fr] justify-center lg:w-[55%] lg:m-auto">
+                    <div className="grid gap-2 lg:gap-14 grid-cols-[auto_1fr] justify-center lg:w-[55%] lg:m-auto">
                         <div className="border-r border-dashed border-gray-400 dark:border-white m-4"></div>
                         <div>
                             <div className="grid">

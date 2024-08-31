@@ -24,9 +24,9 @@ const Xps = ({ xps }) => {
             {xps.map(({ logo, title, date, about, responsibilities, skills, projects }, index) => (
                 <div key={index} className="grid gap-6">
                     {/* heading */}
-                    <div className="flex items-center gap-3 translate-x-[-4rem]">
+                    <div className="flex items-center gap-3 translate-x-[-.1rem] lg:translate-x-[-4rem]">
                         {/* line  */}
-                        <div className="flex items-center">
+                        <div className="items-center hidden lg:flex">
                             <span className="flex justify-center items-center rounded-full w-3 aspect-square bg-gray-600 dark:bg-white">
                                 <span className="block rounded-full w-2 aspect-square bg-white dark:bg-dark"></span>
                             </span>
