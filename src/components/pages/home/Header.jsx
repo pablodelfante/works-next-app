@@ -1,5 +1,5 @@
 import Terminal from 'components/Terminal'
-import BlobV2 from 'components/BlobV2'
+import Blob from 'components/Blob'
 import TypeAnimation from 'components/TypeAnimation'
 import MeImage from 'components/pages/home/MeImage'
 
@@ -23,7 +23,7 @@ const Header = () => {
             </div>
             <div className="hidden lg:grid">
                 <div className="grid justify-center col-span-full row-span-full">
-                    <BlobV2
+                    <Blob
                         blobConfig={{
                             color: 'hwb(243deg 30% 1%)',
                         }}

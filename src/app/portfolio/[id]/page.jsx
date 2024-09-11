@@ -1,13 +1,16 @@
 import Link from 'next/link'
-import { getWorks } from 'connectors/findWorks'
 import Head from 'next/head'
+import Image from 'next/image'
+import ReactMarkdown from 'react-markdown'
+
+import { DEFAULT_URL_IMAGE } from 'utils/constants'
+import { getWorks } from 'connectors/findWorks'
+
 import Layout from 'components/template'
 import Container from 'components/layouts/Container'
 import MacWindow from 'components/MacWindow'
-import Image from 'next/image'
 import Video from 'components/Video'
 import Works from 'components/Works'
-import ReactMarkdown from 'react-markdown'
 
 export async function generateStaticParams() {
     const works = await getWorks()
@@ -66,7 +69,7 @@ export default async function Page({ params }) {
                         {imageUrl && (
                             <MacWindow>
                                 <Image
-                                    src={imageUrl ? imageUrl : defaultUrlImage}
+                                    src={imageUrl ? imageUrl : DEFAULT_URL_IMAGE}
                                     alt="main image on work"
                                     priority={true}
                                     width={1400}

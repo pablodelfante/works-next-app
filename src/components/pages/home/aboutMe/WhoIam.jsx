@@ -45,11 +45,11 @@ export default function WhoIam() {
                             repeat={Infinity}
                         />
                     </h3>
-                    <div className='fade-in-from-right'>
+                    <div className="fade-in-from-right">
                         <Terminal init="whoIam">
                             <p className="mb-5 text-white">
-                                I am full stack developer, graphic designer and digital designer. I have been passionate about technology since I was a
-                                curious and active child. I love sharing, learning and helping others as well as meeting new people!
+                                I am full stack developer, graphic designer and digital designer. I have been passionate about technology since I was
+                                a curious and active child. I love sharing, learning and helping others as well as meeting new people!
                             </p>
                             <p className="text-white">I love sorting out problems and I really enjoy being analytic and creative!</p>
                         </Terminal>

@@ -1,0 +1,94 @@
+'use client'
+import XpItem from 'components/XpItem'
+import Pill from 'components/Pill'
+import { InformationCircleIcon, NewspaperIcon, UserPlusIcon, ChartPieIcon, PresentationChartBarIcon } from '@heroicons/react/24/outline'
+
+const Xps = ({ xps }) => {
+    const itemsToShow = 3
+    const resolveHiddenClassName = (showMoreActive, currentItemIndex, itemsToShow) => {
+        return showMoreActive
+            ? {
+                  opacity: 1,
+                  transition: 'opacity 0.5s ease-in-out',
+              }
+            : currentItemIndex + 1 > itemsToShow
+            ? {
+                  opacity: 0,
+                  height: 0,
+                  pointerEvents: 'none',
+              }
+            : {}
+    }
+    return (
+        <div className="grid gap-36">
+            {xps.map(({ logo, title, date, about, responsibilities, skills, projects }, index) => (
+                <div key={index} className="grid gap-6">
+                    {/* heading */}
+                    <div className="flex items-center gap-3 translate-x-[-.1rem] lg:translate-x-[-4rem]">
+                        {/* line  */}
+                        <div className="items-center hidden lg:flex">
+                            <span className="flex justify-center items-center rounded-full w-3 aspect-square bg-gray-600 dark:bg-white">
+                                <span className="block rounded-full w-2 aspect-square bg-white dark:bg-dark"></span>
+                            </span>
+                            <span className="block border-dashed border-t border-gray-400 dark:border-white w-10"></span>
+                        </div>
+
+                        <img className="w-14 aspect-square" width={50} height={50} src={logo} alt={title} />
+
+                        <div>
+                            <h3 className="leading-6 text-xl">{title}</h3>
+                            <span className="font-thin">{date}</span>
+                        </div>
+                    </div>
+                    {about && (
+                        <XpItem icon={<InformationCircleIcon />} title="About" disableShowMore>
+                            {() => <p>{about}</p>}
+                        </XpItem>
+                    )}
+
+                    {responsibilities && (
+                        <XpItem icon={<NewspaperIcon />} title="Responsibilities" disableShowMore={responsibilities.length <= itemsToShow}>
+                            {(showMore) => (
+                                <ul className="list-outside pl-4 list-['✨'] select-none">
+                                    {responsibilities.map((responsability, index) => (
+                                        <li key={index} style={resolveHiddenClassName(showMore, index, itemsToShow)}>
+                                            {responsability}
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
+                        </XpItem>
+                    )}
+                    {skills && (
+                        <XpItem icon={<UserPlusIcon />} title="Skills aquired" disableShowMore={skills.length <= itemsToShow}>
+                            {(showMore) => (
+                                <div className="flex flex-wrap gap-2 select-none">
+                                    {skills.map((skill, index) => (
+                                        <div key={index} style={resolveHiddenClassName(showMore, index, itemsToShow)}>
+                                            <Pill type="outline">{skill}</Pill>
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
+                        </XpItem>
+                    )}
+                    {projects && (
+                        <XpItem icon={<PresentationChartBarIcon />} title="Projects" disableShowMore={projects.length <= itemsToShow}>
+                            {(showMore) => (
+                                <div className="flex flex-wrap gap-2 select-none">
+                                    {projects.map((project, index) => (
+                                        <div key={index} style={resolveHiddenClassName(showMore, index, itemsToShow)}>
+                                            <Pill>{project}</Pill>
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
+                        </XpItem>
+                    )}
+                </div>
+            ))}
+        </div>
+    )
+}
+
+export default Xps
