@@ -3,6 +3,7 @@ import 'styles/globals.css'
 import DarkProvider from 'contexts/darkMode/DarkProvider'
 import GAnalytics from 'components/GAnalytics'
 
+// TODO: is this necesary?
 export const metadata = {
     title: 'Pablo Delfante Portfolio',
     description: 'Web portfolio, presentation of work and projects. In order to display and provide a personal web image.',
@@ -15,7 +16,7 @@ export default function RootLayout({ children }) {
                 {/* meta description for accesibility */}
                 <meta
                     name="description"
-                    content="Web portfolio, presentation of work and projects. In order to display and provide a personal web image."
+                    content="Pablo Delfante portfolio, personal website, presentation and projects. In order to display and provide a personal web image."
                 ></meta>
 
                 {/* Google fonts */}
