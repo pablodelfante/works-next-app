@@ -7,7 +7,7 @@ const XpPage = () => {
     const xps = [
         {
             logo: '/img/experiences/vexels-logo.jpg',
-            title: 'Vexels SA',
+            title: 'Frontend developer at Vexels SA',
             date: '2022 - today',
             about: 'Vexels is a graphic design platform that caters to a worldwide audience of creatives and merch sellers with high-quality graphic resources. I consider Vexels one of the best experiences that I have had.',
             responsibilities: [
@@ -36,7 +36,7 @@ const XpPage = () => {
         {
             logo: '/img/experiences/ort.jpg',
             date: '2022 - 2023',
-            title: 'ORT University',
+            title: 'Professor at ORT University',
             about: 'With over 13,000 students, ORT is the most significant private university in Uruguay, chosen by those who seek the best option for studying in the country.',
             responsibilities: [
                 'As a professor, I carried out the course of web design',
@@ -49,7 +49,7 @@ const XpPage = () => {
         {
             logo: '/img/experiences/studio.jpg',
             date: '2021 - 2022',
-            title: 'Studio 4D',
+            title: 'Full stack developer at Studio 4D',
             about: 'Studio 4D offers different virtual reality experiences created through apps like Unreal Engine and served through web apps with services on the cloud such as AWS.',
             responsibilities: [
                 'Migrated and implemented React in projects, defined frontend architecture.',
