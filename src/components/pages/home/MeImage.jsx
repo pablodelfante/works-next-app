@@ -6,7 +6,7 @@ const MeImage = () => {
     return (
         <Image
             src={meImage}
-            alt="me prfile image"
+            alt="me, profile image"
             width={350}
             height={600}
             priority={true}

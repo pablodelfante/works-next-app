@@ -6,6 +6,14 @@
     animation: 5s fade-in ease-out;
 }
 
+.fade-in-from-right-500 {
+    animation: 500ms fade-in-from-right 0s ease-out forwards;
+}
+
+.fade-in-from-right-600 {
+    animation: 600ms fade-in-from-right 0s ease-out;
+}
+
 @supports (animation-timeline: view()) {
     .fade-in-from-left {
         animation: fade-in-from-left ease-out;
