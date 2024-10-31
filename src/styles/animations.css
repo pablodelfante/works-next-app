@@ -6,26 +6,26 @@
     animation: 5s fade-in ease-out;
 }
 
-.fade-in-from-right-500 {
+.fade-in-from-right-1 {
     transform: translateX(20vw);
     opacity: 0;
     animation: 1.5s fade-in-from-right 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
 }
 
-.fade-in-from-right-600 {
+.fade-in-from-right-2 {
     transform: translateX(20vw);
     opacity: 0;
     animation: 2.5s fade-in-from-right .6s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
 }
 
 @supports (animation-timeline: view()) {
-    .fade-in-from-left {
+    .on-view\:fade-in-from-left {
         animation: fade-in-from-left ease-out;
         animation-timeline: view();
         animation-range: entry contain 20%;
     }
 
-    .fade-in-from-right {
+    .on-view\:fade-in-from-right {
         animation: fade-in-from-right ease-out;
         animation-timeline: view();
         animation-range: entry contain 20%;

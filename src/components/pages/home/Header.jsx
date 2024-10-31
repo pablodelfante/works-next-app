@@ -22,7 +22,7 @@ const Header = () => {
                 </div>
             </div>
             <div className="hidden lg:grid">
-                <div className="grid justify-center col-span-full row-span-full  fade-in-from-right-500">
+                <div className="grid justify-center col-span-full row-span-full  fade-in-from-right-1">
                     <Blob
                         blobConfig={{
                             color: 'hwb(243deg 30% 1%)',
@@ -30,7 +30,7 @@ const Header = () => {
                         canvasStyles={{ width: '400px' }}
                     />
                 </div>
-                <figure className="[ figure-home ] grid justify-center items-end col-span-full row-span-full  fade-in-from-right-600">
+                <figure className="[ figure-home ] grid justify-center items-end col-span-full row-span-full fade-in-from-right-2">
                     <MeImage />
                 </figure>
             </div>
