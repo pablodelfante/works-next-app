@@ -15,7 +15,7 @@
 .fade-in-from-right-600 {
     transform: translateX(20vw);
     opacity: 0;
-    animation: 2.5s fade-in-from-right 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+    animation: 2.5s fade-in-from-right .6s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
 }
 
 @supports (animation-timeline: view()) {
