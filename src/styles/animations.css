@@ -7,11 +7,15 @@
 }
 
 .fade-in-from-right-500 {
-    animation: 500ms fade-in-from-right 0s ease-out forwards;
+    transform: translateX(20vw);
+    opacity: 0;
+    animation: 1.5s fade-in-from-right 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
 }
 
 .fade-in-from-right-600 {
-    animation: 600ms fade-in-from-right 0s ease-out;
+    transform: translateX(20vw);
+    opacity: 0;
+    animation: 2.5s fade-in-from-right 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
 }
 
 @supports (animation-timeline: view()) {
