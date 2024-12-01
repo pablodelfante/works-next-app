@@ -1,13 +1,11 @@
-const colors = require('tailwindcss/colors')
 
 module.exports = {
     content: ['./src/**/*.{html,js,jsx,ts,tsx}'],
 
-    darkMode: 'class', // or 'media' or 'class'
+    darkMode: 'class',
     theme: {
         extend: {
             colors: {
-                // defino color personalizado, inicial fue colors.indigo['600']
                 primary: 'hwb(243deg 30% 1%)',
                 dark: '#1c1c1c',
             },
@@ -24,7 +22,6 @@ module.exports = {
         extend: {},
     },
     plugins: [
-        // ...
         require('@tailwindcss/line-clamp'),
     ],
 }
