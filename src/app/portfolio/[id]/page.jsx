@@ -80,21 +80,23 @@ export default async function Page({ params }) {
                         )}
 
                         {Boolean(components.length) && (
-                            <ul className="grid gap-1">
+                            <ul className="grid gap-6">
                                 {components.map((component, key) => (
                                     <li key={key}>
                                         {component.__typename === 'Video' && <Video src={component.videoUrl} />}
                                         {component.__typename === 'Markdown' && <ReactMarkdown children={component.markdown} />}
                                         {component.__typename === 'Image' && (
                                             <Link href={`/portfolio/${id}/modal?imageUrl=${component.image.url}`}>
-                                                <Image
-                                                    className="hover:cursor-pointer"
-                                                    src={component.image.url}
-                                                    width={1400}
-                                                    height={700}
-                                                    quality={100}
-                                                    alt="image component"
-                                                />
+                                                <MacWindow>
+                                                    <Image
+                                                        className="hover:cursor-pointer"
+                                                        src={component.image.url}
+                                                        width={1400}
+                                                        height={700}
+                                                        quality={100}
+                                                        alt="image component"
+                                                    />
+                                                </MacWindow>
                                             </Link>
                                         )}
                                     </li>
