@@ -29,8 +29,8 @@ export default function WhoIam() {
                                 500,
                                 'graphic\n designer 🎨👨‍🏫',
                                 500,
-                                'full stack web\n developer 🤖🌆',
-                                500,
+                                '/full/stack/web\n <Developer/> 🤖🌆',
+                                1000,
                                 'creative\n dev 🪐🚀',
                                 500,
                                 'a\n beginner 🌊🏊‍♂️',
@@ -38,6 +38,8 @@ export default function WhoIam() {
                                 'Queen\n lover 👑🎸',
                                 500,
                                 'Team 🧉👨‍🦱 \n and ☕️☕️',
+                                500,
+                                'Dogs 🐶💖 \n lover 🐶💖🐶',
                                 500,
                             ]}
                             wrapper="span"
