@@ -11,6 +11,7 @@ import Container from 'components/layouts/Container'
 import MacWindow from 'components/MacWindow'
 import Video from 'components/Video'
 import Works from 'components/Works'
+import Tag from 'components/Tag'
 
 export async function generateStaticParams() {
     const works = await getWorks()
@@ -55,8 +56,8 @@ export default async function Page({ params }) {
                         {tags && tags.length ? (
                             <ul className="flex flex-wrap lg:gap-x-3 gap-1">
                                 {tags.map((tecnologie, key) => (
-                                    <li className="text-white text-xs font-medium truncate px-2 py-1 bg-gray-500 rounded-full" key={key}>
-                                        {tecnologie}
+                                    <li key={key}>
+                                        <Tag>{tecnologie}</Tag>
                                     </li>
                                 ))}
                             </ul>
