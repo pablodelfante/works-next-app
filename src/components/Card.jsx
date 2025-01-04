@@ -2,7 +2,9 @@ import Image from 'next/image'
 
 import Tag from 'components/Tag'
 
-export default function ({ imageSrc, title, tags, description }) {
+export default function ({ imageSrc, title, tags: tagsInput, description }) {
+    const tags = tagsInput.slice(0, 6)
+    const tagsWasSliced = tagsInput.length > 6
     return (
         <div className="pb-8 rounded-lg overflow-clip [ shadow-md shadow-gray-200 hover:shadow-lg hover:shadow-indigo-500/40 ] [ dark:shadow-sm dark:hover:shadow-lg dark:hover:shadow-indigo-500/40 dark:transition dark:duration-300 ] transition duration-300 [ bg-white bg-opacity-5 hover:bg-opacity-10 backdrop-blur-lg ]">
             <figure className="mb-5 opacity-90">
@@ -27,6 +29,7 @@ export default function ({ imageSrc, title, tags, description }) {
                             <Tag>{tech}</Tag>
                         </li>
                     ))}
+                    {tagsWasSliced && <li className="opacity-20">...</li>}
                 </ul>
                 <p className="line-clamp-3">{description}</p>
             </div>
