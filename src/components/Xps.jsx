@@ -77,31 +77,31 @@ const Xps = ({ xps }) => {
                     {projects && (
                         <XpItem icon={<PresentationChartBarIcon />} title="Projects" disableShowMore={projects.length <= itemsToShow}>
                             {(showMore) => (
-                                <div className="flex flex-wrap gap-2 select-none">
-                                    {projects.map((project, index) => (
-                                        <div key={index} style={resolveHiddenClassName(showMore, index, itemsToShow)}>
-                                            {(() => {
-                                                const [showMoreAboutProject, setShowMoreAboutProject] = useState(false)
-                                                return (
+                                <ul className="flex flex-wrap gap-2 select-none">
+                                    {projects.map((project, index) => {
+                                        // state here
+                                        const [showMoreAboutProject, setShowMoreAboutProject] = useState(false)
+                                        return (
+                                            <>
+                                                <li key={index} style={resolveHiddenClassName(showMore, index, itemsToShow)}>
                                                     <>
-                                                        <Tooltip content={<span>click me</span>}>
-                                                            {/* 
-                                                    render on try to show more
-                                                    {project?.render ? <>{project.render()}</> : ''}
-                                                */}
-                                                            <Pill onClick={() => setShowMoreAboutProject(true)}>
+                                                        <Tooltip content={<span className="w-max block p-4">click me 😸⬇️</span>}>
+                                                            <Pill onClick={() => setShowMoreAboutProject(!showMoreAboutProject)}>
                                                                 {/* FIXME: prevent use or and conditions, improve object data structure */}
                                                                 {project?.name || project}
                                                                 {project?.name ? <InformationCircleIcon className="w-4" /> : ''}
                                                             </Pill>
                                                         </Tooltip>
-                                                        {project?.render && showMoreAboutProject ? <>{project.render()}</> : ''}
+                                                        <div data-new-item>
+                                                            {project?.render && showMoreAboutProject ? <>{project.render()}</> : ''}
+                                                        </div>
                                                     </>
-                                                )
-                                            })()}
-                                        </div>
-                                    ))}
-                                </div>
+                                                </li>
+                                                <li className="w-full">example content</li>
+                                            </>
+                                        )
+                                    })}
+                                </ul>
                             )}
                         </XpItem>
                     )}
