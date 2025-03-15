@@ -1,4 +1,5 @@
 'use client'
+import { useState } from 'react'
 import XpItem from 'components/XpItem'
 import Pill from 'components/Pill'
 import { InformationCircleIcon, NewspaperIcon, UserPlusIcon, QuestionMarkCircleIcon, PresentationChartBarIcon } from '@heroicons/react/24/outline'
@@ -79,13 +80,25 @@ const Xps = ({ xps }) => {
                                 <div className="flex flex-wrap gap-2 select-none">
                                     {projects.map((project, index) => (
                                         <div key={index} style={resolveHiddenClassName(showMore, index, itemsToShow)}>
-                                            <Tooltip content={project?.render ? <>{project.render()}</> : ''}>
-                                                <Pill>
-                                                    {/* FIXME: prevent use or and conditions, improve object data structure */}
-                                                    {project?.name || project}
-                                                    {project?.name ? <InformationCircleIcon className="w-4" /> : ''}
-                                                </Pill>
-                                            </Tooltip>
+                                            {(() => {
+                                                const [showMoreAboutProject, setShowMoreAboutProject] = useState(false)
+                                                return (
+                                                    <>
+                                                        <Tooltip content={<span>click me</span>}>
+                                                            {/* 
+                                                    render on try to show more
+                                                    {project?.render ? <>{project.render()}</> : ''}
+                                                */}
+                                                            <Pill onClick={() => setShowMoreAboutProject(true)}>
+                                                                {/* FIXME: prevent use or and conditions, improve object data structure */}
+                                                                {project?.name || project}
+                                                                {project?.name ? <InformationCircleIcon className="w-4" /> : ''}
+                                                            </Pill>
+                                                        </Tooltip>
+                                                        {project?.render && showMoreAboutProject ? <>{project.render()}</> : ''}
+                                                    </>
+                                                )
+                                            })()}
                                         </div>
                                     ))}
                                 </div>
