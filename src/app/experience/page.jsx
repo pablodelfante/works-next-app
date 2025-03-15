@@ -5,7 +5,17 @@ import Xps from 'components/Xps'
 import AnimatedBlobWithStroke from 'components/AnimatedBlobWithStroke'
 
 const XpPage = () => {
+    /* 
     // TODO: create class to new experience
+   const XP = function (logo, title, date, about, responsibilities, skills, projects) {
+        this.logo = logo
+        this.title = title
+        this.date = date
+        this.about = about
+        this.responsibilities = responsibilities
+        this.skills = skills
+        this.projects = projects
+    } */
     const xps = [
         {
             logo: '/img/experiences/vexels-logo.jpg',
