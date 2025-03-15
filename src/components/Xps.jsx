@@ -81,23 +81,26 @@ const Xps = ({ xps }) => {
                                     {projects.map((project, index) => {
                                         // state here
                                         const [showMoreAboutProject, setShowMoreAboutProject] = useState(false)
+                                        const [extendedProject, setExtendedProject] = useState(<></>)
                                         return (
                                             <>
                                                 <li key={index} style={resolveHiddenClassName(showMore, index, itemsToShow)}>
                                                     <>
                                                         <Tooltip content={<span className="w-max block p-4">click me 😸⬇️</span>}>
-                                                            <Pill onClick={() => setShowMoreAboutProject(!showMoreAboutProject)}>
+                                                            <Pill
+                                                                onClick={() => {
+                                                                    setShowMoreAboutProject(!showMoreAboutProject)
+                                                                    setExtendedProject(project?.render())
+                                                                }}
+                                                            >
                                                                 {/* FIXME: prevent use or and conditions, improve object data structure */}
                                                                 {project?.name || project}
                                                                 {project?.name ? <InformationCircleIcon className="w-4" /> : ''}
                                                             </Pill>
                                                         </Tooltip>
-                                                        <div data-new-item>
-                                                            {project?.render && showMoreAboutProject ? <>{project.render()}</> : ''}
-                                                        </div>
                                                     </>
                                                 </li>
-                                                <li className="w-full">example content</li>
+                                                {showMoreAboutProject && <li className="w-full">{extendedProject}</li>}
                                             </>
                                         )
                                     })}
