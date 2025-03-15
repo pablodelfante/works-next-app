@@ -87,7 +87,7 @@ const Xps = ({ xps }) => {
                                                 <li key={index} style={resolveHiddenClassName(showMore, index, itemsToShow)}>
                                                     <>
                                                         {/* FIXME: prevent use or and conditions, improve object data structure */}
-                                                        <Tooltip content={project?.name && <span className="w-max block p-4">click me 😸⬇️</span>}>
+                                                        <Tooltip content={project?.name && <span className="w-max block p-4">click me! 😸⬇️</span>}>
                                                             <Pill
                                                                 onClick={() => {
                                                                     if (!project?.name) return
