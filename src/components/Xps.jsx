@@ -86,9 +86,10 @@ const Xps = ({ xps }) => {
                                             <>
                                                 <li key={index} style={resolveHiddenClassName(showMore, index, itemsToShow)}>
                                                     <>
-                                                        <Tooltip content={<span className="w-max block p-4">click me 😸⬇️</span>}>
+                                                        <Tooltip content={project?.name && <span className="w-max block p-4">click me 😸⬇️</span>}>
                                                             <Pill
                                                                 onClick={() => {
+                                                                    if (!project?.name) return
                                                                     setShowMoreAboutProject(!showMoreAboutProject)
                                                                     setExtendedProject(project?.render())
                                                                 }}
