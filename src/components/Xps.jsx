@@ -1,7 +1,7 @@
 'use client'
 import XpItem from 'components/XpItem'
 import Pill from 'components/Pill'
-import { InformationCircleIcon, NewspaperIcon, UserPlusIcon, ChartPieIcon, PresentationChartBarIcon } from '@heroicons/react/24/outline'
+import { InformationCircleIcon, NewspaperIcon, UserPlusIcon, QuestionMarkCircleIcon, PresentationChartBarIcon } from '@heroicons/react/24/outline'
 import Tooltip from 'components/Tooltip'
 
 const Xps = ({ xps }) => {
@@ -80,7 +80,11 @@ const Xps = ({ xps }) => {
                                     {projects.map((project, index) => (
                                         <div key={index} style={resolveHiddenClassName(showMore, index, itemsToShow)}>
                                             <Tooltip content={project?.render ? <>{project.render()}</> : ''}>
-                                                <Pill>{project?.name || project}</Pill>
+                                                <Pill>
+                                                    {/* FIXME: prevent use or and conditions, improve object data structure */}
+                                                    {project?.name || project}
+                                                    {project?.name ? <InformationCircleIcon className="w-4" /> : ''}
+                                                </Pill>
                                             </Tooltip>
                                         </div>
                                     ))}

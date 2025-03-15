@@ -37,7 +37,7 @@ const XpPage = () => {
                 {
                     name: 'Designer',
                     render: () => (
-                        <div className="grid gap-2 h-32 overflow-y-scroll  w-96">
+                        <div className="grid gap-2 h-64 overflow-y-scroll w-96 p-4">
                             <p>
                                 Designer is a web application that allows users to create designs using Vexels resources. It is a powerful tool that
                                 enables users to create designs for their projects, such as social media posts, t-shirts, and more.
@@ -51,7 +51,7 @@ const XpPage = () => {
                                 designer.vexels.com
                             </a>
                             <iframe
-                                width="300"
+                                width="330"
                                 height="200"
                                 src="https://www.youtube.com/embed/OAFx-VI24ko?si=Bh7H5eQZ608XqCc6"
                                 title="YouTube video player"
