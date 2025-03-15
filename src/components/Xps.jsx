@@ -86,6 +86,7 @@ const Xps = ({ xps }) => {
                                             <>
                                                 <li key={index} style={resolveHiddenClassName(showMore, index, itemsToShow)}>
                                                     <>
+                                                        {/* FIXME: prevent use or and conditions, improve object data structure */}
                                                         <Tooltip content={project?.name && <span className="w-max block p-4">click me 😸⬇️</span>}>
                                                             <Pill
                                                                 onClick={() => {
@@ -94,11 +95,11 @@ const Xps = ({ xps }) => {
                                                                     setExtendedProject(project?.render())
                                                                 }}
                                                             >
-                                                                {/* FIXME: prevent use or and conditions, improve object data structure */}
                                                                 {project?.name || project}
                                                                 {project?.name ? <InformationCircleIcon className="w-4" /> : ''}
                                                             </Pill>
                                                         </Tooltip>
+                                                        {/* -------------- */}
                                                     </>
                                                 </li>
                                                 {showMoreAboutProject && <li className="w-full">{extendedProject}</li>}
