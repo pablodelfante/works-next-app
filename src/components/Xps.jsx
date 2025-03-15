@@ -2,6 +2,7 @@
 import XpItem from 'components/XpItem'
 import Pill from 'components/Pill'
 import { InformationCircleIcon, NewspaperIcon, UserPlusIcon, ChartPieIcon, PresentationChartBarIcon } from '@heroicons/react/24/outline'
+import Tooltip from 'components/Tooltip'
 
 const Xps = ({ xps }) => {
     const itemsToShow = 3
@@ -78,7 +79,9 @@ const Xps = ({ xps }) => {
                                 <div className="flex flex-wrap gap-2 select-none">
                                     {projects.map((project, index) => (
                                         <div key={index} style={resolveHiddenClassName(showMore, index, itemsToShow)}>
-                                            <Pill>{project}</Pill>
+                                            <Tooltip content={project?.render ? <>{project.render()}</> : ''}>
+                                                <Pill>{project?.name || project}</Pill>
+                                            </Tooltip>
                                         </div>
                                     ))}
                                 </div>

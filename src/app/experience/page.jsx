@@ -1,9 +1,11 @@
+'use client'
 import Layout from 'components/template'
 import Container from 'components/layouts/Container'
 import Xps from 'components/Xps'
 import AnimatedBlobWithStroke from 'components/AnimatedBlobWithStroke'
 
 const XpPage = () => {
+    // TODO: create class to new experience
     const xps = [
         {
             logo: '/img/experiences/vexels-logo.jpg',
@@ -31,7 +33,40 @@ const XpPage = () => {
                 'Synthetic & fast solutions',
                 'Considered project targets',
             ],
-            projects: ['Vexels platform', 'Back offices', 'Vexels Stores', 'Editor'],
+            projects: [
+                {
+                    name: 'Designer',
+                    render: () => (
+                        <div className="grid gap-2 h-32 overflow-y-scroll  w-96">
+                            <p>
+                                Designer is a web application that allows users to create designs using Vexels resources. It is a powerful tool that
+                                enables users to create designs for their projects, such as social media posts, t-shirts, and more.
+                            </p>
+                            <p>
+                                As a frontend developer, I participated and was responsible for improving the application's performance, usability for
+                                users.
+                            </p>
+                            <p>Could you check more on the official website</p>
+                            <a className="underline" href="https://designer.vexels.com" target="_blank" rel="noopener noreferrer nofollow">
+                                designer.vexels.com
+                            </a>
+                            <iframe
+                                width="300"
+                                height="200"
+                                src="https://www.youtube.com/embed/OAFx-VI24ko?si=Bh7H5eQZ608XqCc6"
+                                title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                allowfullscreen
+                            ></iframe>
+                        </div>
+                    ),
+                },
+                'Vexels platform',
+                'Back offices',
+                'Vexels Stores',
+            ],
         },
         {
             logo: '/img/experiences/ort.jpg',
