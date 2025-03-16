@@ -49,22 +49,23 @@ const XpPage = () => {
                     name: 'Designer',
                     icon: <InformationCircleIcon className="w-4" />,
                     render: () => (
-                        <div className="grid gap-2 max-h-96 overflow-y-scroll p-4">
+                        <div className="grid gap-2 max-h-96 overflow-y-scroll py-4">
                             <p>
                                 Designer is a web application that allows users to create designs using Vexels resources. It is a powerful tool that
                                 enables users to create designs for their projects, such as social media posts, t-shirts, and more.
                             </p>
                             <p>
                                 As a frontend developer, I participated and was responsible for improving the application's performance, usability for
-                                users.
+                                users...
                             </p>
-                            <p>Could you check more on the official website</p>
+                            <p>Could you check more on the official website.</p>
                             <a className="underline" href="https://designer.vexels.com" target="_blank" rel="noopener noreferrer nofollow">
                                 designer.vexels.com
                             </a>
                             <iframe
-                                width="330"
-                                height="200"
+                                className="aspect-video w-full"
+                                width="450"
+                                height="250"
                                 src="https://www.youtube.com/embed/OAFx-VI24ko?si=Bh7H5eQZ608XqCc6"
                                 title="YouTube video player"
                                 frameborder="0"
