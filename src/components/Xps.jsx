@@ -99,7 +99,11 @@ const Xps = ({ xps }) => {
                                                         </Pill>
                                                     </Tooltip>
                                                 </li>
-                                                {showMoreAboutProject && <li className="w-full">{extendedProject}</li>}
+                                                {showMoreAboutProject && (
+                                                    <li className="w-full" key={index + 'extended'}>
+                                                        {extendedProject}
+                                                    </li>
+                                                )}
                                             </>
                                         )
                                     })}
