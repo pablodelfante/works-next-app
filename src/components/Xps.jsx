@@ -200,7 +200,7 @@ const Xps = () => {
                             )}
                         </XpItem>
                     )}
-                    {skills && (
+                    {skills.length ? (
                         <XpItem icon={<UserPlusIcon />} title="Skills aquired" disableShowMore={skills.length <= itemsToShow}>
                             {(showMore) => (
                                 <div className="flex flex-wrap gap-2 select-none">
@@ -212,8 +212,10 @@ const Xps = () => {
                                 </div>
                             )}
                         </XpItem>
+                    ) : (
+                        ''
                     )}
-                    {projects && (
+                    {projects.length ? (
                         <XpItem icon={<PresentationChartBarIcon />} title="Projects" disableShowMore={projects.length <= itemsToShow}>
                             {(showMore) => (
                                 <ul className="flex flex-wrap gap-2 select-none">
@@ -245,6 +247,8 @@ const Xps = () => {
                                 </ul>
                             )}
                         </XpItem>
+                    ) : (
+                        <></>
                     )}
                 </div>
             ))}
