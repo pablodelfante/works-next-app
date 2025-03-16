@@ -3,6 +3,7 @@ import Layout from 'components/template'
 import Container from 'components/layouts/Container'
 import Xps from 'components/Xps'
 import AnimatedBlobWithStroke from 'components/AnimatedBlobWithStroke'
+import { InformationCircleIcon } from '@heroicons/react/24/outline'
 
 const XpPage = () => {
     /* 
@@ -46,6 +47,7 @@ const XpPage = () => {
             projects: [
                 {
                     name: 'Designer',
+                    icon: <InformationCircleIcon className="w-4" />,
                     render: () => (
                         <div className="grid gap-2 max-h-96 overflow-y-scroll p-4">
                             <p>
@@ -73,9 +75,18 @@ const XpPage = () => {
                         </div>
                     ),
                 },
-                'Vexels platform',
-                'Back offices',
-                'Vexels Stores',
+                {
+                    name: 'Vexels platform',
+                    render: null,
+                },
+                {
+                    name: 'Back offices',
+                    render: null,
+                },
+                {
+                    name: 'Vexels Stores',
+                    render: null,
+                },
             ],
         },
         {
@@ -90,6 +101,8 @@ const XpPage = () => {
                 'Collaborated with other teachers and proposed educational and structural improvements to the course',
                 'Created, proposed, and contributed to the development of materials, tests, and challenges in various evaluation stages',
             ],
+            skills: [],
+            projects: [],
         },
         {
             logo: '/img/experiences/studio.jpg',
@@ -118,7 +131,28 @@ const XpPage = () => {
                 'Time management',
                 'Creativity to solve problems',
             ],
-            projects: ['Frontend experiences', 'Interface experiences', 'Cirrus node server', 'Unreal Engine', 'Design project'],
+            projects: [
+                {
+                    name: 'Frontend experiences',
+                    render: null,
+                },
+                {
+                    name: 'Interface experiences',
+                    render: null,
+                },
+                {
+                    name: 'Cirrus node server',
+                    render: null,
+                },
+                {
+                    name: 'Unreal Engine',
+                    render: null,
+                },
+                {
+                    name: 'Design project',
+                    render: null,
+                },
+            ],
         },
     ]
 

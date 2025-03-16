@@ -79,28 +79,25 @@ const Xps = ({ xps }) => {
                             {(showMore) => (
                                 <ul className="flex flex-wrap gap-2 select-none">
                                     {projects.map((project, index) => {
-                                        // state here
                                         const [showMoreAboutProject, setShowMoreAboutProject] = useState(false)
                                         const [extendedProject, setExtendedProject] = useState(<></>)
                                         return (
                                             <>
                                                 <li key={index} style={resolveHiddenClassName(showMore, index, itemsToShow)}>
-                                                    <>
-                                                        {/* FIXME: prevent use or and conditions, improve object data structure */}
-                                                        <Tooltip content={project?.name && <span className="w-max block p-4">click me! 😸⬇️</span>}>
-                                                            <Pill
-                                                                onClick={() => {
-                                                                    if (!project?.name) return
-                                                                    setShowMoreAboutProject(!showMoreAboutProject)
-                                                                    setExtendedProject(project?.render())
-                                                                }}
-                                                            >
-                                                                {project?.name || project}
-                                                                {project?.name ? <InformationCircleIcon className="w-4" /> : ''}
-                                                            </Pill>
-                                                        </Tooltip>
-                                                        {/* -------------- */}
-                                                    </>
+                                                    <Tooltip
+                                                        content={project?.icon && <span className="w-max block p-2.5 px-4">click me! 😸⬇️</span>}
+                                                    >
+                                                        <Pill
+                                                            onClick={() => {
+                                                                if (!project?.name) return
+                                                                setShowMoreAboutProject(!showMoreAboutProject)
+                                                                setExtendedProject(project?.render())
+                                                            }}
+                                                        >
+                                                            {project.name}
+                                                            {project?.icon ? project?.icon : ''}
+                                                        </Pill>
+                                                    </Tooltip>
                                                 </li>
                                                 {showMoreAboutProject && <li className="w-full">{extendedProject}</li>}
                                             </>
