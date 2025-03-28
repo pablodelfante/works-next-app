@@ -1,4 +1,3 @@
-// 'use client'
 import Layout from 'components/template'
 import Container from 'components/layouts/Container'
 import Xps from 'components/Xps'
