@@ -5,7 +5,7 @@ import MeImage from 'components/pages/home/MeImage'
 
 const Header = () => {
     return (
-        <div className="grid lg:grid-cols-[1fr_1fr] items-end overflow-hidden">
+        <div className="grid lg:grid-cols-[1fr_1fr] items-end">
             <div className="grid gap-4 pb-16">
                 <h1 className="font-bold text-[10rem]">Hi</h1>
                 <TypeAnimation

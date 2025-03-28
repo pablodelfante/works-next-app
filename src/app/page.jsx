@@ -16,7 +16,7 @@ export default async function Home() {
                 <title>Pablo Delfante</title>
             </Head>
             <Layout>
-                <section>
+                <section className="overflow-clip">
                     <Container>
                         <Header />
                     </Container>
