@@ -2,7 +2,7 @@ import Layout from 'components/template'
 import Container from 'components/layouts/Container'
 import Xps from 'components/Xps'
 import AnimatedBlobWithStroke from 'components/AnimatedBlobWithStroke'
-// test
+
 const XpPage = () => {
     return (
         <Layout>
