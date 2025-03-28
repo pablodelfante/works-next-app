@@ -6,7 +6,7 @@ import AnimatedBlobWithStroke from 'components/AnimatedBlobWithStroke'
 const XpPage = () => {
     return (
         <Layout>
-            <div className="grid gap-24 my-24">
+            <div className="grid gap-24 my-24 overflow-clip">
                 <Container>
                     <div className="grid justify-center">
                         <div className="col-start-1 grid- col-end-2 row-start-1 row-end-2">
