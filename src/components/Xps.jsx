@@ -36,7 +36,7 @@ const Xps = () => {
             projects: [
                 {
                     name: 'Designer',
-                    icon: <InformationCircleIcon className="w-4" />,
+                    icon: <InformationCircleIcon className="w-4 stroke-white dark:group-hover:stroke-white group-hover:stroke-primary" />,
                     render: () => (
                         <div className="grid gap-2 max-h-96 overflow-y-scroll py-4">
                             <p>
@@ -225,7 +225,7 @@ const Xps = () => {
                                             <li key={index}>
                                                 <div key={index} style={resolveHiddenClassName(showMore, index, itemsToShow)}>
                                                     <Tooltip
-                                                        content={project?.icon && <span className="w-max block p-2.5 px-4">click me! 😸⬇️</span>}
+                                                        content={project?.icon && <span className="w-max block p-2.5 px-4 text-white">click me! 😸⬇️</span>}
                                                     >
                                                         <Pill
                                                             onClick={() => {
