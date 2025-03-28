@@ -8,7 +8,7 @@ export default function WhoIam() {
         <div className="grid justify-center md:grid-cols-[.5fr_1fr] xl:grid-cols-[25em_.8fr] gap-16 overflow-clip">
             <div className="flex justify-center">
                 <Image
-                    className="object-contain fade-in-from-left "
+                    className="object-contain on-view:fade-in-from-left"
                     src={maskPng.src}
                     quality={100}
                     alt="who i am masked image"
@@ -19,7 +19,7 @@ export default function WhoIam() {
             </div>
             <div>
                 <div className="grid gap-6">
-                    <h3 className="font-bold text-3xl sm:text-4xl md:text-5xl xl:text-6xl fade-in-from-right">
+                    <h3 className="font-bold text-3xl sm:text-4xl md:text-5xl xl:text-6xl on-view:fade-in-from-right">
                         <span>I'm...</span>
                         <TypeAnimation
                             style={{ whiteSpace: 'pre-line', height: '2.5em', display: 'block' }}
@@ -29,8 +29,8 @@ export default function WhoIam() {
                                 500,
                                 'graphic\n designer 🎨👨‍🏫',
                                 500,
-                                'full stack web\n developer 🤖🌆',
-                                500,
+                                '/full/stack/web\n <Developer/> 🤖🌆',
+                                1000,
                                 'creative\n dev 🪐🚀',
                                 500,
                                 'a\n beginner 🌊🏊‍♂️',
@@ -39,13 +39,15 @@ export default function WhoIam() {
                                 500,
                                 'Team 🧉👨‍🦱 \n and ☕️☕️',
                                 500,
+                                'Dogs 🐶💖 \n lover 🐶💖🐶',
+                                500,
                             ]}
                             wrapper="span"
                             cursor={true}
                             repeat={Infinity}
                         />
                     </h3>
-                    <div className="fade-in-from-right">
+                    <div className="on-view:fade-in-from-right">
                         <Terminal init="whoIam">
                             <p className="mb-5 text-white">
                                 I am full stack developer, graphic designer and digital designer. I have been passionate about technology since I was

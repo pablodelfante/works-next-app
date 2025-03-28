@@ -2,12 +2,9 @@ import { mock } from 'db/mock'
 import { IS_BACKEND_MOCKED } from 'utils/constants'
 
 async function fetchWorks() {
-    const isProduction = process.env.NODE_ENV === 'production'
-    const filterStageOnProduction = isProduction ? ', stage: PUBLISHED' : ''
-
-    const query = `
+  const query = `
       query Works {
-        works(orderBy: highlighted_DESC, first: 20 ${filterStageOnProduction}) {
+        works(orderBy: highlighted_DESC, first: 20, stage: PUBLISHED) {
           id
           title
           description
@@ -37,31 +34,31 @@ async function fetchWorks() {
       }
     `
 
-    try {
-        const response = await fetch(process.env.HOST_BACKEND, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ query }),
-        })
+  try {
+    const response = await fetch(process.env.HOST_BACKEND, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ query }),
+    })
 
-        const data = await response.json()
-        return data
-    } catch (error) {
-        console.error(error)
-        throw new Error(error)
-    }
+    const data = await response.json()
+    return data
+  } catch (error) {
+    console.error(error)
+    throw new Error(error)
+  }
 }
 export const fetchWorksMock = () => mock
 export const getWorks = async () => {
-    try {
-        if (IS_BACKEND_MOCKED) return fetchWorksMock()
-        const response = await fetchWorks()
-        const works = response.data.works
-        return works
-    } catch (error) {
-        console.error({ getWorksIds: error })
-        throw new Error(error)
-    }
+  try {
+    if (IS_BACKEND_MOCKED) return fetchWorksMock()
+    const response = await fetchWorks()
+    const works = response.data.works
+    return works
+  } catch (error) {
+    console.error({ getWorksIds: error })
+    throw new Error(error)
+  }
 }

@@ -1,0 +1,30 @@
+/* Para navegadores basados en WebKit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 12px;
+    /* Ancho de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Color de fondo de la pista */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #fdfdfd;
+    /* Color del pulgar de la barra de desplazamiento */
+    border-radius: 6px;
+    /* Bordes redondeados */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #b6b6b6;
+    /* Color del pulgar al pasar el ratón */
+}
+
+/* Para Firefox */
+* {
+    scrollbar-width: thin;
+    /* Ancho de la barra de desplazamiento */
+    scrollbar-color: #e2e2e2 #333333;
+    /* Color del pulgar y la pista */
+}

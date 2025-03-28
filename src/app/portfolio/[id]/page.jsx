@@ -11,6 +11,7 @@ import Container from 'components/layouts/Container'
 import MacWindow from 'components/MacWindow'
 import Video from 'components/Video'
 import Works from 'components/Works'
+import Tag from 'components/Tag'
 
 export async function generateStaticParams() {
     const works = await getWorks()
@@ -55,8 +56,8 @@ export default async function Page({ params }) {
                         {tags && tags.length ? (
                             <ul className="flex flex-wrap lg:gap-x-3 gap-1">
                                 {tags.map((tecnologie, key) => (
-                                    <li className="text-white text-xs font-medium truncate px-2 py-1 bg-gray-500 rounded-full" key={key}>
-                                        {tecnologie}
+                                    <li key={key}>
+                                        <Tag>{tecnologie}</Tag>
                                     </li>
                                 ))}
                             </ul>
@@ -80,21 +81,23 @@ export default async function Page({ params }) {
                         )}
 
                         {Boolean(components.length) && (
-                            <ul className="grid gap-1">
+                            <ul className="grid gap-6">
                                 {components.map((component, key) => (
                                     <li key={key}>
                                         {component.__typename === 'Video' && <Video src={component.videoUrl} />}
                                         {component.__typename === 'Markdown' && <ReactMarkdown children={component.markdown} />}
                                         {component.__typename === 'Image' && (
                                             <Link href={`/portfolio/${id}/modal?imageUrl=${component.image.url}`}>
-                                                <Image
-                                                    className="hover:cursor-pointer"
-                                                    src={component.image.url}
-                                                    width={1400}
-                                                    height={700}
-                                                    quality={100}
-                                                    alt="image component"
-                                                />
+                                                <MacWindow>
+                                                    <Image
+                                                        className="hover:cursor-pointer"
+                                                        src={component.image.url}
+                                                        width={1400}
+                                                        height={700}
+                                                        quality={100}
+                                                        alt="image component"
+                                                    />
+                                                </MacWindow>
                                             </Link>
                                         )}
                                     </li>
