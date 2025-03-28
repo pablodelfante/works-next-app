@@ -13,7 +13,7 @@ const Tooltip = ({ content, children }) => {
     const handleMouseLeave = () => {
         timeoutRef.current = setTimeout(() => {
             setIsTooltipVisible(false)
-        }, 100) // Adjust delay as needed (milliseconds)
+        }, 100)
     }
 
     return (
