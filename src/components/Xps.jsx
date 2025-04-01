@@ -44,9 +44,7 @@ const Xps = () => {
                                 enables users to create designs for their projects, such as social media posts, t-shirts, and more.
                             </p>
                             <p>
-                                Developed frontend web apps, optimized UX and performance, significantly improved project scalability and user ratio
-                                per minute, contributed to product and UX decisions, improved team agility, and fostered best practices and
-                                collaboration.
+                               Developed frontend web apps, optimized UX and performance, significantly improved project scalability and user ratio per minute, contributed to product and UX decisions, improved team agility, and fostered best practices and collaboration.
                             </p>
                             <p>Could you check more on the official website.</p>
                             <a className="underline" href="https://designer.vexels.com" target="_blank" rel="noopener noreferrer nofollow">
@@ -227,9 +225,7 @@ const Xps = () => {
                                             <li key={index}>
                                                 <div key={index} style={resolveHiddenClassName(showMore, index, itemsToShow)}>
                                                     <Tooltip
-                                                        content={
-                                                            project?.icon && <span className="w-max block p-2.5 px-4 text-white">click me! 😸⬇️</span>
-                                                        }
+                                                        content={project?.icon && <span className="w-max block p-2.5 px-4 text-white">click me! 😸⬇️</span>}
                                                     >
                                                         <Pill
                                                             onClick={() => {

@@ -1,12 +1,4 @@
-import { ReactNode } from 'react';
-
-interface PillProps {
-    children: ReactNode;
-    type?: 'outline' | 'default';
-    onClick?: () => void;
-}
-
-const Pill = ({ children, type = 'default', onClick }: PillProps) => {
+const Pill = ({ children, type, onClick }) => {
     if (type === 'outline') {
         return (
             <div
@@ -28,4 +20,4 @@ const Pill = ({ children, type = 'default', onClick }: PillProps) => {
     )
 }
 
-export default Pill 
+export default Pill
