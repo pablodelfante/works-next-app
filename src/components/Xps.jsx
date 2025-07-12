@@ -44,7 +44,9 @@ const Xps = () => {
                                 enables users to create designs for their projects, such as social media posts, t-shirts, and more.
                             </p>
                             <p>
-                               Developed frontend web apps, optimized UX and performance, significantly improved project scalability and user ratio per minute, contributed to product and UX decisions, improved team agility, and fostered best practices and collaboration.
+                                Developed frontend web apps, optimized UX and performance, significantly improved project scalability and user ratio
+                                per minute, contributed to product and UX decisions, improved team agility, and fostered best practices and
+                                collaboration.
                             </p>
                             <p>Could you check more on the official website.</p>
                             <a className="underline" href="https://designer.vexels.com" target="_blank" rel="noopener noreferrer nofollow">
@@ -103,6 +105,7 @@ const Xps = () => {
                 'Maintained communication between the Node server, Unreal Engine, and frontend application using technologies such as WebSockets and WebRTC.',
                 'Managed Scrum flows, breaking down requirements, providing feedback.',
                 'Separate the Node monolith and implement the first version of the React client, separating frontend and backend as different projects to facilitate scalability and maintenance.',
+                'I helped the team to maintain some AWS services, including EC2 instances, Cloud Pipelines, Cloud Video Streaming services, S3 buckets, AWS Lambda, Route 53, API Gateway, CloudFront, and DynamoDB.',
             ],
             skills: [
                 'Node server',
@@ -113,7 +116,7 @@ const Xps = () => {
                 'DynamoDB',
                 'S3',
                 'WebRTC & WebSockets',
-                'React experience',
+                'AdvancedReact experience',
                 'UX flows',
                 'Testing tools such as Cypress & Vitest',
                 'Time management',
@@ -225,7 +228,9 @@ const Xps = () => {
                                             <li key={index}>
                                                 <div key={index} style={resolveHiddenClassName(showMore, index, itemsToShow)}>
                                                     <Tooltip
-                                                        content={project?.icon && <span className="w-max block p-2.5 px-4 text-white">click me! 😸⬇️</span>}
+                                                        content={
+                                                            project?.icon && <span className="w-max block p-2.5 px-4 text-white">click me! 😸⬇️</span>
+                                                        }
                                                     >
                                                         <Pill
                                                             onClick={() => {
