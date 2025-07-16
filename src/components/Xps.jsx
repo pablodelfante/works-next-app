@@ -116,7 +116,7 @@ const Xps = () => {
                 'DynamoDB',
                 'S3',
                 'WebRTC & WebSockets',
-                'AdvancedReact experience',
+                'Advanced React experience',
                 'UX flows',
                 'Testing tools such as Cypress & Vitest',
                 'Time management',
