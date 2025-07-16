@@ -3,7 +3,28 @@ const runtimeCaching = require('next-pwa/cache')
 
 module.exports = withPWA({
     images: {
-        domains: ['res.cloudinary.com', 'blog.aulaformativa.com', 'media.giphy.com', 'avatars.githubusercontent.com', 'media.graphassets.com', 'us-east-1-shared-usea1-02.graphassets.com'],
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'res.cloudinary.com',
+            },
+            {
+                protocol: 'https',
+                hostname: 'blog.aulaformativa.com',
+            },
+            {
+                protocol: 'https',
+                hostname: 'media.giphy.com',
+            },
+            {
+                protocol: 'https',
+                hostname: 'avatars.githubusercontent.com',
+            },
+            {
+                protocol: 'https',
+                hostname: '**.graphassets.com',
+            },
+        ],
     },
     // https://dev.to/byteslash/how-to-create-a-pwa-with-next-js-4dbm
     pwa: {
